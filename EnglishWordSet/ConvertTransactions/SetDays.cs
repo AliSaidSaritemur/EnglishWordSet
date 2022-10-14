@@ -7,28 +7,31 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.ConvertTransactions
 {
-    class SetStars
+    class SetDays
     {
         public string incStar(string lineToSet)
         {
             string incLine;
-            string pattern = "\\*";
+            string pattern = "^[1-9]";
             Regex rgLine = new Regex(pattern);
             Match matchRgL = rgLine.Match(lineToSet);
 
-            if (lineToSet.StartsWith("***"))
+            if (lineToSet.StartsWith("9"))
             {
-                incLine = "!";
-                incLine += lineToSet.Substring(3);
+                incLine = "!!!";
+                incLine += lineToSet.Substring(1);
             }
             else if (matchRgL.Success)
             {
-                incLine = "*";
-                incLine += lineToSet;
+                incLine = lineToSet;
+                StringBuilder incLineBuild = new StringBuilder(incLine);
+                int nowCount= (int.Parse(lineToSet[0].ToString())+1);           
+                incLineBuild[0]= char.Parse((nowCount).ToString());
+                incLine = incLineBuild.ToString();
             }
             else
             {
-                incLine = "* ";
+                incLine = "1 ";
                 incLine += lineToSet;
             }
             return incLine;

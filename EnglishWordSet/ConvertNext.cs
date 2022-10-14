@@ -15,7 +15,7 @@ namespace EnglishWordSet
         {
 
             
-            SetStars setStars = new SetStars();
+            SetDays setStars = new SetDays();
             SetTurkishWord stw = new SetTurkishWord();
             string output = inputTxt;
             output = setStars.incStar(output);
