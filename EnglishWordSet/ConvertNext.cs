@@ -16,10 +16,12 @@ namespace EnglishWordSet
 
             
             SetStars setStars = new SetStars();
+            SetTurkishWord stw = new SetTurkishWord();
             string output = inputTxt;
             output = setStars.incStar(output);
+            output = stw.deleteTurkishWord(output);
 
-            
+
 
             return output;
         }
