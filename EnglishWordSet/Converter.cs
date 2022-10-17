@@ -1,15 +1,19 @@
-﻿using EnglishWordSet.Intefaces;
+﻿using EnglishWordSet.FileTransactions;
+using EnglishWordSet.Intefaces;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EnglishWordSet
 {
     class Converter
     {
+
+
         IConverts convert;
         public Converter(IConverts _converts)
         {
@@ -18,8 +22,12 @@ namespace EnglishWordSet
 
         public string CovertText(string textToConvert)
         {
+            string textPath = "Saves.txt";
+            string textToSave = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") +"\n"+ textToConvert;
+            TextManagment.WriteToText(textPath, textToSave);
+
             StringReader stringReader = new StringReader(textToConvert);
-            string convertedText = " ";
+            string convertedText = "";
             string lineToAdd = "1";
             while (true)
             {
