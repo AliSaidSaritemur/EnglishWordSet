@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -20,30 +21,34 @@ namespace EnglishWordSet
             convert = _converts;
         }
 
-        public string CovertText(string textToConvert)
+        public string CovertText(string textToConvert,bool spaceStatu )
         {
-            string textPath = "Saves.txt";
-            string textToSave = DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") +"\n"+ textToConvert;
-            TextManagment.WriteToText(textPath, textToSave);
+         
 
             StringReader stringReader = new StringReader(textToConvert);
             string convertedText = "";
             string lineToAdd = "1";
+            string tempText;
+
             while (true)
             {
+                Random rnd = new Random();
+         
                 lineToAdd = stringReader.ReadLine();
                 if (lineToAdd != null)
                 {
                     if (lineToAdd == string.Empty)
                         continue;
-                    convertedText += convert.Convert(lineToAdd);
-                    convertedText += "\n";
+                    tempText = convert.Convert(lineToAdd);  
+                    convertedText = rnd.Next(10) < 5 ? (tempText + "\n" + convertedText) : (convertedText + "\n" + tempText);
                 }
                 else
                 {
                     break;
                 }
             }
+
+            convertedText = spaceStatu ? convertedText + "\n" : convertedText;
             return convertedText;
         }
     }

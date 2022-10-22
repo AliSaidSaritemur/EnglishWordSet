@@ -33,6 +33,9 @@ namespace EnglishWordSet
             this.txtOutput = new System.Windows.Forms.RichTextBox();
             this.btnConvert = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.cBSave = new System.Windows.Forms.CheckBox();
+            this.btnGetSaveText = new System.Windows.Forms.Button();
+            this.cbSpace = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtInput
@@ -53,7 +56,7 @@ namespace EnglishWordSet
             // 
             // btnConvert
             // 
-            this.btnConvert.Location = new System.Drawing.Point(331, 98);
+            this.btnConvert.Location = new System.Drawing.Point(330, 81);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(94, 29);
             this.btnConvert.TabIndex = 3;
@@ -69,11 +72,48 @@ namespace EnglishWordSet
             this.label1.Size = new System.Drawing.Size(0, 20);
             this.label1.TabIndex = 4;
             // 
+            // cBSave
+            // 
+            this.cBSave.AutoSize = true;
+            this.cBSave.Checked = true;
+            this.cBSave.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cBSave.Location = new System.Drawing.Point(61, 42);
+            this.cBSave.Name = "cBSave";
+            this.cBSave.Size = new System.Drawing.Size(60, 24);
+            this.cBSave.TabIndex = 5;
+            this.cBSave.Text = "save";
+            this.cBSave.UseVisualStyleBackColor = true;
+            // 
+            // btnGetSaveText
+            // 
+            this.btnGetSaveText.Location = new System.Drawing.Point(522, 165);
+            this.btnGetSaveText.Name = "btnGetSaveText";
+            this.btnGetSaveText.Size = new System.Drawing.Size(94, 29);
+            this.btnGetSaveText.TabIndex = 6;
+            this.btnGetSaveText.Text = "SaveTexts";
+            this.btnGetSaveText.UseVisualStyleBackColor = true;
+            this.btnGetSaveText.Click += new System.EventHandler(this.btnGetSaveText_Click);
+            // 
+            // cbSpace
+            // 
+            this.cbSpace.AutoSize = true;
+            this.cbSpace.Checked = true;
+            this.cbSpace.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbSpace.Location = new System.Drawing.Point(61, 72);
+            this.cbSpace.Name = "cbSpace";
+            this.cbSpace.Size = new System.Drawing.Size(195, 24);
+            this.cbSpace.TabIndex = 7;
+            this.cbSpace.Text = "Sapce between each line";
+            this.cbSpace.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.cbSpace);
+            this.Controls.Add(this.btnGetSaveText);
+            this.Controls.Add(this.cBSave);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.txtOutput);
@@ -91,6 +131,9 @@ namespace EnglishWordSet
         private System.Windows.Forms.RichTextBox txtOutput;
         private System.Windows.Forms.Button btnConvert;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox cBSave;
+        private System.Windows.Forms.Button btnGetSaveText;
+        private System.Windows.Forms.CheckBox cbSpace;
     }
 }
 

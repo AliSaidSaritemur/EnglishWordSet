@@ -21,6 +21,10 @@ namespace EnglishWordSet.ConvertTransactions
                 incLine = "!!!";
                 incLine += lineToSet.Substring(1);
             }
+           else  if (lineToSet.StartsWith("!!!"))
+            {   
+                incLine = lineToSet.Substring(1);
+            }
             else if (matchRgL.Success)
             {
                 incLine = lineToSet;
