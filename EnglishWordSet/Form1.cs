@@ -1,8 +1,11 @@
-﻿using EnglishWordSet.FileTransactions;
+﻿using EnglishWordSet.CRUD;
+using EnglishWordSet.Data.Contexts;
+using EnglishWordSet.FileTransactions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -26,8 +29,10 @@ namespace EnglishWordSet
             bool spaceStatu =cbSpace.Checked;
             bool saveStatu = cBSave.Checked;
 
-            Converter converter = new Converter(new ConvertNext());
-            tempText= converter.CovertText(tempText, spaceStatu);
+            Converter converter = new Converter(new ConvertNext());       
+            converter.spaceStatu = cbSpace.Checked;
+            tempText = converter.CovertText(tempText);
+
             txtOutput.Text = tempText;
             txtOutput.Lines = txtOutput.Lines.Where(line => line.Trim() != string.Empty).ToArray();
             if (cbSpace.Checked)
@@ -50,5 +55,38 @@ namespace EnglishWordSet
             string saveTexts = TextManagment.ReadText(savesFileName);
             txtOutput.Text = saveTexts;
         }
+
+        private void btnCopyOutput_Click(object sender, EventArgs e)
+        {           
+             txtOutput.SelectionStart = 0;
+            txtOutput.SelectionLength = txtOutput.Text.Length;
+
+            if (txtOutput.SelectionLength > 0)
+                txtOutput.Copy();
+        }
+
+        private void btnPasteInput_Click(object sender, EventArgs e)
+        {
+            txtInput.Clear();
+            txtInput.Paste();
+        }
+
+        private void btnGetNewWord_Click(object sender, EventArgs e)
+        {   
+          
+            MBWordBackend mBWord = new();
+            string wordAndMeaning = mBWord.GetWordWithMeanig();
+            DialogResult dialogResult;
+          
+                  dialogResult = MessageBox.Show("Do you know this word ?", wordAndMeaning, MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes) { 
+             
+            }
+            else if(dialogResult == DialogResult.No)
+            {
+                txtInput.Text = mBWord.GetWord()+"- \n"+txtInput.Text.ToString();
+            }
+        }
     }
 }
+

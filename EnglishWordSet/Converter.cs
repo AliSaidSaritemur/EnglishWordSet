@@ -14,14 +14,14 @@ namespace EnglishWordSet
     class Converter
     {
 
-
+        public bool spaceStatu=false;
         IConverts convert;
         public Converter(IConverts _converts)
         {
             convert = _converts;
         }
 
-        public string CovertText(string textToConvert,bool spaceStatu )
+        public string CovertText(string textToConvert )
         {
          
 

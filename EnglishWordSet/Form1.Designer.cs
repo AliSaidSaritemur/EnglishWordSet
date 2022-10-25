@@ -36,6 +36,9 @@ namespace EnglishWordSet
             this.cBSave = new System.Windows.Forms.CheckBox();
             this.btnGetSaveText = new System.Windows.Forms.Button();
             this.cbSpace = new System.Windows.Forms.CheckBox();
+            this.btnCopyOutput = new System.Windows.Forms.Button();
+            this.btnPasteInput = new System.Windows.Forms.Button();
+            this.btnGetNewWord = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -50,6 +53,7 @@ namespace EnglishWordSet
             // 
             this.txtOutput.Location = new System.Drawing.Point(410, 200);
             this.txtOutput.Name = "txtOutput";
+            this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(329, 238);
             this.txtOutput.TabIndex = 2;
             this.txtOutput.Text = "";
@@ -86,7 +90,7 @@ namespace EnglishWordSet
             // 
             // btnGetSaveText
             // 
-            this.btnGetSaveText.Location = new System.Drawing.Point(522, 165);
+            this.btnGetSaveText.Location = new System.Drawing.Point(694, 22);
             this.btnGetSaveText.Name = "btnGetSaveText";
             this.btnGetSaveText.Size = new System.Drawing.Size(94, 29);
             this.btnGetSaveText.TabIndex = 6;
@@ -103,14 +107,47 @@ namespace EnglishWordSet
             this.cbSpace.Name = "cbSpace";
             this.cbSpace.Size = new System.Drawing.Size(195, 24);
             this.cbSpace.TabIndex = 7;
-            this.cbSpace.Text = "Sapce between each line";
+            this.cbSpace.Text = "Space between each line";
             this.cbSpace.UseVisualStyleBackColor = true;
+            // 
+            // btnCopyOutput
+            // 
+            this.btnCopyOutput.Location = new System.Drawing.Point(520, 165);
+            this.btnCopyOutput.Name = "btnCopyOutput";
+            this.btnCopyOutput.Size = new System.Drawing.Size(134, 29);
+            this.btnCopyOutput.TabIndex = 8;
+            this.btnCopyOutput.Text = "Copy output";
+            this.btnCopyOutput.UseVisualStyleBackColor = true;
+            this.btnCopyOutput.Click += new System.EventHandler(this.btnCopyOutput_Click);
+            // 
+            // btnPasteInput
+            // 
+            this.btnPasteInput.Location = new System.Drawing.Point(113, 165);
+            this.btnPasteInput.Name = "btnPasteInput";
+            this.btnPasteInput.Size = new System.Drawing.Size(134, 29);
+            this.btnPasteInput.TabIndex = 9;
+            this.btnPasteInput.Text = "Paste output";
+            this.btnPasteInput.UseVisualStyleBackColor = true;
+            this.btnPasteInput.Click += new System.EventHandler(this.btnPasteInput_Click);
+            // 
+            // btnGetNewWord
+            // 
+            this.btnGetNewWord.Location = new System.Drawing.Point(652, 69);
+            this.btnGetNewWord.Name = "btnGetNewWord";
+            this.btnGetNewWord.Size = new System.Drawing.Size(136, 29);
+            this.btnGetNewWord.TabIndex = 10;
+            this.btnGetNewWord.Text = "Get New Word";
+            this.btnGetNewWord.UseVisualStyleBackColor = true;
+            this.btnGetNewWord.Click += new System.EventHandler(this.btnGetNewWord_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnGetNewWord);
+            this.Controls.Add(this.btnPasteInput);
+            this.Controls.Add(this.btnCopyOutput);
             this.Controls.Add(this.cbSpace);
             this.Controls.Add(this.btnGetSaveText);
             this.Controls.Add(this.cBSave);
@@ -134,6 +171,9 @@ namespace EnglishWordSet
         private System.Windows.Forms.CheckBox cBSave;
         private System.Windows.Forms.Button btnGetSaveText;
         private System.Windows.Forms.CheckBox cbSpace;
+        private System.Windows.Forms.Button btnCopyOutput;
+        private System.Windows.Forms.Button btnPasteInput;
+        private System.Windows.Forms.Button btnGetNewWord;
     }
 }
 
