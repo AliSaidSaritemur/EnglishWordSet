@@ -78,13 +78,15 @@ namespace EnglishWordSet
             string wordAndMeaning = mBWord.GetWordWithMeanig();
             DialogResult dialogResult;
           
-                  dialogResult = MessageBox.Show("Do you know this word ?", wordAndMeaning, MessageBoxButtons.YesNo);
-            if (dialogResult == DialogResult.Yes) { 
-             
+            dialogResult = MessageBox.Show(wordAndMeaning,"Do you know this word ?", MessageBoxButtons.YesNo);
+
+            if (dialogResult == DialogResult.Yes) {
+                mBWord.RemoveWord();
             }
             else if(dialogResult == DialogResult.No)
             {
                 txtInput.Text = mBWord.GetWord()+"- \n"+txtInput.Text.ToString();
+                mBWord.RemoveWord();
             }
         }
     }
