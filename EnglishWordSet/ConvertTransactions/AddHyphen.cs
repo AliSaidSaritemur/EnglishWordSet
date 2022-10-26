@@ -4,25 +4,23 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 
 namespace EnglishWordSet.ConvertTransactions
 {
-    class SetTurkishWord : IConvertTransactions
+    class AddHyphen : IConvertTransactions
     {
         public string EdditLine(string lineToSet)
         {
-            string deletedLine = lineToSet;
+            string resultLine = lineToSet;
             bool isThereHyben = MyRegex.Isthere(lineToSet, "-");
 
-            if (isThereHyben)
+            if (!isThereHyben&&resultLine!=null)
             {
-                deletedLine = deletedLine.Substring(0, (deletedLine.IndexOf("-") + 1));
+                resultLine += " -";
             }
 
-            return deletedLine;
+            return resultLine;
         }
-
     }
 }

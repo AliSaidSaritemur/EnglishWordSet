@@ -1,4 +1,6 @@
-﻿using System;
+﻿using EnglishWordSet.Intefaces;
+using EnglishWordSet.RefactoredStaticFuncs;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,30 +9,30 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.ConvertTransactions
 {
-    class SetDays
+    class SetDays :IConvertTransactions
     {
-        public string incStar(string lineToSet)
+        public string EdditLine(string lineToSet)
         {
+            lineToSet = lineToSet.Trim();
             string incLine;
             string pattern = "^[1-9]";
-            Regex rgLine = new Regex(pattern);
-            Match matchRgL = rgLine.Match(lineToSet);
+            bool startWithNum = MyRegex.Isthere(lineToSet, pattern);
 
             if (lineToSet.StartsWith("9"))
             {
                 incLine = "!!!";
                 incLine += lineToSet.Substring(1);
             }
-           else  if (lineToSet.StartsWith("!!!"))
-            {   
+            else if (lineToSet.StartsWith("!!!"))
+            {
                 incLine = lineToSet.Substring(1);
             }
-            else if (matchRgL.Success)
+            else if (startWithNum)
             {
                 incLine = lineToSet;
                 StringBuilder incLineBuild = new StringBuilder(incLine);
-                int nowCount= (int.Parse(lineToSet[0].ToString())+1);           
-                incLineBuild[0]= char.Parse((nowCount).ToString());
+                int nowCount = (int.Parse(lineToSet[0].ToString()) + 1);
+                incLineBuild[0] = char.Parse((nowCount).ToString());
                 incLine = incLineBuild.ToString();
             }
             else
@@ -40,6 +42,8 @@ namespace EnglishWordSet.ConvertTransactions
             }
             return incLine;
         }
+
+        
 
     }
 }

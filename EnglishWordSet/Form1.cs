@@ -85,9 +85,10 @@ namespace EnglishWordSet
             }
             else if(dialogResult == DialogResult.No)
             {
-                txtInput.Text = mBWord.GetWord()+"- \n"+txtInput.Text.ToString();
+                txtInput.Text = mBWord.GetWord()+" - \n"+txtInput.Text.ToString();
                 mBWord.RemoveWord();
             }
+            mBWord.SaveChange();
         }
     }
 }

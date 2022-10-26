@@ -25,6 +25,7 @@ namespace EnglishWordSet.CRUD
         public void RemoveWord()
         {
             context.Words.Remove(selectedword);
+        
         }
 
         public string GetWordWithMeanig()
@@ -40,6 +41,9 @@ namespace EnglishWordSet.CRUD
             string line = selectedword.English;
             return line;
         }
-
+        public void SaveChange()
+        {
+            context.SaveChanges();
+        }
     }
 }

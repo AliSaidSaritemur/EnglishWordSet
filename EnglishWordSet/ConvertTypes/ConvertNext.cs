@@ -13,15 +13,17 @@ namespace EnglishWordSet
     {
         public string Convert(string inputTxt)
         {
-
-            
-            SetDays setStars = new SetDays();
-            SetTurkishWord stw = new SetTurkishWord();
             string output = inputTxt;
-            output = setStars.incStar(output);
-            output = stw.deleteTurkishWord(output);
+            IConvertTransactions convertTransaction;
+           
+            convertTransaction=new SetDays();
+            output = convertTransaction.EdditLine(output);
 
+            convertTransaction = new SetTurkishWord();
+            output = convertTransaction.EdditLine(output);
 
+            convertTransaction = new AddHyphen();
+            output = convertTransaction.EdditLine(output);
 
             return output;
         }

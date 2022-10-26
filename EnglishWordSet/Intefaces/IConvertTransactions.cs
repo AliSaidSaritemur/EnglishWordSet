@@ -4,13 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.CRUD
+namespace EnglishWordSet.Intefaces
 {
-    class DataTransactions
+    interface IConvertTransactions
     {
-
-
-        
-
+        string EdditLine(string lineToSet);
     }
 }
