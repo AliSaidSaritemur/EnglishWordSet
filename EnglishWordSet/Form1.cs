@@ -78,7 +78,7 @@ namespace EnglishWordSet
             string wordAndMeaning = mBWord.GetWordWithMeanig();
             DialogResult dialogResult;
           
-            dialogResult = MessageBox.Show(wordAndMeaning,"Do you know this word ?", MessageBoxButtons.YesNo);
+            dialogResult = MessageBox.Show(wordAndMeaning,"Do you know this word ?", MessageBoxButtons.YesNoCancel);
 
             if (dialogResult == DialogResult.Yes) {
                 mBWord.RemoveWord();
@@ -89,6 +89,12 @@ namespace EnglishWordSet
                 mBWord.RemoveWord();
             }
             mBWord.SaveChange();
+        }
+
+        private void btnToAdminPage_Click(object sender, EventArgs e)
+        {
+            LoginPage page = new ();
+            page.Show();
         }
     }
 }

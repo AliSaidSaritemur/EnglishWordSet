@@ -15,14 +15,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             bool result;
             Regex rgLine = new Regex(obj);
             Match matchRgL = rgLine.Match(line);
-            if (matchRgL.Success)
-            {
-                result = true;
-            }
-            else
-            {
-                result = false;
-            }
+            result = matchRgL.Success;
 
             return result;
         }

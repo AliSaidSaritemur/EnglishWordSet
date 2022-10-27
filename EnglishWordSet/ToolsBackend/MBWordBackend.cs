@@ -1,5 +1,6 @@
 ﻿using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.Data.Entities;
+using EnglishWordSet.RefactoredStaticFuncs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,7 +15,7 @@ namespace EnglishWordSet.CRUD
         {
             Invoke();
         }
-        public WordContext context = new();
+        public WordContext context = DBTransactions.GetContext();
         public NWords selectedword { get; set; }
 
         private void Invoke()

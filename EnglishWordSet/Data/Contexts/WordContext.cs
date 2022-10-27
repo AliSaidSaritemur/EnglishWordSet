@@ -11,12 +11,13 @@ namespace EnglishWordSet.Data.Contexts
     class WordContext :DbContext 
     {
         public DbSet<NWords> Words { get; set; }
-
+        public DbSet<Admin> Admins { get; set; }
         protected   override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
             optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb; database= EWordEfCore;" +
                 "integrated security=true;");
         }
+        
     }
 }

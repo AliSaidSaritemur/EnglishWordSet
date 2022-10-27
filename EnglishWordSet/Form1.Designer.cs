@@ -39,28 +39,29 @@ namespace EnglishWordSet
             this.btnCopyOutput = new System.Windows.Forms.Button();
             this.btnPasteInput = new System.Windows.Forms.Button();
             this.btnGetNewWord = new System.Windows.Forms.Button();
+            this.btnToAdminPage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
             // 
             this.txtInput.Location = new System.Drawing.Point(28, 200);
             this.txtInput.Name = "txtInput";
-            this.txtInput.Size = new System.Drawing.Size(329, 238);
+            this.txtInput.Size = new System.Drawing.Size(397, 286);
             this.txtInput.TabIndex = 1;
             this.txtInput.Text = "";
             // 
             // txtOutput
             // 
-            this.txtOutput.Location = new System.Drawing.Point(410, 200);
+            this.txtOutput.Location = new System.Drawing.Point(560, 200);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(329, 238);
+            this.txtOutput.Size = new System.Drawing.Size(386, 273);
             this.txtOutput.TabIndex = 2;
             this.txtOutput.Text = "";
             // 
             // btnConvert
             // 
-            this.btnConvert.Location = new System.Drawing.Point(330, 81);
+            this.btnConvert.Location = new System.Drawing.Point(462, 94);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(94, 29);
             this.btnConvert.TabIndex = 3;
@@ -90,7 +91,7 @@ namespace EnglishWordSet
             // 
             // btnGetSaveText
             // 
-            this.btnGetSaveText.Location = new System.Drawing.Point(694, 22);
+            this.btnGetSaveText.Location = new System.Drawing.Point(709, 479);
             this.btnGetSaveText.Name = "btnGetSaveText";
             this.btnGetSaveText.Size = new System.Drawing.Size(94, 29);
             this.btnGetSaveText.TabIndex = 6;
@@ -112,7 +113,7 @@ namespace EnglishWordSet
             // 
             // btnCopyOutput
             // 
-            this.btnCopyOutput.Location = new System.Drawing.Point(520, 165);
+            this.btnCopyOutput.Location = new System.Drawing.Point(682, 151);
             this.btnCopyOutput.Name = "btnCopyOutput";
             this.btnCopyOutput.Size = new System.Drawing.Size(134, 29);
             this.btnCopyOutput.TabIndex = 8;
@@ -122,7 +123,7 @@ namespace EnglishWordSet
             // 
             // btnPasteInput
             // 
-            this.btnPasteInput.Location = new System.Drawing.Point(113, 165);
+            this.btnPasteInput.Location = new System.Drawing.Point(161, 165);
             this.btnPasteInput.Name = "btnPasteInput";
             this.btnPasteInput.Size = new System.Drawing.Size(134, 29);
             this.btnPasteInput.TabIndex = 9;
@@ -132,7 +133,7 @@ namespace EnglishWordSet
             // 
             // btnGetNewWord
             // 
-            this.btnGetNewWord.Location = new System.Drawing.Point(652, 69);
+            this.btnGetNewWord.Location = new System.Drawing.Point(955, 67);
             this.btnGetNewWord.Name = "btnGetNewWord";
             this.btnGetNewWord.Size = new System.Drawing.Size(136, 29);
             this.btnGetNewWord.TabIndex = 10;
@@ -140,11 +141,22 @@ namespace EnglishWordSet
             this.btnGetNewWord.UseVisualStyleBackColor = true;
             this.btnGetNewWord.Click += new System.EventHandler(this.btnGetNewWord_Click);
             // 
+            // btnToAdminPage
+            // 
+            this.btnToAdminPage.Location = new System.Drawing.Point(955, 12);
+            this.btnToAdminPage.Name = "btnToAdminPage";
+            this.btnToAdminPage.Size = new System.Drawing.Size(136, 29);
+            this.btnToAdminPage.TabIndex = 11;
+            this.btnToAdminPage.Text = "Admin Page";
+            this.btnToAdminPage.UseVisualStyleBackColor = true;
+            this.btnToAdminPage.Click += new System.EventHandler(this.btnToAdminPage_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1089, 552);
+            this.Controls.Add(this.btnToAdminPage);
             this.Controls.Add(this.btnGetNewWord);
             this.Controls.Add(this.btnPasteInput);
             this.Controls.Add(this.btnCopyOutput);
@@ -174,6 +186,7 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnCopyOutput;
         private System.Windows.Forms.Button btnPasteInput;
         private System.Windows.Forms.Button btnGetNewWord;
+        private System.Windows.Forms.Button btnToAdminPage;
     }
 }
 
