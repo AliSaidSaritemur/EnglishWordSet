@@ -23,32 +23,41 @@ namespace EnglishWordSet
 
         public string CovertText(string textToConvert )
         {
-         
-
-            StringReader stringReader = new StringReader(textToConvert);
+            string spaceAmount = spaceStatu ? "\n \n" : "\n";
+            StringReader stringReader = new (textToConvert);
             string convertedText = "";
-            string lineToAdd = "1";
+            string lineToAdd ;
             string tempText;
-
+            Random rnd = new ();
+            
             while (true)
-            {
-                Random rnd = new Random();
-         
+            {        
                 lineToAdd = stringReader.ReadLine();
                 if (lineToAdd != null)
                 {
                     if (lineToAdd == string.Empty)
                         continue;
-                    tempText = convert.Convert(lineToAdd);  
-                    convertedText = rnd.Next(10) < 5 ? (tempText + "\n" + convertedText) : (convertedText + "\n" + tempText);
+
+                    tempText = convert.Convert(lineToAdd);
+
+
+                    if (convertedText != "")
+                    {
+                        convertedText = rnd.Next(10) < 5 ? (tempText + spaceAmount + convertedText) : (convertedText + spaceAmount + tempText);
+
+                    }
+                    else
+                    {
+                        convertedText = tempText;
+                    }
+                   
                 }
                 else
                 {
                     break;
                 }
             }
-
-            convertedText = spaceStatu ? convertedText + "\n" : convertedText;
+       
             return convertedText;
         }
     }

@@ -1,6 +1,7 @@
 ﻿using EnglishWordSet.CRUD;
 using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.FileTransactions;
+using EnglishWordSet.RefactoredStaticFuncs;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -17,16 +18,16 @@ namespace EnglishWordSet
 {
     public partial class Form1 : Form
     {
+       private MBWordBackend mBWord ;
         public Form1()
         {
             InitializeComponent();
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
-        {
+        {   
             string tempText = txtInput.Text.ToString();
 
-            bool spaceStatu =cbSpace.Checked;
             bool saveStatu = cBSave.Checked;
 
             Converter converter = new Converter(new ConvertNext());       
@@ -34,12 +35,7 @@ namespace EnglishWordSet
             tempText = converter.CovertText(tempText);
 
             txtOutput.Text = tempText;
-            txtOutput.Lines = txtOutput.Lines.Where(line => line.Trim() != string.Empty).ToArray();
-            if (cbSpace.Checked)
-            {
-                txtOutput.Text = txtOutput.Text.Replace("-","- \n");
-            }
-           
+
             if (saveStatu)
             {
                 string textPath = "Saves.txt";
@@ -71,31 +67,62 @@ namespace EnglishWordSet
             txtInput.Paste();
         }
 
+     
         private void btnGetNewWord_Click(object sender, EventArgs e)
-        {   
-          
-            MBWordBackend mBWord = new();
+        {
+           
             string wordAndMeaning = mBWord.GetWordWithMeanig();
+           
             DialogResult dialogResult;
           
             dialogResult = MessageBox.Show(wordAndMeaning,"Do you know this word ?", MessageBoxButtons.YesNoCancel);
 
             if (dialogResult == DialogResult.Yes) {
                 mBWord.RemoveWord();
+                mBWord.SaveChange();
             }
             else if(dialogResult == DialogResult.No)
             {
                 txtInput.Text = mBWord.GetWord()+" - \n"+txtInput.Text.ToString();
                 mBWord.RemoveWord();
+                mBWord.SaveChange();
             }
-            mBWord.SaveChange();
         }
 
         private void btnToAdminPage_Click(object sender, EventArgs e)
         {
+         
             LoginPage page = new ();
             page.Show();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            LoadAsync();
+        }
+
+        private async void LoadAsync()
+        {
+            await SetContext();
+            await LoadMBAsync();
+            btnGetNewWord.Enabled = true;
+            btnToAdminPage.Enabled = true;
+        }
+        private Task LoadMBAsync()
+        {
+            return Task.Run(() =>
+            {
+                mBWord = new();
+            });
+        }
+        private Task SetContext()
+        {
+            return Task.Run(() =>
+            {
+                MyDBTransactions.SetContext();
+            });
+        }
+     
     }
 }
 

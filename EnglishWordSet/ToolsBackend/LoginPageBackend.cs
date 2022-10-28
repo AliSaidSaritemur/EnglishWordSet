@@ -11,7 +11,7 @@ namespace EnglishWordSet.ToolsBackend
 {
     class LoginPageBackend
     {
-        public WordContext context = DBTransactions.GetContext();
+        public WordContext context = MyDBTransactions.GetContext();
 
       private Admin admin;
         public bool IsThereUserName(string userName)

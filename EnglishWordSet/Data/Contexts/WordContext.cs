@@ -18,6 +18,11 @@ namespace EnglishWordSet.Data.Contexts
             optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb; database= EWordEfCore;" +
                 "integrated security=true;");
         }
-        
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Admin>().HasIndex(a => a.UserName).IsUnique(true);
+            base.OnModelCreating(modelBuilder);
+        }
+
     }
 }

@@ -21,5 +21,11 @@ namespace EnglishWordSet
         {
 
         }
+
+        private void btnAddNewWord_Click(object sender, EventArgs e)
+        {
+            string tempText = txtInput.Text.ToString();
+
+        }
     }
 }

@@ -11,29 +11,30 @@ namespace EnglishWordSet.CRUD
 {
     class MBWordBackend
     {
+    
         public MBWordBackend()
         {
             Invoke();
         }
-        public WordContext context = DBTransactions.GetContext();
+        public WordContext context = MyDBTransactions.GetContext();
         public NWords selectedword { get; set; }
 
-        private void Invoke()
+        private async void Invoke()
         {
             selectedword = context.Words.FirstOrDefault();
+
         }
+    
+               
+     
 
         public void RemoveWord()
         {
-            context.Words.Remove(selectedword);
-        
+            context.Words.Remove(selectedword);   
         }
 
         public string GetWordWithMeanig()
         {
-            if (selectedword == null)
-                Invoke();
-
             string line = selectedword.English + " - " + selectedword.Turkish;
             return line;
         }
