@@ -3,25 +3,26 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Windows.Forms;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
    static class MyTranslater
     {
+       public static string TranslateEnglishToTurkish(string Engl) {
 
-       public static string TranslateEnglishToTurkish() {
 
-            var client = "<szdasd";
+            WebBrowser webBrowser= new WebBrowser();
 
-            string translateResult="";
-   
-            return translateResult;
+            webBrowser.Navigate("https://translate.google.com.tr/#en/tr");
+            return Engl;
 
         }
-
+      
+    }
     }
 
-}
+

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EnglishWordSet.RefactoredStaticFuncs;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace EnglishWordSet
 {
     public partial class AdminPage : Form
     {
+        DialogResult dialogResult;
         public AdminPage()
         {
             InitializeComponent();
@@ -21,11 +23,21 @@ namespace EnglishWordSet
         {
 
         }
-
+       
         private void btnAddNewWord_Click(object sender, EventArgs e)
         {
-            string tempText = txtInput.Text.ToString();
 
+            if (!MyTestInternet.IsThereInternet())
+            {
+                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
+                  " connect to the internet.", "No internet access",
+          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            string tempText = txtInput.Text.ToString();
+            txtInput.Text = MyTranslater.TranslateEnglishToTurkish(tempText);
+          
         }
     }
 }

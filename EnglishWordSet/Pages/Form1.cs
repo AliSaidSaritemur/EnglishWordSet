@@ -112,7 +112,7 @@ namespace EnglishWordSet
         {
             return Task.Run(() =>
             {
-                mBWord = new();
+                mBWord = new ();
             });
         }
         private Task SetContext()
