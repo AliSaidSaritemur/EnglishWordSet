@@ -1,4 +1,5 @@
-﻿using EnglishWordSet.ToolsBackend;
+﻿using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.ToolsBackend;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
 
 namespace EnglishWordSet
 {
@@ -45,6 +47,7 @@ namespace EnglishWordSet
             }
             else
             {
+                MyNotificationAlerts.GetSuccessMessage("Login verified");
                 epUserName.Clear();
                 AdminPage adminPage = new();
                 adminPage.Show();

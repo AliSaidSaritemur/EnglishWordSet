@@ -19,14 +19,10 @@ namespace EnglishWordSet.CRUD
         public WordContext context = MyDBTransactions.GetContext();
         public NWords selectedword { get; set; }
 
-        private async void Invoke()
+        private  void Invoke()
         {
             selectedword = context.Words.FirstOrDefault();
-
         }
-    
-               
-     
 
         public void RemoveWord()
         {

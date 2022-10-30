@@ -9,29 +9,29 @@ using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace EnglishWordSet
+namespace EnglishWordSet.MyTools
 {
     class Converter
     {
 
-        public bool spaceStatu=false;
+        public bool spaceStatu = false;
         IConverts convert;
         public Converter(IConverts _converts)
         {
             convert = _converts;
         }
 
-        public string CovertText(string textToConvert )
+        public string CovertText(string textToConvert)
         {
             string spaceAmount = spaceStatu ? "\n \n" : "\n";
-            StringReader stringReader = new (textToConvert);
+            StringReader stringReader = new(textToConvert);
             string convertedText = "";
-            string lineToAdd ;
+            string lineToAdd;
             string tempText;
-            Random rnd = new ();
-            
+            Random rnd = new();
+
             while (true)
-            {        
+            {
                 lineToAdd = stringReader.ReadLine();
                 if (lineToAdd != null)
                 {
@@ -43,21 +43,21 @@ namespace EnglishWordSet
 
                     if (convertedText != "")
                     {
-                        convertedText = rnd.Next(10) < 5 ? (tempText + spaceAmount + convertedText) : (convertedText + spaceAmount + tempText);
+                        convertedText = rnd.Next(10) < 5 ? tempText + spaceAmount + convertedText : convertedText + spaceAmount + tempText;
 
                     }
                     else
                     {
                         convertedText = tempText;
                     }
-                   
+
                 }
                 else
                 {
                     break;
                 }
             }
-       
+
             return convertedText;
         }
     }

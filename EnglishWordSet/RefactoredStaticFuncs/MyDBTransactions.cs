@@ -15,7 +15,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
             return wordContext;
         }
-        public static async void  SetContext()
+        public static  void  SetContext()
         {
             if (wordContext == null)
                 wordContext = new();

@@ -1,4 +1,5 @@
 ﻿using EnglishWordSet.Data.Contexts;
+using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using System;
 using System.Collections.Generic;
@@ -11,25 +12,34 @@ namespace EnglishWordSet.ToolsBackend
 {
     class AdminPageBackend
     {
-        public WordContext context = MyDBTransactions.GetContext();
+        private WordContext context = MyDBTransactions.GetContext();
+
+        Translater translater;
 
         public void AddNewWords(string inputTExt)
         {
-            StringReader stringReader = new StringReader(inputTExt);
+            if(translater==null)  
+            translater = new Translater();
+
+            StringReader stringReader = new(inputTExt);
             string lineToAdd;
             while (true)
             {
-                lineToAdd = stringReader.ReadLine();
+                lineToAdd=stringReader.ReadLine();
+
                 if (lineToAdd != null)
                 {
-
-
+                    string translatedWord;
+                    translatedWord = translater.Translate(lineToAdd);
+                    context.Words.Add(new Data.Entities.NWords { English = lineToAdd, Turkish = translatedWord });         
                 }
-                else {
+
+                else
+                {
                     break;
                 }
-
-            }
+                }
+            context.SaveChanges();
         }
 
     }

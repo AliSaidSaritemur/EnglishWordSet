@@ -8,6 +8,16 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Collections;
+using System.Net.Http;
+using System.Web.Script.Serialization;
+using System.Net;
+using System.Collections.Specialized;
+using Newtonsoft.Json;
+using Google.Cloud.Translation.V2;
+using EnglishWordSet.MyTools;
+using EnglishWordSet.ToolsBackend;
+using EnglishWordSet.Data.Entities;
 
 namespace EnglishWordSet
 {
@@ -23,7 +33,8 @@ namespace EnglishWordSet
         {
 
         }
-       
+
+        
         private void btnAddNewWord_Click(object sender, EventArgs e)
         {
 
@@ -35,9 +46,10 @@ namespace EnglishWordSet
                 return;
             }
 
-            string tempText = txtInput.Text.ToString();
-            txtInput.Text = MyTranslater.TranslateEnglishToTurkish(tempText);
-          
+            AdminPageBackend pageBackend = new();
+            pageBackend.AddNewWords(txtInput.Text.ToString());
+            txtInput.Clear();
+            MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
         }
     }
 }
