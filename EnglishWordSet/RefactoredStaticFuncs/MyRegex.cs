@@ -7,18 +7,17 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-  static  class MyRegex
+    static class MyRegex
     {
 
-       public static bool Isthere(string line,string obj)
+        public static bool Isthere(string line, string obj)
         {
             bool result;
-            Regex rgLine = new Regex(obj);
+            Regex rgLine = new (obj);
             Match matchRgL = rgLine.Match(line);
             result = matchRgL.Success;
 
             return result;
         }
-
     }
 }

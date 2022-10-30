@@ -12,18 +12,16 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         public static bool IsThereInternet()
         {
             string adress = "https://www.google.com";
-            bool accsessResult = true;
+            bool accsessResult;
             try
             {
                 WebRequest webRequest = WebRequest.Create(adress);
                 webRequest.GetResponse();
                 accsessResult = true;
-
             }
             catch (Exception)
             {
                 accsessResult = false;
-
             }
             return accsessResult;
         }

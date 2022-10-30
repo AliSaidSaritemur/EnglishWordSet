@@ -18,29 +18,28 @@ namespace EnglishWordSet.ToolsBackend
 
         public void AddNewWords(string inputTExt)
         {
-            if(translater==null)  
-            translater = new Translater();
+            if (translater == null)
+                translater = new Translater();
 
             StringReader stringReader = new(inputTExt);
-            string lineToAdd;
+
+            string willTranslateLine;
             while (true)
             {
-                lineToAdd=stringReader.ReadLine();
+                willTranslateLine = stringReader.ReadLine();
 
-                if (lineToAdd != null)
+                if (willTranslateLine != null)
                 {
                     string translatedWord;
-                    translatedWord = translater.Translate(lineToAdd);
-                    context.Words.Add(new Data.Entities.NWords { English = lineToAdd, Turkish = translatedWord });         
+                    translatedWord = translater.Translate(willTranslateLine);
+                    context.Words.Add(new Data.Entities.NWords { English = willTranslateLine, Turkish = translatedWord });
                 }
-
                 else
                 {
                     break;
                 }
-                }
+            }
             context.SaveChanges();
         }
-
     }
 }

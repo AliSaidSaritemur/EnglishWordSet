@@ -13,10 +13,10 @@ namespace EnglishWordSet.ToolsBackend
     {
         public WordContext context = MyDBTransactions.GetContext();
 
-      private Admin admin;
+        private Admin admin;
         public bool IsThereUserName(string userName)
         {
-            admin =  context.Admins.FirstOrDefault(a=> a.UserName==userName);
+            admin = context.Admins.FirstOrDefault(a => a.UserName == userName);
 
             bool result = admin != null ? true : false;
 
@@ -27,8 +27,6 @@ namespace EnglishWordSet.ToolsBackend
             bool result = admin.Password == password ? true : false;
 
             return result;
-
         }
-
     }
 }

@@ -30,7 +30,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
 
             PopupNotifier popup = new PopupNotifier();
-
             popup.BodyColor = Color.FromArgb(23, 162, 184);
             popup.TitleText = "Info ";
             popup.TitleColor = Color.White;

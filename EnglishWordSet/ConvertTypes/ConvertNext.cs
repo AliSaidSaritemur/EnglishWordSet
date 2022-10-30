@@ -15,8 +15,8 @@ namespace EnglishWordSet
         {
             string output = inputTxt;
             IConvertTransactions convertTransaction;
-           
-            convertTransaction=new SetDays();
+
+            convertTransaction = new SetDays();
             output = convertTransaction.EdditLine(output);
 
             convertTransaction = new SetTurkishWord();

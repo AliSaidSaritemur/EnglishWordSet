@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.ConvertTransactions
 {
-    class SetDays :IConvertTransactions
+    class SetDays : IConvertTransactions
     {
         public string EdditLine(string lineToSet)
         {
@@ -42,8 +42,5 @@ namespace EnglishWordSet.ConvertTransactions
             }
             return incLine;
         }
-
-        
-
     }
 }

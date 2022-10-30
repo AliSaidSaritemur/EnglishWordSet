@@ -11,7 +11,7 @@ namespace EnglishWordSet.CRUD
 {
     class MBWordBackend
     {
-    
+
         public MBWordBackend()
         {
             Invoke();
@@ -19,14 +19,14 @@ namespace EnglishWordSet.CRUD
         public WordContext context = MyDBTransactions.GetContext();
         public NWords selectedword { get; set; }
 
-        private  void Invoke()
+        private void Invoke()
         {
             selectedword = context.Words.FirstOrDefault();
         }
 
         public void RemoveWord()
         {
-            context.Words.Remove(selectedword);   
+            context.Words.Remove(selectedword);
         }
 
         public string GetWordWithMeanig()

@@ -15,11 +15,10 @@ namespace EnglishWordSet.ConvertTransactions
             string resultLine = lineToSet;
             bool isThereHyben = MyRegex.Isthere(lineToSet, "-");
 
-            if (!isThereHyben&&resultLine!=null)
+            if (!isThereHyben && resultLine != null)
             {
                 resultLine += " -";
             }
-
             return resultLine;
         }
     }

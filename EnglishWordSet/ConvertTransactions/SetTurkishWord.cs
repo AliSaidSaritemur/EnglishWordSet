@@ -23,6 +23,5 @@ namespace EnglishWordSet.ConvertTransactions
 
             return deletedLine;
         }
-
     }
 }

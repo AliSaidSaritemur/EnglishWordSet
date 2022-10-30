@@ -15,7 +15,7 @@ namespace EnglishWordSet.MyTools
 
         public string Translate(string inputTxt)
         {
-            var client = TranslationClient.CreateFromApiKey("Your API Key for Google Cloud translate");
+            var client = TranslationClient.CreateFromApiKey("Your Google Cloud API");
 
             var response = client.TranslateText(inputTxt, fromLanguage, toLanguage);
 
@@ -30,8 +30,5 @@ namespace EnglishWordSet.MyTools
         {
             toLanguage = code;
         }
-
     }
-
-
 }

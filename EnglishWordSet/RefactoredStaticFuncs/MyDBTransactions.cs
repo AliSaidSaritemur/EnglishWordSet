@@ -7,15 +7,15 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-   static class MyDBTransactions
+    static class MyDBTransactions
     {
-       static WordContext wordContext;
+        static WordContext wordContext;
 
         public static WordContext GetContext()
         {
             return wordContext;
         }
-        public static  void  SetContext()
+        public static void SetContext()
         {
             if (wordContext == null)
                 wordContext = new();
