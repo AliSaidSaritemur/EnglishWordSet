@@ -19,7 +19,7 @@ namespace EnglishWordSet
 {
     public partial class Form1 : Form
     {
-       private MBWordBackend mBWord ;
+       private MBWordPageBackend mBWord ;
         public Form1()
         {
             InitializeComponent();
@@ -113,7 +113,7 @@ namespace EnglishWordSet
         {
             return Task.Run(() =>
             {
-                mBWord = new ();
+                mBWord = MyGetBackend.mBWordPage();
             });
         }
         private Task SetContext()
