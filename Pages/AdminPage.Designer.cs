@@ -30,7 +30,7 @@ namespace EnglishWordSet
         private void InitializeComponent()
         {
             this.btnAddNewWord = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnAddNewAdmin = new System.Windows.Forms.Button();
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.SuspendLayout();
             // 
@@ -44,15 +44,15 @@ namespace EnglishWordSet
             this.btnAddNewWord.UseVisualStyleBackColor = true;
             this.btnAddNewWord.Click += new System.EventHandler(this.btnAddNewWord_Click);
             // 
-            // button1
+            // btnAddNewAdmin
             // 
-            this.button1.Location = new System.Drawing.Point(406, -3);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(399, 89);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add New Admin";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddNewAdmin.Location = new System.Drawing.Point(406, -3);
+            this.btnAddNewAdmin.Name = "btnAddNewAdmin";
+            this.btnAddNewAdmin.Size = new System.Drawing.Size(399, 89);
+            this.btnAddNewAdmin.TabIndex = 12;
+            this.btnAddNewAdmin.Text = "Add New Admin";
+            this.btnAddNewAdmin.UseVisualStyleBackColor = true;
+            this.btnAddNewAdmin.Click += new System.EventHandler(this.button1_Click);
             // 
             // sqlCommandBuilder1
             // 
@@ -66,7 +66,7 @@ namespace EnglishWordSet
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 472);
             this.Controls.Add(this.btnAddNewWord);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnAddNewAdmin);
             this.IsMdiContainer = true;
             this.Name = "AdminPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -79,7 +79,7 @@ namespace EnglishWordSet
         #endregion
 
         private System.Windows.Forms.Button btnAddNewWord;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnAddNewAdmin;
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
     }
 }

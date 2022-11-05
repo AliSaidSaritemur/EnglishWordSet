@@ -64,13 +64,17 @@ namespace EnglishWordSet
             childAdmin.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e) // Add Admin btn
         {
-            if (ActiveMdiChild != null)
+            if (!MyTestInternet.IsThereInternet())
             {
-                ActiveMdiChild.Close();
-                
+                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
+                  " connect to the internet.", "No internet access",
+          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
             }
+            else { }
+
 
         }
 

@@ -33,6 +33,21 @@ namespace EnglishWordSet.ToolsBackend
             return childAdmin;
         }
 
+
+        //public ChildAdminNewAdmin getChildNewAdminPage()
+        //{
+        //    if (childAdmin == null)
+        //    {
+        //        childAdmin = new ChildAdminNewAdmin();
+
+        //        childAdmin.FormBorderStyle = FormBorderStyle.None;
+        //        childAdmin.MdiParent = AdminPage.ActiveForm;
+
+        //        childAdmin.Location = new Point(230, 111);
+        //    }
+        //    return childAdmin;
+        //}
+
         public void AddNewWords(string inputTExt)
         {
             if (translater == null)

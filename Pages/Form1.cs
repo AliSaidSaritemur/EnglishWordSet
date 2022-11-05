@@ -3,6 +3,7 @@ using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.FileTransactions;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.Sessions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -92,8 +93,11 @@ namespace EnglishWordSet
 
         private void btnToAdminPage_Click(object sender, EventArgs e)
         {
-         
-            LoginPage page = new ();
+            Form page;
+            if (AdminSession.id_Admin != null && AdminSession.id_Admin != 0)
+            { page = new AdminPage(); }
+            else
+            { page = new LoginPage(); }
             page.Show();
         }
 
