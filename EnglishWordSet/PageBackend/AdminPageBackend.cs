@@ -1,4 +1,5 @@
-﻿using EnglishWordSet.Data.Contexts;
+﻿using EnglishWordSet.ChildForms.AdminPage;
+using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using System;
@@ -18,35 +19,35 @@ namespace EnglishWordSet.ToolsBackend
 
         Translater translater;
 
-        private ChildAdminNewWord childAdmin;
-        public ChildAdminNewWord getChildNewWordPage()
+        private ChildAdminNewWord childAdminAddWord;
+        private ChildAdminNewAdmin childAdminAddAdmin;
+
+        public ChildAdminNewWord GetChildNewWordPage()
         {
-            if (childAdmin == null)
-            {
-                childAdmin = new ChildAdminNewWord();
 
-                childAdmin.FormBorderStyle = FormBorderStyle.None;
-                childAdmin.MdiParent = AdminPage.ActiveForm;
+                childAdminAddWord = new ChildAdminNewWord();
 
-                childAdmin.Location = new Point(230, 111);
-            }
-            return childAdmin;
+                childAdminAddWord.FormBorderStyle = FormBorderStyle.None;
+                childAdminAddWord.MdiParent = AdminPage.ActiveForm;
+
+                childAdminAddWord.Location = new Point(230, 100);
+            
+            return childAdminAddWord;
         }
 
 
-        //public ChildAdminNewAdmin getChildNewAdminPage()
-        //{
-        //    if (childAdmin == null)
-        //    {
-        //        childAdmin = new ChildAdminNewAdmin();
+        public ChildAdminNewAdmin GetChildNewAdminPage()
+        {
+        
+                childAdminAddAdmin = new ChildAdminNewAdmin();
 
-        //        childAdmin.FormBorderStyle = FormBorderStyle.None;
-        //        childAdmin.MdiParent = AdminPage.ActiveForm;
+                childAdminAddAdmin.FormBorderStyle = FormBorderStyle.None;
+                childAdminAddAdmin.MdiParent = AdminPage.ActiveForm;
 
-        //        childAdmin.Location = new Point(230, 111);
-        //    }
-        //    return childAdmin;
-        //}
+                childAdminAddAdmin.Location = new Point(230, 111);
+            
+            return childAdminAddAdmin;
+        }
 
         public void AddNewWords(string inputTExt)
         {

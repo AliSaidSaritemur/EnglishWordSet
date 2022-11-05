@@ -40,7 +40,7 @@ namespace EnglishWordSet
 
         }
 
-        ChildAdminNewWord childAdmin;
+        Form childAdmin;
         private void btnAddNewWord_Click(object sender, EventArgs e)
         {
 
@@ -53,14 +53,10 @@ namespace EnglishWordSet
             }
             else { }
 
-           
-             childAdmin = pageBackend.getChildNewWordPage();
-              
-          
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
 
-            if(ActiveMdiChild!=null)
-            ActiveMdiChild.Close();
-
+            childAdmin = pageBackend.GetChildNewWordPage();
             childAdmin.Show();
         }
 
@@ -74,13 +70,18 @@ namespace EnglishWordSet
                 return;
             }
             else { }
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
 
-
+            childAdmin = pageBackend.GetChildNewAdminPage();
+            childAdmin.Show();
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
     }
-}
+
+       
+    }
+
