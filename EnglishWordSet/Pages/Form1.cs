@@ -3,6 +3,7 @@ using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.FileTransactions;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.Sessions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace EnglishWordSet
 {
     public partial class Form1 : Form
     {
-       private MBWordBackend mBWord ;
+       private MBWordPageBackend mBWord ;
         public Form1()
         {
             InitializeComponent();
@@ -92,8 +93,11 @@ namespace EnglishWordSet
 
         private void btnToAdminPage_Click(object sender, EventArgs e)
         {
-         
-            LoginPage page = new ();
+            Form page;
+            if (AdminSession.id_Admin != null && AdminSession.id_Admin != 0)
+            { page = new AdminPage(); }
+            else
+            { page = new LoginPage(); }
             page.Show();
         }
 
@@ -113,7 +117,7 @@ namespace EnglishWordSet
         {
             return Task.Run(() =>
             {
-                mBWord = new ();
+                mBWord = MyGetBackend.mBWordPage();
             });
         }
         private Task SetContext()

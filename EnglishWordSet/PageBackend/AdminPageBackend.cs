@@ -3,10 +3,12 @@ using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace EnglishWordSet.ToolsBackend
 {
@@ -15,6 +17,36 @@ namespace EnglishWordSet.ToolsBackend
         private WordContext context = MyDBTransactions.GetContext();
 
         Translater translater;
+
+        private ChildAdminNewWord childAdmin;
+        public ChildAdminNewWord getChildNewWordPage()
+        {
+            if (childAdmin == null)
+            {
+                childAdmin = new ChildAdminNewWord();
+
+                childAdmin.FormBorderStyle = FormBorderStyle.None;
+                childAdmin.MdiParent = AdminPage.ActiveForm;
+
+                childAdmin.Location = new Point(230, 111);
+            }
+            return childAdmin;
+        }
+
+
+        //public ChildAdminNewAdmin getChildNewAdminPage()
+        //{
+        //    if (childAdmin == null)
+        //    {
+        //        childAdmin = new ChildAdminNewAdmin();
+
+        //        childAdmin.FormBorderStyle = FormBorderStyle.None;
+        //        childAdmin.MdiParent = AdminPage.ActiveForm;
+
+        //        childAdmin.Location = new Point(230, 111);
+        //    }
+        //    return childAdmin;
+        //}
 
         public void AddNewWords(string inputTExt)
         {
@@ -41,5 +73,6 @@ namespace EnglishWordSet.ToolsBackend
             }
             context.SaveChanges();
         }
+       
     }
 }

@@ -18,15 +18,21 @@ using Google.Cloud.Translation.V2;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.Data.Entities;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
+using TextBox = System.Windows.Forms.TextBox;
+using Button = System.Windows.Forms.Button;
+using System.Security.Cryptography;
 
 namespace EnglishWordSet
 {
     public partial class AdminPage : Form
     {
         DialogResult dialogResult;
+        AdminPageBackend pageBackend;
         public AdminPage()
         {
             InitializeComponent();
+            pageBackend = MyGetBackend.AdminPage();
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -34,7 +40,7 @@ namespace EnglishWordSet
 
         }
 
-        
+        ChildAdminNewWord childAdmin;
         private void btnAddNewWord_Click(object sender, EventArgs e)
         {
 
@@ -45,11 +51,36 @@ namespace EnglishWordSet
           MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
+            else { }
 
-            AdminPageBackend pageBackend = new();
-            pageBackend.AddNewWords(txtInput.Text.ToString());
-            txtInput.Clear();
-            MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
+           
+             childAdmin = pageBackend.getChildNewWordPage();
+              
+          
+
+            if(ActiveMdiChild!=null)
+            ActiveMdiChild.Close();
+
+            childAdmin.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e) // Add Admin btn
+        {
+            if (!MyTestInternet.IsThereInternet())
+            {
+                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
+                  " connect to the internet.", "No internet access",
+          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else { }
+
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

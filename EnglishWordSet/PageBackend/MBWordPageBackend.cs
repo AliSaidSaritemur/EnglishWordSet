@@ -1,6 +1,7 @@
 ﻿using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.Data.Entities;
 using EnglishWordSet.RefactoredStaticFuncs;
+using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.CRUD
 {
-    class MBWordBackend
+    class MBWordPageBackend
     {
 
-        public MBWordBackend()
+        public MBWordPageBackend()
         {
             Invoke();
         }
@@ -22,6 +23,7 @@ namespace EnglishWordSet.CRUD
         private void Invoke()
         {
             selectedword = context.Words.FirstOrDefault();
+            
         }
 
         public void RemoveWord()
@@ -31,6 +33,7 @@ namespace EnglishWordSet.CRUD
 
         public string GetWordWithMeanig()
         {
+            Invoke();
             string line = selectedword.English + " - " + selectedword.Turkish;
             return line;
         }
