@@ -31,7 +31,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ChildForms\AdminPage\" />
+    <Compile Update="ChildForms\AdminPage\ChildAdminNewWord.cs">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
 
 </Project>

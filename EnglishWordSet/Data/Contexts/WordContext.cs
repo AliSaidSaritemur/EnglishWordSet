@@ -21,6 +21,7 @@ namespace EnglishWordSet.Data.Contexts
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Admin>().HasIndex(a => a.UserName).IsUnique(true);
+            modelBuilder.Entity<Admin>().Property(a => a.Password).IsRequired();
             base.OnModelCreating(modelBuilder);
         }
 
