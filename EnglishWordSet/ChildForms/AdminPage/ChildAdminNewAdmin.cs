@@ -1,4 +1,5 @@
-﻿using EnglishWordSet.RefactoredStaticFuncs;
+﻿using EnglishWordSet.Data.Contexts;
+using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using System;
 using System.Collections.Generic;
@@ -39,58 +40,93 @@ namespace EnglishWordSet.ChildForms.AdminPage
             AdminPageBackend pageBackend = MyGetBackend.AdminPage();
 
             string userName = txtUserName.Text.ToString();
+            userName=userName.Trim();
             string email = txtEmail.Text.ToString();
+            email=email.Trim(); 
             string phone = txtPhone.Text.ToString();
+            phone =phone=phone.Trim();  
             string password = txtPassword.Text.ToString();
+            password=  password.Trim(); 
             string againPassword = txtAgainPassword.Text.ToString();
+            againPassword= againPassword.Trim();
 
 
-            if (userName.Trim() == "")
-            { UserNameProvider.SetError(txtUserName, "UserName can not be null"); }
+            if (userName== "")
+            { UserNameProvider.SetError(txtUserName, "UserName can not be null");
+                return;
+            }
 
             else if (!MyRegex.Isthere(userName, "[A-Za-z][A-Za-z0-9_]{3,29}"))
-            { UserNameProvider.SetError(txtUserName, "UserName is not valid type"); }
+            { UserNameProvider.SetError(txtUserName, "UserName is not valid type");
+                return;
+            }
             else
             {
                 UserNameProvider.Clear();
             }
 
-            if (email.Trim() == "")
-            { emailProvider.SetError(txtEmail, "Email can not be null"); }
+            if (email == "")
+            { emailProvider.SetError(txtEmail, "Email can not be null");
+                return;
+            }
 
             else if (!MyRegex.Isthere(email, "[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"))
-            { emailProvider.SetError(txtEmail, "Email is not valid type"); }
+            { emailProvider.SetError(txtEmail, "Email is not valid type");
+                return;
+            }
             else
             {
                 emailProvider.Clear();
             }
 
 
-            if (phone.Trim() == "")
-            { emailProvider.SetError(txtPhone, "Phone Number can not be null"); }
+            if (phone == "")
+            { emailProvider.SetError(txtPhone, "Phone Number can not be null");
+                return;
+            }
 
-            else if (!MyRegex.Isthere(phone, "0?[0-9]"))
-            { emailProvider.SetError(txtPhone, "Phone Number is not valid type"); }
+            else if (!MyRegex.Isthere(phone, "^0?[0-9]{10}$"))
+            { emailProvider.SetError(txtPhone, "Phone Number is not valid type");
+                return;
+            }
             else
             {
                 emailProvider.Clear();
             }
 
-            if (password.Trim() == "")
-            { passwordProvider.SetError(txtPassword, "Password can not be null"); }
+            if (password== "")
+            { passwordProvider.SetError(txtPassword, "Password can not be null");
+                return;
+            }
 
             else if (password!=againPassword)
             {
                 passwordProvider.Clear();
-                againPasswordProvider.SetError(txtAgainPassword, "Both of Passwords should be same"); }
+                againPasswordProvider.SetError(txtAgainPassword, "Both of Passwords should be same");
+                return;
+            }
             else
             {
                 againPasswordProvider.Clear();
             }
 
+            if(!MyRegex.Isthere(phone, "^0"))
+            {
+                string temp = "0"+phone;
+                phone= temp;    
+            }
 
 
+            WordContext context = MyDBTransactions.GetContext();
+            context.Add(new Data.Entities.Admin { Email = email,Password=password,Phone=phone,UserName=userName });
 
+            context.SaveChanges();
+            MyNotificationAlerts.GetSuccessMessage("Admin added");
+            txtUserName.Clear();
+            txtAgainPassword.Clear();   
+            txtEmail.Clear();
+            txtPhone.Clear();
+            txtUserName.Clear();
         }
     }
 }

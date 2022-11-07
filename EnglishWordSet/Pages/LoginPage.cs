@@ -34,6 +34,7 @@ namespace EnglishWordSet
 
             if (!loginB.IsThereUserName(userName)) {
                 epUserName.SetError(txtUserName, "User Name not found");
+                MyNotificationAlerts.GetErrorMessage("Login not verified");
                 return;
             }
             else
@@ -44,6 +45,7 @@ namespace EnglishWordSet
             if (!loginB.IsThereUser(password))
             {
                 epUserName.SetError(txtPassword, "Wrong password !!!");
+                MyNotificationAlerts.GetErrorMessage("Login not verified");
             }
             else
             {
