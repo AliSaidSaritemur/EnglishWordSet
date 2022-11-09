@@ -23,7 +23,7 @@ namespace EnglishWordSet.MyTools
 
         public string CovertText(string textToConvert)
         {
-            string spaceAmount = spaceStatu ? "\n \n" : "\n";
+            string spaceAmount = spaceStatu ? "\n\n" : "\n";
             StringReader stringReader = new(textToConvert);
             string convertedText = "";
             string lineToAdd;
