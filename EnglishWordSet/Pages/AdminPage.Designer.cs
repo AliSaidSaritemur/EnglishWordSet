@@ -32,13 +32,15 @@ namespace EnglishWordSet
             this.btnAddNewWord = new System.Windows.Forms.Button();
             this.btnAddNewAdmin = new System.Windows.Forms.Button();
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
+            this.btnAddLearnedWord = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnAddNewWord
             // 
+            this.btnAddNewWord.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.btnAddNewWord.Location = new System.Drawing.Point(-1, -3);
             this.btnAddNewWord.Name = "btnAddNewWord";
-            this.btnAddNewWord.Size = new System.Drawing.Size(414, 89);
+            this.btnAddNewWord.Size = new System.Drawing.Size(269, 89);
             this.btnAddNewWord.TabIndex = 11;
             this.btnAddNewWord.Text = "Add New Words";
             this.btnAddNewWord.UseVisualStyleBackColor = true;
@@ -46,9 +48,10 @@ namespace EnglishWordSet
             // 
             // btnAddNewAdmin
             // 
-            this.btnAddNewAdmin.Location = new System.Drawing.Point(406, -3);
+            this.btnAddNewAdmin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddNewAdmin.Location = new System.Drawing.Point(538, -3);
             this.btnAddNewAdmin.Name = "btnAddNewAdmin";
-            this.btnAddNewAdmin.Size = new System.Drawing.Size(399, 89);
+            this.btnAddNewAdmin.Size = new System.Drawing.Size(267, 89);
             this.btnAddNewAdmin.TabIndex = 12;
             this.btnAddNewAdmin.Text = "Add New Admin";
             this.btnAddNewAdmin.UseVisualStyleBackColor = true;
@@ -60,11 +63,23 @@ namespace EnglishWordSet
             this.sqlCommandBuilder1.QuotePrefix = "[";
             this.sqlCommandBuilder1.QuoteSuffix = "]";
             // 
+            // btnAddLearnedWord
+            // 
+            this.btnAddLearnedWord.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnAddLearnedWord.Location = new System.Drawing.Point(264, -3);
+            this.btnAddLearnedWord.Name = "btnAddLearnedWord";
+            this.btnAddLearnedWord.Size = new System.Drawing.Size(276, 89);
+            this.btnAddLearnedWord.TabIndex = 14;
+            this.btnAddLearnedWord.Text = "Add Learned Word";
+            this.btnAddLearnedWord.UseVisualStyleBackColor = true;
+            this.btnAddLearnedWord.Click += new System.EventHandler(this.btnAddLearnedWord_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 523);
+            this.Controls.Add(this.btnAddLearnedWord);
             this.Controls.Add(this.btnAddNewWord);
             this.Controls.Add(this.btnAddNewAdmin);
             this.IsMdiContainer = true;
@@ -81,5 +96,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnAddNewWord;
         private System.Windows.Forms.Button btnAddNewAdmin;
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
+        private System.Windows.Forms.Button btnAddLearnedWord;
     }
 }

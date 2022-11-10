@@ -80,6 +80,25 @@ namespace EnglishWordSet
         {
 
         }
+
+        private void btnAddLearnedWord_Click(object sender, EventArgs e)
+        {
+                 if (!MyTestInternet.IsThereInternet())
+            {
+                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
+                  " connect to the internet.", "No internet access",
+          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+            else { }
+
+            if (ActiveMdiChild != null)
+                ActiveMdiChild.Close();
+
+            childAdmin = pageBackend.GetChildNewLearnedWord();
+            childAdmin.Show();
+
+        }
     }
 
        

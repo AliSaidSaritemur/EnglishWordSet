@@ -40,6 +40,7 @@ namespace EnglishWordSet
             this.btnPasteInput = new System.Windows.Forms.Button();
             this.btnGetNewWord = new System.Windows.Forms.Button();
             this.btnToAdminPage = new System.Windows.Forms.Button();
+            this.getLaarnedWordPage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInput
@@ -116,7 +117,7 @@ namespace EnglishWordSet
             // 
             // btnCopyOutput
             // 
-            this.btnCopyOutput.Location = new System.Drawing.Point(682, 165);
+            this.btnCopyOutput.Location = new System.Drawing.Point(693, 165);
             this.btnCopyOutput.Name = "btnCopyOutput";
             this.btnCopyOutput.Size = new System.Drawing.Size(134, 29);
             this.btnCopyOutput.TabIndex = 8;
@@ -137,7 +138,7 @@ namespace EnglishWordSet
             // btnGetNewWord
             // 
             this.btnGetNewWord.Enabled = false;
-            this.btnGetNewWord.Location = new System.Drawing.Point(955, 67);
+            this.btnGetNewWord.Location = new System.Drawing.Point(955, 58);
             this.btnGetNewWord.Name = "btnGetNewWord";
             this.btnGetNewWord.Size = new System.Drawing.Size(136, 29);
             this.btnGetNewWord.TabIndex = 10;
@@ -156,12 +157,22 @@ namespace EnglishWordSet
             this.btnToAdminPage.UseVisualStyleBackColor = true;
             this.btnToAdminPage.Click += new System.EventHandler(this.btnToAdminPage_Click);
             // 
+            // getLaarnedWordPage
+            // 
+            this.getLaarnedWordPage.Location = new System.Drawing.Point(423, 12);
+            this.getLaarnedWordPage.Name = "getLaarnedWordPage";
+            this.getLaarnedWordPage.Size = new System.Drawing.Size(160, 29);
+            this.getLaarnedWordPage.TabIndex = 12;
+            this.getLaarnedWordPage.Text = "Get Word Sentence";
+            this.getLaarnedWordPage.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1089, 552);
+            this.Controls.Add(this.getLaarnedWordPage);
             this.Controls.Add(this.btnToAdminPage);
             this.Controls.Add(this.btnGetNewWord);
             this.Controls.Add(this.btnPasteInput);
@@ -195,6 +206,7 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnPasteInput;
         private System.Windows.Forms.Button btnGetNewWord;
         private System.Windows.Forms.Button btnToAdminPage;
+        private System.Windows.Forms.Button getLaarnedWordPage;
     }
 }
 
