@@ -2,6 +2,7 @@
 using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.FileTransactions;
 using EnglishWordSet.MyTools;
+using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using System;
@@ -127,7 +128,12 @@ namespace EnglishWordSet
                 MyDBTransactions.SetContext();
             });
         }
-     
+
+        private void getLaarnedWordPage_Click(object sender, EventArgs e)
+        {
+            Form page=new LearnedWordsPanel();
+            page.Show();
+        }
     }
 }
 

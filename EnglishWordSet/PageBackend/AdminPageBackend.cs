@@ -92,6 +92,7 @@ namespace EnglishWordSet.ToolsBackend
         public void AddNewLearnedWord(string word,string sentence,string meaning)
         {
             translater ??= new Translater();
+            word = word.ToLower();
             meaning =meaning==""? translater.Translate(word):meaning;                    
 
             string meaningOfSentence= translater.Translate(sentence); ;

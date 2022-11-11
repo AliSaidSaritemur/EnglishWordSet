@@ -165,6 +165,7 @@ namespace EnglishWordSet
             this.getLaarnedWordPage.TabIndex = 12;
             this.getLaarnedWordPage.Text = "Get Word Sentence";
             this.getLaarnedWordPage.UseVisualStyleBackColor = true;
+            this.getLaarnedWordPage.Click += new System.EventHandler(this.getLaarnedWordPage_Click);
             // 
             // Form1
             // 
