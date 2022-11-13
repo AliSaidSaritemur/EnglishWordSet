@@ -54,22 +54,6 @@ namespace EnglishWordSet
             string saveTexts = TextManagment.ReadText(savesFileName);
             txtOutput.Text = saveTexts;
         }
-
-        private void btnCopyOutput_Click(object sender, EventArgs e)
-        {           
-             txtOutput.SelectionStart = 0;
-            txtOutput.SelectionLength = txtOutput.Text.Length;
-
-            if (txtOutput.SelectionLength > 0)
-                txtOutput.Copy();
-        }
-
-        private void btnPasteInput_Click(object sender, EventArgs e)
-        {
-            txtInput.Clear();
-            txtInput.Paste();
-        }
-
      
         private void btnGetNewWord_Click(object sender, EventArgs e)
         {
@@ -133,6 +117,39 @@ namespace EnglishWordSet
         {
             Form page=new LearnedWordsPanel();
             page.Show();
+        }
+
+        private async void pbCopy_Click(object sender, EventArgs e)
+        {
+            txtOutput.SelectionStart = 0;
+            txtOutput.SelectionLength = txtOutput.Text.Length;
+
+            if (txtOutput.SelectionLength > 0)
+            { txtOutput.Copy();
+                pbCopy.Image = EnglishWordSet.Properties.Resources.sucsessBlue;
+                timerCopySuccess.Start();
+            }
+        }
+      
+        private void timerCopySuccess_Tick(object sender, EventArgs e)
+        {
+            pbCopy.Image = EnglishWordSet.Properties.Resources.Copy;
+        }
+
+        private void pbPaste_Click(object sender, EventArgs e)
+        {
+
+            Image pasteImg= EnglishWordSet.Properties.Resources.paste;
+            txtInput.Clear();
+            txtInput.Paste();
+      
+            pbPaste.Image = MyImageFilter.GreenFilter(pasteImg);
+            timerPasteSuccess.Start();
+        }
+
+        private void timerPasteSuccess_Tick(object sender, EventArgs e)
+        {
+            pbPaste.Image= EnglishWordSet.Properties.Resources.paste;
         }
     }
 }

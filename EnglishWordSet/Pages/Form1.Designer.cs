@@ -29,6 +29,7 @@ namespace EnglishWordSet
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtInput = new System.Windows.Forms.RichTextBox();
             this.txtOutput = new System.Windows.Forms.RichTextBox();
             this.btnConvert = new System.Windows.Forms.Button();
@@ -36,11 +37,15 @@ namespace EnglishWordSet
             this.cBSave = new System.Windows.Forms.CheckBox();
             this.btnGetSaveText = new System.Windows.Forms.Button();
             this.cbSpace = new System.Windows.Forms.CheckBox();
-            this.btnCopyOutput = new System.Windows.Forms.Button();
-            this.btnPasteInput = new System.Windows.Forms.Button();
             this.btnGetNewWord = new System.Windows.Forms.Button();
             this.btnToAdminPage = new System.Windows.Forms.Button();
             this.getLaarnedWordPage = new System.Windows.Forms.Button();
+            this.pbCopy = new System.Windows.Forms.PictureBox();
+            this.timerCopySuccess = new System.Windows.Forms.Timer(this.components);
+            this.pbPaste = new System.Windows.Forms.PictureBox();
+            this.timerPasteSuccess = new System.Windows.Forms.Timer(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).BeginInit();
             this.SuspendLayout();
             // 
             // txtInput
@@ -115,26 +120,6 @@ namespace EnglishWordSet
             this.cbSpace.Text = "Space between each line";
             this.cbSpace.UseVisualStyleBackColor = true;
             // 
-            // btnCopyOutput
-            // 
-            this.btnCopyOutput.Location = new System.Drawing.Point(693, 165);
-            this.btnCopyOutput.Name = "btnCopyOutput";
-            this.btnCopyOutput.Size = new System.Drawing.Size(134, 29);
-            this.btnCopyOutput.TabIndex = 8;
-            this.btnCopyOutput.Text = "Copy output";
-            this.btnCopyOutput.UseVisualStyleBackColor = true;
-            this.btnCopyOutput.Click += new System.EventHandler(this.btnCopyOutput_Click);
-            // 
-            // btnPasteInput
-            // 
-            this.btnPasteInput.Location = new System.Drawing.Point(161, 165);
-            this.btnPasteInput.Name = "btnPasteInput";
-            this.btnPasteInput.Size = new System.Drawing.Size(134, 29);
-            this.btnPasteInput.TabIndex = 9;
-            this.btnPasteInput.Text = "Paste output";
-            this.btnPasteInput.UseVisualStyleBackColor = true;
-            this.btnPasteInput.Click += new System.EventHandler(this.btnPasteInput_Click);
-            // 
             // btnGetNewWord
             // 
             this.btnGetNewWord.Enabled = false;
@@ -167,17 +152,53 @@ namespace EnglishWordSet
             this.getLaarnedWordPage.UseVisualStyleBackColor = true;
             this.getLaarnedWordPage.Click += new System.EventHandler(this.getLaarnedWordPage_Click);
             // 
+            // pbCopy
+            // 
+            this.pbCopy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbCopy.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbCopy.Image = global::EnglishWordSet.Properties.Resources.Copy;
+            this.pbCopy.Location = new System.Drawing.Point(867, 390);
+            this.pbCopy.Name = "pbCopy";
+            this.pbCopy.Size = new System.Drawing.Size(79, 96);
+            this.pbCopy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbCopy.TabIndex = 13;
+            this.pbCopy.TabStop = false;
+            this.pbCopy.Click += new System.EventHandler(this.pbCopy_Click);
+            // 
+            // timerCopySuccess
+            // 
+            this.timerCopySuccess.Interval = 1500;
+            this.timerCopySuccess.Tick += new System.EventHandler(this.timerCopySuccess_Tick);
+            // 
+            // pbPaste
+            // 
+            this.pbPaste.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pbPaste.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbPaste.Image = global::EnglishWordSet.Properties.Resources.paste;
+            this.pbPaste.Location = new System.Drawing.Point(338, 390);
+            this.pbPaste.Name = "pbPaste";
+            this.pbPaste.Size = new System.Drawing.Size(87, 96);
+            this.pbPaste.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbPaste.TabIndex = 14;
+            this.pbPaste.TabStop = false;
+            this.pbPaste.Click += new System.EventHandler(this.pbPaste_Click);
+            // 
+            // timerPasteSuccess
+            // 
+            this.timerPasteSuccess.Interval = 500;
+            this.timerPasteSuccess.Tick += new System.EventHandler(this.timerPasteSuccess_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1089, 552);
+            this.Controls.Add(this.pbPaste);
+            this.Controls.Add(this.pbCopy);
             this.Controls.Add(this.getLaarnedWordPage);
             this.Controls.Add(this.btnToAdminPage);
             this.Controls.Add(this.btnGetNewWord);
-            this.Controls.Add(this.btnPasteInput);
-            this.Controls.Add(this.btnCopyOutput);
             this.Controls.Add(this.cbSpace);
             this.Controls.Add(this.btnGetSaveText);
             this.Controls.Add(this.cBSave);
@@ -189,6 +210,8 @@ namespace EnglishWordSet
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -204,10 +227,13 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnGetSaveText;
         private System.Windows.Forms.CheckBox cbSpace;
         private System.Windows.Forms.Button btnCopyOutput;
-        private System.Windows.Forms.Button btnPasteInput;
         private System.Windows.Forms.Button btnGetNewWord;
         private System.Windows.Forms.Button btnToAdminPage;
         private System.Windows.Forms.Button getLaarnedWordPage;
+        private System.Windows.Forms.PictureBox pbCopy;
+        private System.Windows.Forms.Timer timerCopySuccess;
+        private System.Windows.Forms.PictureBox pbPaste;
+        private System.Windows.Forms.Timer timerPasteSuccess;
     }
 }
 
