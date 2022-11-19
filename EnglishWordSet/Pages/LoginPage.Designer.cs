@@ -70,6 +70,7 @@ namespace EnglishWordSet
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(139, 27);
             this.txtUserName.TabIndex = 2;
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
             // txtPassword
             // 
@@ -78,6 +79,7 @@ namespace EnglishWordSet
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(139, 27);
             this.txtPassword.TabIndex = 3;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // btnLogin
             // 
@@ -106,6 +108,7 @@ namespace EnglishWordSet
             this.Name = "LoginPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LoginPage";
+            this.Load += new System.EventHandler(this.LoginPage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epUserName)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

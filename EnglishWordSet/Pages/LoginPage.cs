@@ -19,6 +19,8 @@ namespace EnglishWordSet
         public LoginPage()
         {
             InitializeComponent();
+            this.ActiveControl = txtUserName;
+            txtUserName.Focus();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -57,6 +59,37 @@ namespace EnglishWordSet
             }
 
 
+        }
+
+        private void LoginPage_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.btnLogin_Click(sender, e);
+            }
+
+            else if (e.KeyCode == Keys.Down)
+            {
+                txtPassword.Focus();
+            }   
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.btnLogin_Click(sender,e);
+            }
+          else  if (e.KeyCode == Keys.Up)
+            {
+                txtUserName.Focus();
+            }
         }
     }
 }

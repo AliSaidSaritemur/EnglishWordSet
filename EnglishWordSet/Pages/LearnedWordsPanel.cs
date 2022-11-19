@@ -27,7 +27,8 @@ namespace EnglishWordSet.Pages
 
         private void LearnedWordsPanel_Load(object sender, EventArgs e)
         {
-
+            this.ActiveControl = txtSearch;
+            txtSearch.Focus();
         }
 
         private void pbSearch_Click(object sender, EventArgs e)
@@ -49,6 +50,15 @@ namespace EnglishWordSet.Pages
         private void txtSearch_TextChanged(object sender, EventArgs e)
         {
 
+
+        }
+
+        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.pbSearch_Click(sender, e);
+            }
         }
     }
 }
