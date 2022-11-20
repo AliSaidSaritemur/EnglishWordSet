@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace EnglishWordSet.ToolsBackend
 {
-    class AdminPageBackend
+    class AdminPageBackend 
     {
         private WordContext context = MyDBTransactions.GetContext();
 

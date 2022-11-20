@@ -82,6 +82,7 @@
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(125, 27);
             this.txtUserName.TabIndex = 1;
+            this.txtUserName.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtUserName_KeyDown);
             // 
             // txtEmail
             // 
@@ -89,6 +90,7 @@
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(125, 27);
             this.txtEmail.TabIndex = 5;
+            this.txtEmail.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtEmail_KeyDown);
             // 
             // label3
             // 
@@ -108,6 +110,7 @@
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(125, 27);
             this.txtPhone.TabIndex = 7;
+            this.txtPhone.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPhone_KeyDown);
             // 
             // label4
             // 
@@ -140,6 +143,7 @@
             this.txtPassword.PasswordChar = '*';
             this.txtPassword.Size = new System.Drawing.Size(125, 27);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtPassword_KeyDown);
             // 
             // label2
             // 
@@ -159,6 +163,7 @@
             this.txtAgainPassword.PasswordChar = '*';
             this.txtAgainPassword.Size = new System.Drawing.Size(125, 27);
             this.txtAgainPassword.TabIndex = 13;
+            this.txtAgainPassword.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtAgainPassword_KeyDown);
             // 
             // label6
             // 

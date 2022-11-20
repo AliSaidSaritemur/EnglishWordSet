@@ -86,7 +86,7 @@ namespace EnglishWordSet
             {
                 this.btnLogin_Click(sender,e);
             }
-          else  if (e.KeyCode == Keys.Up)
+          else  if (MyKeyDownValueCheck.IsItUp(e))
             {
                 txtUserName.Focus();
             }

@@ -14,9 +14,13 @@ namespace EnglishWordSet.ChildForms.AdminPage
 {
     public partial class ChildAdminNewLearnedWord : Form
     {
+        TextBox focusText;
         public ChildAdminNewLearnedWord()
         {
             InitializeComponent();
+            focusText = txtWord;
+            this.ActiveControl = focusText;
+            focusText.Focus();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
@@ -30,6 +34,16 @@ namespace EnglishWordSet.ChildForms.AdminPage
             txtSentence.Clear();
             txtMeaning.Clear();
             MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
+        }
+
+        private void txtWord_KeyDown(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void ChildAdminNewLearnedWord_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

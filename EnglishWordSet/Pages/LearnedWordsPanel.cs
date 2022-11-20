@@ -40,9 +40,14 @@ namespace EnglishWordSet.Pages
             if(learnedWord == null)
             {
                 MyNotificationAlerts.GetErrorMessage("System has no "+ searchedWord+" word");
+                lblSentence.Text="";
                 return;
             }
-            lblSentence.Text = learnedWord.wordSentence;
+            else
+            {
+                lblSentence.Text = learnedWord.wordSentence;
+            }
+           
 
 
         }

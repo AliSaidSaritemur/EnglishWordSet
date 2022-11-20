@@ -15,9 +15,13 @@ namespace EnglishWordSet.ChildForms.AdminPage
 {
     public partial class ChildAdminNewAdmin : Form
     {
+        TextBox focusText;
         public ChildAdminNewAdmin()
         {
             InitializeComponent();
+            focusText = txtUserName;
+            this.ActiveControl = focusText;
+            focusText.Focus();
         }
 
         private void ChildAdminNewAdmin_Load(object sender, EventArgs e)
@@ -39,16 +43,12 @@ namespace EnglishWordSet.ChildForms.AdminPage
         {
             AdminPageBackend pageBackend = MyGetBackend.AdminPage();
 
+            TrimForm();
             string userName = txtUserName.Text.ToString();
-            userName=userName.Trim();
             string email = txtEmail.Text.ToString();
-            email=email.Trim(); 
             string phone = txtPhone.Text.ToString();
-            phone =phone=phone.Trim();  
             string password = txtPassword.Text.ToString();
-            password=  password.Trim(); 
             string againPassword = txtAgainPassword.Text.ToString();
-            againPassword= againPassword.Trim();
 
 
             if (userName== "")
@@ -120,13 +120,93 @@ namespace EnglishWordSet.ChildForms.AdminPage
             WordContext context = MyDBTransactions.GetContext();
             context.Add(new Data.Entities.Admin { Email = email,Password=password,Phone=phone,UserName=userName });
 
-            context.SaveChanges();
+ 
             MyNotificationAlerts.GetSuccessMessage("Admin added");
-            txtUserName.Clear();
-            txtAgainPassword.Clear();   
-            txtEmail.Clear();
-            txtPhone.Clear();
-            txtUserName.Clear();
+            CleanForm();
+            context.SaveChanges();
+        }
+
+        private void txtUserName_KeyDown(object sender, KeyEventArgs e)
+        {
+            if(MyKeyDownValueCheck.IsItDown(e))
+            {
+                focusText = txtEmail;
+            }
+            focusText.Focus();
+        }
+
+        private void txtEmail_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItUp(e))
+            {
+               focusText= txtUserName;
+            }
+            else if (MyKeyDownValueCheck.IsItDown(e))
+            {
+                focusText = txtPhone;
+            }
+            focusText.Focus();
+        }
+
+        private void txtPhone_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItUp(e))
+            {
+                focusText= txtEmail;
+            }
+            else if (MyKeyDownValueCheck.IsItDown(e))
+            {
+                focusText = txtPassword;
+            }
+            focusText.Focus();
+        }
+
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((MyKeyDownValueCheck.IsItUp(e)))
+            {
+                focusText = txtPhone;
+            }
+            else if (MyKeyDownValueCheck.IsItDown(e))
+            {
+                focusText = txtAgainPassword;
+            }
+            focusText.Focus();
+        }
+
+        private void txtAgainPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if ((MyKeyDownValueCheck.IsItUp(e)))
+            {
+                focusText = txtPassword;
+            }
+
+
+            if (MyKeyDownValueCheck.IsItEnter(e))
+            {
+                this.btnSubmitNewAdmin_Click(sender,e);
+            }
+            focusText.Focus();
+        }
+        private void CleanForm()
+        {
+            foreach (var c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = String.Empty;
+                }
+            }
+        }
+        private void TrimForm()
+        {
+            foreach (var c in this.Controls)
+            {
+                if (c is TextBox)
+                {
+                    ((TextBox)c).Text = ((TextBox)c).Text.ToString().Trim();
+                }
+            }
         }
     }
 }

@@ -40,18 +40,17 @@
             // 
             // txtWord
             // 
-            this.txtWord.Location = new System.Drawing.Point(107, 64);
-            this.txtWord.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtWord.Location = new System.Drawing.Point(122, 85);
             this.txtWord.Name = "txtWord";
-            this.txtWord.Size = new System.Drawing.Size(110, 23);
+            this.txtWord.Size = new System.Drawing.Size(125, 27);
             this.txtWord.TabIndex = 0;
+            this.txtWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtWord_KeyDown);
             // 
             // txtSentence
             // 
-            this.txtSentence.Location = new System.Drawing.Point(107, 102);
-            this.txtSentence.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSentence.Location = new System.Drawing.Point(122, 136);
             this.txtSentence.Name = "txtSentence";
-            this.txtSentence.Size = new System.Drawing.Size(173, 44);
+            this.txtSentence.Size = new System.Drawing.Size(197, 57);
             this.txtSentence.TabIndex = 1;
             this.txtSentence.Text = "";
             // 
@@ -60,9 +59,9 @@
             this.label1.AutoSize = true;
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(10, 64);
+            this.label1.Location = new System.Drawing.Point(11, 85);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 22);
+            this.label1.Size = new System.Drawing.Size(65, 27);
             this.label1.TabIndex = 2;
             this.label1.Text = " Word";
             // 
@@ -71,9 +70,9 @@
             this.label3.AutoSize = true;
             this.label3.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(10, 112);
+            this.label3.Location = new System.Drawing.Point(11, 149);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(71, 22);
+            this.label3.Size = new System.Drawing.Size(91, 27);
             this.label3.TabIndex = 4;
             this.label3.Text = "Sentence";
             // 
@@ -82,26 +81,24 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(10, 172);
+            this.label2.Location = new System.Drawing.Point(11, 229);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(69, 22);
+            this.label2.Size = new System.Drawing.Size(89, 27);
             this.label2.TabIndex = 5;
             this.label2.Text = "Meaning";
             // 
             // txtMeaning
             // 
-            this.txtMeaning.Location = new System.Drawing.Point(107, 172);
-            this.txtMeaning.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtMeaning.Location = new System.Drawing.Point(122, 229);
             this.txtMeaning.Name = "txtMeaning";
-            this.txtMeaning.Size = new System.Drawing.Size(110, 23);
+            this.txtMeaning.Size = new System.Drawing.Size(125, 27);
             this.txtMeaning.TabIndex = 6;
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(87, 226);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(99, 301);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(82, 22);
+            this.btnAdd.Size = new System.Drawing.Size(94, 29);
             this.btnAdd.TabIndex = 7;
             this.btnAdd.Text = "Submit";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -112,17 +109,17 @@
             this.label4.AutoSize = true;
             this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label4.Location = new System.Drawing.Point(22, 20);
+            this.label4.Location = new System.Drawing.Point(25, 27);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(214, 22);
+            this.label4.Size = new System.Drawing.Size(273, 27);
             this.label4.TabIndex = 8;
             this.label4.Text = "Adding Learned English Words";
             // 
             // ChildAdminNewLearnedWord
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(290, 270);
+            this.ClientSize = new System.Drawing.Size(331, 360);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtMeaning);
@@ -131,10 +128,10 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSentence);
             this.Controls.Add(this.txtWord);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "ChildAdminNewLearnedWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewLearnedWord";
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChildAdminNewLearnedWord_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
