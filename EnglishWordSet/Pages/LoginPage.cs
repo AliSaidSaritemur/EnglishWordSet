@@ -22,7 +22,7 @@ namespace EnglishWordSet
             this.ActiveControl = txtUserName;
             txtUserName.Focus();
         }
-
+        AdminPage adminPage;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -53,7 +53,7 @@ namespace EnglishWordSet
             {
                 MyNotificationAlerts.GetSuccessMessage("Login verified");
                 epUserName.Clear();
-                AdminPage adminPage = new();
+                 adminPage = new();
                 adminPage.Show();
                 this.Close();
             }
@@ -90,6 +90,15 @@ namespace EnglishWordSet
             {
                 txtUserName.Focus();
             }
+        }
+
+        private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            if(e.CloseReason == CloseReason.UserClosing&&adminPage==null)
+            {
+                MyPageGetter.GetForm1().Show();
+            }
+            
         }
     }
 }

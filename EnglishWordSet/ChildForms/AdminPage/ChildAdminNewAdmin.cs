@@ -179,14 +179,13 @@ namespace EnglishWordSet.ChildForms.AdminPage
             if ((MyKeyDownValueCheck.IsItUp(e)))
             {
                 focusText = txtPassword;
+                focusText.Focus();
             }
-
-
             if (MyKeyDownValueCheck.IsItEnter(e))
             {
                 this.btnSubmitNewAdmin_Click(sender,e);
             }
-            focusText.Focus();
+        
         }
         private void CleanForm()
         {

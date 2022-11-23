@@ -25,6 +25,7 @@ namespace EnglishWordSet
         public Form1()
         {
             InitializeComponent();
+            MyPageGetter.SetForm1(this);
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -84,6 +85,7 @@ namespace EnglishWordSet
             else
             { page = new LoginPage(); }
             page.Show();
+            Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)

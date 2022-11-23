@@ -33,6 +33,7 @@ namespace EnglishWordSet
         {
             InitializeComponent();
             pageBackend = MyGetBackend.AdminPage();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -46,15 +47,15 @@ namespace EnglishWordSet
 
             if (!MyTestInternet.IsThereInternet())
             {
-                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
-                  " connect to the internet.", "No internet access",
-          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                InternetAlert();
                 return;
             }
             else { }
 
             if (ActiveMdiChild != null)
-                ActiveMdiChild.Close();
+            {
+                ActiveMdiChild.Hide();
+            }
 
             childAdmin = pageBackend.GetChildNewWordPage();
             childAdmin.Show();
@@ -64,14 +65,15 @@ namespace EnglishWordSet
         {
             if (!MyTestInternet.IsThereInternet())
             {
-                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
-                  " connect to the internet.", "No internet access",
-          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                InternetAlert();
                 return;
             }
             else { }
             if (ActiveMdiChild != null)
-                ActiveMdiChild.Close();
+            {
+                ActiveMdiChild.Hide();
+            }
+
 
             childAdmin = pageBackend.GetChildNewAdminPage();
             childAdmin.Show();
@@ -85,19 +87,36 @@ namespace EnglishWordSet
         {
                  if (!MyTestInternet.IsThereInternet())
             {
-                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
-                  " connect to the internet.", "No internet access",
-          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                InternetAlert();
                 return;
             }
             else { }
 
             if (ActiveMdiChild != null)
-                ActiveMdiChild.Close();
+            {
+                ActiveMdiChild.Hide();
+            }
 
             childAdmin = pageBackend.GetChildNewLearnedWord();
             childAdmin.Show();
+        }
 
+        private void InternetAlert()
+        {
+            dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
+               " connect to the internet.", "No internet access",
+       MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            MyPageGetter.GetForm1().Show();
+            Close();
+        }
+
+        private void AdminPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MyPageGetter.GetForm1().Show();
         }
     }
 

@@ -31,7 +31,5 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 
             return false;
         }
-
-
     }
 }

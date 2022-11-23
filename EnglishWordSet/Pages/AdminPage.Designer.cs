@@ -33,6 +33,8 @@ namespace EnglishWordSet
             this.btnAddNewAdmin = new System.Windows.Forms.Button();
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.btnAddLearnedWord = new System.Windows.Forms.Button();
+            this.pbBack = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddNewWord
@@ -74,11 +76,23 @@ namespace EnglishWordSet
             this.btnAddLearnedWord.UseVisualStyleBackColor = true;
             this.btnAddLearnedWord.Click += new System.EventHandler(this.btnAddLearnedWord_Click);
             // 
+            // pbBack
+            // 
+            this.pbBack.Image = global::EnglishWordSet.Properties.Resources.back;
+            this.pbBack.Location = new System.Drawing.Point(12, 431);
+            this.pbBack.Name = "pbBack";
+            this.pbBack.Size = new System.Drawing.Size(98, 80);
+            this.pbBack.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBack.TabIndex = 16;
+            this.pbBack.TabStop = false;
+            this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
+            // 
             // AdminPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 523);
+            this.Controls.Add(this.pbBack);
             this.Controls.Add(this.btnAddLearnedWord);
             this.Controls.Add(this.btnAddNewWord);
             this.Controls.Add(this.btnAddNewAdmin);
@@ -86,7 +100,9 @@ namespace EnglishWordSet
             this.Name = "AdminPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "5";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -97,5 +113,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnAddNewAdmin;
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
         private System.Windows.Forms.Button btnAddLearnedWord;
+        private System.Windows.Forms.PictureBox pbBack;
     }
 }

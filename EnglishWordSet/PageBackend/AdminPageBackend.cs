@@ -25,41 +25,38 @@ namespace EnglishWordSet.ToolsBackend
 
         public ChildAdminNewWord GetChildNewWordPage()
         {
-
+            if (childAdminAddWord == null)
+            {
                 childAdminAddWord = new ChildAdminNewWord();
-
                 childAdminAddWord.FormBorderStyle = FormBorderStyle.None;
                 childAdminAddWord.MdiParent = AdminPage.ActiveForm;
-
                 childAdminAddWord.Location = new Point(230, 100);
-            
+            }    
             return childAdminAddWord;
         }
 
 
         public ChildAdminNewAdmin GetChildNewAdminPage()
         {
-        
+            if (childAdminAddAdmin == null)
+            {
                 childAdminAddAdmin = new ChildAdminNewAdmin();
-
                 childAdminAddAdmin.FormBorderStyle = FormBorderStyle.None;
                 childAdminAddAdmin.MdiParent = AdminPage.ActiveForm;
-
                 childAdminAddAdmin.Location = new Point(230, 111);
-            
+            }                     
             return childAdminAddAdmin;
         }
 
         public ChildAdminNewLearnedWord GetChildNewLearnedWord()
         {
-
-            newLearnedWord = new ChildAdminNewLearnedWord();
-
-            newLearnedWord.FormBorderStyle = FormBorderStyle.None;
-            newLearnedWord.MdiParent = AdminPage.ActiveForm;
-
-            newLearnedWord.Location = new Point(230, 111);
-
+            if(newLearnedWord == null)
+            {
+                newLearnedWord = new ChildAdminNewLearnedWord();
+                newLearnedWord.FormBorderStyle = FormBorderStyle.None;
+                newLearnedWord.MdiParent = AdminPage.ActiveForm;
+                newLearnedWord.Location = new Point(230, 111);
+            }    
             return newLearnedWord;
         }
 
