@@ -181,11 +181,11 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 focusText = txtPassword;
                 focusText.Focus();
             }
-            if (MyKeyDownValueCheck.IsItEnter(e))
+            if ((MyKeyDownValueCheck.IsItDown(e)))
             {
-                this.btnSubmitNewAdmin_Click(sender,e);
+                focusText = txtPassword;
+                btnSubmitNewAdmin.Focus();
             }
-        
         }
         private void CleanForm()
         {
@@ -206,6 +206,26 @@ namespace EnglishWordSet.ChildForms.AdminPage
                     ((TextBox)c).Text = ((TextBox)c).Text.ToString().Trim();
                 }
             }
+        }
+
+        private void ChildAdminNewAdmin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItEnter(e))
+            {
+                this.btnSubmitNewAdmin_Click(sender, e);
+            }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter )
+            {
+                object sender = new object();
+                EventArgs e = new EventArgs();
+                this.btnSubmitNewAdmin_Click(sender, e);
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

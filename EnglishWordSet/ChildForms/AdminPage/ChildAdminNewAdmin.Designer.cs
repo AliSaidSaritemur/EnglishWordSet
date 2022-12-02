@@ -216,6 +216,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewAdmin";
             this.Load += new System.EventHandler(this.ChildAdminNewAdmin_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChildAdminNewAdmin_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.phoneProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailProvider)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserNameProvider)).EndInit();

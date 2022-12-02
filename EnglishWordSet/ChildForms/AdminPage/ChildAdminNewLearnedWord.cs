@@ -38,12 +38,51 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         private void txtWord_KeyDown(object sender, KeyEventArgs e)
         {
-
+            if (e.KeyCode == Keys.Down)
+            {
+                txtSentence.Focus();
+            }
         }
 
         private void ChildAdminNewLearnedWord_KeyDown(object sender, KeyEventArgs e)
         {
 
+        }
+
+        private void txtSentence_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItDown(e))
+            {
+                txtMeaning.Focus();
+            }
+            else if (MyKeyDownValueCheck.IsItUp(e))
+            {
+                txtWord.Focus();
+            }
+        }
+
+        private void txtMeaning_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItDown(e))
+            {
+                btnAdd.Focus();
+            }
+            else if (MyKeyDownValueCheck.IsItUp(e))
+            {
+                txtSentence.Focus();
+            }
+        }
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter)
+            {
+                object sender = new object();
+                EventArgs e = new EventArgs();
+                this.btnAdd_Click(sender, e);
+                return true;
+            }
+            return base.ProcessCmdKey(ref msg, keyData);
         }
     }
 }

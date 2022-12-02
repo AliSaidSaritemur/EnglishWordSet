@@ -31,5 +31,21 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 
             return false;
         }
+        public static Boolean IsItRight(KeyEventArgs e)
+            {
+                if (e.KeyCode == Keys.Right)
+                    return true;
+
+                return false;
+            }
+
+
+        public static Boolean IsItLeft(KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Left)
+                return true;
+
+            return false;
+        }
     }
 }

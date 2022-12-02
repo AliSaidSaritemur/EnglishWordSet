@@ -81,7 +81,7 @@ namespace EnglishWordSet
         {
             Form page;
             if (AdminSession.id_Admin != null && AdminSession.id_Admin != 0)
-            { page = new AdminPage(); }
+            {page= MyPageGetter.GetAdminPage(); }
             else
             { page = new LoginPage(); }
             page.Show();

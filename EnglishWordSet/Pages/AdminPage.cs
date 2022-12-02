@@ -33,6 +33,9 @@ namespace EnglishWordSet
         {
             InitializeComponent();
             pageBackend = MyGetBackend.AdminPage();
+            MyPageGetter.SetAdminPage(this);
+            this.ActiveControl = btnAddNewWord;
+            btnAddNewWord.Focus();
 
         }
 
@@ -111,12 +114,50 @@ namespace EnglishWordSet
         private void pbBack_Click(object sender, EventArgs e)
         {
             MyPageGetter.GetForm1().Show();
-            Close();
+            Hide();
         }
 
         private void AdminPage_FormClosed(object sender, FormClosedEventArgs e)
         {
             MyPageGetter.GetForm1().Show();
+        }
+
+        private void AdminPage_Activated(object sender, EventArgs e)
+        {
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Hide();
+            }
+            
+        }
+
+        private void btnAddNewWord_KeyDown(object sender, KeyEventArgs e)
+        {
+
+            if (MyKeyDownValueCheck.IsItRight(e))
+            {
+                btnAddLearnedWord.Focus();
+            }
+        }
+
+        private void btnAddLearnedWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItRight(e))
+            {
+                btnAddNewAdmin.Focus();
+            }
+            else if (MyKeyDownValueCheck.IsItLeft(e))
+            {
+                btnAddNewWord.Focus();
+            }
+        }
+
+        private void btnAddNewAdmin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItLeft(e))
+            {
+                btnAddLearnedWord.Focus();
+            }
         }
     }
 

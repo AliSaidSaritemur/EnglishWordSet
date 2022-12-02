@@ -47,6 +47,7 @@ namespace EnglishWordSet
             this.btnAddNewWord.Text = "Add New Words";
             this.btnAddNewWord.UseVisualStyleBackColor = true;
             this.btnAddNewWord.Click += new System.EventHandler(this.btnAddNewWord_Click);
+            this.btnAddNewWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAddNewWord_KeyDown);
             // 
             // btnAddNewAdmin
             // 
@@ -58,6 +59,7 @@ namespace EnglishWordSet
             this.btnAddNewAdmin.Text = "Add New Admin";
             this.btnAddNewAdmin.UseVisualStyleBackColor = true;
             this.btnAddNewAdmin.Click += new System.EventHandler(this.button1_Click);
+            this.btnAddNewAdmin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAddNewAdmin_KeyDown);
             // 
             // sqlCommandBuilder1
             // 
@@ -75,6 +77,7 @@ namespace EnglishWordSet
             this.btnAddLearnedWord.Text = "Add Learned Word";
             this.btnAddLearnedWord.UseVisualStyleBackColor = true;
             this.btnAddLearnedWord.Click += new System.EventHandler(this.btnAddLearnedWord_Click);
+            this.btnAddLearnedWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAddLearnedWord_KeyDown);
             // 
             // pbBack
             // 
@@ -100,6 +103,7 @@ namespace EnglishWordSet
             this.Name = "AdminPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "5";
+            this.Activated += new System.EventHandler(this.AdminPage_Activated);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();

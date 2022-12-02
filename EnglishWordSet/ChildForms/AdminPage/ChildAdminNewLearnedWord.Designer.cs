@@ -53,6 +53,7 @@
             this.txtSentence.Size = new System.Drawing.Size(197, 57);
             this.txtSentence.TabIndex = 1;
             this.txtSentence.Text = "";
+            this.txtSentence.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSentence_KeyDown);
             // 
             // label1
             // 
@@ -93,6 +94,7 @@
             this.txtMeaning.Name = "txtMeaning";
             this.txtMeaning.Size = new System.Drawing.Size(125, 27);
             this.txtMeaning.TabIndex = 6;
+            this.txtMeaning.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtMeaning_KeyDown);
             // 
             // btnAdd
             // 
