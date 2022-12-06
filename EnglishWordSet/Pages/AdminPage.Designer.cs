@@ -40,26 +40,28 @@ namespace EnglishWordSet
             // btnAddNewWord
             // 
             this.btnAddNewWord.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddNewWord.Location = new System.Drawing.Point(-1, -3);
+            this.btnAddNewWord.Location = new System.Drawing.Point(532, -1);
             this.btnAddNewWord.Name = "btnAddNewWord";
             this.btnAddNewWord.Size = new System.Drawing.Size(269, 89);
             this.btnAddNewWord.TabIndex = 11;
             this.btnAddNewWord.Text = "Add New Words";
             this.btnAddNewWord.UseVisualStyleBackColor = true;
             this.btnAddNewWord.Click += new System.EventHandler(this.btnAddNewWord_Click);
-            this.btnAddNewWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAddNewWord_KeyDown);
+            this.btnAddNewWord.Enter += new System.EventHandler(this.btnAddNewWord_Enter);
+            this.btnAddNewWord.Leave += new System.EventHandler(this.btnAddNewWord_Leave);
             // 
             // btnAddNewAdmin
             // 
             this.btnAddNewAdmin.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddNewAdmin.Location = new System.Drawing.Point(538, -3);
+            this.btnAddNewAdmin.Location = new System.Drawing.Point(-1, -1);
             this.btnAddNewAdmin.Name = "btnAddNewAdmin";
             this.btnAddNewAdmin.Size = new System.Drawing.Size(267, 89);
             this.btnAddNewAdmin.TabIndex = 12;
             this.btnAddNewAdmin.Text = "Add New Admin";
             this.btnAddNewAdmin.UseVisualStyleBackColor = true;
             this.btnAddNewAdmin.Click += new System.EventHandler(this.button1_Click);
-            this.btnAddNewAdmin.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAddNewAdmin_KeyDown);
+            this.btnAddNewAdmin.Enter += new System.EventHandler(this.btnAddNewAdmin_Enter);
+            this.btnAddNewAdmin.Leave += new System.EventHandler(this.btnAddNewAdmin_Leave);
             // 
             // sqlCommandBuilder1
             // 
@@ -70,14 +72,15 @@ namespace EnglishWordSet
             // btnAddLearnedWord
             // 
             this.btnAddLearnedWord.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.btnAddLearnedWord.Location = new System.Drawing.Point(264, -3);
+            this.btnAddLearnedWord.Location = new System.Drawing.Point(261, -1);
             this.btnAddLearnedWord.Name = "btnAddLearnedWord";
             this.btnAddLearnedWord.Size = new System.Drawing.Size(276, 89);
             this.btnAddLearnedWord.TabIndex = 14;
             this.btnAddLearnedWord.Text = "Add Learned Word";
             this.btnAddLearnedWord.UseVisualStyleBackColor = true;
             this.btnAddLearnedWord.Click += new System.EventHandler(this.btnAddLearnedWord_Click);
-            this.btnAddLearnedWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.btnAddLearnedWord_KeyDown);
+            this.btnAddLearnedWord.Enter += new System.EventHandler(this.btnAddLearnedWord_Enter);
+            this.btnAddLearnedWord.Leave += new System.EventHandler(this.btnAddLearnedWord_Leave);
             // 
             // pbBack
             // 

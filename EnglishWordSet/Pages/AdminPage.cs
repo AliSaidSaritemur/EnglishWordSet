@@ -34,8 +34,8 @@ namespace EnglishWordSet
             InitializeComponent();
             pageBackend = MyGetBackend.AdminPage();
             MyPageGetter.SetAdminPage(this);
-            this.ActiveControl = btnAddNewWord;
-            btnAddNewWord.Focus();
+            this.ActiveControl = btnAddNewAdmin;
+            btnAddNewAdmin.Focus();
 
         }
 
@@ -64,7 +64,7 @@ namespace EnglishWordSet
             childAdmin.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e) // Add Admin btn
+        private void button1_Click(object sender, EventArgs e) 
         {
             if (!MyTestInternet.IsThereInternet())
             {
@@ -131,33 +131,42 @@ namespace EnglishWordSet
             
         }
 
-        private void btnAddNewWord_KeyDown(object sender, KeyEventArgs e)
-        {
-
-            if (MyKeyDownValueCheck.IsItRight(e))
-            {
-                btnAddLearnedWord.Focus();
-            }
-        }
-
-        private void btnAddLearnedWord_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (MyKeyDownValueCheck.IsItRight(e))
-            {
-                btnAddNewAdmin.Focus();
-            }
-            else if (MyKeyDownValueCheck.IsItLeft(e))
-            {
-                btnAddNewWord.Focus();
-            }
-        }
-
         private void btnAddNewAdmin_KeyDown(object sender, KeyEventArgs e)
         {
             if (MyKeyDownValueCheck.IsItLeft(e))
             {
                 btnAddLearnedWord.Focus();
             }
+        }
+
+        private void btnAddNewWord_Enter(object sender, EventArgs e)
+        {
+            btnAddNewWord.BackColor = Color.AliceBlue;
+        }
+
+        private void btnAddNewWord_Leave(object sender, EventArgs e)
+        {
+            btnAddNewWord.BackColor = Color.White;
+        }
+
+        private void btnAddLearnedWord_Enter(object sender, EventArgs e)
+        {
+            btnAddLearnedWord.BackColor = Color.AliceBlue;
+        }
+
+        private void btnAddLearnedWord_Leave(object sender, EventArgs e)
+        {
+            btnAddLearnedWord.BackColor = Color.White;
+        }
+
+        private void btnAddNewAdmin_Enter(object sender, EventArgs e)
+        {
+            btnAddNewAdmin.BackColor = Color.AliceBlue;
+        }
+
+        private void btnAddNewAdmin_Leave(object sender, EventArgs e)
+        {
+            btnAddNewAdmin.BackColor = Color.White;
         }
     }
 
