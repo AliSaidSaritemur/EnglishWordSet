@@ -8,14 +8,14 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 {
     static class MyPageGetter
     {
-        private static Form1 form1;
+        private static Main form1;
         private static AdminPage adminpage;
 
-        public  static void SetForm1(Form1 frm1)
+        public  static void SetForm1(Main frm1)
         {
             form1 = frm1;
         }
-    public static Form1 GetForm1()
+    public static Main GetForm1()
         {
             return form1;
         }

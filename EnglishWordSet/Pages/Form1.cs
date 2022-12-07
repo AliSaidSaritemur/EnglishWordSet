@@ -1,6 +1,5 @@
 ﻿using EnglishWordSet.CRUD;
 using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.FileTransactions;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
@@ -14,15 +13,16 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EnglishWordSet
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
        private MBWordPageBackend mBWord ;
-        public Form1()
+        public Main()
         {
             InitializeComponent();
             MyPageGetter.SetForm1(this);
@@ -39,7 +39,7 @@ namespace EnglishWordSet
             tempText = converter.CovertText(tempText);
 
             txtOutput.Text = tempText;
-
+            SetWordInform(txtOutput, lblWordCountOutput, lblWordDayAvarageOutput);
             if (saveStatu)
             {
                 string textPath = "Saves.txt";
@@ -71,7 +71,8 @@ namespace EnglishWordSet
             }
             else if(dialogResult == DialogResult.No)
             {
-                txtInput.Text = mBWord.GetWord()+" - \n"+txtInput.Text.ToString();
+                Random rnd = new Random();
+                txtInput.Text = rnd.Next(10) < 5 ? mBWord.GetWord() + " - \n" + txtInput.Text.ToString() : txtInput.Text.ToString() + " - \n"+ mBWord.GetWord();
                 mBWord.RemoveWord();
                 mBWord.SaveChange();
             }
@@ -130,6 +131,7 @@ namespace EnglishWordSet
             { txtOutput.Copy();
                 pbCopy.Image = EnglishWordSet.Properties.Resources.sucsessBlue;
                 timerCopySuccess.Start();
+            
             }
         }
       
@@ -147,12 +149,33 @@ namespace EnglishWordSet
       
             pbPaste.Image = MyImageFilter.GreenFilter(pasteImg);
             timerPasteSuccess.Start();
+            SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
         }
 
         private void timerPasteSuccess_Tick(object sender, EventArgs e)
         {
             pbPaste.Image= EnglishWordSet.Properties.Resources.paste;
         }
+
+        private void txtInput_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void SetWordInform(RichTextBox textBox,Label lblWordCount, Label lblWordDayAvarage)
+        {
+            string inputText = textBox.Text.ToString().Trim();
+            TextInformationGeter informationGeter = new TextInformationGeter(inputText);
+
+            int wordsCount = informationGeter.GetWordCount();
+            int avarageDayWord = informationGeter.GetDaysAvarage();
+            if(wordsCount != 0) { 
+            lblWordCount.Text = "Word Count : " + wordsCount;
+            lblWordDayAvarage.Text = "Day Avarage : " + avarageDayWord;
+            }
+        }
+
+
     }
 }
 

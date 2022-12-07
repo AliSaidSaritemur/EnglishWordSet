@@ -1,7 +1,7 @@
 ﻿
 namespace EnglishWordSet
 {
-    partial class Form1
+    partial class Main
     {
         /// <summary>
         ///  Required designer variable.
@@ -44,6 +44,10 @@ namespace EnglishWordSet
             this.timerCopySuccess = new System.Windows.Forms.Timer(this.components);
             this.pbPaste = new System.Windows.Forms.PictureBox();
             this.timerPasteSuccess = new System.Windows.Forms.Timer(this.components);
+            this.lblWordCountInput = new System.Windows.Forms.Label();
+            this.lblWordDayAvarageInput = new System.Windows.Forms.Label();
+            this.lblWordDayAvarageOutput = new System.Windows.Forms.Label();
+            this.lblWordCountOutput = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).BeginInit();
             this.SuspendLayout();
@@ -55,13 +59,14 @@ namespace EnglishWordSet
             this.txtInput.Size = new System.Drawing.Size(397, 286);
             this.txtInput.TabIndex = 1;
             this.txtInput.Text = "";
+            this.txtInput.TextChanged += new System.EventHandler(this.txtInput_TextChanged);
             // 
             // txtOutput
             // 
             this.txtOutput.Location = new System.Drawing.Point(560, 200);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
-            this.txtOutput.Size = new System.Drawing.Size(386, 286);
+            this.txtOutput.Size = new System.Drawing.Size(406, 286);
             this.txtOutput.TabIndex = 2;
             this.txtOutput.Text = "";
             // 
@@ -100,7 +105,7 @@ namespace EnglishWordSet
             // 
             // btnGetSaveText
             // 
-            this.btnGetSaveText.Location = new System.Drawing.Point(707, 500);
+            this.btnGetSaveText.Location = new System.Drawing.Point(983, 108);
             this.btnGetSaveText.Name = "btnGetSaveText";
             this.btnGetSaveText.Size = new System.Drawing.Size(94, 29);
             this.btnGetSaveText.TabIndex = 6;
@@ -157,7 +162,7 @@ namespace EnglishWordSet
             this.pbCopy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbCopy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCopy.Image = global::EnglishWordSet.Properties.Resources.Copy;
-            this.pbCopy.Location = new System.Drawing.Point(867, 390);
+            this.pbCopy.Location = new System.Drawing.Point(887, 390);
             this.pbCopy.Name = "pbCopy";
             this.pbCopy.Size = new System.Drawing.Size(79, 96);
             this.pbCopy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -188,12 +193,64 @@ namespace EnglishWordSet
             this.timerPasteSuccess.Interval = 500;
             this.timerPasteSuccess.Tick += new System.EventHandler(this.timerPasteSuccess_Tick);
             // 
-            // Form1
+            // lblWordCountInput
+            // 
+            this.lblWordCountInput.AutoSize = true;
+            this.lblWordCountInput.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.lblWordCountInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblWordCountInput.Font = new System.Drawing.Font("Verdana", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblWordCountInput.Location = new System.Drawing.Point(28, 507);
+            this.lblWordCountInput.Name = "lblWordCountInput";
+            this.lblWordCountInput.Size = new System.Drawing.Size(197, 22);
+            this.lblWordCountInput.TabIndex = 15;
+            this.lblWordCountInput.Text = "Word Count :          ";
+            // 
+            // lblWordDayAvarageInput
+            // 
+            this.lblWordDayAvarageInput.AutoSize = true;
+            this.lblWordDayAvarageInput.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.lblWordDayAvarageInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblWordDayAvarageInput.Font = new System.Drawing.Font("Verdana", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblWordDayAvarageInput.Location = new System.Drawing.Point(231, 507);
+            this.lblWordDayAvarageInput.Name = "lblWordDayAvarageInput";
+            this.lblWordDayAvarageInput.Size = new System.Drawing.Size(203, 22);
+            this.lblWordDayAvarageInput.TabIndex = 16;
+            this.lblWordDayAvarageInput.Text = "Day Avarage :          ";
+            // 
+            // lblWordDayAvarageOutput
+            // 
+            this.lblWordDayAvarageOutput.AutoSize = true;
+            this.lblWordDayAvarageOutput.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.lblWordDayAvarageOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblWordDayAvarageOutput.Font = new System.Drawing.Font("Verdana", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblWordDayAvarageOutput.Location = new System.Drawing.Point(763, 507);
+            this.lblWordDayAvarageOutput.Name = "lblWordDayAvarageOutput";
+            this.lblWordDayAvarageOutput.Size = new System.Drawing.Size(203, 22);
+            this.lblWordDayAvarageOutput.TabIndex = 18;
+            this.lblWordDayAvarageOutput.Text = "Day Avarage :          ";
+            // 
+            // lblWordCountOutput
+            // 
+            this.lblWordCountOutput.AutoSize = true;
+            this.lblWordCountOutput.BackColor = System.Drawing.Color.MediumTurquoise;
+            this.lblWordCountOutput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblWordCountOutput.Font = new System.Drawing.Font("Verdana", 10.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblWordCountOutput.Location = new System.Drawing.Point(560, 507);
+            this.lblWordCountOutput.Name = "lblWordCountOutput";
+            this.lblWordCountOutput.Size = new System.Drawing.Size(197, 22);
+            this.lblWordCountOutput.TabIndex = 17;
+            this.lblWordCountOutput.Text = "Word Count :          ";
+            // 
+            // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1089, 552);
+            this.Controls.Add(this.lblWordDayAvarageOutput);
+            this.Controls.Add(this.lblWordCountOutput);
+            this.Controls.Add(this.lblWordDayAvarageInput);
+            this.Controls.Add(this.lblWordCountInput);
             this.Controls.Add(this.pbPaste);
             this.Controls.Add(this.pbCopy);
             this.Controls.Add(this.getLaarnedWordPage);
@@ -206,7 +263,8 @@ namespace EnglishWordSet
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.txtInput);
-            this.Name = "Form1";
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -234,6 +292,10 @@ namespace EnglishWordSet
         private System.Windows.Forms.Timer timerCopySuccess;
         private System.Windows.Forms.PictureBox pbPaste;
         private System.Windows.Forms.Timer timerPasteSuccess;
+        private System.Windows.Forms.Label lblWordCountInput;
+        private System.Windows.Forms.Label lblWordDayAvarageInput;
+        private System.Windows.Forms.Label lblWordDayAvarageOutput;
+        private System.Windows.Forms.Label lblWordCountOutput;
     }
 }
 

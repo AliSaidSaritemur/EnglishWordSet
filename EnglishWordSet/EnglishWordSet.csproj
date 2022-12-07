@@ -53,6 +53,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="FileTransactions\" />
     <Folder Include="Properties\Images\" />
   </ItemGroup>
 
