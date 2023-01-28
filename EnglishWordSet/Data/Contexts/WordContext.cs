@@ -12,6 +12,8 @@ namespace EnglishWordSet.Data.Contexts
     {
         public DbSet<NWords> Words { get; set; }
         public DbSet<Admin> Admins { get; set; }
+        public DbSet<LearnedWord> LearnedWords { get; set;}
+
         protected   override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
@@ -20,8 +22,14 @@ namespace EnglishWordSet.Data.Contexts
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<LearnedWord>().HasIndex(a => a.wordEnglish).IsUnique(true);
+            modelBuilder.Entity<LearnedWord>().Property(a => a.wordEnglish).HasColumnName("learnedWord_word");
+            modelBuilder.Entity<LearnedWord>().Property(a => a.wordTurkish).HasColumnName("learnedWord_meanig");
+            modelBuilder.Entity<LearnedWord>().Property(a => a.wordSentence).HasColumnName("learnedWord_sentence");
+            modelBuilder.Entity<LearnedWord>().Property(a => a.meaningWordSentence).HasColumnName("learnedWord_meanigSentence");
             modelBuilder.Entity<Admin>().HasIndex(a => a.UserName).IsUnique(true);
             modelBuilder.Entity<Admin>().Property(a => a.Password).IsRequired();
+            
             base.OnModelCreating(modelBuilder);
         }
 

@@ -3,14 +3,16 @@ using EnglishWordSet.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EnglishWordSet.Migrations
 {
     [DbContext(typeof(WordContext))]
-    partial class WordContextModelSnapshot : ModelSnapshot
+    [Migration("20221109113315_LearnedWordTable_Added")]
+    partial class LearnedWordTable_Added
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -54,27 +56,20 @@ namespace EnglishWordSet.Migrations
                         .HasColumnType("int")
                         .UseIdentityColumn();
 
-                    b.Property<string>("meaningWordSentence")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("learnedWord_meanigSentence");
-
                     b.Property<string>("wordEnglish")
-                        .HasColumnType("nvarchar(450)")
-                        .HasColumnName("learnedWord_word");
+                        .HasColumnType("nvarchar(450)");
 
                     b.Property<string>("wordSentence")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("learnedWord_sentence");
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("wordTurkish")
-                        .HasColumnType("nvarchar(max)")
-                        .HasColumnName("learnedWord_meanig");
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
 
                     b.HasIndex("wordEnglish")
                         .IsUnique()
-                        .HasFilter("[learnedWord_word] IS NOT NULL");
+                        .HasFilter("[wordEnglish] IS NOT NULL");
 
                     b.ToTable("LearnedWords");
                 });

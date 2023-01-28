@@ -25,7 +25,7 @@ namespace EnglishWordSet.ConvertTransactions
             }
             else if (lineToSet.StartsWith("!!!"))
             {
-                incLine = lineToSet.Substring(1);
+                incLine = lineToSet.Substring(0);
             }
             else if (startWithNum)
             {

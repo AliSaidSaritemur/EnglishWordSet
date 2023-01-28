@@ -33,6 +33,10 @@ namespace EnglishWordSet
         {
             InitializeComponent();
             pageBackend = MyGetBackend.AdminPage();
+            MyPageGetter.SetAdminPage(this);
+            this.ActiveControl = btnAddNewAdmin;
+            btnAddNewAdmin.Focus();
+
         }
 
         private void Form2_Load(object sender, EventArgs e)
@@ -46,32 +50,33 @@ namespace EnglishWordSet
 
             if (!MyTestInternet.IsThereInternet())
             {
-                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
-                  " connect to the internet.", "No internet access",
-          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                InternetAlert();
                 return;
             }
             else { }
 
             if (ActiveMdiChild != null)
-                ActiveMdiChild.Close();
+            {
+                ActiveMdiChild.Hide();
+            }
 
             childAdmin = pageBackend.GetChildNewWordPage();
             childAdmin.Show();
         }
 
-        private void button1_Click(object sender, EventArgs e) // Add Admin btn
+        private void button1_Click(object sender, EventArgs e) 
         {
             if (!MyTestInternet.IsThereInternet())
             {
-                dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
-                  " connect to the internet.", "No internet access",
-          MessageBoxButtons.OK, MessageBoxIcon.Error);
+                InternetAlert();
                 return;
             }
             else { }
             if (ActiveMdiChild != null)
-                ActiveMdiChild.Close();
+            {
+                ActiveMdiChild.Hide();
+            }
+
 
             childAdmin = pageBackend.GetChildNewAdminPage();
             childAdmin.Show();
@@ -79,6 +84,85 @@ namespace EnglishWordSet
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void btnAddLearnedWord_Click(object sender, EventArgs e)
+        {
+                 if (!MyTestInternet.IsThereInternet())
+            {
+                InternetAlert();
+                return;
+            }
+            else { }
+
+            if (ActiveMdiChild != null)
+            {
+                ActiveMdiChild.Hide();
+            }
+
+            childAdmin = pageBackend.GetChildNewLearnedWord();
+            childAdmin.Show();
+        }
+
+        private void InternetAlert()
+        {
+            dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
+               " connect to the internet.", "No internet access",
+       MessageBoxButtons.OK, MessageBoxIcon.Error);
+        }
+
+        private void pbBack_Click(object sender, EventArgs e)
+        {
+            MyPageGetter.GetForm1().Show();
+            Hide();
+        }
+
+        private void AdminPage_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            MyPageGetter.GetForm1().Show();
+        }
+
+        private void AdminPage_Activated(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void btnAddNewAdmin_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (MyKeyDownValueCheck.IsItLeft(e))
+            {
+                btnAddLearnedWord.Focus();
+            }
+        }
+
+        private void btnAddNewWord_Enter(object sender, EventArgs e)
+        {
+            btnAddNewWord.BackColor = Color.AliceBlue;
+        }
+
+        private void btnAddNewWord_Leave(object sender, EventArgs e)
+        {
+            btnAddNewWord.BackColor = Color.White;
+        }
+
+        private void btnAddLearnedWord_Enter(object sender, EventArgs e)
+        {
+            btnAddLearnedWord.BackColor = Color.AliceBlue;
+        }
+
+        private void btnAddLearnedWord_Leave(object sender, EventArgs e)
+        {
+            btnAddLearnedWord.BackColor = Color.White;
+        }
+
+        private void btnAddNewAdmin_Enter(object sender, EventArgs e)
+        {
+            btnAddNewAdmin.BackColor = Color.AliceBlue;
+        }
+
+        private void btnAddNewAdmin_Leave(object sender, EventArgs e)
+        {
+            btnAddNewAdmin.BackColor = Color.White;
         }
     }
 

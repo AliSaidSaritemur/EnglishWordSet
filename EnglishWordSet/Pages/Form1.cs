@@ -1,7 +1,10 @@
-﻿using EnglishWordSet.CRUD;
+﻿using EnglishWordSet.Check.Word;
+using EnglishWordSet.CRUD;
 using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.FileTransactions;
+using EnglishWordSet.Data.Entities;
 using EnglishWordSet.MyTools;
+using EnglishWordSet.PageBackend;
+using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using System;
@@ -13,17 +16,19 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EnglishWordSet
 {
-    public partial class Form1 : Form
+    public partial class Main : Form
     {
        private MBWordPageBackend mBWord ;
-        public Form1()
+        public Main()
         {
             InitializeComponent();
+            MyPageGetter.SetForm1(this);
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -37,7 +42,7 @@ namespace EnglishWordSet
             tempText = converter.CovertText(tempText);
 
             txtOutput.Text = tempText;
-
+            SetWordInform(txtOutput, lblWordCountOutput, lblWordDayAvarageOutput);
             if (saveStatu)
             {
                 string textPath = "Saves.txt";
@@ -53,31 +58,15 @@ namespace EnglishWordSet
             string saveTexts = TextManagment.ReadText(savesFileName);
             txtOutput.Text = saveTexts;
         }
-
-        private void btnCopyOutput_Click(object sender, EventArgs e)
-        {           
-             txtOutput.SelectionStart = 0;
-            txtOutput.SelectionLength = txtOutput.Text.Length;
-
-            if (txtOutput.SelectionLength > 0)
-                txtOutput.Copy();
-        }
-
-        private void btnPasteInput_Click(object sender, EventArgs e)
-        {
-            txtInput.Clear();
-            txtInput.Paste();
-        }
-
      
         private void btnGetNewWord_Click(object sender, EventArgs e)
         {
-           
-            string wordAndMeaning = mBWord.GetWordWithMeanig();
+            mBWord = new MBWordPageBackend();
+            string word = mBWord.GetWord();
            
             DialogResult dialogResult;
           
-            dialogResult = MessageBox.Show(wordAndMeaning,"Do you know this word ?", MessageBoxButtons.YesNoCancel);
+            dialogResult = MessageBox.Show(word, "Do you know this word ?", MessageBoxButtons.YesNoCancel);
 
             if (dialogResult == DialogResult.Yes) {
                 mBWord.RemoveWord();
@@ -85,9 +74,21 @@ namespace EnglishWordSet
             }
             else if(dialogResult == DialogResult.No)
             {
-                txtInput.Text = mBWord.GetWord()+" - \n"+txtInput.Text.ToString();
+                ICheckWord IsWordInLearned = new IsLearned();
+
+                if (IsWordInLearned.IsCheck(word))
+                {
+                    LearnedWordsPageBackend lwpb = MyGetBackend.LearnedPAge();
+                    string sentenceWord= lwpb.GetSentence(word);
+                    MessageBox.Show("You already learned this word. \nSentence : "+ sentenceWord, word);
+                    return;
+                }
+
+                Random rnd = new Random();
+                txtInput.Text = rnd.Next(10) < 5 ? mBWord.GetWordWithMeanig() + "\n" +  txtInput.Text.ToString() : txtInput.Text.ToString() + "\n " + mBWord.GetWordWithMeanig();
                 mBWord.RemoveWord();
                 mBWord.SaveChange();
+                SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
             }
         }
 
@@ -95,10 +96,11 @@ namespace EnglishWordSet
         {
             Form page;
             if (AdminSession.id_Admin != null && AdminSession.id_Admin != 0)
-            { page = new AdminPage(); }
+            {page= MyPageGetter.GetAdminPage(); }
             else
             { page = new LoginPage(); }
             page.Show();
+            Hide();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -127,7 +129,67 @@ namespace EnglishWordSet
                 MyDBTransactions.SetContext();
             });
         }
-     
+
+        private void getLaarnedWordPage_Click(object sender, EventArgs e)
+        {
+            Form page=new LearnedWordsPanel();
+            page.Show();
+        }
+
+        private async void pbCopy_Click(object sender, EventArgs e)
+        {
+            txtOutput.SelectionStart = 0;
+            txtOutput.SelectionLength = txtOutput.Text.Length;
+
+            if (txtOutput.SelectionLength > 0)
+            { txtOutput.Copy();
+                pbCopy.Image = EnglishWordSet.Properties.Resources.sucsessBlue;
+                timerCopySuccess.Start();
+            
+            }
+        }
+      
+        private void timerCopySuccess_Tick(object sender, EventArgs e)
+        {
+            pbCopy.Image = EnglishWordSet.Properties.Resources.Copy;
+        }
+
+        private void pbPaste_Click(object sender, EventArgs e)
+        {
+
+            Image pasteImg= EnglishWordSet.Properties.Resources.paste;
+            txtInput.Clear();
+            txtInput.Paste();
+      
+            pbPaste.Image = MyImageFilter.GreenFilter(pasteImg);
+            timerPasteSuccess.Start();
+            SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
+        }
+
+        private void timerPasteSuccess_Tick(object sender, EventArgs e)
+        {
+            pbPaste.Image= EnglishWordSet.Properties.Resources.paste;
+        }
+
+        private void txtInput_TextChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void SetWordInform(RichTextBox textBox,Label lblWordCount, Label lblWordDayAvarage)
+        {
+            string inputText = textBox.Text.ToString().Trim();
+            TextInformationGeter informationGeter = new TextInformationGeter(inputText);
+
+            int wordsCount = informationGeter.GetWordCount();
+            int avarageDayWord = informationGeter.GetDaysAvarage();
+            if(wordsCount != 0) { 
+            lblWordCount.Text = "Word Count : " + wordsCount;
+            lblWordDayAvarage.Text = "Day Avarage : " + avarageDayWord;
+            }
+        }
+
+
     }
 }
 

@@ -1,4 +1,5 @@
 ﻿using EnglishWordSet.CRUD;
+using EnglishWordSet.PageBackend;
 using EnglishWordSet.ToolsBackend;
 using System;
 using System.Collections.Generic;
@@ -14,6 +15,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
       private static  AdminPageBackend adminPageBackend;
         private static LoginPageBackend loginPageBackend;
         private static MBWordPageBackend mBWordPageBackend;
+        private static LearnedWordsPageBackend learnedWordsPageBackend;
 
         public static AdminPageBackend AdminPage()
         {
@@ -35,6 +37,12 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             return mBWordPageBackend;
         }
 
+        public static LearnedWordsPageBackend LearnedPAge()
+        {
+            if (learnedWordsPageBackend == null)
+                learnedWordsPageBackend = new LearnedWordsPageBackend();
+            return learnedWordsPageBackend;
+        }
 
     }
 }
