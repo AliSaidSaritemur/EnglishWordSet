@@ -1,9 +1,13 @@
 ﻿using EnglishWordSet.Check.Word;
 using EnglishWordSet.CRUD;
 using EnglishWordSet.Data.Contexts;
+<<<<<<< HEAD
 using EnglishWordSet.Data.Entities;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.PageBackend;
+=======
+using EnglishWordSet.MyTools;
+>>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
 using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
@@ -74,6 +78,7 @@ namespace EnglishWordSet
             }
             else if(dialogResult == DialogResult.No)
             {
+<<<<<<< HEAD
                 ICheckWord IsWordInLearned = new IsLearned();
 
                 if (IsWordInLearned.IsCheck(word))
@@ -86,6 +91,10 @@ namespace EnglishWordSet
 
                 Random rnd = new Random();
                 txtInput.Text = rnd.Next(10) < 5 ? mBWord.GetWordWithMeanig() + "\n" +  txtInput.Text.ToString() : txtInput.Text.ToString() + "\n " + mBWord.GetWordWithMeanig();
+=======
+                Random rnd = new Random();
+                txtInput.Text = rnd.Next(10) < 5 ? mBWord.GetWord() + " - \n" + txtInput.Text.ToString() : txtInput.Text.ToString() + " - \n"+ mBWord.GetWord();
+>>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
                 mBWord.RemoveWord();
                 mBWord.SaveChange();
                 SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);

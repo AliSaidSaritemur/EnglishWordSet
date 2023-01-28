@@ -15,7 +15,11 @@ namespace EnglishWordSet.MyTools
 
         public string Translate(string inputTxt)
         {
+<<<<<<< HEAD
             var client = TranslationClient.CreateFromApiKey("AIzaSyBTL7y3H--lfRrgzfFVsIPYjXs7f7TdkyU");
+=======
+            var client = TranslationClient.CreateFromApiKey("Your API Key");
+>>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
 
             var response = client.TranslateText(inputTxt, fromLanguage, toLanguage);
 

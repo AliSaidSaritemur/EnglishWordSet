@@ -4,7 +4,10 @@ using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
 using System.Collections.Specialized;
+=======
+>>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
@@ -34,15 +37,22 @@ namespace EnglishWordSet.Pages
 
         private void pbSearch_Click(object sender, EventArgs e)
         {
+<<<<<<< HEAD
             lblSentence.AutoSize = true;
             string searchedWord = txtSearch.Text.ToString().Trim();
             LearnedWordsPageBackend lwpb = MyGetBackend.LearnedPAge();
              LearnedWord learnedWord = lwpb.SelectWord(searchedWord);
             string learnedwordString;
+=======
+            string searchedWord = txtSearch.Text.ToString().Trim();
+            LearnedWordsPageBackend lwpb = MyGetBackend.LearnedPAge();
+             LearnedWord learnedWord = lwpb.SelectWord(searchedWord);
+>>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
 
             if(learnedWord == null)
             {
                 MyNotificationAlerts.GetErrorMessage("System has no "+ searchedWord+" word");
+<<<<<<< HEAD
                 lblSentences.Text="";
                 return;
             }
@@ -51,6 +61,18 @@ namespace EnglishWordSet.Pages
                 lblSentences.Text = learnedWord.wordSentence;
             }
            
+=======
+                lblSentence.Text="";
+                return;
+            }
+            else
+            {
+                lblSentence.Text = learnedWord.wordSentence;
+            }
+           
+
+
+>>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)

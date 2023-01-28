@@ -35,6 +35,7 @@ namespace EnglishWordSet.CRUD
 
         public string GetWordWithMeanig()
         {
+            Invoke();
             string line = selectedword.English + " - " + selectedword.Turkish;
             return line;
         }
