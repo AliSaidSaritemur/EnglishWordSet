@@ -3,14 +3,16 @@ using EnglishWordSet.Data.Contexts;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 namespace EnglishWordSet.Migrations
 {
     [DbContext(typeof(WordContext))]
-    partial class WordContextModelSnapshot : ModelSnapshot
+    [Migration("20221110104825_setted_LearnedWord")]
+    partial class setted_LearnedWord
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

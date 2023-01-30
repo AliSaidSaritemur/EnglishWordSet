@@ -22,8 +22,10 @@ namespace EnglishWordSet.CRUD
 
         private void Invoke()
         {
-            selectedword = context.Words.FirstOrDefault();
-            
+            Random rand = new Random();
+            int toSkip = rand.Next(0,context.Words.Count());
+            selectedword = context.Words.Skip(toSkip).Take(1).First();
+
         }
 
         public void RemoveWord()
@@ -33,15 +35,16 @@ namespace EnglishWordSet.CRUD
 
         public string GetWordWithMeanig()
         {
-            Invoke();
             string line = selectedword.English + " - " + selectedword.Turkish;
             return line;
         }
         public string GetWord()
         {
+          
             string line = selectedword.English;
             return line;
         }
+
         public void SaveChange()
         {
             context.SaveChanges();

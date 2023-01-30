@@ -1,5 +1,6 @@
 ﻿using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.Data.Entities;
+using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using System;
@@ -25,7 +26,10 @@ namespace EnglishWordSet.ToolsBackend
         }
         public bool IsThereUser(string password)
         {
-            bool result = admin.Password == password ? true : false;
+            DataEncryption dataEncryption = new();
+            string encryptedPassword = dataEncryption.Encrypt(password);
+
+            bool result = admin.Password == encryptedPassword ? true : false;
             AdminSession.id_Admin =result  ?  admin.id : AdminSession.id_Admin;
             return result;
         }

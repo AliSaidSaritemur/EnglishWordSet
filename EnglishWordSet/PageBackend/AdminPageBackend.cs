@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace EnglishWordSet.ToolsBackend
 {
-    class AdminPageBackend
+    class AdminPageBackend 
     {
         private WordContext context = MyDBTransactions.GetContext();
 
@@ -21,38 +21,48 @@ namespace EnglishWordSet.ToolsBackend
 
         private ChildAdminNewWord childAdminAddWord;
         private ChildAdminNewAdmin childAdminAddAdmin;
+        private ChildAdminNewLearnedWord newLearnedWord;
 
         public ChildAdminNewWord GetChildNewWordPage()
         {
-
+            if (childAdminAddWord == null)
+            {
                 childAdminAddWord = new ChildAdminNewWord();
-
                 childAdminAddWord.FormBorderStyle = FormBorderStyle.None;
                 childAdminAddWord.MdiParent = AdminPage.ActiveForm;
-
                 childAdminAddWord.Location = new Point(230, 100);
-            
+            }    
             return childAdminAddWord;
         }
 
 
         public ChildAdminNewAdmin GetChildNewAdminPage()
         {
-        
+            if (childAdminAddAdmin == null)
+            {
                 childAdminAddAdmin = new ChildAdminNewAdmin();
-
                 childAdminAddAdmin.FormBorderStyle = FormBorderStyle.None;
                 childAdminAddAdmin.MdiParent = AdminPage.ActiveForm;
-
                 childAdminAddAdmin.Location = new Point(230, 111);
-            
+            }                     
             return childAdminAddAdmin;
+        }
+
+        public ChildAdminNewLearnedWord GetChildNewLearnedWord()
+        {
+            if(newLearnedWord == null)
+            {
+                newLearnedWord = new ChildAdminNewLearnedWord();
+                newLearnedWord.FormBorderStyle = FormBorderStyle.None;
+                newLearnedWord.MdiParent = AdminPage.ActiveForm;
+                newLearnedWord.Location = new Point(230, 111);
+            }    
+            return newLearnedWord;
         }
 
         public void AddNewWords(string inputTExt)
         {
-            if (translater == null)
-                translater = new Translater();
+            translater ??= new Translater();
 
             StringReader stringReader = new(inputTExt);
 
@@ -75,5 +85,18 @@ namespace EnglishWordSet.ToolsBackend
             context.SaveChanges();
         }
        
+
+        public void AddNewLearnedWord(string word,string sentence,string meaning)
+        {
+            translater ??= new Translater();
+            word = word.ToLower();
+            meaning =meaning==""? translater.Translate(word):meaning;                    
+
+            string meaningOfSentence= translater.Translate(sentence); ;
+
+            context.LearnedWords.Add(new Data.Entities.LearnedWord { wordEnglish = word, wordSentence = sentence, wordTurkish = meaning,meaningWordSentence= meaningOfSentence });
+            context.SaveChanges();
+        }
     }
+
 }
