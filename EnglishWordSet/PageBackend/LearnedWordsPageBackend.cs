@@ -20,6 +20,10 @@ namespace EnglishWordSet.PageBackend
             selectedWord = context.LearnedWords.FirstOrDefault(I=> I.wordEnglish== word);
             return selectedWord;    
         }
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
 
         public String GetSentence(string word)
         {
@@ -27,5 +31,11 @@ namespace EnglishWordSet.PageBackend
             selectedWord = context.LearnedWords.FirstOrDefault(I => I.wordEnglish == word);
             return selectedWord.wordSentence;
         }
+<<<<<<< HEAD
+=======
+=======
+        
+>>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
+>>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
     }
 }
