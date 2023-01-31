@@ -124,16 +124,6 @@ namespace EnglishWordSet
 
         private void AdminPage_Activated(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
-<<<<<<< HEAD
-=======
-            if (ActiveMdiChild != null)
-            {
-                ActiveMdiChild.Hide();
-            }
->>>>>>> e786232210edb1947b3038abcfc91f427dd1cdf5
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             
         }
 

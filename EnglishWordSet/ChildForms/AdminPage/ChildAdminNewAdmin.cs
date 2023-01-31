@@ -1,8 +1,5 @@
 ﻿using EnglishWordSet.Data.Contexts;
-<<<<<<< HEAD
 using EnglishWordSet.MyTools;
-=======
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using System;
@@ -46,10 +43,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
         private void btnSubmitNewAdmin_Click(object sender, EventArgs e)
         {
             AdminPageBackend pageBackend = MyGetBackend.AdminPage();
-<<<<<<< HEAD
             WordContext context = MyDBTransactions.GetContext();
-=======
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
 
             TrimForm();
             string userName = txtUserName.Text.ToString();
@@ -59,7 +53,6 @@ namespace EnglishWordSet.ChildForms.AdminPage
             string againPassword = txtAgainPassword.Text.ToString();
 
 
-<<<<<<< HEAD
             if (context.Admins.FirstOrDefault(a => a.UserName == userName)!=null)
             {
                 UserNameProvider.SetError(txtUserName, "This username already using");
@@ -67,9 +60,6 @@ namespace EnglishWordSet.ChildForms.AdminPage
             }
 
             else if (userName== "")
-=======
-            if (userName== "")
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             { UserNameProvider.SetError(txtUserName, "UserName can not be null");
                 return;
             }
@@ -83,16 +73,12 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 UserNameProvider.Clear();
             }
 
-<<<<<<< HEAD
             if (context.Admins.FirstOrDefault(a => a.Email == email) != null)
             {
                 emailProvider.SetError(txtEmail, "This email already using");
                 return;
             }
             else if (email == "")
-=======
-            if (email == "")
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             { emailProvider.SetError(txtEmail, "Email can not be null");
                 return;
             }
@@ -106,7 +92,6 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 emailProvider.Clear();
             }
 
-<<<<<<< HEAD
             if (context.Admins.FirstOrDefault(a => a.Phone == phone) != null)
             {
                 phoneProvider.SetError(txtPhone, "This phone number already using");
@@ -115,29 +100,16 @@ namespace EnglishWordSet.ChildForms.AdminPage
             else if (phone == "")
             {
                 phoneProvider.SetError(txtPhone, "Phone Number can not be null");
-=======
-
-            if (phone == "")
-            { emailProvider.SetError(txtPhone, "Phone Number can not be null");
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
                 return;
             }
 
             else if (!MyRegex.Isthere(phone, "^0?[0-9]{10}$"))
-<<<<<<< HEAD
             { phoneProvider.SetError(txtPhone, "Phone Number is not valid type");
-=======
-            { emailProvider.SetError(txtPhone, "Phone Number is not valid type");
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
                 return;
             }
             else
             {
-<<<<<<< HEAD
                 phoneProvider.Clear();
-=======
-                emailProvider.Clear();
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             }
 
             if (password== "")
@@ -162,17 +134,11 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 phone= temp;    
             }
 
-<<<<<<< HEAD
             DataEncryption dataEncryption = new();
             string encyptedPassword = dataEncryption.Encrypt(password);
 
 
             context.Add(new Data.Entities.Admin { Email = email,Password=encyptedPassword,Phone=phone,UserName=userName });
-=======
-
-            WordContext context = MyDBTransactions.GetContext();
-            context.Add(new Data.Entities.Admin { Email = email,Password=password,Phone=phone,UserName=userName });
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
 
  
             MyNotificationAlerts.GetSuccessMessage("Admin added");
@@ -186,10 +152,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             {
                 focusText = txtEmail;
             }
-<<<<<<< HEAD
             else { return; }
-=======
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             focusText.Focus();
         }
 
@@ -203,10 +166,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             {
                 focusText = txtPhone;
             }
-<<<<<<< HEAD
             else{ return;}
-=======
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             focusText.Focus();
         }
 
@@ -220,10 +180,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             {
                 focusText = txtPassword;
             }
-<<<<<<< HEAD
             else { return; }
-=======
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             focusText.Focus();
         }
 
@@ -237,10 +194,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             {
                 focusText = txtAgainPassword;
             }
-<<<<<<< HEAD
             else { return; }
-=======
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
             focusText.Focus();
         }
 
@@ -256,10 +210,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 focusText = txtPassword;
                 btnSubmitNewAdmin.Focus();
             }
-<<<<<<< HEAD
             else { return; }
-=======
->>>>>>> 4c133cded4616a0fea5579ee49cd08c987ea4ec1
         }
         private void CleanForm()
         {
