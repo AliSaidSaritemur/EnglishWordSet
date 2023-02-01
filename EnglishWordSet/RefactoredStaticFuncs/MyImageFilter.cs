@@ -15,6 +15,11 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             return FilterImage(image,Color.Green);
             }
 
+        internal static Image GreenFilter(string regular)
+        {
+            throw new NotImplementedException();
+        }
+
         private static  Image FilterImage(Image inputImage,Color color){
             Bitmap outputImage = new Bitmap(inputImage.Width, inputImage.Height);
             Graphics imageGraphics = Graphics.FromImage(outputImage);

@@ -1,4 +1,5 @@
 ﻿using EnglishWordSet.Data.Entities;
+using EnglishWordSet.MyTools;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
@@ -49,6 +50,8 @@ namespace EnglishWordSet.Pages
             else
             {     
                 lblSentences.Text = learnedWord.wordSentence;
+                UnsplashImagesTransaction tran = new();
+                tran.getImageWithWord(pBLearned, searchedWord);
             }
            
         }

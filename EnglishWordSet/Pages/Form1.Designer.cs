@@ -149,6 +149,7 @@ namespace EnglishWordSet
             // 
             // getLaarnedWordPage
             // 
+            this.getLaarnedWordPage.Enabled = false;
             this.getLaarnedWordPage.Location = new System.Drawing.Point(423, 12);
             this.getLaarnedWordPage.Name = "getLaarnedWordPage";
             this.getLaarnedWordPage.Size = new System.Drawing.Size(160, 29);

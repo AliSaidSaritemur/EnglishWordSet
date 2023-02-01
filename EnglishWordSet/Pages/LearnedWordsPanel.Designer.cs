@@ -33,7 +33,9 @@
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.lblSentence = new System.Windows.Forms.Label();
             this.lblSentences = new System.Windows.Forms.Label();
+            this.pBLearned = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -84,11 +86,21 @@
             this.lblSentences.Size = new System.Drawing.Size(502, 68);
             this.lblSentences.TabIndex = 4;
             // 
+            // pBLearned
+            // 
+            this.pBLearned.Location = new System.Drawing.Point(245, 222);
+            this.pBLearned.Name = "pBLearned";
+            this.pBLearned.Size = new System.Drawing.Size(149, 102);
+            this.pBLearned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBLearned.TabIndex = 5;
+            this.pBLearned.TabStop = false;
+            // 
             // LearnedWordsPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(631, 270);
+            this.ClientSize = new System.Drawing.Size(675, 353);
+            this.Controls.Add(this.pBLearned);
             this.Controls.Add(this.lblSentences);
             this.Controls.Add(this.lblSentence);
             this.Controls.Add(this.pbSearch);
@@ -100,6 +112,7 @@
             this.Text = "LearnedWordsPanel";
             this.Load += new System.EventHandler(this.LearnedWordsPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -112,5 +125,6 @@
         private System.Windows.Forms.Label lblSentence;
         private System.Windows.Forms.Label Sentence;
         private System.Windows.Forms.Label lblSentences;
+        private System.Windows.Forms.PictureBox pBLearned;
     }
 }

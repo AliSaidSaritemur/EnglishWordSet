@@ -115,6 +115,7 @@ namespace EnglishWordSet
             await LoadMBAsync();
             btnGetNewWord.Enabled = true;
             btnToAdminPage.Enabled = true;
+            getLaarnedWordPage.Enabled = true;
         }
         private Task LoadMBAsync()
         {
