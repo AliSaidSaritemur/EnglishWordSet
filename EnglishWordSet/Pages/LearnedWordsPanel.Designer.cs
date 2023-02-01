@@ -28,14 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.Sentence = new System.Windows.Forms.Label();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.lblSentence = new System.Windows.Forms.Label();
             this.lblSentences = new System.Windows.Forms.Label();
             this.pBLearned = new System.Windows.Forms.PictureBox();
+            this.epWifiConnectionImage = new System.Windows.Forms.ErrorProvider(this.components);
+            this.WifiEPtimer = new System.Windows.Forms.Timer(this.components);
+            this.timerImageEnable = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epWifiConnectionImage)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
@@ -88,12 +93,29 @@
             // 
             // pBLearned
             // 
-            this.pBLearned.Location = new System.Drawing.Point(245, 222);
+            this.pBLearned.Enabled = false;
+            this.pBLearned.Image = global::EnglishWordSet.Properties.Resources.tipMark;
+            this.pBLearned.Location = new System.Drawing.Point(194, 184);
             this.pBLearned.Name = "pBLearned";
-            this.pBLearned.Size = new System.Drawing.Size(149, 102);
+            this.pBLearned.Size = new System.Drawing.Size(217, 140);
             this.pBLearned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pBLearned.TabIndex = 5;
             this.pBLearned.TabStop = false;
+            this.pBLearned.Click += new System.EventHandler(this.pBLearned_Click);
+            // 
+            // epWifiConnectionImage
+            // 
+            this.epWifiConnectionImage.ContainerControl = this;
+            // 
+            // WifiEPtimer
+            // 
+            this.WifiEPtimer.Interval = 400;
+            this.WifiEPtimer.Tick += new System.EventHandler(this.WifiEPtimer_Tick);
+            // 
+            // timerImageEnable
+            // 
+            this.timerImageEnable.Interval = 1000;
+            this.timerImageEnable.Tick += new System.EventHandler(this.timerImageEnable_Tick);
             // 
             // LearnedWordsPanel
             // 
@@ -113,6 +135,7 @@
             this.Load += new System.EventHandler(this.LearnedWordsPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.epWifiConnectionImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -126,5 +149,8 @@
         private System.Windows.Forms.Label Sentence;
         private System.Windows.Forms.Label lblSentences;
         private System.Windows.Forms.PictureBox pBLearned;
+        private System.Windows.Forms.ErrorProvider epWifiConnectionImage;
+        private System.Windows.Forms.Timer WifiEPtimer;
+        private System.Windows.Forms.Timer timerImageEnable;
     }
 }

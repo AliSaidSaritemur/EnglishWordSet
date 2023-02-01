@@ -83,6 +83,16 @@ namespace EnglishWordSet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap noImageAvaIlable {
+            get {
+                object obj = ResourceManager.GetObject("noImageAvaIlable", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap paste {
             get {
                 object obj = ResourceManager.GetObject("paste", resourceCulture);
@@ -106,6 +116,26 @@ namespace EnglishWordSet.Properties {
         internal static System.Drawing.Bitmap sucsessBlue {
             get {
                 object obj = ResourceManager.GetObject("sucsessBlue", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tipMark {
+            get {
+                object obj = ResourceManager.GetObject("tipMark", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap wifiDisconnect {
+            get {
+                object obj = ResourceManager.GetObject("wifiDisconnect", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

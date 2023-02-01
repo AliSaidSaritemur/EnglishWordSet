@@ -20,10 +20,11 @@ namespace EnglishWordSet.Pages
 {
     public partial class LearnedWordsPanel : Form
     {
-        
+        string searchedWord;
         public LearnedWordsPanel()
         {
-            InitializeComponent();
+            InitializeComponent(); 
+   
 
         }
 
@@ -36,7 +37,7 @@ namespace EnglishWordSet.Pages
         private void pbSearch_Click(object sender, EventArgs e)
         {
             lblSentence.AutoSize = true;
-            string searchedWord = txtSearch.Text.ToString().Trim();
+             searchedWord = txtSearch.Text.ToString().Trim();
             LearnedWordsPageBackend lwpb = MyGetBackend.LearnedPAge();
              LearnedWord learnedWord = lwpb.SelectWord(searchedWord);
             string learnedwordString;
@@ -50,8 +51,7 @@ namespace EnglishWordSet.Pages
             else
             {     
                 lblSentences.Text = learnedWord.wordSentence;
-                UnsplashImagesTransaction tran = new();
-                tran.getImageWithWord(pBLearned, searchedWord);
+                pBLearned.Enabled = true;
             }
            
         }
@@ -68,6 +68,32 @@ namespace EnglishWordSet.Pages
             {
                 this.pbSearch_Click(sender, e);
             }
+        }
+
+        private void pBLearned_Click(object sender, EventArgs e)
+        {
+            if (!MyTestInternet.IsThereInternet())
+            {
+                Image disConnectImage = EnglishWordSet.Properties.Resources.wifiDisconnect;
+                pBLearned.Image = MyImageFilter.RedFilter(disConnectImage);
+                epWifiConnectionImage.SetError(pBLearned, "No Internet connection !!!");
+                WifiEPtimer.Start();
+                return;
+            }
+            UnsplashImagesTransaction tran = new();
+            tran.getImageWithWord(pBLearned, searchedWord);
+            pBLearned.Enabled=false;
+            timerImageEnable.Start();
+        }
+
+        private void WifiEPtimer_Tick(object sender, EventArgs e)
+        {
+            pBLearned.Image = EnglishWordSet.Properties.Resources.wifiDisconnect;
+        }
+
+        private void timerImageEnable_Tick(object sender, EventArgs e)
+        {
+            pBLearned.Enabled = true;
         }
     }
 }

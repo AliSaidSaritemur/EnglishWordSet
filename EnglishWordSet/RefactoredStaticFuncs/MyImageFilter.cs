@@ -19,6 +19,11 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
             throw new NotImplementedException();
         }
+        public static Image RedFilter(Image image)
+        {
+
+            return FilterImage(image, Color.Red);
+        }
 
         private static  Image FilterImage(Image inputImage,Color color){
             Bitmap outputImage = new Bitmap(inputImage.Width, inputImage.Height);

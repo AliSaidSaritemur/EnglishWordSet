@@ -24,25 +24,27 @@ namespace EnglishWordSet.MyTools
 
         public async void getImageWithWord(PictureBox pbLearned,String searchedWord)
         {
-         var client = new UnsplasharpClient("YOUR API KEY");
-         
-         var randomPhotosFromQuery = await client.GetRandomPhoto(count: 1, query: searchedWord);
+            if (searchedWord == null)return;
 
-           var photos =  randomPhotosFromQuery[0];
+         var client = new UnsplasharpClient("YOUR API KEY");
+            var randomPhotosFromQuery = await client.SearchPhotos(searchedWord);
+
+            if (randomPhotosFromQuery.Count < 2) {
+                pbLearned.Image = Properties.Resources.noImageAvaIlable;
+                return;
+            }
+       
+
+            Random rnd = new Random();
+            var photos =  randomPhotosFromQuery[rnd.Next(randomPhotosFromQuery.Count-1)];
 
 
             WebClient wc = new WebClient();
             byte[] bytes = wc.DownloadData(photos.Urls.Regular);
             MemoryStream ms = new MemoryStream(bytes);
-            System.Drawing.Image img = System.Drawing.Image.FromStream(ms);
+            Image img = Image.FromStream(ms);
 
             pbLearned.Image = img;
-         //   var listPhotos =  client.ListPhotos();
-         //   var downloadLink =  client.GetPhotoDownloadLink(listPhotos[0].Id);
-
-
-            string fetchUrl = "https://api.unsplash.com/search/photos/?client_id=zbUIVrp4QpDLHjJjhV4gSE1lAniC20DXwQsDkMa68Ws&per_page=1&page=1&query=leon";
-          
         }
 
     }
