@@ -22,12 +22,10 @@ namespace EnglishWordSet.MyTools
 {
     public class UnsplashImagesTransaction
     {
-
         private string lastSearchedWord;
         private  List<Unsplasharp.Models.Photo> lastPhotos;
         private UnsplasharpClient client;
-        private Image lastImage;
-        Random rnd=new Random();
+        private int photonum=0;
         public async void getImageWithWord(PictureBox pbLearned,String searchedWord)
         {
             List<Unsplasharp.Models.Photo> photos;
@@ -36,13 +34,13 @@ namespace EnglishWordSet.MyTools
             if (lastSearchedWord == searchedWord)
             {
                 photos = lastPhotos;
+                photonum = (photonum < photos.Count-1) ?++photonum:0;
             }
             else
             {
                 client = new UnsplasharpClient("Your API Key") ?? client;
                 photos = await client.SearchPhotos(searchedWord);
-                lastSearchedWord = searchedWord;
-                lastPhotos = photos;
+                RefreshSystem(searchedWord, photos);
             }
 
             if (photos.Count < 2)
@@ -51,22 +49,16 @@ namespace EnglishWordSet.MyTools
                 return;
             }
 
-            Image img;
-
-            do
-            {
-                img = GetRandomImageFromArray(photos);
-            } while (lastImage!= null &&TypeComparator.ImageCompare(img,lastImage));
-
-            pbLearned.Image,lastImage = img;
+            var nowPhoto = photos[photonum];
+            Image img = TypeConverter.ConverterURLtoImage(nowPhoto.Urls.Regular);
+            pbLearned.Image = img;
         }
 
-        private Image GetRandomImageFromArray(List<Unsplasharp.Models.Photo> photos)
+        private void RefreshSystem(string searchedWord, List<Unsplasharp.Models.Photo> photos)
         {
-            var photo = photos[rnd.Next(photos.Count - 1)];
-            var img = TypeConverter.ConverterURLtoImage(photo.Urls.Regular);
-            return img;
-        }   
-    }
-   
+            lastSearchedWord = searchedWord;
+            lastPhotos = photos;
+            photonum = 0;
+        }
+    } 
 }
