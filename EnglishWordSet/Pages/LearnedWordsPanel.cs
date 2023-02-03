@@ -22,6 +22,7 @@ namespace EnglishWordSet.Pages
     {
         UnsplashImagesTransaction tran;
         string searchedWord;
+        bool isConnectWifi=false;
         public LearnedWordsPanel()
         {
             InitializeComponent();
@@ -73,24 +74,24 @@ namespace EnglishWordSet.Pages
         }
 
         private void pBLearned_Click(object sender, EventArgs e)
-        {
-            if (!MyTestInternet.IsThereInternet())
-            {
-                Image disConnectImage = EnglishWordSet.Properties.Resources.wifiDisconnect;
-                pBLearned.Image = MyImageFilter.RedFilter(disConnectImage);
-                epWifiConnectionImage.SetError(pBLearned, "No Internet connection !!!");
-                WifiEPtimer.Start();
-                return;
-            }
-            btnChangeImage_Click(sender,e);
-            
+        {                   
             pBLearned.Enabled= false;
             btnChangeImage.Visible = true;
-
+            btnChangeImage_Click(sender, e);
         }
         private void btnChangeImage_Click(object sender, EventArgs e)
         {
-
+            if (!MyTestInternet.IsThereInternet())
+            {
+                WifiConnectionAlert();
+                return;
+            }
+            else if(!isConnectWifi) 
+            {   WifiEPtimer.Stop();
+                epWifiConnectionImage.Clear();
+                isConnectWifi = true;
+            }
+                
             tran.getImageWithWord(pBLearned, searchedWord);
             btnChangeImage.Enabled = false;
             timerImageEnable.Start();
@@ -104,7 +105,16 @@ namespace EnglishWordSet.Pages
         {
             btnChangeImage.Enabled = true;
         }
-
+        private void WifiConnectionAlert()
+        {
+            Image disConnectImage = EnglishWordSet.Properties.Resources.wifiDisconnect;
+            pBLearned.Image = MyImageFilter.RedFilter(disConnectImage);
+            epWifiConnectionImage.SetError(pBLearned, "No Internet connection !!!");
+            pBLearned.Enabled = true;
+            btnChangeImage.Visible = false;
+            isConnectWifi = false;
+            WifiEPtimer.Start();       
+        }
        
     }
 }
