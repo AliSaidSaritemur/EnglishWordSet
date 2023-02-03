@@ -38,6 +38,7 @@
             this.epWifiConnectionImage = new System.Windows.Forms.ErrorProvider(this.components);
             this.WifiEPtimer = new System.Windows.Forms.Timer(this.components);
             this.timerImageEnable = new System.Windows.Forms.Timer(this.components);
+            this.btnChangeImage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWifiConnectionImage)).BeginInit();
@@ -117,11 +118,23 @@
             this.timerImageEnable.Interval = 1000;
             this.timerImageEnable.Tick += new System.EventHandler(this.timerImageEnable_Tick);
             // 
+            // btnChangeImage
+            // 
+            this.btnChangeImage.Location = new System.Drawing.Point(254, 330);
+            this.btnChangeImage.Name = "btnChangeImage";
+            this.btnChangeImage.Size = new System.Drawing.Size(94, 29);
+            this.btnChangeImage.TabIndex = 6;
+            this.btnChangeImage.Text = "Change";
+            this.btnChangeImage.UseVisualStyleBackColor = true;
+            this.btnChangeImage.Visible = false;
+            this.btnChangeImage.Click += new System.EventHandler(this.btnChangeImage_Click);
+            // 
             // LearnedWordsPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(675, 353);
+            this.ClientSize = new System.Drawing.Size(683, 367);
+            this.Controls.Add(this.btnChangeImage);
             this.Controls.Add(this.pBLearned);
             this.Controls.Add(this.lblSentences);
             this.Controls.Add(this.lblSentence);
@@ -152,5 +165,6 @@
         private System.Windows.Forms.ErrorProvider epWifiConnectionImage;
         private System.Windows.Forms.Timer WifiEPtimer;
         private System.Windows.Forms.Timer timerImageEnable;
+        private System.Windows.Forms.Button btnChangeImage;
     }
 }

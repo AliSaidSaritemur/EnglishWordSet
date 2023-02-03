@@ -20,12 +20,12 @@ namespace EnglishWordSet.Pages
 {
     public partial class LearnedWordsPanel : Form
     {
+        UnsplashImagesTransaction tran;
         string searchedWord;
         public LearnedWordsPanel()
         {
-            InitializeComponent(); 
-   
-
+            InitializeComponent();
+            tran = new();
         }
 
         private void LearnedWordsPanel_Load(object sender, EventArgs e)
@@ -52,6 +52,8 @@ namespace EnglishWordSet.Pages
             {     
                 lblSentences.Text = learnedWord.wordSentence;
                 pBLearned.Enabled = true;
+                btnChangeImage.Visible = false;
+                pBLearned.Image = EnglishWordSet.Properties.Resources.tipMark;
             }
            
         }
@@ -80,12 +82,19 @@ namespace EnglishWordSet.Pages
                 WifiEPtimer.Start();
                 return;
             }
-            UnsplashImagesTransaction tran = new();
+            btnChangeImage_Click(sender,e);
+            
+            pBLearned.Enabled= false;
+            btnChangeImage.Visible = true;
+
+        }
+        private void btnChangeImage_Click(object sender, EventArgs e)
+        {
+
             tran.getImageWithWord(pBLearned, searchedWord);
-            pBLearned.Enabled=false;
+            btnChangeImage.Enabled = false;
             timerImageEnable.Start();
         }
-
         private void WifiEPtimer_Tick(object sender, EventArgs e)
         {
             pBLearned.Image = EnglishWordSet.Properties.Resources.wifiDisconnect;
@@ -93,7 +102,9 @@ namespace EnglishWordSet.Pages
 
         private void timerImageEnable_Tick(object sender, EventArgs e)
         {
-            pBLearned.Enabled = true;
+            btnChangeImage.Enabled = true;
         }
+
+       
     }
 }

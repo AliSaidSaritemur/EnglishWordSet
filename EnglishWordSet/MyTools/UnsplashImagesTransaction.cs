@@ -16,37 +16,57 @@ using Phaber.Unsplash;
 using System.Windows.Forms;
 using EnglishWordSet.RefactoredStaticFuncs;
 using System.IO;
+using Unsplasharp.Models;
 
 namespace EnglishWordSet.MyTools
 {
     public class UnsplashImagesTransaction
     {
 
+        private string lastSearchedWord;
+        private  List<Unsplasharp.Models.Photo> lastPhotos;
+        private UnsplasharpClient client;
+        private Image lastImage;
+        Random rnd=new Random();
         public async void getImageWithWord(PictureBox pbLearned,String searchedWord)
         {
+            List<Unsplasharp.Models.Photo> photos;
             if (searchedWord == null)return;
+            else { }
+            if (lastSearchedWord == searchedWord)
+            {
+                photos = lastPhotos;
+            }
+            else
+            {
+                client = new UnsplasharpClient("Your API Key") ?? client;
+                photos = await client.SearchPhotos(searchedWord);
+                lastSearchedWord = searchedWord;
+                lastPhotos = photos;
+            }
 
-         var client = new UnsplasharpClient("YOUR API KEY");
-            var randomPhotosFromQuery = await client.SearchPhotos(searchedWord);
-
-            if (randomPhotosFromQuery.Count < 2) {
+            if (photos.Count < 2)
+            {
                 pbLearned.Image = Properties.Resources.noImageAvaIlable;
                 return;
             }
-       
 
-            Random rnd = new Random();
-            var photos =  randomPhotosFromQuery[rnd.Next(randomPhotosFromQuery.Count-1)];
+            Image img;
 
+            do
+            {
+                img = GetRandomImageFromArray(photos);
+            } while (lastImage!= null &&TypeComparator.ImageCompare(img,lastImage));
 
-            WebClient wc = new WebClient();
-            byte[] bytes = wc.DownloadData(photos.Urls.Regular);
-            MemoryStream ms = new MemoryStream(bytes);
-            Image img = Image.FromStream(ms);
-
-            pbLearned.Image = img;
+            pbLearned.Image,lastImage = img;
         }
 
+        private Image GetRandomImageFromArray(List<Unsplasharp.Models.Photo> photos)
+        {
+            var photo = photos[rnd.Next(photos.Count - 1)];
+            var img = TypeConverter.ConverterURLtoImage(photo.Urls.Regular);
+            return img;
+        }   
     }
    
 }
