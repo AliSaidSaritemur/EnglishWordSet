@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.PageBackend
 {
-     class LearnedWordsPageBackend
+     class LearnedWordsController
     {
 
 

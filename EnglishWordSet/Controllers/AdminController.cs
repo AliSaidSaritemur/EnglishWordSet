@@ -2,6 +2,7 @@
 using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.services.Impl;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -14,10 +15,10 @@ using System.Windows.Forms;
 
 namespace EnglishWordSet.ToolsBackend
 {
-    class AdminPageBackend 
+    class AdminController 
     {
         private WordContext context = MyDBTransactions.GetContext();
-
+        public WordImpl wordImpl =new();
         Translater translater;
 
         private ChildAdminNewWord childAdminAddWord;
@@ -92,7 +93,7 @@ namespace EnglishWordSet.ToolsBackend
                 {
                     string translatedWord;
                     translatedWord = currentWord.Value;
-                    context.Words.Add(new Data.Entities.NWords { English = willTranslateLine, Turkish = translatedWord });
+                    ((services.IWordService)wordImpl).Add(willTranslateLine, translatedWord);                
                 }
                 else
                 {

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.Check.Word
-{    
+namespace EnglishWordSet.services
+{
     internal interface ICheckWord
     {
         bool IsCheck(string word);

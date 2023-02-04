@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.Data.Entities
 {
-     class LearnedWord
+    public class LearnedWord
     {
 
         public int Id { get; set; }

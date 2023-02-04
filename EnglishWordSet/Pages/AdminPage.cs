@@ -28,11 +28,11 @@ namespace EnglishWordSet
     public partial class AdminPage : Form
     {
         DialogResult dialogResult;
-        AdminPageBackend pageBackend;
+        AdminController pageBackend;
         public AdminPage()
         {
             InitializeComponent();
-            pageBackend = MyGetBackend.AdminPage();
+            pageBackend = ControllersGetter.AdminPage();
             MyPageGetter.SetAdminPage(this);
             this.ActiveControl = btnAddNewAdmin;
             btnAddNewAdmin.Focus();

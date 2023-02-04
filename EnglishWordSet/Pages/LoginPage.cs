@@ -31,7 +31,7 @@ namespace EnglishWordSet
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            LoginPageBackend loginB = MyGetBackend.LoginPage();
+            LoginController loginB = ControllersGetter.LoginPage();
             string userName = txtUserName.Text.ToString();
             string password = txtPassword.Text.ToString();
 

@@ -94,12 +94,13 @@
             // 
             // pBLearned
             // 
+            this.pBLearned.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.pBLearned.Enabled = false;
             this.pBLearned.Image = global::EnglishWordSet.Properties.Resources.tipMark;
-            this.pBLearned.Location = new System.Drawing.Point(194, 184);
+            this.pBLearned.Location = new System.Drawing.Point(179, 184);
             this.pBLearned.Name = "pBLearned";
-            this.pBLearned.Size = new System.Drawing.Size(217, 140);
-            this.pBLearned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pBLearned.Size = new System.Drawing.Size(244, 140);
+            this.pBLearned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBLearned.TabIndex = 5;
             this.pBLearned.TabStop = false;
             this.pBLearned.Click += new System.EventHandler(this.pBLearned_Click);

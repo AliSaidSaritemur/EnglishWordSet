@@ -25,7 +25,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AdminPageBackend pageBackend = MyGetBackend.AdminPage();
+            AdminController pageBackend = ControllersGetter.AdminPage();
             string word=txtWord.Text.ToString().Trim();
             string sentence=txtSentence.Text.ToString().Trim();
             string meaning=txtMeaning.Text.ToString().Trim();   

@@ -1,6 +1,7 @@
 ﻿using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.Data.Entities;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.services.Impl;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;
@@ -10,27 +11,25 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.CRUD
 {
-    class MBWordPageBackend
+    class MBWordController
     {
 
-        public MBWordPageBackend()
+        public MBWordController()
         {
             Invoke();
         }
         public WordContext context = MyDBTransactions.GetContext();
         public NWords selectedword { get; set; }
+         private WordImpl wordImpl =new();
 
         private void Invoke()
-        {
-            Random rand = new Random();
-            int toSkip = rand.Next(0,context.Words.Count());
-            selectedword = context.Words.Skip(toSkip).Take(1).First();
-
+        {       
+            selectedword = wordImpl.GetRandomWord();
         }
 
         public void RemoveWord()
         {
-            context.Words.Remove(selectedword);
+            wordImpl.Delete(selectedword.English);
         }
 
         public string GetWordWithMeanig()
@@ -39,15 +38,9 @@ namespace EnglishWordSet.CRUD
             return line;
         }
         public string GetWord()
-        {
-          
+        { 
             string line = selectedword.English;
             return line;
-        }
-
-        public void SaveChange()
-        {
-            context.SaveChanges();
-        }
+        }     
     }
 }

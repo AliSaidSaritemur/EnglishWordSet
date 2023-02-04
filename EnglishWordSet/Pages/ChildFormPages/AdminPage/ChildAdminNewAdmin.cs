@@ -42,7 +42,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         private void btnSubmitNewAdmin_Click(object sender, EventArgs e)
         {
-            AdminPageBackend pageBackend = MyGetBackend.AdminPage();
+            AdminController pageBackend = ControllersGetter.AdminPage();
             WordContext context = MyDBTransactions.GetContext();
 
             TrimForm();

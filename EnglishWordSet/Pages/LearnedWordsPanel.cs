@@ -39,7 +39,7 @@ namespace EnglishWordSet.Pages
         {
             lblSentence.AutoSize = true;
              searchedWord = txtSearch.Text.ToString().Trim();
-            LearnedWordsPageBackend lwpb = MyGetBackend.LearnedPAge();
+            LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
              LearnedWord learnedWord = lwpb.SelectWord(searchedWord);
             string learnedwordString;
 

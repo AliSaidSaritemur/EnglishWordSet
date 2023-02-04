@@ -1,11 +1,12 @@
-﻿using EnglishWordSet.Check.Word;
-using EnglishWordSet.CRUD;
+﻿using EnglishWordSet.CRUD;
 using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.Data.Entities;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.services;
+using EnglishWordSet.services.Impl;
 using EnglishWordSet.Sessions;
 using System;
 using System.Collections.Generic;
@@ -24,7 +25,7 @@ namespace EnglishWordSet
 {
     public partial class Main : Form
     {
-       private MBWordPageBackend mBWord ;
+       private MBWordController mBWord ;
         public Main()
         {
             InitializeComponent();
@@ -61,7 +62,7 @@ namespace EnglishWordSet
      
         private void btnGetNewWord_Click(object sender, EventArgs e)
         {
-            mBWord = new MBWordPageBackend();
+            mBWord = new MBWordController();
             string word = mBWord.GetWord();
            
             DialogResult dialogResult;
@@ -70,7 +71,6 @@ namespace EnglishWordSet
 
             if (dialogResult == DialogResult.Yes) {
                 mBWord.RemoveWord();
-                mBWord.SaveChange();
                 btnGetNewWord_Click(sender, e);
             }
             else if(dialogResult == DialogResult.No)
@@ -79,7 +79,7 @@ namespace EnglishWordSet
 
                 if (IsWordInLearned.IsCheck(word))
                 {
-                    LearnedWordsPageBackend lwpb = MyGetBackend.LearnedPAge();
+                    LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
                     string sentenceWord= lwpb.GetSentence(word);
                     MessageBox.Show("You already learned this word. \nSentence : "+ sentenceWord, word);
                     return;
@@ -88,7 +88,6 @@ namespace EnglishWordSet
                 Random rnd = new Random();
                 txtInput.Text = rnd.Next(10) < 5 ? mBWord.GetWordWithMeanig() + "\n" +  txtInput.Text.ToString() : txtInput.Text.ToString() + "\n " + mBWord.GetWordWithMeanig();
                 mBWord.RemoveWord();
-                mBWord.SaveChange();
                 SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
             }
         }
@@ -121,7 +120,7 @@ namespace EnglishWordSet
         {
             return Task.Run(() =>
             {
-                mBWord = MyGetBackend.mBWordPage();
+                mBWord = ControllersGetter.mBWordPage();
             });
         }
         private Task SetContext()

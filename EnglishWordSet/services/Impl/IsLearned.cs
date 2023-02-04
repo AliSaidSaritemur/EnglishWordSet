@@ -6,14 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.Check.Word
+namespace EnglishWordSet.services.Impl
 {
     internal class IsLearned : ICheckWord
     {
         public WordContext context = MyDBTransactions.GetContext();
         public bool IsCheck(string word)
         {
-            return 0<context.LearnedWords.Count(I => I.wordEnglish == word);
+            return 0 < context.LearnedWords.Count(I => I.wordEnglish == word);
         }
     }
 }

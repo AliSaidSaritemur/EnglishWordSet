@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.ToolsBackend
 {
-    class LoginPageBackend
+    class LoginController
     {
         public WordContext context = MyDBTransactions.GetContext();
 
