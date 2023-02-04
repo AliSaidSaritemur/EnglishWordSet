@@ -3,6 +3,7 @@ using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -63,9 +64,11 @@ namespace EnglishWordSet.ToolsBackend
         public void AddNewWords(string inputTExt)
         {
             translater ??= new Translater();
-
+            string translatedInput = translater.Translate(inputTExt);
             StringReader stringReader = new(inputTExt);
+            StringReader stringReaderTranslated = new(inputTExt);
 
+            LinkedList<string> translatedWords = new LinkedList<string>();
             string willTranslateLine;
             while (true)
             {
@@ -73,14 +76,30 @@ namespace EnglishWordSet.ToolsBackend
 
                 if (willTranslateLine != null)
                 {
+                    translatedWords.AddLast(willTranslateLine);                 
+                }
+                else
+                {
+                    break;
+                }
+            }
+            var currentWord = translatedWords.Find(translatedWords.First());
+            while (true)
+            {
+                willTranslateLine = stringReader.ReadLine();
+
+                if (willTranslateLine != null)
+                {
                     string translatedWord;
-                    translatedWord = translater.Translate(willTranslateLine);
+                    translatedWord = currentWord.Value;
                     context.Words.Add(new Data.Entities.NWords { English = willTranslateLine, Turkish = translatedWord });
                 }
                 else
                 {
                     break;
                 }
+
+                currentWord = (currentWord.Next != null) ? currentWord.Next: currentWord;
             }
             context.SaveChanges();
         }

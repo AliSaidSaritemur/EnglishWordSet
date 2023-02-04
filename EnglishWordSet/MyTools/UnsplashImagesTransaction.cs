@@ -38,7 +38,7 @@ namespace EnglishWordSet.MyTools
             }
             else
             {
-                client = new UnsplasharpClient("zbUIVrp4QpDLHjJjhV4gSE1lAniC20DXwQsDkMa68Ws") ?? client;
+                client = new UnsplasharpClient("YOUR API KEY") ?? client;
                 photos = await client.SearchPhotos(searchedWord);
                 RefreshSystem(searchedWord, photos);
             }
