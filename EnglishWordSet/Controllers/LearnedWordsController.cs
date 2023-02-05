@@ -2,6 +2,7 @@
 using EnglishWordSet.Data.Entities;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.services.Impl;
 using Phaber.Unsplash.Entities;
 using System;
 using System.Collections.Generic;
@@ -14,21 +15,22 @@ namespace EnglishWordSet.PageBackend
      class LearnedWordsController
     {
 
-
+        private LearnedWordImpl _learnedWordImpl = new ();
         public WordContext context = MyDBTransactions.GetContext();
         public LearnedWord selectedWord;
 
         public LearnedWord SelectWord(string word)
-        {   
+        {      
             word =word.ToLower();
-            selectedWord = context.LearnedWords.FirstOrDefault(I=> I.wordEnglish== word);
+            if (selectedWord==null || selectedWord.wordEnglish != word)
+                selectedWord = _learnedWordImpl.GetLearnedWord(word);
+
             return selectedWord;    
         }
 
         public String GetSentence(string word)
         {
-            word = word.ToLower();
-            selectedWord = context.LearnedWords.FirstOrDefault(I => I.wordEnglish == word);
+            SelectWord(word);
             return selectedWord.wordSentence;
         }
     }

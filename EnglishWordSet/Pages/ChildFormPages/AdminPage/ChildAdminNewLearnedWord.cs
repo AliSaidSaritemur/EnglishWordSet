@@ -26,14 +26,20 @@ namespace EnglishWordSet.ChildForms.AdminPage
         private void btnAdd_Click(object sender, EventArgs e)
         {
             AdminController pageBackend = ControllersGetter.AdminPage();
+       
             string word=txtWord.Text.ToString().Trim();
+            if (pageBackend.IsLEarnedWordAdded(word))
+            {
+                MyNotificationAlerts.GetErrorMessage("The word is already added to Database");
+                return;
+            }
             string sentence=txtSentence.Text.ToString().Trim();
             string meaning=txtMeaning.Text.ToString().Trim();   
             pageBackend.AddNewLearnedWord(word,sentence,meaning);
             txtWord.Clear();
             txtSentence.Clear();
             txtMeaning.Clear();
-            MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
+            MyNotificationAlerts.GetSuccessMessage("The word is added to Database");
         }
 
         private void txtWord_KeyDown(object sender, KeyEventArgs e)

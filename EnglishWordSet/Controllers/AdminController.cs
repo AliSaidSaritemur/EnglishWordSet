@@ -15,8 +15,9 @@ using System.Windows.Forms;
 
 namespace EnglishWordSet.ToolsBackend
 {
-    class AdminController 
+    class AdminController
     {
+        private LearnedWordImpl _learnedWordImpl = new();
         private WordContext context = MyDBTransactions.GetContext();
         public WordImpl wordImpl =new();
         Translater translater;
@@ -108,14 +109,20 @@ namespace EnglishWordSet.ToolsBackend
 
         public void AddNewLearnedWord(string word,string sentence,string meaning)
         {
+
             translater ??= new Translater();
             word = word.ToLower();
             meaning =meaning==""? translater.Translate(word):meaning;                    
 
             string meaningOfSentence= translater.Translate(sentence); ;
 
-            context.LearnedWords.Add(new Data.Entities.LearnedWord { wordEnglish = word, wordSentence = sentence, wordTurkish = meaning,meaningWordSentence= meaningOfSentence });
-            context.SaveChanges();
+            _learnedWordImpl.Add(word,sentence,meaning, meaningOfSentence);
+           
+        }
+
+        public bool IsLEarnedWordAdded(string word)
+        {
+            return (_learnedWordImpl.IsThere(word));
         }
     }
 

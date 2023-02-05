@@ -75,9 +75,9 @@ namespace EnglishWordSet
             }
             else if(dialogResult == DialogResult.No)
             {
-                ICheckWord IsWordInLearned = new IsLearned();
+                LearnedWordImpl _learnedWordImpl = new ();
 
-                if (IsWordInLearned.IsCheck(word))
+                if (_learnedWordImpl.IsThere(word))
                 {
                     LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
                     string sentenceWord= lwpb.GetSentence(word);

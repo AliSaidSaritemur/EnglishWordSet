@@ -103,6 +103,7 @@
             this.pBLearned.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pBLearned.TabIndex = 5;
             this.pBLearned.TabStop = false;
+            this.pBLearned.Visible = false;
             this.pBLearned.Click += new System.EventHandler(this.pBLearned_Click);
             // 
             // epWifiConnectionImage

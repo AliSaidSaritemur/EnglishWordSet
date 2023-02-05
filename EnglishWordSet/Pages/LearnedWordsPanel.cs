@@ -47,16 +47,16 @@ namespace EnglishWordSet.Pages
             {
                 MyNotificationAlerts.GetErrorMessage("System has no "+ searchedWord+" word");
                 lblSentences.Text="";
-                return;
+                pBLearned.Visible=false;
             }
             else
             {     
                 lblSentences.Text = learnedWord.wordSentence;
                 pBLearned.Enabled = true;
-                btnChangeImage.Visible = false;
-                pBLearned.Image = EnglishWordSet.Properties.Resources.tipMark;
+                pBLearned.Visible = true;
+                pBLearned.Image = EnglishWordSet.Properties.Resources.tipMark;        
             }
-           
+            btnChangeImage.Visible = false;
         }
 
         private void txtSearch_TextChanged(object sender, EventArgs e)
