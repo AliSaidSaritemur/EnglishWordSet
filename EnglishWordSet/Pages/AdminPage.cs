@@ -22,6 +22,7 @@ using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
 using Button = System.Windows.Forms.Button;
 using System.Security.Cryptography;
+using EnglishWordSet.util.StaticTools;
 
 namespace EnglishWordSet
 {
@@ -50,7 +51,8 @@ namespace EnglishWordSet
 
             if (!MyTestInternet.IsThereInternet())
             {
-                InternetAlert();
+                BasicAlerts.ErrorAlert("Words can't Add.\nFor adding words," +
+               " connect to the internet.", "No internet access");
                 return;
             }
             else { }
@@ -65,19 +67,11 @@ namespace EnglishWordSet
         }
 
         private void button1_Click(object sender, EventArgs e) 
-        {
-            if (!MyTestInternet.IsThereInternet())
-            {
-                InternetAlert();
-                return;
-            }
-            else { }
+        {        
             if (ActiveMdiChild != null)
             {
                 ActiveMdiChild.Hide();
             }
-
-
             childAdmin = pageBackend.GetChildNewAdminPage();
             childAdmin.Show();
         }
@@ -90,7 +84,8 @@ namespace EnglishWordSet
         {
                  if (!MyTestInternet.IsThereInternet())
             {
-                InternetAlert();
+                BasicAlerts.ErrorAlert("Learned Words can't Add.\nFor adding words," +
+               " connect to the internet.", "No internet access");
                 return;
             }
             else { }
@@ -102,13 +97,6 @@ namespace EnglishWordSet
 
             childAdmin = pageBackend.GetChildNewLearnedWord();
             childAdmin.Show();
-        }
-
-        private void InternetAlert()
-        {
-            dialogResult = MessageBox.Show("No Words Addded.\nFor adding words," +
-               " connect to the internet.", "No internet access",
-       MessageBoxButtons.OK, MessageBoxIcon.Error);
         }
 
         private void pbBack_Click(object sender, EventArgs e)

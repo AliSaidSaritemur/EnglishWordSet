@@ -28,8 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtInput = new System.Windows.Forms.RichTextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
+            this.prWords = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
             this.SuspendLayout();
             // 
             // txtInput
@@ -52,6 +55,10 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
+            // prWords
+            // 
+            this.prWords.ContainerControl = this;
+            // 
             // ChildAdminNewWord
             // 
             this.AcceptButton = this.btnSubmit;
@@ -64,6 +71,7 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewWord";
+            ((System.ComponentModel.ISupportInitialize)(this.prWords)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -73,5 +81,6 @@
 
         public System.Windows.Forms.RichTextBox txtInput;
         private System.Windows.Forms.Button btnSubmit;
+        private System.Windows.Forms.ErrorProvider prWords;
     }
 }

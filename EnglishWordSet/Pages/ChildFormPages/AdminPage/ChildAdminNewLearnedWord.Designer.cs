@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtWord = new System.Windows.Forms.TextBox();
             this.txtSentence = new System.Windows.Forms.RichTextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -36,6 +37,12 @@
             this.txtMeaning = new System.Windows.Forms.TextBox();
             this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
+            this.prWord = new System.Windows.Forms.ErrorProvider(this.components);
+            this.prSentence = new System.Windows.Forms.ErrorProvider(this.components);
+            this.prMeanning = new System.Windows.Forms.ErrorProvider(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.prWord)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prSentence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prMeanning)).BeginInit();
             this.SuspendLayout();
             // 
             // txtWord
@@ -117,6 +124,18 @@
             this.label4.TabIndex = 8;
             this.label4.Text = "Adding Learned English Words";
             // 
+            // prWord
+            // 
+            this.prWord.ContainerControl = this;
+            // 
+            // prSentence
+            // 
+            this.prSentence.ContainerControl = this;
+            // 
+            // prMeanning
+            // 
+            this.prMeanning.ContainerControl = this;
+            // 
             // ChildAdminNewLearnedWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -134,6 +153,9 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewLearnedWord";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChildAdminNewLearnedWord_KeyDown);
+            ((System.ComponentModel.ISupportInitialize)(this.prWord)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prSentence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prMeanning)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -149,5 +171,8 @@
         private System.Windows.Forms.TextBox txtMeaning;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.ErrorProvider prWord;
+        private System.Windows.Forms.ErrorProvider prSentence;
+        private System.Windows.Forms.ErrorProvider prMeanning;
     }
 }

@@ -66,15 +66,14 @@ namespace EnglishWordSet.ToolsBackend
         public void AddNewWords(string inputTExt)
         {
             translater ??= new Translater();
-            string translatedInput = translater.Translate(inputTExt);
             StringReader stringReader = new(inputTExt);
-            StringReader stringReaderTranslated = new(inputTExt);
+            StringReader stringReaderTranslated = new(translater.Translate(inputTExt));
 
             LinkedList<string> translatedWords = new LinkedList<string>();
             string willTranslateLine;
             while (true)
             {
-                willTranslateLine = stringReader.ReadLine();
+                willTranslateLine = stringReaderTranslated.ReadLine();
 
                 if (willTranslateLine != null)
                 {
@@ -85,7 +84,8 @@ namespace EnglishWordSet.ToolsBackend
                     break;
                 }
             }
-            var currentWord = translatedWords.Find(translatedWords.First());
+            var currentWord = translatedWords.First;
+
             while (true)
             {
                 willTranslateLine = stringReader.ReadLine();
@@ -114,7 +114,7 @@ namespace EnglishWordSet.ToolsBackend
             word = word.ToLower();
             meaning =meaning==""? translater.Translate(word):meaning;                    
 
-            string meaningOfSentence= translater.Translate(sentence); ;
+            string meaningOfSentence= translater.Translate(sentence); 
 
             _learnedWordImpl.Add(word,sentence,meaning, meaningOfSentence);
            

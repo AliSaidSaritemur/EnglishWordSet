@@ -1,5 +1,6 @@
 ﻿using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
+using EnglishWordSet.util.StaticTools;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +16,9 @@ namespace EnglishWordSet.ChildForms.AdminPage
     public partial class ChildAdminNewLearnedWord : Form
     {
         TextBox focusText;
+        string word;
+        string sentence;
+        string meaning;
         public ChildAdminNewLearnedWord()
         {
             InitializeComponent();
@@ -25,16 +29,28 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            AdminController pageBackend = ControllersGetter.AdminPage();
+            if (!MyTestInternet.IsThereInternet())
+            {
+                BasicAlerts.ErrorAlert("Learned Words can't Add.\nFor adding words," +
+               " connect to the internet.", "No internet access");
+                return;
+            }
+            else { }
+
+             word = txtWord.Text.ToString().Trim();
+             sentence = txtSentence.Text.ToString().Trim();
+             meaning = txtMeaning.Text.ToString().Trim();
+
+            if (WordProviderTest()||SentenceProviderTest()||MeanningProviderTest())
+                return;
        
-            string word=txtWord.Text.ToString().Trim();
+            AdminController pageBackend = ControllersGetter.AdminPage();
             if (pageBackend.IsLEarnedWordAdded(word))
             {
                 MyNotificationAlerts.GetErrorMessage("The word is already added to Database");
                 return;
             }
-            string sentence=txtSentence.Text.ToString().Trim();
-            string meaning=txtMeaning.Text.ToString().Trim();   
+           
             pageBackend.AddNewLearnedWord(word,sentence,meaning);
             txtWord.Clear();
             txtSentence.Clear();
@@ -78,7 +94,57 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 txtSentence.Focus();
             }
         }
+        
+        private bool WordProviderTest()
+        {
+            if (word.Length == 0)
+            {
+                prWord.SetError(txtWord, "Word can't be empty !!!");
+                return true;
+            }
+            else if (!MyRegex.IsName(word))
+            {
+                prWord.SetError(txtWord, "Word should be invalid type !!!");
+                return true;
+            }
+            else
+            {
+                prWord.Clear();
+                return false;
+            }
+        }
 
+        private bool SentenceProviderTest()
+        {
+            if (sentence.Length == 0)
+            {
+                prWord.SetError(txtSentence, "Sentence can't be empty !!!");
+                return true;
+            }
+            else if (!MyRegex.IsName(sentence))
+            {
+                prSentence.SetError(txtSentence, "Sentence should be invalid type !!!");
+                return true;
+            }
+            else
+            {
+                prSentence.Clear();
+                return false;
+            }
+        }
+        private bool MeanningProviderTest()
+        {
+            if (meaning != null && !MyRegex.IsName(meaning))
+            {
+                prMeanning.SetError(txtMeaning, "Meaning should be invalid type !!!");
+                return true;
+            }
+            else
+            {
+                prMeanning.Clear();
+                return false;
+            }
+        }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
             if (keyData == Keys.Enter)
