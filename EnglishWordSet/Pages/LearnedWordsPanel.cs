@@ -1,8 +1,8 @@
-﻿using EnglishWordSet.Data.Entities;
-using EnglishWordSet.MyTools;
+﻿using EnglishWordSet.MyTools;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Collections.Specialized;
@@ -14,7 +14,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Windows.Forms.VisualStyles;
-using Tulpep.PayULibrary.Models.Request.Request_Cross;
+
 
 namespace EnglishWordSet.Pages
 {

@@ -1,6 +1,6 @@
 ﻿using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.Data.Entities;
 using EnglishWordSet.RefactoredStaticFuncs;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ namespace EnglishWordSet.services.Impl
 
         public void Add(string word, string wordMeaning)
         {
-            context.Words.Add(new Data.Entities.NWords { English = word, Turkish = wordMeaning });
+            context.Words.Add(new NWords { English = word, Turkish = wordMeaning });
             context.SaveChanges();
         }
 

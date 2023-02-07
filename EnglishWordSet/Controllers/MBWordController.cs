@@ -1,7 +1,7 @@
 ﻿using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.Data.Entities;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.services.Impl;
+using Entities.Concrete;
 using Microsoft.EntityFrameworkCore.Storage;
 using System;
 using System.Collections.Generic;

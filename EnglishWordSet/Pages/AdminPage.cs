@@ -17,7 +17,6 @@ using Newtonsoft.Json;
 using Google.Cloud.Translation.V2;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.ToolsBackend;
-using EnglishWordSet.Data.Entities;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 using TextBox = System.Windows.Forms.TextBox;
 using Button = System.Windows.Forms.Button;

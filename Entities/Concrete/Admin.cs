@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.Data.Entities
+namespace Entities.Concrete
 {
     public class Admin
     {

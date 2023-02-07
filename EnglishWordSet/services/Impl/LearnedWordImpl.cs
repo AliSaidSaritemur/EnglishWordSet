@@ -1,6 +1,6 @@
 ﻿using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.Data.Entities;
 using EnglishWordSet.RefactoredStaticFuncs;
+using Entities.Concrete;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using System;
 using System.Collections.Generic;
@@ -17,7 +17,7 @@ namespace EnglishWordSet.services.Impl
 
         public void Add(string word, string sentence, string wordMeaning, string senteceMeaning)
         {
-            context.LearnedWords.Add(new Data.Entities.LearnedWord { wordEnglish = word, wordSentence = sentence, wordTurkish = wordMeaning, meaningWordSentence = senteceMeaning });
+            context.LearnedWords.Add(new LearnedWord { wordEnglish = word, wordSentence = sentence, wordTurkish = wordMeaning, meaningWordSentence = senteceMeaning });
             context.SaveChanges();
         }
 

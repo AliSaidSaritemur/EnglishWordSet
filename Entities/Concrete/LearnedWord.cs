@@ -4,11 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.Data.Entities
+namespace Entities.Concrete
 {
     public class LearnedWord
     {
-
         public int Id { get; set; }
         public string wordEnglish { get; set; }
         public string wordTurkish{ get; set; }

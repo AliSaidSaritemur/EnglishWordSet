@@ -1,6 +1,5 @@
 ﻿using EnglishWordSet.CRUD;
 using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.Data.Entities;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.Pages;

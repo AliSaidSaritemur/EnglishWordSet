@@ -2,6 +2,7 @@
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -83,7 +84,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return;
             }
 
-            else if (!MyRegex.Isthere(email, "[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$"))
+            else if (!MyRegex.IsMail(email))
             { emailProvider.SetError(txtEmail, "Email is not valid type");
                 return;
             }
@@ -138,7 +139,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             string encyptedPassword = dataEncryption.Encrypt(password);
 
 
-            context.Add(new Data.Entities.Admin { Email = email,Password=encyptedPassword,Phone=phone,UserName=userName });
+            context.Add(new Admin { Email = email,Password=encyptedPassword,Phone=phone,UserName=userName });
 
  
             MyNotificationAlerts.GetSuccessMessage("Admin added");
