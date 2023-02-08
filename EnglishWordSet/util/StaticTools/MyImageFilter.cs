@@ -14,11 +14,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 
             return FilterImage(image,Color.Green);
             }
-
-        internal static Image GreenFilter(string regular)
-        {
-            throw new NotImplementedException();
-        }
         public static Image RedFilter(Image image)
         {
 
@@ -32,6 +27,5 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             imageGraphics.FillRectangle(new SolidBrush(Color.FromArgb(100, color)), 0, 0, outputImage.Width, outputImage.Height);
             return outputImage; 
         }
-
     }
 }

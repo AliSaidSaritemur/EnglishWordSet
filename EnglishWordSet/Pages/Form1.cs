@@ -1,24 +1,15 @@
 ﻿using EnglishWordSet.CRUD;
-using EnglishWordSet.Data.Contexts;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
-using EnglishWordSet.services;
-using EnglishWordSet.services.Impl;
+using DataAccess.Concrete;
 using EnglishWordSet.Sessions;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Data.SqlClient;
 using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DataAccess.util;
 
 namespace EnglishWordSet
 {
@@ -126,7 +117,7 @@ namespace EnglishWordSet
         {
             return Task.Run(() =>
             {
-                MyDBTransactions.SetContext();
+                MyDBTransactions.GetContext();
             });
         }
 

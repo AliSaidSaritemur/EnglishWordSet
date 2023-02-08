@@ -1,5 +1,5 @@
-﻿using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.RefactoredStaticFuncs;
+﻿using DataAccess.Abstract;
+using DataAccess.util;
 using Entities.Concrete;
 using System;
 using System.Collections.Generic;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.services.Impl
+namespace DataAccess.Concrete
 {
     public class WordImpl : IWordService
     {

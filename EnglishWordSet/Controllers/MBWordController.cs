@@ -1,13 +1,6 @@
-﻿using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.RefactoredStaticFuncs;
-using EnglishWordSet.services.Impl;
+﻿using DataAccess.Concrete;
+using DataAccess.util;
 using Entities.Concrete;
-using Microsoft.EntityFrameworkCore.Storage;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnglishWordSet.CRUD
 {

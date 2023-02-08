@@ -1,16 +1,10 @@
-﻿using EnglishWordSet.ChildForms.AdminPage;
-using EnglishWordSet.Data.Contexts;
+﻿using DataAccess.Concrete;
+using DataAccess.util;
+using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.MyTools;
-using EnglishWordSet.RefactoredStaticFuncs;
-using EnglishWordSet.services.Impl;
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EnglishWordSet.ToolsBackend
@@ -94,16 +88,14 @@ namespace EnglishWordSet.ToolsBackend
                 {
                     string translatedWord;
                     translatedWord = currentWord.Value;
-                    ((services.IWordService)wordImpl).Add(willTranslateLine, translatedWord);                
+                    wordImpl.Add(willTranslateLine, translatedWord);                
                 }
                 else
                 {
                     break;
                 }
-
                 currentWord = (currentWord.Next != null) ? currentWord.Next: currentWord;
             }
-            context.SaveChanges();
         }
        
 

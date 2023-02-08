@@ -1,16 +1,11 @@
-﻿using EnglishWordSet.Data.Contexts;
+﻿using DataAccess.Concrete;
+using DataAccess.util;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using Entities.Concrete;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EnglishWordSet.ChildForms.AdminPage

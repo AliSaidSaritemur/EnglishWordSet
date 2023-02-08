@@ -1,22 +1,9 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System;
-using System.Net;
 using Unsplasharp;
-using Phaber.Unsplash.Entities;
-using System.Security.Policy;
-using static Microsoft.EntityFrameworkCore.DbLoggerCategory;
-using System.Media;
-using Phaber.Unsplash;
 using System.Windows.Forms;
 using EnglishWordSet.RefactoredStaticFuncs;
-using System.IO;
-using Unsplasharp.Models;
 
 namespace EnglishWordSet.MyTools
 {

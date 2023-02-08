@@ -7,15 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.Data.Contexts
+namespace DataAccess.Concrete
 {
-    class WordContext :DbContext 
+   public class WordContext :DbContext 
     {
         public DbSet<NWords> Words { get; set; }
         public DbSet<Admin> Admins { get; set; }
         public DbSet<LearnedWord> LearnedWords { get; set;}
 
-        protected   override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
             optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb; database= EWordEfCore;" +

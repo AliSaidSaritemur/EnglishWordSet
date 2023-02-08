@@ -1,7 +1,6 @@
-﻿using EnglishWordSet.Data.Contexts;
-using EnglishWordSet.MyTools;
+﻿using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
-using EnglishWordSet.services.Impl;
+using DataAccess.Concrete;
 using Entities.Concrete;
 using Phaber.Unsplash.Entities;
 using System;
@@ -9,7 +8,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using DataAccess.util;
 
 namespace EnglishWordSet.PageBackend
 {

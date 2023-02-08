@@ -1,13 +1,10 @@
-﻿using EnglishWordSet.Data.Contexts;
+﻿using DataAccess.Concrete;
+using DataAccess.util;
 using EnglishWordSet.MyTools;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using Entities.Concrete;
-using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 
 namespace EnglishWordSet.ToolsBackend

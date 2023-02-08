@@ -134,7 +134,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
         }
         private bool MeanningProviderTest()
         {
-            if (meaning != null && !MyRegex.IsName(meaning))
+            if (!string.IsNullOrEmpty(meaning) && !MyRegex.IsName(meaning))
             {
                 prMeanning.SetError(txtMeaning, "Meaning should be invalid type !!!");
                 return true;
