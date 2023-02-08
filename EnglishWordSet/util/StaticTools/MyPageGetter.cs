@@ -15,17 +15,14 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
             form1 = frm1;
         }
-    public static Main GetForm1()
+        public static Main GetForm1()
         {
             return form1;
         }
 
-        public static void SetAdminPage(AdminPage newAdminpage)
-        {
-            adminpage = newAdminpage;
-        }
         public static AdminPage GetAdminPage()
         {
+            adminpage ??= new();
             return adminpage;
         }
 

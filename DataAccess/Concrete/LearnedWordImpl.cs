@@ -13,7 +13,7 @@ namespace DataAccess.Concrete
     public class LearnedWordImpl : ILearnedWordService
     {
         private WordContext context = MyDBTransactions.GetContext();
-        private Random rand = new Random();
+        private Random rand;
 
         public void Add(string word, string sentence, string wordMeaning, string senteceMeaning)
         {
@@ -30,6 +30,7 @@ namespace DataAccess.Concrete
 
         public LearnedWord GetRandomWord()
         {
+            rand ??= new Random();
             int toSkip = rand.Next(0, context.Words.Count());
             return context.LearnedWords.Skip(toSkip).Take(1).First();
         }

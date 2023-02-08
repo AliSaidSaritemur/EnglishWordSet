@@ -12,6 +12,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
 {
     public partial class ChildAdminNewAdmin : Form
     {
+        AdminImpl adminImpl;
         TextBox focusText;
         public ChildAdminNewAdmin()
         {
@@ -39,7 +40,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
         private void btnSubmitNewAdmin_Click(object sender, EventArgs e)
         {
             AdminController pageBackend = ControllersGetter.AdminPage();
-            WordContext context = MyDBTransactions.GetContext();
+            adminImpl ??= new ();
 
             TrimForm();
             string userName = txtUserName.Text.ToString();
@@ -49,7 +50,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             string againPassword = txtAgainPassword.Text.ToString();
 
 
-            if (context.Admins.FirstOrDefault(a => a.UserName == userName)!=null)
+            if (adminImpl.IsThereUserName(userName))
             {
                 UserNameProvider.SetError(txtUserName, "This username already using");
                 return;
@@ -69,7 +70,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 UserNameProvider.Clear();
             }
 
-            if (context.Admins.FirstOrDefault(a => a.Email == email) != null)
+            if (adminImpl.IsThereMail(email))
             {
                 emailProvider.SetError(txtEmail, "This email already using");
                 return;
@@ -88,7 +89,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 emailProvider.Clear();
             }
 
-            if (context.Admins.FirstOrDefault(a => a.Phone == phone) != null)
+            if (adminImpl.IsTherePhone(phone))
             {
                 phoneProvider.SetError(txtPhone, "This phone number already using");
                 return;
@@ -126,20 +127,13 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
             if(!MyRegex.Isthere(phone, "^0"))
             {
-                string temp = "0"+phone;
-                phone= temp;    
+              phone = "0"+phone;   
             }
 
-            DataEncryption dataEncryption = new();
-            string encyptedPassword = dataEncryption.Encrypt(password);
+            adminImpl.Add(email,password,phone,userName);
 
-
-            context.Add(new Admin { Email = email,Password=encyptedPassword,Phone=phone,UserName=userName });
-
- 
             MyNotificationAlerts.GetSuccessMessage("Admin added");
             CleanForm();
-            context.SaveChanges();
         }
 
         private void txtUserName_KeyDown(object sender, KeyEventArgs e)

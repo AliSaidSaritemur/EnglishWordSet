@@ -12,7 +12,6 @@ namespace EnglishWordSet.ToolsBackend
     class AdminController
     {
         private LearnedWordImpl _learnedWordImpl = new();
-        private WordContext context = MyDBTransactions.GetContext();
         public WordImpl wordImpl =new();
         Translater translater;
 
@@ -104,7 +103,7 @@ namespace EnglishWordSet.ToolsBackend
 
             translater ??= new Translater();
             word = word.ToLower();
-            meaning =meaning==""? translater.Translate(word):meaning;                    
+            meaning =string.IsNullOrEmpty(meaning)? translater.Translate(word):meaning;                    
 
             string meaningOfSentence= translater.Translate(sentence); 
 

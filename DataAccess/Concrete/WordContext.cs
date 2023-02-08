@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-   public class WordContext :DbContext 
+   internal class WordContext :DbContext 
     {
         public DbSet<NWords> Words { get; set; }
         public DbSet<Admin> Admins { get; set; }

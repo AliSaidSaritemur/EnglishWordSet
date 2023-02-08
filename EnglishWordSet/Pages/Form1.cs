@@ -52,7 +52,7 @@ namespace EnglishWordSet
      
         private void btnGetNewWord_Click(object sender, EventArgs e)
         {
-            mBWord = new MBWordController();
+            mBWord ??= new ();
             string word = mBWord.GetWord();
            
             DialogResult dialogResult;
@@ -85,7 +85,7 @@ namespace EnglishWordSet
         private void btnToAdminPage_Click(object sender, EventArgs e)
         {
             Form page;
-            if (AdminSession.id_Admin != null && AdminSession.id_Admin != 0)
+            if (!string.IsNullOrEmpty(AdminSession.username_Admin))
             {page= MyPageGetter.GetAdminPage(); }
             else
             { page = new LoginPage(); }
@@ -117,7 +117,7 @@ namespace EnglishWordSet
         {
             return Task.Run(() =>
             {
-                MyDBTransactions.GetContext();
+                mBWord ??= new();
             });
         }
 
@@ -134,7 +134,7 @@ namespace EnglishWordSet
 
             if (txtOutput.SelectionLength > 0)
             { txtOutput.Copy();
-                pbCopy.Image = EnglishWordSet.Properties.Resources.sucsessBlue;
+                pbCopy.Image = Properties.Resources.sucsessBlue;
                 timerCopySuccess.Start();
             
             }
@@ -142,13 +142,13 @@ namespace EnglishWordSet
       
         private void timerCopySuccess_Tick(object sender, EventArgs e)
         {
-            pbCopy.Image = EnglishWordSet.Properties.Resources.Copy;
+            pbCopy.Image = Properties.Resources.Copy;
         }
 
         private void pbPaste_Click(object sender, EventArgs e)
         {
 
-            Image pasteImg= EnglishWordSet.Properties.Resources.paste;
+            Image pasteImg= Properties.Resources.paste;
             txtInput.Clear();
             txtInput.Paste();
       
@@ -159,7 +159,7 @@ namespace EnglishWordSet
 
         private void timerPasteSuccess_Tick(object sender, EventArgs e)
         {
-            pbPaste.Image= EnglishWordSet.Properties.Resources.paste;
+            pbPaste.Image= Properties.Resources.paste;
         }
 
         private void txtInput_TextChanged(object sender, EventArgs e)

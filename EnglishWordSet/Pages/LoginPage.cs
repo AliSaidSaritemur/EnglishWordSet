@@ -54,15 +54,8 @@ namespace EnglishWordSet
             {
                 MyNotificationAlerts.GetSuccessMessage("Login verified");
                 epUserName.Clear();
-
-                if(MyPageGetter.GetAdminPage()!=null)
-                    adminPage = MyPageGetter.GetAdminPage();
-                else
-                {
-                    adminPage = new AdminPage();
-                    MyPageGetter.SetAdminPage(adminPage);
-                }
-
+                adminPage = MyPageGetter.GetAdminPage();
+                 AdminSession.username_Admin = userName;
                 adminPage.Show();
                 this.Close();
             }

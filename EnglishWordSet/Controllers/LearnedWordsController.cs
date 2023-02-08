@@ -14,9 +14,7 @@ namespace EnglishWordSet.PageBackend
 {
      class LearnedWordsController
     {
-
-        private LearnedWordImpl _learnedWordImpl = new ();
-        public WordContext context = MyDBTransactions.GetContext();
+        private LearnedWordImpl _learnedWordImpl = new ();       
         public LearnedWord selectedWord;
 
         public LearnedWord SelectWord(string word)

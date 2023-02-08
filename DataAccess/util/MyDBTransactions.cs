@@ -3,7 +3,7 @@
 
 namespace DataAccess.util
 {
-   public static class MyDBTransactions
+   internal static class MyDBTransactions
     {
         static WordContext wordContext;
 

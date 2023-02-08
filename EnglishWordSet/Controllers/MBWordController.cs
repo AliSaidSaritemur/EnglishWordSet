@@ -11,7 +11,6 @@ namespace EnglishWordSet.CRUD
         {
             Invoke();
         }
-        public WordContext context = MyDBTransactions.GetContext();
         public NWords selectedword { get; set; }
          private WordImpl wordImpl =new();
 

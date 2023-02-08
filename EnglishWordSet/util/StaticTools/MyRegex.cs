@@ -9,14 +9,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 {
     static class MyRegex
     {
-      private  static readonly IDictionary<string, string> regexQueries= new Dictionary<string, string>();
-
-       static MyRegex()
-        {
-            regexQueries.Add("name", "^[\\w'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}|~<>;:[\\]]{2,}$");
-            regexQueries.Add("mail", "[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
-        }
-
         public static bool Isthere(string line, string obj)
         {
             bool result;
@@ -29,7 +21,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         public static bool IsName(string line)
         {
             bool result;
-            Regex rgLine = new(regexQueries["name"]);
+            Regex rgLine = new("^[\\w'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}|~<>;:[\\]]{2,}$");
             Match matchRgL = rgLine.Match(line);
             result = matchRgL.Success;
             return result;
@@ -38,7 +30,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         public static bool IsMail(string line)
         {
             bool result;
-            Regex rgLine = new(regexQueries["mail"]);
+            Regex rgLine = new("[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
             Match matchRgL = rgLine.Match(line);
             result = matchRgL.Success;
             return result;

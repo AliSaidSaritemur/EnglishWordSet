@@ -8,7 +8,7 @@ namespace EnglishWordSet.Sessions
 {
     static class AdminSession
     {
-        public static int id_Admin { get; set; }
+        public static string username_Admin { get; set; }
         
     }
 }

@@ -4,14 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EnglishWordSet.MyTools
+namespace DataAccess.util
 {
     public class DataEncryption
     {
-
         public string Encrypt(string Value)
         {
-            string result = null;
+            string result = "";
             char[] _Value = Value.ToCharArray();
 
             foreach (char item in _Value)

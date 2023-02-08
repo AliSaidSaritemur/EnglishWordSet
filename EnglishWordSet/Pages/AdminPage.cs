@@ -1,26 +1,8 @@
 ﻿using EnglishWordSet.RefactoredStaticFuncs;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Collections;
-using System.Net.Http;
-using System.Web.Script.Serialization;
-using System.Net;
-using System.Collections.Specialized;
-using Newtonsoft.Json;
-using Google.Cloud.Translation.V2;
-using EnglishWordSet.MyTools;
 using EnglishWordSet.ToolsBackend;
-using static System.Windows.Forms.VisualStyles.VisualStyleElement;
-using TextBox = System.Windows.Forms.TextBox;
-using Button = System.Windows.Forms.Button;
-using System.Security.Cryptography;
 using EnglishWordSet.util.StaticTools;
 
 namespace EnglishWordSet
@@ -33,7 +15,6 @@ namespace EnglishWordSet
         {
             InitializeComponent();
             pageBackend = ControllersGetter.AdminPage();
-            MyPageGetter.SetAdminPage(this);
             this.ActiveControl = btnAddNewAdmin;
             btnAddNewAdmin.Focus();
 
