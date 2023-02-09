@@ -9,7 +9,6 @@ namespace EnglishWordSet
 {
     public partial class AdminPage : Form
     {
-        DialogResult dialogResult;
         AdminController pageBackend;
         public AdminPage()
         {

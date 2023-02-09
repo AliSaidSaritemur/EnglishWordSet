@@ -1,0 +1,7168 @@
+
+
+09-02-2023 02:35:28
+5 wrinkle -
+
+!!! forbid -
+
+5 conclude -
+
+!!! arrange -
+
+6 chimney -
+
+8 obey -
+
+2 remedy -
+
+8 quantity -
+
+!!! imperative  -
+
+!!! immediate  -
+
+5 supply -
+
+8 approach -
+
+!!! inquiry -
+
+!!! converse -
+
+5 suppose -
+
+4 resilient -
+
+5 agriculture -
+
+1 Indicate -
+
+3 moot  -
+
+1 squish -
+
+1 revise -
+
+1 wicked -
+
+!!! boundary -
+
+7 Greedy -
+
+!!! misery -
+
+7 instruction  -
+
+!!! distinguish -
+
+7 rummage  -
+
+4 retrieve -
+
+1 excessive -
+
+!!! interference -
+
+9 facilitate -
+
+!!! nausea -
+
+9 carry out -
+
+6 preserve -
+
+5 rigorous  -
+
+9 confidential -
+
+8 intensive -
+
+7 trial -
+
+!!! delicate  -
+
+8 proximity -
+
+1 oppose -
+
+1 butter -
+
+08-02-2023 02:31:21
+1 wicked -
+
+2 moot  -
+
+1 Indicate -
+
+9 boundary -
+
+4 agriculture -
+
+6 Greedy -
+
+3 resilient -
+
+4 suppose -
+
+!!! converse -
+
+!!! inquiry -
+
+7 approach -
+
+4 supply -
+
+!!! misery -
+
+!!! immediate  -
+
+!!! imperative  -
+
+7 quantity -
+
+6 instruction  -
+
+1 remedy -
+
+!!! distinguish -
+
+6 rummage  -
+
+7 obey -
+
+3 retrieve -
+
+1 excessive -
+
+!!! interference -
+
+8 facilitate -
+
+!!! nausea -
+
+8 carry out -
+
+!!! quarrel -
+
+5 chimney -
+
+!!! equivalent -
+
+9 arrange -
+
+4 conclude -
+
+5 preserve -
+
+4 rigorous  -
+
+8 confidential -
+
+7 intensive -
+
+!!! detect -
+
+!!! forbid -
+
+4 wrinkle -
+
+6 trial -
+
+!!! delicate  -
+
+7 proximity -
+
+1 oppose -
+
+07-02-2023 00:47:56
+1 excessive -
+
+2 retrieve -
+
+9 interference -
+
+7 facilitate -
+
+9 nausea -
+
+6 obey -
+
+7 carry out -
+
+5 rummage  -
+
+!!! quarrel -
+
+!!! distinguish -
+
+1 remedy -
+
+5 instruction  -
+
+4 chimney -
+
+!!! equivalent -
+
+6 quantity -
+
+!!! imperative  -
+
+!!! immediate  -
+
+8 arrange -
+
+3 conclude -
+
+9 misery -
+
+3 supply -
+
+4 preserve -
+
+3 rigorous  -
+
+7 confidential -
+
+6 intensive -
+
+6 approach -
+
+!!! inquiry -
+
+!!! converse -
+
+3 suppose -
+
+2 resilient -
+
+9 detect -
+
+5 Greedy -
+
+!!! forbid -
+
+3 agriculture -
+
+3 wrinkle -
+
+!!! trial -
+
+8 boundary -
+
+9 delicate  -
+
+6 proximity -
+
+1 Indicate -
+
+1 moot  -
+
+05-02-2023 23:10:13
+2 rigorous  -
+
+6 confidential -
+
+5 intensive -
+
+3 preserve -
+
+2 supply -
+
+8 misery -
+
+2 conclude -
+
+!!! appoint -
+
+8 approach -
+
+!!! inquiry -
+
+7 arrange -
+
+9 converse -
+
+2 suppose -
+
+1 resilient -
+
+!!! immediate  -
+
+9 imperative  -
+
+5 quantity -
+
+8 detect -
+
+4 Greedy -
+
+!!! forbid -
+
+!!! equivalent -
+
+3 chimney -
+
+4 instruction  -
+
+1 remedy -
+
+!!! distinguish -
+
+9 quarrel -
+
+4 rummage  -
+
+2 agriculture -
+
+2 wrinkle -
+
+!!! trial -
+
+6 carry out -
+
+5 obey -
+
+8 nausea -
+
+7 boundary -
+
+8 delicate  -
+
+6 facilitate -
+
+5 proximity -
+
+8 interference -
+
+1 retrieve -
+
+1 excessive -
+
+05-02-2023 01:58:19
+1 suppose -
+
+8 converse -
+
+!!! immediate  -
+
+8 imperative  -
+
+4 quantity -
+
+7 detect -
+
+3 Greedy -
+
+!!! reticent -
+
+!!! forbid -
+
+6 arrange -
+
+!!! inquiry -
+
+7 approach -
+
+!!! equivalent -
+
+!!! appoint -
+
+2 chimney -
+
+3 instruction  -
+
+!!! miserable -
+
+!!! distinguish -
+
+1 conclude -
+
+7 misery -
+
+8 quarrel -
+
+3 rummage  -
+
+1 supply -
+
+1 agriculture -
+
+1 wrinkle -
+
+!!! trial -
+
+5 carry out -
+
+4 obey -
+
+2 preserve -
+
+4 intensive -
+
+7 nausea -
+
+6 boundary -
+
+5 confidential -
+
+7 delicate  -
+
+5 facilitate -
+
+!!! occupy -
+
+7 proximity -
+
+7 interference -
+
+1 retrieve -
+
+1 rigorous  -
+
+04-02-2023 01:38:01
+1 agriculture -
+
+1 wrinkle -
+
+2 rummage  -
+
+7 quarrel -
+
+6 misery -
+
+!!! trial -
+
+1 conclude -
+
+4 carry out -
+
+3 obey -
+
+!!! distinguish -
+
+!!! miserable -
+
+2 instruction  -
+
+1 chimney -
+
+1 preserve -
+
+3 intensive -
+
+6 nausea -
+
+!!! appoint -
+
+5 boundary -
+
+9 equivalent -
+
+4 confidential -
+
+6 delicate  -
+
+!!! correspond -
+
+6 approach -
+
+4 facilitate -
+
+9 inquiry -
+
+!!! arrange -
+
+!!! forbid -
+
+9 reticent -
+
+2 Greedy -
+
+6 detect -
+
+3 quantity -
+
+7 imperative  -
+
+!!! occupy -
+
+!!! immediate  -
+
+6 proximity -
+
+!!! clarify -
+
+7 converse -
+
+6 interference -
+
+03-02-2023 01:18:28
+1 chimney -
+
+1 instruction  -
+
+2 intensive -
+
+5 nausea -
+
+!!! barrel -
+
+!!! appoint -
+
+9 miserable -
+
+9 distinguish -
+
+2 obey -
+
+4 boundary -
+
+8 equivalent -
+
+3 confidential -
+
+5 delicate  -
+
+!!! correspond -
+
+!!! approach -
+
+3 facilitate -
+
+8 inquiry -
+
+!!! carry out -
+
+!!! arrange -
+
+1 conclude -
+
+9 forbid -
+
+8 reticent -
+
+!!! trophy -
+
+!!! trial -
+
+1 Greedy -
+
+5 misery -
+
+5 detect -
+
+2 quantity -
+
+6 imperative  -
+
+!!! occupy -
+
+!!! immediate  -
+
+5 proximity -
+
+!!! courage-
+
+6 quarrel -
+
+!!! clarify -
+
+6 converse -
+
+5 interference -
+
+1 rummage  -
+
+02-02-2023 01:01:29
+8 forbid -
+
+7 reticent -
+
+!!! trophy -
+
+!!! arrange -
+
+!!! carry out -
+
+!!! trial -
+
+!!! sufficient -
+
+7 inquiry -
+
+1 Greedy -
+
+2 facilitate -
+
+4 misery -
+
+4 detect -
+
+!!! approach -
+
+!!! correspond -
+
+4 delicate  -
+
+2 confidential -
+
+1 quantity -
+
+7 equivalent -
+
+5 imperative  -
+
+3 boundary -
+
+!!! drought -
+
+!!! occupy -
+
+!!! immediate  -
+
+4 proximity -
+
+9 courage-
+
+1 obey -
+
+8 distinguish -
+
+8 miserable -
+
+5 quarrel -
+
+!!! clarify -
+
+9 appoint -
+
+!!! barrel -
+
+4 nausea -
+
+5 converse -
+
+4 interference -
+
+1 rummage  -
+
+1 intensive -
+
+02-02-2023 00:51:06
+
+
+01-02-2023 00:55:16
+1 confidential -
+
+3 delicate  -
+
+6 equivalent -
+
+4 imperative  -
+
+!!! correspond -
+
+9 approach -
+
+2 boundary -
+
+!!! obliged -
+
+3 detect -
+
+!!! drought -
+
+9 occupy -
+
+!!! resistance -
+
+!!! immediate  -
+
+3 misery -
+
+4 proximity -
+
+8 courage-
+
+1 facilitate -
+
+1 obey -
+
+1 Greedy -
+
+7 distinguish -
+
+7 miserable -
+
+4 quarrel -
+
+6 inquiry -
+
+!!! clarify -
+
+8 appoint -
+
+!!! sufficient -
+
+9 barrel -
+
+!!! trial -
+
+!!! carry out -
+
+3 nausea -
+
+!!! drawer -
+
+4 converse -
+
+!!! decay -
+
+!!! arrange -
+
+!!! trophy -
+
+6 reticent -
+
+3 interference -
+
+7 forbid -
+
+31-01-2023 00:35:41
+1 facilitate -
+
+6 distinguish -
+
+6 miserable -
+
+3 quarrel -
+
+5 inquiry -
+
+7 courage-
+
+!!! clarify -
+
+3 proximity -
+
+7 appoint -
+
+!!! sufficient -
+
+8 barrel -
+
+9 trial -
+
+2 misery -
+
+!!! immediate  -
+
+!!! carry out -
+
+9 resistance -
+
+8 occupy -
+
+2 nausea -
+
+!!! drawer -
+
+3 converse -
+
+!!! decay -
+
+!!! arrange -
+
+9 drought -
+
+2 detect -
+
+!!! obliged -
+
+!!! trophy -
+
+5 reticent -
+
+2 interference -
+
+1 boundary -
+
+8 approach -
+
+!!! correspond -
+
+6 forbid -
+
+!!! annually -
+
+3 imperative  -
+
+5 equivalent -
+
+2 delicate  -
+
+1 confidential -
+
+30-01-2023 01:01:03
+1 nausea -
+
+7 occupy -
+
+!!! drawer -
+
+8 resistance -
+
+2 converse -
+
+!!! carry out -
+
+!!! decay -
+
+!!! arrange -
+
+8 drought -
+
+!!! immediate  -
+
+2 misery -
+
+8 trial -
+
+!!! praise -
+
+1 detect -
+
+7 barrel -
+
+!!! sufficient -
+
+6 appoint -
+
+9 obliged -
+
+9 trophy -
+
+4 reticent -
+
+1 interference -
+
+1 boundary -
+
+2 proximity -
+
+!!! clarify -
+
+1 !!6 courage-
+
+!!! approach -
+
+!!! correspond -
+
+!!! intuition -
+
+4 inquiry -
+
+!!! redirect -
+
+2 quarrel -
+
+9 forbid -
+
+5 miserable -
+
+!!! annually -
+
+5 imperative  -
+
+!!! widely -
+
+4 equivalent -
+
+5 distinguish -
+
+1 delicate  -
+
+28-01-2023 23:16:40
+1 boundary -
+
+1 interference -
+
+1 proximity -
+
+3 reticent -
+
+!!! clarify -
+
+8 trophy -
+
+8 obliged -
+
+5 appoint -
+
+!!! sufficient -
+
+!!! courage-
+
+!!! approach -
+
+!!! correspond -
+
+6 barrel -
+
+!!! intuition -
+
+1 detect -
+
+!!! praise -
+
+7 trial -
+
+3 inquiry -
+
+!!! redirect -
+
+1 misery -
+
+!!! immediate  -
+
+1 quarrel -
+
+8 forbid -
+
+4 miserable -
+
+7 drought -
+
+9 arrange -
+
+!!! decay -
+
+!!! carry out -
+
+!!! annually -
+
+!!! as if -
+
+7 imperative  -
+
+1 converse -
+
+!!! widely -
+
+7 resistance -
+
+!!! drawer -
+
+6 equivalent -
+
+6 occupy -
+
+4 distinguish -
+
+1 nausea -
+
+11-01-2023 21:48:58
+1 interference -
+
+2 reticent -
+
+3 distinguish -
+
+1 quarrel -
+
+!!! immediate  -
+
+5 occupy -
+
+6 drought -
+
+8 arrange -
+
+!!! clarify -
+
+9 redirect -
+
+!!! drawer -
+
+!!! as if -
+
+6 resistance -
+
+9 trophy -
+
+8 imperative  -
+
+1 detect -
+
+7 obliged -
+
+9 sufficient -
+
+!!! approach -
+
+!!! correspond -
+
+1 converse -
+
+!!! courage-
+
+5 barrel -
+
+4 appoint -
+
+!!! intuition -
+
+!!! widely -
+
+9 praise -
+
+7 trial -
+
+3 inquiry -
+
+!!! annually -
+
+1 misery -
+
+!!! carry out -
+
+9 decay -
+
+5 equivalent -
+
+3 miserable -
+
+7 forbid -
+
+1 proximity -
+
+1 nausea -
+
+22-12-2022 04:45:39
+!!! correspond -
+
+!!! approach -
+
+9 courage-
+
+8 sufficient -
+
+4 barrel -
+
+3 appoint -
+
+!!! intuition -
+
+6 obliged -
+
+1 detect -
+
+7 imperative  -
+
+!!! widely -
+
+8 trophy -
+
+!!! praise -
+
+6 trial -
+
+5 resistance -
+
+9 as if -
+
+2 inquiry -
+
+9 drawer -
+
+!!! annually -
+
+8 redirect -
+
+!!! clarify -
+
+1 misery -
+
+!!! carry out -
+
+8 decay -
+
+9 arrange -
+
+5 drought -
+
+4 equivalent -
+
+4 occupy -
+
+9 immediate  -
+
+4 miserable -
+
+7 forbid -
+
+1 quarrel -
+
+!!! duration -
+
+4 distinguish -
+
+3 reticent -
+
+1 proximity -
+
+15-12-2022 13:43:14
+!!! carry out -
+
+7 decay -
+
+!!! arrange -
+
+!!! clarify -
+
+7 redirect -
+
+!!! annually -
+
+4 drought -
+
+4 equivalent -
+
+!!! transmit -
+
+3 occupy -
+
+8 drawer -
+
+2 inquiry -
+
+8 as if -
+
+!!! immediate  -
+
+4 resistance -
+
+5 trial -
+
+3 miserable -
+
+!!! praise -
+
+7 trophy -
+
+!!! widely -
+
+8 imperative  -
+
+2 detect -
+
+5 obliged -
+
+!!! intuition -
+
+2 appoint -
+
+7 forbid -
+
+1 quarrel -
+
+3 barrel -
+
+7 sufficient -
+
+!!! duration -
+
+3 distinguish -
+
+!!! courage-
+
+!!! approach -
+
+!!! correspond -
+
+2 reticent -
+
+13-12-2022 15:45:33
+!!! trophy -
+
+!!! praise -
+
+!!! widely -
+
+9 imperative  -
+
+1 detect -
+
+4 obliged -
+
+!!! intuition -
+
+2 miserable -
+
+!!! trial -
+
+1 appoint -
+
+3 resistance -
+
+9 immediate  -
+
+!!! extension -
+
+7 as if -
+
+6 forbid -
+
+1 inquiry -
+
+1 quarrel -
+
+2 barrel -
+
+7 drawer -
+
+6 sufficient -
+
+9 duration -
+
+2 occupy -
+
+!!! transmit -
+
+4 equivalent -
+
+!!! turnpike -
+
+2 distinguish -
+
+3 drought -
+
+!!! annually -
+
+6 redirect -
+
+!!! courage-
+
+4 ensure -
+
+!!! clarify -
+
+!!! arrange -
+
+!!! approach -
+
+6 decay -
+
+!!! correspond -
+
+!!! carry out -
+
+1 reticent -
+
+11-12-2022 13:37:52
+1 barrel -
+
+6 drawer -
+
+5 sufficient -
+
+8 duration -
+
+1 occupy -
+
+1 inquiry -
+
+!!! transmit -
+
+6 forbid -
+
+6 as if -
+
+!!! extension -
+
+!!! immediate  -
+
+2 resistance -
+
+1 appoint -
+
+!!! trial -
+
+3 equivalent -
+
+9 turnpike -
+
+1 miserable -
+
+1 distinguish -
+
+2 drought -
+
+!!! annually -
+
+!!! intuition -
+
+4 obliged -
+
+5 redirect -
+
+9 courage-
+
+2 detect -
+
+9 imperative  -
+
+!!! establish -
+
+!!! widely -
+
+!!! praise -
+
+3 ensure -
+
+!!! clarify -
+
+9 trophy -
+
+9 arrange -
+
+!!! approach -
+
+5 decay -
+
+!!! correspond -
+
+!!! carry out -
+
+07-12-2022 05:16:09
+1 distinguish -
+
+1 drought -
+
+8 turnpike -
+
+2 equivalent -
+
+!!! annually -
+
+!!! intuition -
+
+3 obliged -
+
+4 redirect -
+
+8 courage-
+
+1 detect -
+
+!!! martial -
+
+!!! imperative  -
+
+9 establish -
+
+!!! widely -
+
+!!! praise -
+
+!!! trial -
+
+2 ensure -
+
+!!! clarify -
+
+1 appoint -
+
+1 resistance -
+
+!!! immediate  -
+
+9 extension -
+
+8 trophy -
+
+5 as if -
+
+9 forbid -
+
+!!! transmit -
+
+1 inquiry -
+
+1 occupy -
+
+!!! arrange -
+
+!!! approach -
+
+4 decay -
+
+!!! correspond -
+
+7 duration -
+
+!!! budget -
+
+4 sufficient -
+
+!!! carry out -
+
+5 drawer -
+
+07-12-2022 02:32:45
+
+
+06-12-2022 03:18:31
+1 distinguish -
+
+!!! presence -
+
+4 drawer -
+
+!!! carry out -
+
+2 drought -
+
+3 sufficient -
+
+9 budget -
+
+1 equivalent -
+
+7 trophy -
+
+4 as if -
+
+!!! intimidating  -
+
+!!! widely -
+
+!!! intuition -
+
+2 obliged -
+
+7 courage-
+
+8 establish -
+
+1 detect -
+
+!!! transmit -
+
+!!! arrange -
+
+9 martial -
+
+8 forbid -
+
+!!! imperative  -
+
+!!! approach -
+
+3 redirect -
+
+3 decay -
+
+!!! praise -
+
+!!! correspond -
+
+9 annually -
+
+9 trial -
+
+1 ensure -
+
+7 turnpike -
+
+6 duration -
+
+8 extension -
+
+!!! clarify -
+
+!!! immediate  -
+
+17-11-2022 03:55:16
+9 arrange -
+
+8 martial -
+
+!!! transmit -
+
+9 forbid -
+
+1 detect -
+
+!!! imperative  -
+
+!!! approach -
+
+7 establish -
+
+6 courage-
+
+2 redirect -
+
+1 obliged -
+
+!!! intuition -
+
+!!! widely -
+
+3 decay -
+
+!!! praise -
+
+!!! intimidating  -
+
+3 as if -
+
+!!! correspond -
+
+6 trophy -
+
+8 annually -
+
+8 trial -
+
+1 equivalent -
+
+1 ensure -
+
+6 turnpike -
+
+5 duration -
+
+8 budget -
+
+3 sufficient -
+
+7 extension -
+
+2 drought -
+
+!!! clarify -
+
+!!! carry out -
+
+!!! navigate  -
+
+3 drawer -
+
+!!! presence -
+
+!!! carry on -
+
+!!! immediate  -
+
+1 distinguish -
+
+13-11-2022 18:06:00
+7 annually -
+
+2 distinguish -
+
+4 duration -
+
+5 trophy -
+
+!! correspond -
+
+!!! transmit -
+
+!! impatient -
+
+8 forbid -
+
+!! praise -
+
+2 decay -
+
+2 drawer -
+
+2 sufficient -
+
+9 imperative  -
+
+!! approach -
+
+!! intuition -
+
+6 establish -
+
+9 carry out -
+
+!! clarify -
+
+1 obliged -
+
+1 drought -
+
+1 redirect -
+
+6 extension -
+
+5 courage-
+
+!!! widely -
+
+1 detect -
+
+!! navigate  -
+
+!! presence -
+
+9 intimidating  -
+
+!! carry on -
+
+2 as if -
+
+7 martial -
+
+7 budget -
+
+8 arrange -
+
+5 turnpike -
+
+!! immediate  -
+
+!! restrict -
+
+7 trial -
+
+12-11-2022 00:58:34
+6 trial -
+
+!!! restrict -
+
+6 annually -
+
+!!! intuition -
+
+!!! immediate  -
+
+1 as if -
+
+!!! carry on -
+
+1 detect -
+
+!!! praise -
+
+!!! discrete -
+
+!!! presence -
+
+!!! navigate  -
+
+1 decay -
+
+1 sufficient -
+
+9 widely -
+
+8 intimidating  -
+
+7 forbid -
+
+!!! impatient -
+
+9 transmit -
+
+!!! correspond -
+
+6 martial -
+
+6 budget -
+
+8 imperative  -
+
+4 trophy -
+
+7 arrange -
+
+3 duration -
+
+4 turnpike -
+
+!!! breakthrough  -
+
+2 distinguish -
+
+!!! approach -
+
+5 establish -
+
+4 courage-
+
+8 carry out -
+
+!!! clarify -
+
+5 extension -
+
+09-11-2022 14:20:18
+9 Furthermore -
+ 
+9 navigate  -
+ 
+9 presence -
+ 
+1 decay -
+ 
+9 discrete -
+ 
+1 sufficient -
+ 
+9 praise -
+ 
+1 detect -
+ 
+8 widely -
+ 
+9 intimidating  -
+ 
+9 carry on -
+ 
+8 forbid -
+ 
+1 as if -
+ 
+9 impatient -
+ 
+8 transmit -
+ 
+9 correspond -
+ 
+5 martial -
+ 
+5 budget -
+ 
+9 imperative  -
+ 
+3 trophy -
+ 
+8 arrange -
+ 
+2 duration -
+ 
+3 turnpike -
+ 
+9 breakthrough  -
+ 
+9 immediate  -
+ 
+1 distinguish -
+ 
+9 approach -
+ 
+9 persist -
+ 
+9 intuition -
+ 
+4 establish -
+ 
+3 courage-
+ 
+5 annually -
+ 
+9 crucial -
+ 
+9 restrict -
+ 
+7 carry out -
+ 
+9 clarify -
+ 
+4 extension -
+ 
+5 trial -
+
+05-11-2022 05:40:20
+4 budget -
+ 
+4 martial -
+ 
+8 imperative  -
+ 
+8 correspond -
+ 
+2 trophy -
+ 
+7 transmit -
+ 
+7 arrange -
+ 
+8 impatient -
+ 
+1 duration -
+ 
+1 as if -
+ 
+2 turnpike -
+ 
+8 breakthrough  -
+ 
+7 forbid -
+ 
+8 carry on -
+ 
+8 intimidating  -
+ 
+8 immediate  -
+ 
+7 widely -
+ 
+1 distinguish -
+ 
+1 detect -
+ 
+8 praise -
+ 
+8 approach -
+ 
+1 sufficient -
+ 
+8 persist -
+ 
+8 discrete -
+ 
+8 intuition -
+ 
+3 establish -
+ 
+2 courage-
+ 
+4 annually -
+ 
+8 crucial -
+ 
+8 lead to -
+ 
+8 restrict -
+ 
+6 carry out -
+ 
+1 decay -
+ 
+8 presence -
+ 
+8 navigate  -
+ 
+8 clarify -
+ 
+3 extension -
+ 
+8 aspect -
+ 
+8 commercial -
+ 
+8 Furthermore -
+ 
+4 trial -
+
+05-11-2022 05:39:20
+4 trial -
+ 
+4 martial -
+ 
+8 imperative  -
+ 
+8 correspond -
+ 
+3 extension -
+ 
+7 transmit -
+ 
+8 clarify -
+ 
+7 arrange -
+ 
+8 navigate  -
+ 
+8 impatient -
+ 
+1 duration -
+ 
+1 as if -
+ 
+2 turnpike -
+ 
+6 carry out -
+ 
+8 restrict -
+ 
+8 crucial -
+ 
+4 annually -
+ 
+2 courage-
+ 
+8 carry on -
+ 
+8 intimidating  -
+ 
+8 intuition -
+ 
+8 immediate  -
+ 
+8 persist -
+ 
+1 sufficient -
+ 
+7 widely -
+ 
+8 approach -
+ 
+8 praise -
+ 
+8 discrete -
+ 
+3 establish -
+ 
+7 forbid -
+ 
+8 breakthrough  -
+ 
+8 lead to -
+ 
+1 decay -
+ 
+8 presence -
+ 
+2 trophy -
+ 
+8 aspect -
+ 
+8 commercial -
+ 
+8 Furthermore -
+ 
+4 budget -
+
+29-10-2022 01:06:54
+1 asdasd -
+
+
+
+29-10-2022 00:58:42
+
+1 sadasd -
+
+
+29-10-2022 00:54:36
+
+1 sadsad -
+
+
+28-10-2022 23:51:12
+
+
+
+28-10-2022 23:44:08
+
+1 aazads -
+
+
+27-10-2022 12:28:03
+7 praise -
+7 approach -
+6 widely -
+7 hyperbole -
+7 persist -
+7 robust -
+7 discrete -
+7 immediate  -
+7 intuition -
+7 intimidating  -
+7 carry on -
+2 establish -
+2 courage-
+7 forbid -
+7 provide -
+7 breakthrough  -
+3 annually -
+7 crucial -
+7 lead to -
+7 restrict -
+6 carry out -
+7 wrap -
+1 turnpike -
+
+1 decay -
+1 as if -
+1 duration -
+7 impatient -
+7 presence -
+7 navigate  -
+6 arrange -
+7 clarify -
+6 transmit -
+2 trophy -
+2 extension -
+7 aspect -
+7 correspond -
+7 commercial -
+7 Furthermore -
+7 imperative  -
+3 martial -
+3 budget -
+3 trial -
+
+
+26-10-2022 14:47:44
+6 wrap -
+5 carry out -
+6 restrict -
+6 plenty -
+6 impatient -
+6 presence -
+6 navigate  -
+5 arrange -
+6 lead to -
+6 crucial -
+6 clarify -
+2 annually -
+6 breakthrough  -
+5 transmit -
+6 provide -
+6 forbid -
+1 trophy -
+1 courage-
+
+1 extension -
+1 establish -
+6 aspect -
+6 correspond -
+6 carry on -
+6 relevant  -
+6 intimidating  -
+6 commercial -
+6 intuition -
+6 immediate  -
+6 discrete -
+6 Furthermore -
+6 robust -
+6 persist -
+6 imperative  -
+2 martial -
+2 budget -
+2 trial -
+6 hyperbole -
+5 widely -
+6 approach -
+6 praise -
+6 orbit -
+
+
+26-10-2022 14:40:05
+!!! adadsa -
+
+1 asdasd
+4 asdasd -
+
+
+26-10-2022 14:32:49
+1 kelam-
+1 melan
+
+1 selam-
+
+
+25-10-2022 14:08:45
+
+1 Lan nie evet dedin
+
+
+25-10-2022 12:58:57
+2 trial -
+2 martial -
+6 breakthrough  -
+6 imperative  -
+6 Furthermore -
+6 discrete -
+6 commercial -
+6 provide -
+6 carry on -
+
+6 aspect -
+6 correspond -
+6 forbid -
+6 relevant  -
+6 intimidating  -
+6 intuition -
+6 immediate  -
+6 robust -
+6 persist -
+5 transmit -
+2 budget -
+
+
+24-10-2022 13:04:22
+5 aspect -
+5 correspond -
+5 carry on -
+5 forbid -
+5 relevant  -
+5 provide -
+5 intimidating  -
+5 commercial -
+5 intuition -
+5 immediate  -
+5 discrete -
+5 Furthermore -
+5 robust -
+5 persist -
+4 transmit -
+5 imperative  -
+5 breakthrough  -
+1 martial -
+1 budget -
+1 trial -
+
+1 annually -
+5 hyperbole -
+5 clarify -
+5 crucial -
+5 lead to -
+4 arrange -
+5 navigate  -
+5 presence -
+5 impatient -
+5 plenty -
+5 restrict -
+4 widely -
+4 carry out -
+5 approach -
+5 praise -
+5 orbit -
+5 wrap -
+
+
+22-10-2022 07:00:06
+5 haphazard -
+5 orbit -
+5 carry on -
+5 forbid -
+5 praise -
+5 commercial -
+5 plenty -
+5 immediate  -
+5 discrete -
+5 Furthermore -
+5 robust -
+5 persist -
+4 arrange -
+5 imperative  -
+5 lead to -
+5 crucial -
+5 hyperbole -
+
+5 clarify -
+5 breakthrough  -
+4 transmit -
+5 recommend  -
+5 navigate  -
+5 presence -
+5 impatient -
+5 intuition -
+5 restrict -
+5 intimidating  -
+4 widely -
+4 carry out -
+5 approach -
+5 provide -
+5 relevant  -
+5 correspond -
+5 wrap -
+5 aspect -
+
+
+22-10-2022 03:45:34
+5 aspect -
+5 correspond -
+5 carry on -
+5 forbid -
+5 provide -
+5 approach -
+5 intimidating  -
+5 restrict -
+5 plenty -
+5 intuition -
+5 impatient -
+5 immediate  -
+5 robust -
+5 crucial -
+5 clarify -
+5 hyperbole -
+
+5 lead to -
+5 breakthrough  -
+5 imperative  -
+4 arrange -
+4 transmit -
+5 recommend  -
+5 persist -
+5 Furthermore -
+5 navigate  -
+5 discrete -
+5 presence -
+5 commercial -
+4 widely -
+4 carry out -
+5 praise -
+5 relevant  -
+5 orbit -
+5 wrap -
+5 haphazard -
+
+
+22-10-2022 03:45:25
+5 aspect -
+5 haphazard -
+5 wrap -
+5 orbit -
+5 correspond -
+5 forbid -
+4 widely -
+5 intimidating  -
+5 commercial -
+5 restrict -
+5 intuition -
+5 discrete -
+5 persist -
+5 imperative  -
+5 crucial -
+5 clarify -
+
+5 hyperbole -
+5 lead to -
+5 breakthrough  -
+4 arrange -
+4 transmit -
+5 recommend  -
+5 robust -
+5 Furthermore -
+5 navigate  -
+5 immediate  -
+5 presence -
+5 impatient -
+5 plenty -
+4 carry out -
+5 approach -
+5 praise -
+5 provide -
+5 relevant  -
+5 carry on -
+
+21-10-2022 14:36:43
+5 aspect -
+5 haphazard -
+5 wrap -
+5 correspond -
+5 forbid -
+5 relevant  -
+5 approach -
+5 restrict -
+5 intuition -
+5 immediate  -
+5 discrete -
+5 navigate  -
+5 Furthermore -
+5 robust -
+5 persist -
+5 recommend  -
+4 arrange -
+5 breakthrough  -
+5 clarify -
+5 hyperbole -
+
+5 crucial -
+5 lead to -
+5 imperative  -
+4 transmit -
+5 presence -
+5 impatient -
+5 plenty -
+5 commercial -
+5 intimidating  -
+4 widely -
+4 carry out -
+5 praise -
+5 provide -
+5 carry on -
+5 orbit -
+
+
+21-10-2022 14:35:48
+True
+
+
+21-10-2022 14:04:49
+5 haphazard -
+5 wrap -
+4 carry out -
+5 plenty -
+5 intuition -
+5 presence -
+5 immediate  -
+5 navigate  -
+5 robust -
+4 transmit -
+5 imperative  -
+5 crucial -
+5 hyperbole -
+
+5 clarify -
+5 lead to -
+5 breakthrough  -
+4 arrange -
+5 recommend  -
+5 persist -
+5 Furthermore -
+5 discrete -
+5 impatient -
+5 restrict -
+5 commercial -
+5 intimidating  -
+4 widely -
+5 approach -
+5 praise -
+5 provide -
+5 relevant  -
+5 forbid -
+5 carry on -
+5 correspond -
+5 orbit -
+5 aspect -
+
+20-10-2022 21:34:11
+3 discrete - ayrık
+3 immediate  - acil
+3 navigate  -  gezmek
+3 presence - varlık
+3 impatient - sabırsız
+3 Furthermore - üstüne
+3 intuition - sezgi
+3 plenty - bolca
+3 restrict - kısıtlamak
+3 commercial - ticari
+3 intimidating  -göz korkutucu
+3 robust - güçlü
+3 persist - ısrar
+3 recommend  - tavsiye etmek
+2 widely - yaygın olarak
+2 carry out -yapmak
+2 transmit - iletmek
+2 arrange -yaygın ****
+3 approach -yakın
+3 praise - övmek
+3 provide - sağlamak
+3 relevant  - ilgiili ***
+3 imperative  - zorunlu
+3 breakthrough  - atılım
+3 forbid - yasaklamak
+3 lead to - yol açmak
+3 crucial - hayati 
+3 carry on - devam ettirmek
+3 correspond - karşılık
+3 clarify - açıklamak  **** 
+3 orbit - yörünge
+3 wrap - sarmak
+3 haphazard - gelişi güzel
+3 aspect - görünüş
+3 hyperbole - abartmak
+
+19-10-2022 13:31:46
+1 transmit - yönlendirmek
+1 arrange - sınır
+1 carry out - yapmak
+1 widely -yaygın
+2 approach - yakın
+2 recommend  - tavsiye etmek
+2 persist - varlık
+2 robust - güçlü
+2 praise - övgü
+2 provide - sağlamak
+2 intimidating  - göz korkutucu
+2 relevant  - ilgili
+2 imperative  - zorunlu
+2 breakthrough  - atılım
+2 commercial - ticari
+2 forbid -  yasaklamak
+2 lead to - yol açmak
+2 restrict - kısıtlamak
+2 crucial - hayati
+2 carry on - sürdürmek
+2 correspond - karşılık
+2 clarify - açıklamak
+2 orbit - yörünge
+2 plenty - bolca
+2 intuition - sezgi
+2 Furthermore - üstelik
+2 wrap -  sarmak
+2 haphazard - gelişigüzel
+2 impatient - sabırsız
+2 aspect - görünüş
+2 hyperbole - abartmak
+2 presence - varlık
+2 navigate  - gezmek
+2 immediate  - acil
+2 discrete - ayrık
+
+19-10-2022 13:31:14
+1
+
+17-10-2022 22:37:44
+1 transmit -dsadasd
+1 arrange -
+1 carry out -asdasd
+1 widely -
+2 approach -
+2 recommend  -asdasd
+2 persist -
+2 robust -
+2 praise -asdasd
+2 provide -asddas
+2 intimidating  -
+2 significant -afaf
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 22:36:53
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -qweeqw
+2 recommend  -
+2 persist -
+2 robust -qweqwe
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -wqeqwe
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -qwewqe
+2 correspond -
+2 clarify -wqewqe
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -qwewqe
+2 haphazard -
+2 impatient -weqeqw
+2 aspect -wqeqwe
+2 hyperbole -wqewqe
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 22:36:37
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 22:26:28
+17-10-2022 22:06:03
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 22:06:02
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 22:06:00
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 22:05:38
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:59:02
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:51:23
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:45:56
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:41:04
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:41:03
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:29
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:28
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:28
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:27
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:40:19
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:39:40
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:38:24
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:38:20
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:37:12
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 21:33:41
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -17-10-2022 14:57:06
+qweqew
+qwe
+wqe
+qw
+ew17-10-2022 14:42:12
+2 transmit -
+2 arrange -
+2 carry out -
+2 widely -
+3 approach -
+3 recommend  -
+3 persist -
+3 robust güçlü
+3 praise övgü
+3 provide -
+3 intimidating  -
+3 significant önemli
+3 eventually -
+3 relevant  -
+3 imperative  -
+3 breakthrough  -
+3 commercial -
+3 forbid -
+3 lead to -
+3 restrict -
+3 crucial -
+3 carry on -
+3 correspond -
+3 clarify -
+3 orbit -
+3 plenty -
+3 intuition -
+3 Furthermore -
+3 wrap -
+3 haphazard -
+3 impatient -
+3 aspect -
+3 hyperbole -
+3 presence -
+3 navigate  -
+3 immediate  -
+3 discrete -
+
+17-10-2022 14:42:08
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust güçlü
+2 praise övgü
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+17-10-2022 14:42:08
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust güçlü
+2 praise övgü
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 14:42:12
+2 transmit -
+2 arrange -
+2 carry out -
+2 widely -
+3 approach -
+3 recommend  -
+3 persist -
+3 robust güçlü
+3 praise övgü
+3 provide -
+3 intimidating  -
+3 significant önemli
+3 eventually -
+3 relevant  -
+3 imperative  -
+3 breakthrough  -
+3 commercial -
+3 forbid -
+3 lead to -
+3 restrict -
+3 crucial -
+3 carry on -
+3 correspond -
+3 clarify -
+3 orbit -
+3 plenty -
+3 intuition -
+3 Furthermore -
+3 wrap -
+3 haphazard -
+3 impatient -
+3 aspect -
+3 hyperbole -
+3 presence -
+3 navigate  -
+3 immediate  -
+3 discrete -
+
+
+
+17-10-2022 14:57:06
+qweqew
+qwe
+wqe
+qw
+ew
+
+17-10-2022 21:33:41
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:37:12
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:38:20
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:38:24
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:39:40
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant önemli
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:19
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:27
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:28
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:28
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:29
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:40:50
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:41:03
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:41:04
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:45:56
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:51:23
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 21:59:02
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 22:05:38
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 22:06:00
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 22:06:02
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+17-10-2022 22:06:03
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+
+
+17-10-2022 22:26:28
+
+
+
+
+17-10-2022 22:36:37
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -
+2 recommend  -
+2 persist -
+2 robust -
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+
+
+17-10-2022 22:36:53
+1 transmit -
+1 arrange -
+1 carry out -
+1 widely -
+2 approach -qweeqw
+2 recommend  -
+2 persist -
+2 robust -qweqwe
+2 praise -
+2 provide -
+2 intimidating  -
+2 significant -
+2 eventually -
+2 relevant  -wqeqwe
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -qwewqe
+2 correspond -
+2 clarify -wqewqe
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -qwewqe
+2 haphazard -
+2 impatient -weqeqw
+2 aspect -wqeqwe
+2 hyperbole -wqewqe
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+
+
+17-10-2022 22:37:44
+1 transmit -dsadasd
+1 arrange -
+1 carry out -asdasd
+1 widely -
+2 approach -
+2 recommend  -asdasd
+2 persist -
+2 robust -
+2 praise -asdasd
+2 provide -asddas
+2 intimidating  -
+2 significant -afaf
+2 eventually -
+2 relevant  -
+2 imperative  -
+2 breakthrough  -
+2 commercial -
+2 forbid -
+2 lead to -
+2 restrict -
+2 crucial -
+2 carry on -
+2 correspond -
+2 clarify -
+2 orbit -
+2 plenty -
+2 intuition -
+2 Furthermore -
+2 wrap -
+2 haphazard -
+2 impatient -
+2 aspect -
+2 hyperbole -
+2 presence -
+2 navigate  -
+2 immediate  -
+2 discrete -
+
+
+
+19-10-2022 13:31:14
+1
+
+
+
+19-10-2022 13:31:46
+1 transmit - yönlendirmek
+1 arrange - sınır
+1 carry out - yapmak
+1 widely -yaygın
+2 approach - yakın
+2 recommend  - tavsiye etmek
+2 persist - varlık
+2 robust - güçlü
+2 praise - övgü
+2 provide - sağlamak
+2 intimidating  - göz korkutucu
+2 relevant  - ilgili
+2 imperative  - zorunlu
+2 breakthrough  - atılım
+2 commercial - ticari
+2 forbid -  yasaklamak
+2 lead to - yol açmak
+2 restrict - kısıtlamak
+2 crucial - hayati
+2 carry on - sürdürmek
+2 correspond - karşılık
+2 clarify - açıklamak
+2 orbit - yörünge
+2 plenty - bolca
+2 intuition - sezgi
+2 Furthermore - üstelik
+2 wrap -  sarmak
+2 haphazard - gelişigüzel
+2 impatient - sabırsız
+2 aspect - görünüş
+2 hyperbole - abartmak
+2 presence - varlık
+2 navigate  - gezmek
+2 immediate  - acil
+2 discrete - ayrık
+
+
+
+20-10-2022 21:34:11
+3 discrete - ayrık
+3 immediate  - acil
+3 navigate  -  gezmek
+3 presence - varlık
+3 impatient - sabırsız
+3 Furthermore - üstüne
+3 intuition - sezgi
+3 plenty - bolca
+3 restrict - kısıtlamak
+3 commercial - ticari
+3 intimidating  -göz korkutucu
+3 robust - güçlü
+3 persist - ısrar
+3 recommend  - tavsiye etmek
+2 widely - yaygın olarak
+2 carry out -yapmak
+2 transmit - iletmek
+2 arrange -yaygın ****
+3 approach -yakın
+3 praise - övmek
+3 provide - sağlamak
+3 relevant  - ilgiili ***
+3 imperative  - zorunlu
+3 breakthrough  - atılım
+3 forbid - yasaklamak
+3 lead to - yol açmak
+3 crucial - hayati 
+3 carry on - devam ettirmek
+3 correspond - karşılık
+3 clarify - açıklamak  **** 
+3 orbit - yörünge
+3 wrap - sarmak
+3 haphazard - gelişi güzel
+3 aspect - görünüş
+3 hyperbole - abartmak
+
+
+
+21-10-2022 14:04:49
+5 haphazard -
+5 wrap -
+4 carry out -
+5 plenty -
+5 intuition -
+5 presence -
+5 immediate  -
+5 navigate  -
+5 robust -
+4 transmit -
+5 imperative  -
+5 crucial -
+5 hyperbole -
+
+5 clarify -
+5 lead to -
+5 breakthrough  -
+4 arrange -
+5 recommend  -
+5 persist -
+5 Furthermore -
+5 discrete -
+5 impatient -
+5 restrict -
+5 commercial -
+5 intimidating  -
+4 widely -
+5 approach -
+5 praise -
+5 provide -
+5 relevant  -
+5 forbid -
+5 carry on -
+5 correspond -
+5 orbit -
+5 aspect -
+
+
+
+21-10-2022 14:35:48
+True
+
+
+
+
+21-10-2022 14:36:43
+5 aspect -
+5 haphazard -
+5 wrap -
+5 correspond -
+5 forbid -
+5 relevant  -
+5 approach -
+5 restrict -
+5 intuition -
+5 immediate  -
+5 discrete -
+5 navigate  -
+5 Furthermore -
+5 robust -
+5 persist -
+5 recommend  -
+4 arrange -
+5 breakthrough  -
+5 clarify -
+5 hyperbole -
+
+5 crucial -
+5 lead to -
+5 imperative  -
+4 transmit -
+5 presence -
+5 impatient -
+5 plenty -
+5 commercial -
+5 intimidating  -
+4 widely -
+4 carry out -
+5 praise -
+5 provide -
+5 carry on -
+5 orbit -
+
+
+
+
+22-10-2022 03:45:25
+5 aspect -
+5 haphazard -
+5 wrap -
+5 orbit -
+5 correspond -
+5 forbid -
+4 widely -
+5 intimidating  -
+5 commercial -
+5 restrict -
+5 intuition -
+5 discrete -
+5 persist -
+5 imperative  -
+5 crucial -
+5 clarify -
+
+5 hyperbole -
+5 lead to -
+5 breakthrough  -
+4 arrange -
+4 transmit -
+5 recommend  -
+5 robust -
+5 Furthermore -
+5 navigate  -
+5 immediate  -
+5 presence -
+5 impatient -
+5 plenty -
+4 carry out -
+5 approach -
+5 praise -
+5 provide -
+5 relevant  -
+5 carry on -
+
+
+
+22-10-2022 03:45:34
+5 aspect -
+5 correspond -
+5 carry on -
+5 forbid -
+5 provide -
+5 approach -
+5 intimidating  -
+5 restrict -
+5 plenty -
+5 intuition -
+5 impatient -
+5 immediate  -
+5 robust -
+5 crucial -
+5 clarify -
+5 hyperbole -
+
+5 lead to -
+5 breakthrough  -
+5 imperative  -
+4 arrange -
+4 transmit -
+5 recommend  -
+5 persist -
+5 Furthermore -
+5 navigate  -
+5 discrete -
+5 presence -
+5 commercial -
+4 widely -
+4 carry out -
+5 praise -
+5 relevant  -
+5 orbit -
+5 wrap -
+5 haphazard -
+
+
+
+
+22-10-2022 07:00:06
+5 haphazard -
+5 orbit -
+5 carry on -
+5 forbid -
+5 praise -
+5 commercial -
+5 plenty -
+5 immediate  -
+5 discrete -
+5 Furthermore -
+5 robust -
+5 persist -
+4 arrange -
+5 imperative  -
+5 lead to -
+5 crucial -
+5 hyperbole -
+
+5 clarify -
+5 breakthrough  -
+4 transmit -
+5 recommend  -
+5 navigate  -
+5 presence -
+5 impatient -
+5 intuition -
+5 restrict -
+5 intimidating  -
+4 widely -
+4 carry out -
+5 approach -
+5 provide -
+5 relevant  -
+5 correspond -
+5 wrap -
+5 aspect -
+
+
+
+
+24-10-2022 13:04:22
+5 aspect -
+5 correspond -
+5 carry on -
+5 forbid -
+5 relevant  -
+5 provide -
+5 intimidating  -
+5 commercial -
+5 intuition -
+5 immediate  -
+5 discrete -
+5 Furthermore -
+5 robust -
+5 persist -
+4 transmit -
+5 imperative  -
+5 breakthrough  -
+1 martial -
+1 budget -
+1 trial -
+
+1 annually -
+5 hyperbole -
+5 clarify -
+5 crucial -
+5 lead to -
+4 arrange -
+5 navigate  -
+5 presence -
+5 impatient -
+5 plenty -
+5 restrict -
+4 widely -
+4 carry out -
+5 approach -
+5 praise -
+5 orbit -
+5 wrap -
+
+
+
+
+25-10-2022 12:58:57
+2 trial -
+2 martial -
+6 breakthrough  -
+6 imperative  -
+6 Furthermore -
+6 discrete -
+6 commercial -
+6 provide -
+6 carry on -
+
+6 aspect -
+6 correspond -
+6 forbid -
+6 relevant  -
+6 intimidating  -
+6 intuition -
+6 immediate  -
+6 robust -
+6 persist -
+5 transmit -
+2 budget -
+
+
+
+
+25-10-2022 14:08:45
+
+1 Lan nie evet dedin
+
+
+
+
+26-10-2022 14:32:49
+1 kelam-
+1 melan
+
+1 selam-
+
+
+
+
+26-10-2022 14:40:05
+!!! adadsa -
+
+1 asdasd
+4 asdasd -
+
+
+
+
+26-10-2022 14:47:44
+6 wrap -
+5 carry out -
+6 restrict -
+6 plenty -
+6 impatient -
+6 presence -
+6 navigate  -
+5 arrange -
+6 lead to -
+6 crucial -
+6 clarify -
+2 annually -
+6 breakthrough  -
+5 transmit -
+6 provide -
+6 forbid -
+1 trophy -
+1 courage-
+
+1 extension -
+1 establish -
+6 aspect -
+6 correspond -
+6 carry on -
+6 relevant  -
+6 intimidating  -
+6 commercial -
+6 intuition -
+6 immediate  -
+6 discrete -
+6 Furthermore -
+6 robust -
+6 persist -
+6 imperative  -
+2 martial -
+2 budget -
+2 trial -
+6 hyperbole -
+5 widely -
+6 approach -
+6 praise -
+6 orbit -
+
+
+
+
+27-10-2022 12:28:03
+7 praise -
+7 approach -
+6 widely -
+7 hyperbole -
+7 persist -
+7 robust -
+7 discrete -
+7 immediate  -
+7 intuition -
+7 intimidating  -
+7 carry on -
+2 establish -
+2 courage-
+7 forbid -
+7 provide -
+7 breakthrough  -
+3 annually -
+7 crucial -
+7 lead to -
+7 restrict -
+6 carry out -
+7 wrap -
+1 turnpike -
+
+1 decay -
+1 as if -
+1 duration -
+7 impatient -
+7 presence -
+7 navigate  -
+6 arrange -
+7 clarify -
+6 transmit -
+2 trophy -
+2 extension -
+7 aspect -
+7 correspond -
+7 commercial -
+7 Furthermore -
+7 imperative  -
+3 martial -
+3 budget -
+3 trial -
+
+
+
+
+28-10-2022 23:44:08
+
+1 aazads -
+
+
+
+
+28-10-2022 23:51:12
+
+
+
+
+
+29-10-2022 00:54:36
+
+1 sadsad -
+
+
+
+
+29-10-2022 00:58:42
+
+1 sadasd -
+
+
+
+
+29-10-2022 01:06:54
+1 asdasd -
+
+
+
+
+
+05-11-2022 05:39:20
+4 trial -
+ 
+4 martial -
+ 
+8 imperative  -
+ 
+8 correspond -
+ 
+3 extension -
+ 
+7 transmit -
+ 
+8 clarify -
+ 
+7 arrange -
+ 
+8 navigate  -
+ 
+8 impatient -
+ 
+1 duration -
+ 
+1 as if -
+ 
+2 turnpike -
+ 
+6 carry out -
+ 
+8 restrict -
+ 
+8 crucial -
+ 
+4 annually -
+ 
+2 courage-
+ 
+8 carry on -
+ 
+8 intimidating  -
+ 
+8 intuition -
+ 
+8 immediate  -
+ 
+8 persist -
+ 
+1 sufficient -
+ 
+7 widely -
+ 
+8 approach -
+ 
+8 praise -
+ 
+8 discrete -
+ 
+3 establish -
+ 
+7 forbid -
+ 
+8 breakthrough  -
+ 
+8 lead to -
+ 
+1 decay -
+ 
+8 presence -
+ 
+2 trophy -
+ 
+8 aspect -
+ 
+8 commercial -
+ 
+8 Furthermore -
+ 
+4 budget -
+
+
+
+05-11-2022 05:40:20
+4 budget -
+ 
+4 martial -
+ 
+8 imperative  -
+ 
+8 correspond -
+ 
+2 trophy -
+ 
+7 transmit -
+ 
+7 arrange -
+ 
+8 impatient -
+ 
+1 duration -
+ 
+1 as if -
+ 
+2 turnpike -
+ 
+8 breakthrough  -
+ 
+7 forbid -
+ 
+8 carry on -
+ 
+8 intimidating  -
+ 
+8 immediate  -
+ 
+7 widely -
+ 
+1 distinguish -
+ 
+1 detect -
+ 
+8 praise -
+ 
+8 approach -
+ 
+1 sufficient -
+ 
+8 persist -
+ 
+8 discrete -
+ 
+8 intuition -
+ 
+3 establish -
+ 
+2 courage-
+ 
+4 annually -
+ 
+8 crucial -
+ 
+8 lead to -
+ 
+8 restrict -
+ 
+6 carry out -
+ 
+1 decay -
+ 
+8 presence -
+ 
+8 navigate  -
+ 
+8 clarify -
+ 
+3 extension -
+ 
+8 aspect -
+ 
+8 commercial -
+ 
+8 Furthermore -
+ 
+4 trial -
+
+
+
+09-11-2022 14:20:18
+9 Furthermore -
+ 
+9 navigate  -
+ 
+9 presence -
+ 
+1 decay -
+ 
+9 discrete -
+ 
+1 sufficient -
+ 
+9 praise -
+ 
+1 detect -
+ 
+8 widely -
+ 
+9 intimidating  -
+ 
+9 carry on -
+ 
+8 forbid -
+ 
+1 as if -
+ 
+9 impatient -
+ 
+8 transmit -
+ 
+9 correspond -
+ 
+5 martial -
+ 
+5 budget -
+ 
+9 imperative  -
+ 
+3 trophy -
+ 
+8 arrange -
+ 
+2 duration -
+ 
+3 turnpike -
+ 
+9 breakthrough  -
+ 
+9 immediate  -
+ 
+1 distinguish -
+ 
+9 approach -
+ 
+9 persist -
+ 
+9 intuition -
+ 
+4 establish -
+ 
+3 courage-
+ 
+5 annually -
+ 
+9 crucial -
+ 
+9 restrict -
+ 
+7 carry out -
+ 
+9 clarify -
+ 
+4 extension -
+ 
+5 trial -
+
+
+
+12-11-2022 00:58:34
+6 trial -
+
+!!! restrict -
+
+6 annually -
+
+!!! intuition -
+
+!!! immediate  -
+
+1 as if -
+
+!!! carry on -
+
+1 detect -
+
+!!! praise -
+
+!!! discrete -
+
+!!! presence -
+
+!!! navigate  -
+
+1 decay -
+
+1 sufficient -
+
+9 widely -
+
+8 intimidating  -
+
+7 forbid -
+
+!!! impatient -
+
+9 transmit -
+
+!!! correspond -
+
+6 martial -
+
+6 budget -
+
+8 imperative  -
+
+4 trophy -
+
+7 arrange -
+
+3 duration -
+
+4 turnpike -
+
+!!! breakthrough  -
+
+2 distinguish -
+
+!!! approach -
+
+5 establish -
+
+4 courage-
+
+8 carry out -
+
+!!! clarify -
+
+5 extension -
+
+
+
+13-11-2022 18:06:00
+7 annually -
+
+2 distinguish -
+
+4 duration -
+
+5 trophy -
+
+!! correspond -
+
+!!! transmit -
+
+!! impatient -
+
+8 forbid -
+
+!! praise -
+
+2 decay -
+
+2 drawer -
+
+2 sufficient -
+
+9 imperative  -
+
+!! approach -
+
+!! intuition -
+
+6 establish -
+
+9 carry out -
+
+!! clarify -
+
+1 obliged -
+
+1 drought -
+
+1 redirect -
+
+6 extension -
+
+5 courage-
+
+!!! widely -
+
+1 detect -
+
+!! navigate  -
+
+!! presence -
+
+9 intimidating  -
+
+!! carry on -
+
+2 as if -
+
+7 martial -
+
+7 budget -
+
+8 arrange -
+
+5 turnpike -
+
+!! immediate  -
+
+!! restrict -
+
+7 trial -
+
+
+
+17-11-2022 03:55:16
+9 arrange -
+
+8 martial -
+
+!!! transmit -
+
+9 forbid -
+
+1 detect -
+
+!!! imperative  -
+
+!!! approach -
+
+7 establish -
+
+6 courage-
+
+2 redirect -
+
+1 obliged -
+
+!!! intuition -
+
+!!! widely -
+
+3 decay -
+
+!!! praise -
+
+!!! intimidating  -
+
+3 as if -
+
+!!! correspond -
+
+6 trophy -
+
+8 annually -
+
+8 trial -
+
+1 equivalent -
+
+1 ensure -
+
+6 turnpike -
+
+5 duration -
+
+8 budget -
+
+3 sufficient -
+
+7 extension -
+
+2 drought -
+
+!!! clarify -
+
+!!! carry out -
+
+!!! navigate  -
+
+3 drawer -
+
+!!! presence -
+
+!!! carry on -
+
+!!! immediate  -
+
+1 distinguish -
+
+
+
+06-12-2022 03:18:31
+1 distinguish -
+
+!!! presence -
+
+4 drawer -
+
+!!! carry out -
+
+2 drought -
+
+3 sufficient -
+
+9 budget -
+
+1 equivalent -
+
+7 trophy -
+
+4 as if -
+
+!!! intimidating  -
+
+!!! widely -
+
+!!! intuition -
+
+2 obliged -
+
+7 courage-
+
+8 establish -
+
+1 detect -
+
+!!! transmit -
+
+!!! arrange -
+
+9 martial -
+
+8 forbid -
+
+!!! imperative  -
+
+!!! approach -
+
+3 redirect -
+
+3 decay -
+
+!!! praise -
+
+!!! correspond -
+
+9 annually -
+
+9 trial -
+
+1 ensure -
+
+7 turnpike -
+
+6 duration -
+
+8 extension -
+
+!!! clarify -
+
+!!! immediate  -
+
+
+
+07-12-2022 02:32:45
+
+
+
+
+07-12-2022 05:16:09
+1 distinguish -
+
+1 drought -
+
+8 turnpike -
+
+2 equivalent -
+
+!!! annually -
+
+!!! intuition -
+
+3 obliged -
+
+4 redirect -
+
+8 courage-
+
+1 detect -
+
+!!! martial -
+
+!!! imperative  -
+
+9 establish -
+
+!!! widely -
+
+!!! praise -
+
+!!! trial -
+
+2 ensure -
+
+!!! clarify -
+
+1 appoint -
+
+1 resistance -
+
+!!! immediate  -
+
+9 extension -
+
+8 trophy -
+
+5 as if -
+
+9 forbid -
+
+!!! transmit -
+
+1 inquiry -
+
+1 occupy -
+
+!!! arrange -
+
+!!! approach -
+
+4 decay -
+
+!!! correspond -
+
+7 duration -
+
+!!! budget -
+
+4 sufficient -
+
+!!! carry out -
+
+5 drawer -
+
+
+
+11-12-2022 13:37:52
+1 barrel -
+
+6 drawer -
+
+5 sufficient -
+
+8 duration -
+
+1 occupy -
+
+1 inquiry -
+
+!!! transmit -
+
+6 forbid -
+
+6 as if -
+
+!!! extension -
+
+!!! immediate  -
+
+2 resistance -
+
+1 appoint -
+
+!!! trial -
+
+3 equivalent -
+
+9 turnpike -
+
+1 miserable -
+
+1 distinguish -
+
+2 drought -
+
+!!! annually -
+
+!!! intuition -
+
+4 obliged -
+
+5 redirect -
+
+9 courage-
+
+2 detect -
+
+9 imperative  -
+
+!!! establish -
+
+!!! widely -
+
+!!! praise -
+
+3 ensure -
+
+!!! clarify -
+
+9 trophy -
+
+9 arrange -
+
+!!! approach -
+
+5 decay -
+
+!!! correspond -
+
+!!! carry out -
+
+
+
+13-12-2022 15:45:33
+!!! trophy -
+
+!!! praise -
+
+!!! widely -
+
+9 imperative  -
+
+1 detect -
+
+4 obliged -
+
+!!! intuition -
+
+2 miserable -
+
+!!! trial -
+
+1 appoint -
+
+3 resistance -
+
+9 immediate  -
+
+!!! extension -
+
+7 as if -
+
+6 forbid -
+
+1 inquiry -
+
+1 quarrel -
+
+2 barrel -
+
+7 drawer -
+
+6 sufficient -
+
+9 duration -
+
+2 occupy -
+
+!!! transmit -
+
+4 equivalent -
+
+!!! turnpike -
+
+2 distinguish -
+
+3 drought -
+
+!!! annually -
+
+6 redirect -
+
+!!! courage-
+
+4 ensure -
+
+!!! clarify -
+
+!!! arrange -
+
+!!! approach -
+
+6 decay -
+
+!!! correspond -
+
+!!! carry out -
+
+1 reticent -
+
+
+
+15-12-2022 13:43:14
+!!! carry out -
+
+7 decay -
+
+!!! arrange -
+
+!!! clarify -
+
+7 redirect -
+
+!!! annually -
+
+4 drought -
+
+4 equivalent -
+
+!!! transmit -
+
+3 occupy -
+
+8 drawer -
+
+2 inquiry -
+
+8 as if -
+
+!!! immediate  -
+
+4 resistance -
+
+5 trial -
+
+3 miserable -
+
+!!! praise -
+
+7 trophy -
+
+!!! widely -
+
+8 imperative  -
+
+2 detect -
+
+5 obliged -
+
+!!! intuition -
+
+2 appoint -
+
+7 forbid -
+
+1 quarrel -
+
+3 barrel -
+
+7 sufficient -
+
+!!! duration -
+
+3 distinguish -
+
+!!! courage-
+
+!!! approach -
+
+!!! correspond -
+
+2 reticent -
+
+
+
+22-12-2022 04:45:39
+!!! correspond -
+
+!!! approach -
+
+9 courage-
+
+8 sufficient -
+
+4 barrel -
+
+3 appoint -
+
+!!! intuition -
+
+6 obliged -
+
+1 detect -
+
+7 imperative  -
+
+!!! widely -
+
+8 trophy -
+
+!!! praise -
+
+6 trial -
+
+5 resistance -
+
+9 as if -
+
+2 inquiry -
+
+9 drawer -
+
+!!! annually -
+
+8 redirect -
+
+!!! clarify -
+
+1 misery -
+
+!!! carry out -
+
+8 decay -
+
+9 arrange -
+
+5 drought -
+
+4 equivalent -
+
+4 occupy -
+
+9 immediate  -
+
+4 miserable -
+
+7 forbid -
+
+1 quarrel -
+
+!!! duration -
+
+4 distinguish -
+
+3 reticent -
+
+1 proximity -
+
+
+
+11-01-2023 21:48:58
+1 interference -
+
+2 reticent -
+
+3 distinguish -
+
+1 quarrel -
+
+!!! immediate  -
+
+5 occupy -
+
+6 drought -
+
+8 arrange -
+
+!!! clarify -
+
+9 redirect -
+
+!!! drawer -
+
+!!! as if -
+
+6 resistance -
+
+9 trophy -
+
+8 imperative  -
+
+1 detect -
+
+7 obliged -
+
+9 sufficient -
+
+!!! approach -
+
+!!! correspond -
+
+1 converse -
+
+!!! courage-
+
+5 barrel -
+
+4 appoint -
+
+!!! intuition -
+
+!!! widely -
+
+9 praise -
+
+7 trial -
+
+3 inquiry -
+
+!!! annually -
+
+1 misery -
+
+!!! carry out -
+
+9 decay -
+
+5 equivalent -
+
+3 miserable -
+
+7 forbid -
+
+1 proximity -
+
+1 nausea -
+
+
+
+28-01-2023 23:16:40
+1 boundary -
+
+1 interference -
+
+1 proximity -
+
+3 reticent -
+
+!!! clarify -
+
+8 trophy -
+
+8 obliged -
+
+5 appoint -
+
+!!! sufficient -
+
+!!! courage-
+
+!!! approach -
+
+!!! correspond -
+
+6 barrel -
+
+!!! intuition -
+
+1 detect -
+
+!!! praise -
+
+7 trial -
+
+3 inquiry -
+
+!!! redirect -
+
+1 misery -
+
+!!! immediate  -
+
+1 quarrel -
+
+8 forbid -
+
+4 miserable -
+
+7 drought -
+
+9 arrange -
+
+!!! decay -
+
+!!! carry out -
+
+!!! annually -
+
+!!! as if -
+
+7 imperative  -
+
+1 converse -
+
+!!! widely -
+
+7 resistance -
+
+!!! drawer -
+
+6 equivalent -
+
+6 occupy -
+
+4 distinguish -
+
+1 nausea -
+
+
+
+30-01-2023 01:01:03
+1 nausea -
+
+7 occupy -
+
+!!! drawer -
+
+8 resistance -
+
+2 converse -
+
+!!! carry out -
+
+!!! decay -
+
+!!! arrange -
+
+8 drought -
+
+!!! immediate  -
+
+2 misery -
+
+8 trial -
+
+!!! praise -
+
+1 detect -
+
+7 barrel -
+
+!!! sufficient -
+
+6 appoint -
+
+9 obliged -
+
+9 trophy -
+
+4 reticent -
+
+1 interference -
+
+1 boundary -
+
+2 proximity -
+
+!!! clarify -
+
+1 !!6 courage-
+
+!!! approach -
+
+!!! correspond -
+
+!!! intuition -
+
+4 inquiry -
+
+!!! redirect -
+
+2 quarrel -
+
+9 forbid -
+
+5 miserable -
+
+!!! annually -
+
+5 imperative  -
+
+!!! widely -
+
+4 equivalent -
+
+5 distinguish -
+
+1 delicate  -
+
+
+
+31-01-2023 00:35:41
+1 facilitate -
+
+6 distinguish -
+
+6 miserable -
+
+3 quarrel -
+
+5 inquiry -
+
+7 courage-
+
+!!! clarify -
+
+3 proximity -
+
+7 appoint -
+
+!!! sufficient -
+
+8 barrel -
+
+9 trial -
+
+2 misery -
+
+!!! immediate  -
+
+!!! carry out -
+
+9 resistance -
+
+8 occupy -
+
+2 nausea -
+
+!!! drawer -
+
+3 converse -
+
+!!! decay -
+
+!!! arrange -
+
+9 drought -
+
+2 detect -
+
+!!! obliged -
+
+!!! trophy -
+
+5 reticent -
+
+2 interference -
+
+1 boundary -
+
+8 approach -
+
+!!! correspond -
+
+6 forbid -
+
+!!! annually -
+
+3 imperative  -
+
+5 equivalent -
+
+2 delicate  -
+
+1 confidential -
+
+
+
+01-02-2023 00:55:16
+1 confidential -
+
+3 delicate  -
+
+6 equivalent -
+
+4 imperative  -
+
+!!! correspond -
+
+9 approach -
+
+2 boundary -
+
+!!! obliged -
+
+3 detect -
+
+!!! drought -
+
+9 occupy -
+
+!!! resistance -
+
+!!! immediate  -
+
+3 misery -
+
+4 proximity -
+
+8 courage-
+
+1 facilitate -
+
+1 obey -
+
+1 Greedy -
+
+7 distinguish -
+
+7 miserable -
+
+4 quarrel -
+
+6 inquiry -
+
+!!! clarify -
+
+8 appoint -
+
+!!! sufficient -
+
+9 barrel -
+
+!!! trial -
+
+!!! carry out -
+
+3 nausea -
+
+!!! drawer -
+
+4 converse -
+
+!!! decay -
+
+!!! arrange -
+
+!!! trophy -
+
+6 reticent -
+
+3 interference -
+
+7 forbid -
+
+
+
+02-02-2023 00:51:06
+
+
+
+
+02-02-2023 01:01:29
+8 forbid -
+
+7 reticent -
+
+!!! trophy -
+
+!!! arrange -
+
+!!! carry out -
+
+!!! trial -
+
+!!! sufficient -
+
+7 inquiry -
+
+1 Greedy -
+
+2 facilitate -
+
+4 misery -
+
+4 detect -
+
+!!! approach -
+
+!!! correspond -
+
+4 delicate  -
+
+2 confidential -
+
+1 quantity -
+
+7 equivalent -
+
+5 imperative  -
+
+3 boundary -
+
+!!! drought -
+
+!!! occupy -
+
+!!! immediate  -
+
+4 proximity -
+
+9 courage-
+
+1 obey -
+
+8 distinguish -
+
+8 miserable -
+
+5 quarrel -
+
+!!! clarify -
+
+9 appoint -
+
+!!! barrel -
+
+4 nausea -
+
+5 converse -
+
+4 interference -
+
+1 rummage  -
+
+1 intensive -
+
+
+
+03-02-2023 01:18:28
+1 chimney -
+
+1 instruction  -
+
+2 intensive -
+
+5 nausea -
+
+!!! barrel -
+
+!!! appoint -
+
+9 miserable -
+
+9 distinguish -
+
+2 obey -
+
+4 boundary -
+
+8 equivalent -
+
+3 confidential -
+
+5 delicate  -
+
+!!! correspond -
+
+!!! approach -
+
+3 facilitate -
+
+8 inquiry -
+
+!!! carry out -
+
+!!! arrange -
+
+1 conclude -
+
+9 forbid -
+
+8 reticent -
+
+!!! trophy -
+
+!!! trial -
+
+1 Greedy -
+
+5 misery -
+
+5 detect -
+
+2 quantity -
+
+6 imperative  -
+
+!!! occupy -
+
+!!! immediate  -
+
+5 proximity -
+
+!!! courage-
+
+6 quarrel -
+
+!!! clarify -
+
+6 converse -
+
+5 interference -
+
+1 rummage  -
+
+
+
+04-02-2023 01:38:01
+1 agriculture -
+
+1 wrinkle -
+
+2 rummage  -
+
+7 quarrel -
+
+6 misery -
+
+!!! trial -
+
+1 conclude -
+
+4 carry out -
+
+3 obey -
+
+!!! distinguish -
+
+!!! miserable -
+
+2 instruction  -
+
+1 chimney -
+
+1 preserve -
+
+3 intensive -
+
+6 nausea -
+
+!!! appoint -
+
+5 boundary -
+
+9 equivalent -
+
+4 confidential -
+
+6 delicate  -
+
+!!! correspond -
+
+6 approach -
+
+4 facilitate -
+
+9 inquiry -
+
+!!! arrange -
+
+!!! forbid -
+
+9 reticent -
+
+2 Greedy -
+
+6 detect -
+
+3 quantity -
+
+7 imperative  -
+
+!!! occupy -
+
+!!! immediate  -
+
+6 proximity -
+
+!!! clarify -
+
+7 converse -
+
+6 interference -
+
+
+
+05-02-2023 01:58:19
+1 suppose -
+
+8 converse -
+
+!!! immediate  -
+
+8 imperative  -
+
+4 quantity -
+
+7 detect -
+
+3 Greedy -
+
+!!! reticent -
+
+!!! forbid -
+
+6 arrange -
+
+!!! inquiry -
+
+7 approach -
+
+!!! equivalent -
+
+!!! appoint -
+
+2 chimney -
+
+3 instruction  -
+
+!!! miserable -
+
+!!! distinguish -
+
+1 conclude -
+
+7 misery -
+
+8 quarrel -
+
+3 rummage  -
+
+1 supply -
+
+1 agriculture -
+
+1 wrinkle -
+
+!!! trial -
+
+5 carry out -
+
+4 obey -
+
+2 preserve -
+
+4 intensive -
+
+7 nausea -
+
+6 boundary -
+
+5 confidential -
+
+7 delicate  -
+
+5 facilitate -
+
+!!! occupy -
+
+7 proximity -
+
+7 interference -
+
+1 retrieve -
+
+1 rigorous  -
+
+
+
+05-02-2023 23:10:13
+2 rigorous  -
+
+6 confidential -
+
+5 intensive -
+
+3 preserve -
+
+2 supply -
+
+8 misery -
+
+2 conclude -
+
+!!! appoint -
+
+8 approach -
+
+!!! inquiry -
+
+7 arrange -
+
+9 converse -
+
+2 suppose -
+
+1 resilient -
+
+!!! immediate  -
+
+9 imperative  -
+
+5 quantity -
+
+8 detect -
+
+4 Greedy -
+
+!!! forbid -
+
+!!! equivalent -
+
+3 chimney -
+
+4 instruction  -
+
+1 remedy -
+
+!!! distinguish -
+
+9 quarrel -
+
+4 rummage  -
+
+2 agriculture -
+
+2 wrinkle -
+
+!!! trial -
+
+6 carry out -
+
+5 obey -
+
+8 nausea -
+
+7 boundary -
+
+8 delicate  -
+
+6 facilitate -
+
+5 proximity -
+
+8 interference -
+
+1 retrieve -
+
+1 excessive -
+
+
+
+07-02-2023 00:47:56
+1 excessive -
+
+2 retrieve -
+
+9 interference -
+
+7 facilitate -
+
+9 nausea -
+
+6 obey -
+
+7 carry out -
+
+5 rummage  -
+
+!!! quarrel -
+
+!!! distinguish -
+
+1 remedy -
+
+5 instruction  -
+
+4 chimney -
+
+!!! equivalent -
+
+6 quantity -
+
+!!! imperative  -
+
+!!! immediate  -
+
+8 arrange -
+
+3 conclude -
+
+9 misery -
+
+3 supply -
+
+4 preserve -
+
+3 rigorous  -
+
+7 confidential -
+
+6 intensive -
+
+6 approach -
+
+!!! inquiry -
+
+!!! converse -
+
+3 suppose -
+
+2 resilient -
+
+9 detect -
+
+5 Greedy -
+
+!!! forbid -
+
+3 agriculture -
+
+3 wrinkle -
+
+!!! trial -
+
+8 boundary -
+
+9 delicate  -
+
+6 proximity -
+
+1 Indicate -
+
+1 moot  -
+
+
+
+08-02-2023 02:31:21
+1 wicked -
+
+2 moot  -
+
+1 Indicate -
+
+9 boundary -
+
+4 agriculture -
+
+6 Greedy -
+
+3 resilient -
+
+4 suppose -
+
+!!! converse -
+
+!!! inquiry -
+
+7 approach -
+
+4 supply -
+
+!!! misery -
+
+!!! immediate  -
+
+!!! imperative  -
+
+7 quantity -
+
+6 instruction  -
+
+1 remedy -
+
+!!! distinguish -
+
+6 rummage  -
+
+7 obey -
+
+3 retrieve -
+
+1 excessive -
+
+!!! interference -
+
+8 facilitate -
+
+!!! nausea -
+
+8 carry out -
+
+!!! quarrel -
+
+5 chimney -
+
+!!! equivalent -
+
+9 arrange -
+
+4 conclude -
+
+5 preserve -
+
+4 rigorous  -
+
+8 confidential -
+
+7 intensive -
+
+!!! detect -
+
+!!! forbid -
+
+4 wrinkle -
+
+6 trial -
+
+!!! delicate  -
+
+7 proximity -
+
+1 oppose -
+
+
+
+09-02-2023 02:35:28
+5 wrinkle -
+
+!!! forbid -
+
+5 conclude -
+
+!!! arrange -
+
+6 chimney -
+
+8 obey -
+
+2 remedy -
+
+8 quantity -
+
+!!! imperative  -
+
+!!! immediate  -
+
+5 supply -
+
+8 approach -
+
+!!! inquiry -
+
+!!! converse -
+
+5 suppose -
+
+4 resilient -
+
+5 agriculture -
+
+1 Indicate -
+
+3 moot  -
+
+1 squish -
+
+1 revise -
+
+1 wicked -
+
+!!! boundary -
+
+7 Greedy -
+
+!!! misery -
+
+7 instruction  -
+
+!!! distinguish -
+
+7 rummage  -
+
+4 retrieve -
+
+1 excessive -
+
+!!! interference -
+
+9 facilitate -
+
+!!! nausea -
+
+9 carry out -
+
+6 preserve -
+
+5 rigorous  -
+
+9 confidential -
+
+8 intensive -
+
+7 trial -
+
+!!! delicate  -
+
+8 proximity -
+
+1 oppose -
+
+1 butter -

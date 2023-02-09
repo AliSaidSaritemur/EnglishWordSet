@@ -6,19 +6,14 @@ namespace EnglishWordSet.CRUD
 {
     class MBWordController
     {
+        public NWords selectedword { get; set; }
+        private WordImpl wordImpl = new();
 
         public MBWordController()
         {
-            Invoke();
-        }
-        public NWords selectedword { get; set; }
-         private WordImpl wordImpl =new();
-
-        private void Invoke()
-        {       
             selectedword = wordImpl.GetRandomWord();
         }
-
+        
         public void RemoveWord()
         {
             wordImpl.Delete(selectedword.English);
@@ -30,7 +25,8 @@ namespace EnglishWordSet.CRUD
             return line;
         }
         public string GetWord()
-        { 
+        {
+            selectedword = wordImpl.GetRandomWord();
             string line = selectedword.English;
             return line;
         }     
