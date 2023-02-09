@@ -1,11 +1,8 @@
 ﻿using EnglishWordSet.RefactoredStaticFuncs;
-using System;
-using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
+
 
 namespace EnglishWordSet.MyTools
 {
@@ -17,21 +14,19 @@ namespace EnglishWordSet.MyTools
         {
             inputText = Regex.Replace(inputText, @"^\s+$[\r\n]*", string.Empty, RegexOptions.Multiline);
             this.inputText = inputText;
-
         }
 
         public int GetWordCount()
         {
-            int wordsCount =wordsCount = inputText.ToCharArray().Count(c => c == '-');
+            int wordsCount = inputText.ToCharArray().Count(c => c == '-');
             return wordsCount;   
         }
 
         public int GetDaysAvarage()
         {
             int wordsCount= GetWordCount(); 
-            if (wordsCount == 0)
+            if (wordsCount < 0)
                 return 0;
-            GetWordCount();
             int DayCount = 0;
             int avarageDayWord;
             string templine;
@@ -42,7 +37,7 @@ namespace EnglishWordSet.MyTools
             {
                 templine = stringReader.ReadLine();
 
-                if (templine == null)
+                if (string.IsNullOrEmpty(templine))
                     break;
 
                 if (templine.StartsWith("!!!"))

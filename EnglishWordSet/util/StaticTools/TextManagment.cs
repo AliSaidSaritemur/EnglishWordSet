@@ -7,14 +7,14 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-    static class TextManagment
+   internal static class TextManagment
     {
         static string pathTextStart = Directory.GetCurrentDirectory() + "/Files/";
         static string pathText;
 
         public static void WriteToText(string textPath, string textToAdd)
         {
-            if (pathText == string.Empty || pathText == null)
+            if (string.IsNullOrEmpty(pathText))
                 pathText = pathTextStart + textPath;
 
             File.AppendAllText(pathText, "\n" + textToAdd + "\n");
@@ -26,7 +26,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         }
         public static string ReadText(string textPath)
         {
-            if (pathText == string.Empty || pathText == null)
+            if (string.IsNullOrEmpty(pathText))
                 pathText = pathTextStart + textPath;
 
             string text = File.ReadAllText(pathText);

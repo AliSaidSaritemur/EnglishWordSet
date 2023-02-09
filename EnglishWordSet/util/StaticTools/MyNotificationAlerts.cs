@@ -1,74 +1,52 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 using Tulpep.NotificationWindow;
-using System.Windows.Forms;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-    static class MyNotificationAlerts
+   internal static class MyNotificationAlerts
     {
+        static PopupNotifier popup;
 
-        public static void GetSuccessMessage(string MessageText)
+         static MyNotificationAlerts()
         {
-            PopupNotifier popup = new PopupNotifier();
-            popup.BodyColor = Color.FromArgb(40, 167, 69);
-            popup.TitleText = "Success";
+           popup ??= new ();          
             popup.TitleColor = Color.White;
             popup.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
-            popup.ContentText = MessageText;
             popup.ContentColor = Color.White;
             popup.ContentFont = new Font("Century Gothic", 12);
             popup.Delay = 800;
+        }
+
+        public static void GetSuccessMessage(string MessageText)
+        {
+            popup.BodyColor = Color.FromArgb(40, 167, 69);
+            popup.TitleText = "Success";
+            popup.ContentText = MessageText;
             popup.Popup();
         }
 
         public static void GetInfoMessage(string MessageText)
         {
-
-            PopupNotifier popup = new PopupNotifier();
             popup.BodyColor = Color.FromArgb(23, 162, 184);
             popup.TitleText = "Info ";
-            popup.TitleColor = Color.White;
-            popup.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
             popup.ContentText = MessageText;
-            popup.ContentColor = Color.White;
-            popup.ContentFont = new Font("Century Gothic", 12);
-            popup.Delay = 800;
             popup.Popup();
         }
 
         public static void GetWarningMessage(string MessageText)
         {
-            PopupNotifier popup = new PopupNotifier();
             popup.BodyColor = Color.FromArgb(255, 193, 7);
             popup.TitleText = "Warning !!";
-            popup.TitleColor = Color.White;
-            popup.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
             popup.ContentText = MessageText;
-            popup.ContentColor = Color.White;
-            popup.ContentFont = new Font("Century Gothic", 12);
-            popup.Delay = 800;
             popup.Popup();
         }
 
         public static void GetErrorMessage(string MessageText)
         {
-
-            PopupNotifier popup = new PopupNotifier();
             popup.BodyColor = Color.FromArgb(220, 53, 69);
-            popup.TitleText = "Error ";
-            popup.TitleColor = Color.White;
-            popup.TitleFont = new Font("Century Gothic", 15, FontStyle.Bold);
+            popup.TitleText = "Error ";        
             popup.ContentText = MessageText;
-            popup.ContentColor = Color.White;
-            popup.ContentFont = new Font("Century Gothic", 12);
-            popup.Delay = 800;
             popup.Popup();
         }
-
     }
 }

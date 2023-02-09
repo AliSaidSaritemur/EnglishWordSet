@@ -1,13 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-   static class MyTestInternet
+  internal static class MyTestInternet
     {
         public static bool IsThereInternet()
         {

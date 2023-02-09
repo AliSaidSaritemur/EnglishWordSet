@@ -1,6 +1,5 @@
 ﻿using DataAccess.Concrete;
 
-
 namespace DataAccess.util
 {
    internal static class MyDBTransactions

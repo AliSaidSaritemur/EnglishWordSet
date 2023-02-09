@@ -1,16 +1,12 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-    public static class TypeComparator
+    internal static class TypeComparator
     {
-
         public static bool ImageCompare(Image image1, Image image2)
         {
             byte[] image1Bytes;

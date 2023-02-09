@@ -1,22 +1,16 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Drawing;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
     static class MyImageFilter
     {
 
-        public static Image GreenFilter (Image image){
-
+        public static Image GreenFilter (Image image)
+        {
             return FilterImage(image,Color.Green);
-            }
+        }
         public static Image RedFilter(Image image)
         {
-
             return FilterImage(image, Color.Red);
         }
 

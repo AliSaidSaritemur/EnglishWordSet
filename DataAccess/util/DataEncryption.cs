@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿
 namespace DataAccess.util
 {
-    public class DataEncryption
+    internal class DataEncryption
     {
-        public string Encrypt(string Value)
+        internal string Encrypt(string Value)
         {
             string result = "";
             char[] _Value = Value.ToCharArray();

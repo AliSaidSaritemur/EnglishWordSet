@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using Microsoft.EntityFrameworkCore.Query;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
     static class MyRegex
     {
+        private static bool result;
         public static bool Isthere(string line, string obj)
         {
-            bool result;
             Regex rgLine = new (obj);
             Match matchRgL = rgLine.Match(line);
             result = matchRgL.Success;
@@ -19,8 +15,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         }
 
         public static bool IsName(string line)
-        {
-            bool result;
+        {         
             Regex rgLine = new("^[\\w'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}|~<>;:[\\]]{2,}$");
             Match matchRgL = rgLine.Match(line);
             result = matchRgL.Success;
@@ -29,7 +24,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 
         public static bool IsMail(string line)
         {
-            bool result;
             Regex rgLine = new("[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$");
             Match matchRgL = rgLine.Match(line);
             result = matchRgL.Success;
