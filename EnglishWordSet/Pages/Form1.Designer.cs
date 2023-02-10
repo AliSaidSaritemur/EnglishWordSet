@@ -285,7 +285,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.CheckBox cBSave;
         private System.Windows.Forms.Button btnGetSaveText;
         private System.Windows.Forms.CheckBox cbSpace;
-        private System.Windows.Forms.Button btnCopyOutput;
         private System.Windows.Forms.Button btnGetNewWord;
         private System.Windows.Forms.Button btnToAdminPage;
         private System.Windows.Forms.Button getLaarnedWordPage;

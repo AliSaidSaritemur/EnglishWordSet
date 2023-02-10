@@ -18,6 +18,7 @@ namespace DataAccess.Concrete
         public void Delete(string word)
         {
             LearnedWord learnedword = context.LearnedWords.FirstOrDefault(I => I.wordEnglish== word);
+            if(learnedword!=null)
             context.LearnedWords.Remove(learnedword);
             context.SaveChanges();
         }

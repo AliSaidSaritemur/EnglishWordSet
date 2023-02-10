@@ -25,7 +25,7 @@ namespace EnglishWordSet.MyTools
             }
             else
             {
-                client = new UnsplasharpClient(SettingsFile.Default.UnsplashAPIKey) ?? client;
+                client = new UnsplasharpClient(Settings.SettingsInfo.Default.UnsplashAPIKey) ?? client;
                 photos = await client.SearchPhotos(searchedWord);
                 RefreshSystem(searchedWord, photos);
             }

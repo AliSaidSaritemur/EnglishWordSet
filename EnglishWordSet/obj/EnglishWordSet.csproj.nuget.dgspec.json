@@ -124,6 +124,9 @@
               },
               "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj": {
+                "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj"
               }
             }
           }
@@ -142,26 +145,6 @@
               "target": "Package",
               "version": "[2.1.0, )"
             },
-            "Microsoft.EntityFrameworkCore": {
-              "target": "Package",
-              "version": "[7.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.Tools": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.2, )"
-            },
             "Microsoft.IdentityModel.JsonWebTokens": {
               "target": "Package",
               "version": "[6.26.0, )"
@@ -170,21 +153,9 @@
               "target": "Package",
               "version": "[2.0.0, )"
             },
-            "System.Data.SqlClient": {
-              "target": "Package",
-              "version": "[4.8.4, )"
-            },
-            "Tulpep.ActiveDirectoryObjectPicker": {
-              "target": "Package",
-              "version": "[3.0.11, )"
-            },
             "Tulpep.NotificationWindow": {
               "target": "Package",
               "version": "[1.1.38, )"
-            },
-            "Tulpep.PayULibrary": {
-              "target": "Package",
-              "version": "[1.0.83, )"
             },
             "unsplasharp.api": {
               "target": "Package",
@@ -227,6 +198,21 @@
       },
       "frameworks": {
         "net472": {}
+      }
+    },
+    "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj",
+        "projectName": "Settings",
+        "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj",
+        "frameworks": {
+          "net46": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net46": {}
       }
     }
   }

@@ -12,22 +12,9 @@
 
   <ItemGroup>
     <PackageReference Include="Google.Cloud.Translation.V2" Version="2.1.0" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="7.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
-    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.2" />
-    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="7.0.2">
-      <PrivateAssets>all</PrivateAssets>
-      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
-    </PackageReference>
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.26.0" />
     <PackageReference Include="Phaber.Unsplash" Version="2.0.0" />
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.4" />
-    <PackageReference Include="Tulpep.ActiveDirectoryObjectPicker" Version="3.0.11" />
     <PackageReference Include="Tulpep.NotificationWindow" Version="1.1.38" />
-    <PackageReference Include="Tulpep.PayULibrary" Version="1.0.83" />
     <PackageReference Include="unsplasharp.api" Version="0.7.0" />
   </ItemGroup>
 
@@ -46,11 +33,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="SettingsFile.Designer.cs">
-      <DesignTimeSharedInput>True</DesignTimeSharedInput>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>SettingsFile.settings</DependentUpon>
-    </Compile>
   </ItemGroup>
 
   <ItemGroup>
@@ -65,16 +47,9 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ConfigApp\ConfigApp.csproj" />
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Update="SettingsFile.settings">
-      <Generator>SettingsSingleFileGenerator</Generator>
-      <LastGenOutput>SettingsFile.Designer.cs</LastGenOutput>
-    </None>
+    <ProjectReference Include="..\Settings\Settings.csproj" />
   </ItemGroup>
 
 </Project>

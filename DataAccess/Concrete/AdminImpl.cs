@@ -21,6 +21,7 @@ namespace DataAccess.Concrete
         public void Delete(string username)
         {
             Admin admin = context.Admins.FirstOrDefault(I => I.UserName== username);
+            if (admin == null)
             context.Admins.Remove(admin);
             context.SaveChanges();
         }
