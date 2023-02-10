@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using LogAccess;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete
@@ -11,9 +12,14 @@ namespace DataAccess.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-
+            try { 
             optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb; database= EWordEfCore;" +
                 "integrated security=true;");
+            }
+            catch
+            {
+                Logs.Fatal("System couldn't access to DB");
+            }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

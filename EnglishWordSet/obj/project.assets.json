@@ -2306,6 +2306,7 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Entities": "1.0.0",
+          "LogAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",
           "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
         },
@@ -2323,6 +2324,15 @@
         },
         "runtime": {
           "bin/placeholder/Entities.dll": {}
+        }
+      },
+      "LogAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/LogAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogAccess.dll": {}
         }
       },
       "Settings/1.0.0": {
@@ -7300,6 +7310,11 @@
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
     },
+    "LogAccess/1.0.0": {
+      "type": "project",
+      "path": "../LogAccess/LogAccess.csproj",
+      "msbuildProject": "../LogAccess/LogAccess.csproj"
+    },
     "Settings/1.0.0": {
       "type": "project",
       "path": "../Settings/Settings.csproj",
@@ -7311,6 +7326,7 @@
       "DataAccess >= 1.0.0",
       "Entities >= 1.0.0",
       "Google.Cloud.Translation.V2 >= 2.1.0",
+      "LogAccess >= 1.0.0",
       "Microsoft.IdentityModel.JsonWebTokens >= 6.26.0",
       "Phaber.Unsplash >= 2.0.0",
       "Settings >= 1.0.0",
@@ -7356,6 +7372,9 @@
             },
             "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj": {
+              "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj"
             },
             "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj": {
               "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj"

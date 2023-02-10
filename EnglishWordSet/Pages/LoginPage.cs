@@ -2,16 +2,10 @@
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
+using LogAccess;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Xml.Linq;
+
 
 namespace EnglishWordSet
 {
@@ -53,6 +47,7 @@ namespace EnglishWordSet
             else
             {
                 MyNotificationAlerts.GetSuccessMessage("Login verified");
+                Logs.Info(userName + "  Loged");
                 epUserName.Clear();
                 adminPage = MyPageGetter.GetAdminPage();
                  AdminSession.username_Admin = userName;

@@ -35,6 +35,9 @@
             "projectReferences": {
               "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj": {
                 "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj"
+              },
+              "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj": {
+                "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj"
               }
             }
           }
@@ -103,6 +106,21 @@
       },
       "frameworks": {
         "net472": {}
+      }
+    },
+    "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj": {
+      "restore": {
+        "projectUniqueName": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj",
+        "projectName": "LogAccess",
+        "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj",
+        "frameworks": {
+          "net46": {
+            "projectReferences": {}
+          }
+        }
+      },
+      "frameworks": {
+        "net46": {}
       }
     }
   }

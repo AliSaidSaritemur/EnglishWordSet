@@ -1164,6 +1164,15 @@
         "runtime": {
           "bin/placeholder/Entities.dll": {}
         }
+      },
+      "LogAccess/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/LogAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/LogAccess.dll": {}
+        }
       }
     }
   },
@@ -3514,11 +3523,17 @@
       "type": "project",
       "path": "../Entities/Entities.csproj",
       "msbuildProject": "../Entities/Entities.csproj"
+    },
+    "LogAccess/1.0.0": {
+      "type": "project",
+      "path": "../LogAccess/LogAccess.csproj",
+      "msbuildProject": "../LogAccess/LogAccess.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
       "Entities >= 1.0.0",
+      "LogAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
       "Microsoft.EntityFrameworkCore.Design >= 7.0.2",
       "Microsoft.EntityFrameworkCore.SqlServer >= 7.0.2",
@@ -3560,6 +3575,9 @@
           "projectReferences": {
             "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj"
+            },
+            "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj": {
+              "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\LogAccess\\LogAccess.csproj"
             }
           }
         }
