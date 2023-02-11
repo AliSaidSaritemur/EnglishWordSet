@@ -7,28 +7,34 @@ using System.Threading.Tasks;
 
 namespace LogAccess
 {
-    public static class Logs
+     public abstract  class Logs
     {
-        private static Logger logger = LogManager.GetCurrentClassLogger();
-        public static void Fatal(string message)
+        public  Logger logger;
+
+        public virtual void Fatal(string message)
         {
             logger.Fatal(message);  
         }
-        public static void Info(string message)
+        public virtual void Info(string message)
         {
             logger.Info(message);
         }
-        public static void Warn(string message)
+        public virtual void Warn(string message)
         {
             logger.Warn(message);
         }
-        public static void Debug(string message)
+        public virtual void Debug(string message)
         {
             logger.Debug(message);
         }
-        public static void Error(string message)
+        public virtual  void Error(string message)
         {
             logger.Error(message);
         }
+        public virtual void Trace(string message)
+        {
+            logger.Trace(message);
+        }
+        
     }
 }

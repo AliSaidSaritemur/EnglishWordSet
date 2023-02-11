@@ -1,7 +1,7 @@
 ﻿
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-    static class MyPageGetter
+    static class PageTransactions
     {
         private static Main form1;
         private static AdminPage adminpage;

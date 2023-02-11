@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-   internal static class TextManagment
+   internal static class FileTransactions
     {
-        static string pathTextStart = Directory.GetCurrentDirectory() + "/Files/";
+        static string pathTextStart = Directory.GetCurrentDirectory() ;
         static string pathText;
 
         public static void WriteToText(string textPath, string textToAdd)
@@ -30,6 +30,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
                 pathText = pathTextStart + textPath;
 
             string text = File.ReadAllText(pathText);
+
             return text;
         }
     }

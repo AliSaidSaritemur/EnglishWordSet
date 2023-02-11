@@ -7,3 +7,4 @@ C:\Users\alisa\source\repos\EnglishWordSet\LogAccess\obj\Debug\LogAccess.csproj.
 C:\Users\alisa\source\repos\EnglishWordSet\LogAccess\obj\Debug\LogAccess.csproj.CopyComplete
 C:\Users\alisa\source\repos\EnglishWordSet\LogAccess\obj\Debug\LogAccess.dll
 C:\Users\alisa\source\repos\EnglishWordSet\LogAccess\obj\Debug\LogAccess.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\LogAccess\bin\Debug\NLog.dll

@@ -25,7 +25,7 @@ namespace EnglishWordSet.MyTools
         public int GetDaysAvarage()
         {
             int wordsCount= GetWordCount(); 
-            if (wordsCount < 0)
+            if (wordsCount <= 0)
                 return 0;
             int DayCount = 0;
             int avarageDayWord;
@@ -37,7 +37,7 @@ namespace EnglishWordSet.MyTools
             {
                 templine = stringReader.ReadLine();
 
-                if (string.IsNullOrEmpty(templine))
+                if (templine == null)
                     break;
 
                 if (templine.StartsWith("!!!"))

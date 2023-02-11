@@ -1,5 +1,6 @@
 ﻿using Google.Cloud.Translation.V2;
 using LogAccess;
+using LogAccess.services;
 
 namespace EnglishWordSet.MyTools
 {
@@ -19,7 +20,7 @@ namespace EnglishWordSet.MyTools
             }
             catch (Google.GoogleApiException e)
             {
-                 Logs.Error("Google Translate API is failed to start ");
+                 AddLog.systemLogs.Error("Google Translate API is failed to start ");
                   client = null;
                 return inputTxt;
             }

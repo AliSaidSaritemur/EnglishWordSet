@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using EnglishWordSet.RefactoredStaticFuncs;
 using LogAccess;
 using Unsplasharp.Models;
+using LogAccess.services;
 
 namespace EnglishWordSet.MyTools
 {
@@ -39,7 +40,7 @@ namespace EnglishWordSet.MyTools
                 Photo photosErrorCheck = await client.GetRandomPhoto();
                  if (string.IsNullOrEmpty(photosErrorCheck.Urls.Regular))
                 {
-                    Logs.Error("Unsplash API Key is failed to start ");
+                    AddLog.systemLogs.Error("Unsplash API Key is failed to start ");
                     client=null;
                 }
                 return;

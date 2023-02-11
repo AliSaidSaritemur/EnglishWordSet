@@ -11,7 +11,7 @@ namespace EnglishWordSet
     {
         AdminController pageBackend;
         public AdminPage()
-        {
+        {      
             InitializeComponent();
             pageBackend = ControllersGetter.AdminPage();
             this.ActiveControl = btnAddNewAdmin;
@@ -80,13 +80,13 @@ namespace EnglishWordSet
 
         private void pbBack_Click(object sender, EventArgs e)
         {
-            MyPageGetter.GetForm1().Show();
+            PageTransactions.GetForm1().Show();
             Hide();
         }
 
         private void AdminPage_FormClosed(object sender, FormClosedEventArgs e)
         {
-            MyPageGetter.GetForm1().Show();
+          
         }
 
         private void AdminPage_Activated(object sender, EventArgs e)
@@ -130,6 +130,13 @@ namespace EnglishWordSet
         private void btnAddNewAdmin_Leave(object sender, EventArgs e)
         {
             btnAddNewAdmin.BackColor = Color.White;
+        }
+
+        private void AdminPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true; 
+            this.Hide();
+            PageTransactions.GetForm1().Show();
         }
     }
 

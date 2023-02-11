@@ -63,12 +63,6 @@ namespace EnglishWordSet
             this.btnAddNewAdmin.Enter += new System.EventHandler(this.btnAddNewAdmin_Enter);
             this.btnAddNewAdmin.Leave += new System.EventHandler(this.btnAddNewAdmin_Leave);
             // 
-            // sqlCommandBuilder1
-            // 
-            this.sqlCommandBuilder1.DataAdapter = null;
-            this.sqlCommandBuilder1.QuotePrefix = "[";
-            this.sqlCommandBuilder1.QuoteSuffix = "]";
-            // 
             // btnAddLearnedWord
             // 
             this.btnAddLearnedWord.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
@@ -108,6 +102,7 @@ namespace EnglishWordSet
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "5";
             this.Activated += new System.EventHandler(this.AdminPage_Activated);
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminPage_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();

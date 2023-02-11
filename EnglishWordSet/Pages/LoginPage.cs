@@ -3,6 +3,7 @@ using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
 using LogAccess;
+using LogAccess.services;
 using System;
 using System.Windows.Forms;
 
@@ -47,9 +48,9 @@ namespace EnglishWordSet
             else
             {
                 MyNotificationAlerts.GetSuccessMessage("Login verified");
-                Logs.Info(userName + "  Loged");
+                AddLog.systemLogs.Info(userName + "  Loged");
                 epUserName.Clear();
-                adminPage = MyPageGetter.GetAdminPage();
+                adminPage = PageTransactions.GetAdminPage();
                  AdminSession.username_Admin = userName;
                 adminPage.Show();
                 this.Close();
@@ -88,7 +89,7 @@ namespace EnglishWordSet
         {
             if(e.CloseReason == CloseReason.UserClosing&&adminPage==null)
             {
-                MyPageGetter.GetForm1().Show();
+                PageTransactions.GetForm1().Show();
             }
             
         }

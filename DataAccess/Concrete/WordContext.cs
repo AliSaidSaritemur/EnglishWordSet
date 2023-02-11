@@ -1,5 +1,6 @@
 ﻿using Entities.Concrete;
 using LogAccess;
+using LogAccess.services;
 using Microsoft.EntityFrameworkCore;
 
 namespace DataAccess.Concrete
@@ -18,7 +19,7 @@ namespace DataAccess.Concrete
             }
             catch
             {
-                Logs.Fatal("System couldn't access to DB");
+                AddLog.systemLogs.Fatal("System couldn't access to DB");
             }
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

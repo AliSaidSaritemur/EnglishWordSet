@@ -10,6 +10,7 @@ using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess.util;
+using LogAccess.services;
 
 namespace EnglishWordSet
 {
@@ -19,7 +20,7 @@ namespace EnglishWordSet
         public Main()
         {
             InitializeComponent();
-            MyPageGetter.SetForm1(this);
+            PageTransactions.SetForm1(this);
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -36,17 +37,21 @@ namespace EnglishWordSet
             SetWordInform(txtOutput, lblWordCountOutput, lblWordDayAvarageOutput);
             if (saveStatu)
             {
+                AddLog.ConvertedWordsLogs.Info(tempText);
                 string textPath = "Saves.txt";
                 string textToSave = "\n\n" + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + "\n" + tempText;
-                TextManagment.WriteToText(textPath, textToSave);
+                FileTransactions.WriteToText(textPath, textToSave);
             }
-
+            else
+            {
+                AddLog.ConvertedWordsLogs.Trace(tempText);
+            }
         }
 
         private void btnGetSaveText_Click(object sender, EventArgs e)
         {
-            string savesFileName = "Saves.txt";
-            string saveTexts = TextManagment.ReadText(savesFileName);
+            string savesFileName = "/logs/ConvertedWord/ConvertedWords.log";
+            string saveTexts = FileTransactions.ReadText(savesFileName);
             txtOutput.Text = saveTexts;
         }
      
@@ -86,7 +91,7 @@ namespace EnglishWordSet
         {
             Form page;
             if (!string.IsNullOrEmpty(AdminSession.username_Admin))
-            {page= MyPageGetter.GetAdminPage(); }
+            {page= PageTransactions.GetAdminPage(); }
             else
             { page = new LoginPage(); }
             page.Show();
