@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qNTrLtV0fCiLZEkKX81GP+gXsHWPCqmF6QVN/LS09wD/9WQxe2flovqAr+LEBOdnKW2oa5NGnrpGD8MADz3JFw==",
+  "dgSpecHash": "WMkv7b4PFgOMLiV4PR87BFwdrgaRJOd4t7AAZgYBACyGwBNwo9/vAhguZSUIpOVRZUCE5y7izE4XUcYrB0MV8Q==",
   "success": true,
   "projectFilePath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\EnglishWordSet\\EnglishWordSet.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\alisa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\optional\\4.0.0\\optional.4.0.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\phaber.unsplash\\2.0.0\\phaber.unsplash.2.0.0.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\postsharp.redist\\5.0.27\\postsharp.redist.5.0.27.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
@@ -111,6 +112,7 @@
     "C:\\Users\\alisa\\.nuget\\packages\\system.runtime.interopservices\\4.3.0\\system.runtime.interopservices.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\system.runtime.numerics\\4.3.0\\system.runtime.numerics.4.3.0.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\system.runtime.serialization.primitives\\4.3.0\\system.runtime.serialization.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\system.security.cryptography.algorithms\\4.3.0\\system.security.cryptography.algorithms.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\system.security.cryptography.cng\\5.0.0\\system.security.cryptography.cng.5.0.0.nupkg.sha512",
@@ -135,6 +137,8 @@
     "C:\\Users\\alisa\\.nuget\\packages\\system.windows.extensions\\5.0.0\\system.windows.extensions.5.0.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\system.xml.xmldocument\\4.0.1\\system.xml.xmldocument.4.0.1.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\system.xml.xmlserializer\\4.0.11\\system.xml.xmlserializer.4.0.11.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\tulpep.notificationwindow\\1.1.38\\tulpep.notificationwindow.1.1.38.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\unsplasharp.api\\0.7.0\\unsplasharp.api.0.7.0.nupkg.sha512"
   ],

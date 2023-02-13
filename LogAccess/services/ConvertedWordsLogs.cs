@@ -15,11 +15,16 @@ namespace LogAccess.services
         }
         public override void Info(string message)
         {
-            logger.Info("\n"+message);
+            LogManager.IsLoggingEnabled();
+            logger.Info("\n" + message);
+            LogManager.Shutdown();
+
         }
         public override void Trace(string message)
         {
+            LogManager.IsLoggingEnabled();
             logger.Trace("\n" + message);
+            LogManager.Shutdown();
         }
     }
 }

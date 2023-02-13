@@ -14,6 +14,7 @@
           "LogAccess": "1.0.0",
           "Microsoft.IdentityModel.JsonWebTokens": "6.26.0",
           "Phaber.Unsplash": "2.0.0",
+          "PostSharp.Redist": "5.0.27",
           "Settings": "1.0.0",
           "Tulpep.NotificationWindow": "1.1.38",
           "unsplasharp.api": "0.7.0",
@@ -563,6 +564,18 @@
           }
         }
       },
+      "PostSharp.Redist/5.0.27": {
+        "dependencies": {
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Xml.XmlSerializer": "4.0.11"
+        },
+        "runtime": {
+          "lib/netstandard1.3/PostSharp.dll": {
+            "assemblyVersion": "5.0.27.0",
+            "fileVersion": "5.0.27.0"
+          }
+        }
+      },
       "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.23-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
       "runtime.fedora.24-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {},
@@ -1009,6 +1022,12 @@
           "System.Runtime.Extensions": "4.3.0"
         }
       },
+      "System.Runtime.Serialization.Primitives/4.3.0": {
+        "dependencies": {
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
+        }
+      },
       "System.Security.AccessControl/5.0.0": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "5.0.0",
@@ -1224,6 +1243,41 @@
           "System.Xml.ReaderWriter": "4.3.0"
         }
       },
+      "System.Xml.XmlDocument/4.0.1": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.Encoding": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0"
+        }
+      },
+      "System.Xml.XmlSerializer/4.0.11": {
+        "dependencies": {
+          "System.Collections": "4.3.0",
+          "System.Globalization": "4.3.0",
+          "System.IO": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Reflection.Emit.ILGeneration": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Reflection.Primitives": "4.3.0",
+          "System.Reflection.TypeExtensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0",
+          "System.Runtime.Extensions": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0",
+          "System.Threading": "4.3.0",
+          "System.Xml.ReaderWriter": "4.3.0",
+          "System.Xml.XmlDocument": "4.0.1"
+        }
+      },
       "Tulpep.NotificationWindow/1.1.38": {
         "runtime": {
           "lib/net40/Tulpep.NotificationWindow.dll": {
@@ -1250,7 +1304,8 @@
           "Entities": "1.0.0",
           "LogAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",
-          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2"
+          "Microsoft.EntityFrameworkCore.SqlServer": "7.0.2",
+          "PostSharp.Redist": "5.0.27"
         },
         "runtime": {
           "DataAccess.dll": {}
@@ -1279,11 +1334,11 @@
           }
         }
       },
-      "NLog/4.0.0.0": {
+      "NLog/5.0.0.0": {
         "runtime": {
           "NLog.dll": {
-            "assemblyVersion": "4.0.0.0",
-            "fileVersion": "4.7.15.867"
+            "assemblyVersion": "5.0.0.0",
+            "fileVersion": "5.1.1.1522"
           }
         }
       }
@@ -1609,6 +1664,13 @@
       "sha512": "sha512-H6LizNBxG1kCfdle084OAQaXE1FDwI0L5hbUhG4YP2u2x92R9e2iDRndn6Hh6Cswd86r1vjfOdF+B5Tj/48flg==",
       "path": "phaber.unsplash/2.0.0",
       "hashPath": "phaber.unsplash.2.0.0.nupkg.sha512"
+    },
+    "PostSharp.Redist/5.0.27": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-YbGGGDq1d4AJfFfAslcWyDrSFMTsXjv4b+j/sAfHTus2ev+S6/7gSfLXBoNtFsnv0KPLoVzMl2OfoobPI/5Afw==",
+      "path": "postsharp.redist/5.0.27",
+      "hashPath": "postsharp.redist.5.0.27.nupkg.sha512"
     },
     "runtime.debian.8-x64.runtime.native.System.Security.Cryptography.OpenSsl/4.3.0": {
       "type": "package",
@@ -2044,6 +2106,13 @@
       "path": "system.runtime.numerics/4.3.0",
       "hashPath": "system.runtime.numerics.4.3.0.nupkg.sha512"
     },
+    "System.Runtime.Serialization.Primitives/4.3.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Wz+0KOukJGAlXjtKr+5Xpuxf8+c8739RI1C+A2BoQZT+wMCCoMDDdO8/4IRHfaVINqL78GO8dW8G2lW/e45Mcw==",
+      "path": "system.runtime.serialization.primitives/4.3.0",
+      "hashPath": "system.runtime.serialization.primitives.4.3.0.nupkg.sha512"
+    },
     "System.Security.AccessControl/5.0.0": {
       "type": "package",
       "serviceable": true,
@@ -2212,6 +2281,20 @@
       "path": "system.xml.xdocument/4.3.0",
       "hashPath": "system.xml.xdocument.4.3.0.nupkg.sha512"
     },
+    "System.Xml.XmlDocument/4.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2eZu6IP+etFVBBFUFzw2w6J21DqIN5eL9Y8r8JfJWUmV28Z5P0SNU01oCisVHQgHsDhHPnmq2s1hJrJCFZWloQ==",
+      "path": "system.xml.xmldocument/4.0.1",
+      "hashPath": "system.xml.xmldocument.4.0.1.nupkg.sha512"
+    },
+    "System.Xml.XmlSerializer/4.0.11": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-FrazwwqfIXTfq23mfv4zH+BjqkSFNaNFBtjzu3I9NRmG8EELYyrv/fJnttCIwRMFRR/YKXF1hmsMmMEnl55HGw==",
+      "path": "system.xml.xmlserializer/4.0.11",
+      "hashPath": "system.xml.xmlserializer.4.0.11.nupkg.sha512"
+    },
     "Tulpep.NotificationWindow/1.1.38": {
       "type": "package",
       "serviceable": true,
@@ -2251,7 +2334,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "NLog/4.0.0.0": {
+    "NLog/5.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

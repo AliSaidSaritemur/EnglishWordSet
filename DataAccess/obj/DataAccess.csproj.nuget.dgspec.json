@@ -71,6 +71,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[7.0.2, )"
+            },
+            "PostSharp.Redist": {
+              "target": "Package",
+              "version": "[5.0.27, )"
             }
           },
           "imports": [

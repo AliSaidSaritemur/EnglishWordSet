@@ -11,18 +11,26 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DataAccess.util;
 using LogAccess.services;
+using System.Text.RegularExpressions;
+using System.Linq;
+using Image = System.Drawing.Image;
+using LogAccess;
+using System.Windows.Markup;
+using EnglishWordSet.util.StaticTools;
 
 namespace EnglishWordSet
 {
     public partial class Main : Form
     {
-       private MBWordController mBWord ;
+        private string savesFileName = "/logs/ConvertedWord/ConvertedWords.log";
+        private string saveTexts;
+        private MBWordController mBWord ;
         public Main()
         {
             InitializeComponent();
             PageTransactions.SetForm1(this);
         }
-
+ 
         private void btnConvert_Click(object sender, EventArgs e)
         {   
             string tempText = txtInput.Text.ToString();
@@ -35,24 +43,23 @@ namespace EnglishWordSet
 
             txtOutput.Text = tempText;
             SetWordInform(txtOutput, lblWordCountOutput, lblWordDayAvarageOutput);
+            string noSpaceOutput = Regex.Replace(tempText, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
             if (saveStatu)
             {
                 AddLog.ConvertedWordsLogs.Info(tempText);
-                string textPath = "Saves.txt";
-                string textToSave = "\n\n" + DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss") + "\n" + tempText;
-                FileTransactions.WriteToText(textPath, textToSave);
+                
             }
             else
             {
-                AddLog.ConvertedWordsLogs.Trace(tempText);
+                AddLog.ConvertedWordsLogs.Trace(noSpaceOutput);
             }
         }
 
-        private void btnGetSaveText_Click(object sender, EventArgs e)
+        private async void btnGetSaveText_Click(object sender, EventArgs e)
         {
-            string savesFileName = "/logs/ConvertedWord/ConvertedWords.log";
-            string saveTexts = FileTransactions.ReadText(savesFileName);
-            txtOutput.Text = saveTexts;
+            if (!ReadSaveText())
+                return;
+            txtOutput.Text =  saveTexts;
         }
      
         private void btnGetNewWord_Click(object sender, EventArgs e)
@@ -185,6 +192,44 @@ namespace EnglishWordSet
             }
         }
 
+        private void btnGetLast_Click(object sender, EventArgs e)
+        {
+            if(!ReadSaveText())
+                return;
+            string words = GetLastWordsFromSaves();
+             words = Regex.Replace(words, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
+            txtInput.Text = words;
+            SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
+        }
+
+
+        private string GetLastWordsFromSaves()
+        {
+                Regex regex = new Regex("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\.\\d{4}");
+                string vals = regex.Split(saveTexts)[0];
+                vals ??= vals.Remove(vals.TrimEnd().LastIndexOf(Environment.NewLine));
+                return vals;         
+        }
+
+        private bool ReadSaveText()
+        {
+            
+            saveTexts = " ";
+            saveTexts =   FileTransactions.ReadText(savesFileName);
+            saveTexts = string.Join("\r\n", saveTexts.Split('\r', '\n').Reverse());
+            if (!string.IsNullOrEmpty(saveTexts))   
+            return true;
+            else { 
+                AddLog.systemLogs.Error("There was a problem opening the Converter Word file.");
+                return false;
+                btnGetSaveText.Visible = false;
+                btnGetLast.Visible = false;
+                BasicAlerts.ErrorAlert("There are some technical problems with the display of transactions currently made. You can fix the problem by restarting the program.",
+                    "Unable to access files");
+                return false;
+            }
+
+        }
 
     }
 }

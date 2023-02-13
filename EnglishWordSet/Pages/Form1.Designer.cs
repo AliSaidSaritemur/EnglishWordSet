@@ -48,6 +48,7 @@ namespace EnglishWordSet
             this.lblWordDayAvarageInput = new System.Windows.Forms.Label();
             this.lblWordDayAvarageOutput = new System.Windows.Forms.Label();
             this.lblWordCountOutput = new System.Windows.Forms.Label();
+            this.btnGetLast = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).BeginInit();
             this.SuspendLayout();
@@ -242,12 +243,23 @@ namespace EnglishWordSet
             this.lblWordCountOutput.TabIndex = 17;
             this.lblWordCountOutput.Text = "Word Count :          ";
             // 
+            // btnGetLast
+            // 
+            this.btnGetLast.Location = new System.Drawing.Point(151, 165);
+            this.btnGetLast.Name = "btnGetLast";
+            this.btnGetLast.Size = new System.Drawing.Size(140, 29);
+            this.btnGetLast.TabIndex = 19;
+            this.btnGetLast.Text = "Get Last Words";
+            this.btnGetLast.UseVisualStyleBackColor = true;
+            this.btnGetLast.Click += new System.EventHandler(this.btnGetLast_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1089, 552);
+            this.Controls.Add(this.btnGetLast);
             this.Controls.Add(this.lblWordDayAvarageOutput);
             this.Controls.Add(this.lblWordCountOutput);
             this.Controls.Add(this.lblWordDayAvarageInput);
@@ -296,6 +308,7 @@ namespace EnglishWordSet
         private System.Windows.Forms.Label lblWordDayAvarageInput;
         private System.Windows.Forms.Label lblWordDayAvarageOutput;
         private System.Windows.Forms.Label lblWordCountOutput;
+        private System.Windows.Forms.Button btnGetLast;
     }
 }
 
