@@ -78,6 +78,7 @@ namespace EnglishWordSet
             // 
             // pbBack
             // 
+            this.pbBack.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbBack.Image = global::EnglishWordSet.Properties.Resources.back;
             this.pbBack.Location = new System.Drawing.Point(12, 431);
             this.pbBack.Name = "pbBack";

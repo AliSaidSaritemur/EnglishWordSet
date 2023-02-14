@@ -57,6 +57,7 @@
     <Compile Include="services\Logs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\SystemLogs.cs" />
+    <Compile Include="services\WrongWords.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="NLog.config">

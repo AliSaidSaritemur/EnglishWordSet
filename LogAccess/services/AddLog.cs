@@ -10,6 +10,7 @@ namespace LogAccess.services
     {
         private static SystemLogs tempSystemLogs;
         private static ConvertedWordsLogs tempConvertedWordsLogs;
+        private static WrongWords tempWrongWords;
 
         public static SystemLogs systemLogs { get {
                 tempSystemLogs = (tempSystemLogs == null) ? new SystemLogs() : tempSystemLogs;
@@ -22,6 +23,14 @@ namespace LogAccess.services
             {
                 tempConvertedWordsLogs = (tempConvertedWordsLogs == null) ? new ConvertedWordsLogs() : tempConvertedWordsLogs;
                 return tempConvertedWordsLogs;
+            }
+        }
+        public static WrongWords WrongWordsLogs
+        {
+            get
+            {
+                tempWrongWords = (tempWrongWords == null) ? new WrongWords() : tempWrongWords;
+                return tempWrongWords;
             }
         }
     }

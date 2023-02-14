@@ -10,6 +10,9 @@
     <Compile Update="Pages\ChildFormPages\AdminPage\ChildAdminNewLearnedWord.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pages\ChildFormPages\AdminPage\TrashBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Pages\Form1.cs">
       <SubType>Form</SubType>
     </Compile>

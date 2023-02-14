@@ -12,7 +12,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         static string pathTextStart = Directory.GetCurrentDirectory() ;
         static string pathText;
 
-        public static void WriteToText(string textPath, string textToAdd)
+        public static void AddTextToFile(string textPath, string textToAdd)
         {
             if (string.IsNullOrEmpty(pathText))
                 pathText = pathTextStart + textPath;
@@ -32,6 +32,13 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             string text = File.ReadAllText(pathText);
 
             return text;
+        }
+        public static void WriteText(string textPath,string texttoWrite)
+        {
+            if (string.IsNullOrEmpty(pathText))
+                pathText = pathTextStart + textPath;
+
+            File.WriteAllTextAsync(pathText, texttoWrite);
         }
     }
 }
