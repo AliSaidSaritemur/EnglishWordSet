@@ -90,7 +90,7 @@ namespace EnglishWordSet
                 imgTrash.Image = MyImageFilter.RedFilter(Properties.Resources.trash);
                 timerTresh.Start();
                 AddLog.WrongWordsLogs.Info(logMessage);
-                prWords.SetError(txtInput, "Words should be invalid type !!!");
+                prWords.Clear();
                 return WordstobeSave;
             }
             else

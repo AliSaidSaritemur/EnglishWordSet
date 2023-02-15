@@ -14,9 +14,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 
         public static void AddTextToFile(string textPath, string textToAdd)
         {
-            if (string.IsNullOrEmpty(pathText))
-                pathText = pathTextStart + textPath;
-
+            pathText = pathTextStart + textPath;
             File.AppendAllText(pathText, "\n" + textToAdd + "\n");
             string newText = textToAdd + File.ReadAllText(pathText);
             StreamWriter writer = new StreamWriter(pathText);
@@ -26,7 +24,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         }
         public static string ReadText(string textPath)
         {
-            if (string.IsNullOrEmpty(pathText))
                 pathText = pathTextStart + textPath;
 
             string text = File.ReadAllText(pathText);
@@ -35,7 +32,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         }
         public static void WriteText(string textPath,string texttoWrite)
         {
-            if (string.IsNullOrEmpty(pathText))
                 pathText = pathTextStart + textPath;
 
             File.WriteAllTextAsync(pathText, texttoWrite);

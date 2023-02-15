@@ -1,5 +1,6 @@
 ﻿using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
+using EnglishWordSet.util.MyTools;
 using EnglishWordSet.util.StaticTools;
 using System;
 using System.Collections.Generic;
@@ -118,17 +119,11 @@ namespace EnglishWordSet.ChildForms.AdminPage
         {
             if (sentence.Length == 0)
             {
-                prWord.SetError(txtSentence, "Sentence can't be empty !!!");
-                return true;
-            }
-            else if (!MyRegex.IsName(sentence))
-            {
-                prSentence.SetError(txtSentence, "Sentence should be invalid type !!!");
+                prSentence.SetError(txtSentence, "Sentence can't be empty !!!");
                 return true;
             }
             else
             {
-                prSentence.Clear();
                 return false;
             }
         }
@@ -155,6 +150,22 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void ChildAdminNewLearnedWord_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ChildAdminNewLearnedWord_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel = true;
+            Hide();
+        }
+
+        private void btnNewSentence_Click(object sender, EventArgs e)
+        {
+            DictionaryTransections.GetSEntenceByWordtoTextBox(txtSentence,txtWord.Text.ToString());
         }
     }
 }

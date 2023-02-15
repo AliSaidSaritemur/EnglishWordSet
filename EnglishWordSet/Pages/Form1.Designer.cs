@@ -55,6 +55,7 @@ namespace EnglishWordSet
             // 
             // txtInput
             // 
+            this.txtInput.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtInput.Location = new System.Drawing.Point(28, 200);
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(397, 286);
@@ -64,6 +65,7 @@ namespace EnglishWordSet
             // 
             // txtOutput
             // 
+            this.txtOutput.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.txtOutput.Location = new System.Drawing.Point(560, 200);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
@@ -76,9 +78,9 @@ namespace EnglishWordSet
             this.btnConvert.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnConvert.Location = new System.Drawing.Point(451, 108);
+            this.btnConvert.Location = new System.Drawing.Point(454, 112);
             this.btnConvert.Name = "btnConvert";
-            this.btnConvert.Size = new System.Drawing.Size(94, 29);
+            this.btnConvert.Size = new System.Drawing.Size(93, 31);
             this.btnConvert.TabIndex = 3;
             this.btnConvert.Text = "Convert";
             this.btnConvert.UseVisualStyleBackColor = true;
@@ -106,7 +108,7 @@ namespace EnglishWordSet
             // 
             // btnGetSaveText
             // 
-            this.btnGetSaveText.Location = new System.Drawing.Point(983, 108);
+            this.btnGetSaveText.Location = new System.Drawing.Point(910, 117);
             this.btnGetSaveText.Name = "btnGetSaveText";
             this.btnGetSaveText.Size = new System.Drawing.Size(94, 29);
             this.btnGetSaveText.TabIndex = 6;
@@ -129,7 +131,7 @@ namespace EnglishWordSet
             // btnGetNewWord
             // 
             this.btnGetNewWord.Enabled = false;
-            this.btnGetNewWord.Location = new System.Drawing.Point(955, 58);
+            this.btnGetNewWord.Location = new System.Drawing.Point(887, 67);
             this.btnGetNewWord.Name = "btnGetNewWord";
             this.btnGetNewWord.Size = new System.Drawing.Size(136, 29);
             this.btnGetNewWord.TabIndex = 10;
@@ -140,7 +142,7 @@ namespace EnglishWordSet
             // btnToAdminPage
             // 
             this.btnToAdminPage.Enabled = false;
-            this.btnToAdminPage.Location = new System.Drawing.Point(955, 12);
+            this.btnToAdminPage.Location = new System.Drawing.Point(887, 21);
             this.btnToAdminPage.Name = "btnToAdminPage";
             this.btnToAdminPage.Size = new System.Drawing.Size(136, 29);
             this.btnToAdminPage.TabIndex = 11;
@@ -258,7 +260,7 @@ namespace EnglishWordSet
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
-            this.ClientSize = new System.Drawing.Size(1089, 552);
+            this.ClientSize = new System.Drawing.Size(1026, 554);
             this.Controls.Add(this.btnGetLast);
             this.Controls.Add(this.lblWordDayAvarageOutput);
             this.Controls.Add(this.lblWordCountOutput);

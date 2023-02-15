@@ -17,6 +17,8 @@ using Image = System.Drawing.Image;
 using LogAccess;
 using System.Windows.Markup;
 using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.ChildForms.AdminPage;
+using EnglishWordSet.util.MyTools;
 
 namespace EnglishWordSet
 {
@@ -87,11 +89,23 @@ namespace EnglishWordSet
                     return;
                 }
 
-                Random rnd = new Random();
+                ChildAdminNewLearnedWordPAgeGetter(word, mBWord.GetMeaning());
+                   Random rnd = new Random();
                 txtInput.Text = rnd.Next(10) < 5 ? mBWord.GetWordWithMeanig() + "\n" +  txtInput.Text.ToString() : txtInput.Text.ToString() + "\n " + mBWord.GetWordWithMeanig();
                 mBWord.RemoveWord();
                 SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
             }
+        }
+
+        private void ChildAdminNewLearnedWordPAgeGetter(string word, string meaaning)
+        {
+            ChildAdminNewLearnedWord _childAdminNewLearned = PageTransactions.GetChildAdminNewLearnedWordPage();
+            _childAdminNewLearned.txtWord.Text = word;
+            _childAdminNewLearned.txtMeaning.Text = meaaning;
+            DictionaryTransections.GetSEntenceByWordtoTextBox(_childAdminNewLearned.txtSentence,word);
+            _childAdminNewLearned.StartPosition = FormStartPosition.CenterScreen;
+            _childAdminNewLearned.Show();
+
         }
 
         private void btnToAdminPage_Click(object sender, EventArgs e)

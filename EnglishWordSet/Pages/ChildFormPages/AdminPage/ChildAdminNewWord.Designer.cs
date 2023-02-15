@@ -32,15 +32,16 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChildAdminNewWord));
             this.txtInput = new System.Windows.Forms.RichTextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
-            this.prWords = new System.Windows.Forms.ErrorProvider(this.components);
             this.imgTrash = new System.Windows.Forms.PictureBox();
             this.timerTresh = new System.Windows.Forms.Timer(this.components);
-            ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
+            this.prWords = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
             this.SuspendLayout();
             // 
             // txtInput
             // 
+            this.txtInput.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
             this.txtInput.Location = new System.Drawing.Point(51, 32);
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(254, 165);
@@ -59,10 +60,6 @@
             this.btnSubmit.UseVisualStyleBackColor = true;
             this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
-            // prWords
-            // 
-            this.prWords.ContainerControl = this;
-            // 
             // imgTrash
             // 
             this.imgTrash.Cursor = System.Windows.Forms.Cursors.Hand;
@@ -80,9 +77,12 @@
             this.timerTresh.Interval = 500;
             this.timerTresh.Tick += new System.EventHandler(this.timerTresh_Tick);
             // 
+            // prWords
+            // 
+            this.prWords.ContainerControl = this;
+            // 
             // ChildAdminNewWord
             // 
-            this.AcceptButton = this.btnSubmit;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
@@ -94,8 +94,8 @@
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewWord";
-            ((System.ComponentModel.ISupportInitialize)(this.prWords)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prWords)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,8 +105,8 @@
 
         public System.Windows.Forms.RichTextBox txtInput;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.ErrorProvider prWords;
         private System.Windows.Forms.Timer timerTresh;
         internal System.Windows.Forms.PictureBox imgTrash;
+        private System.Windows.Forms.ErrorProvider prWords;
     }
 }

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "WMkv7b4PFgOMLiV4PR87BFwdrgaRJOd4t7AAZgYBACyGwBNwo9/vAhguZSUIpOVRZUCE5y7izE4XUcYrB0MV8Q==",
+  "dgSpecHash": "3rLBd5bakdULO+TcVI2X18kZCr6yHdOM/iQI+W8B34lJvxwVxonOhySpAylg9VG/tlkmITuljom7qk0qYOXoEQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\EnglishWordSet\\EnglishWordSet.csproj",
   "expectedPackageFiles": [
@@ -50,6 +50,7 @@
     "C:\\Users\\alisa\\.nuget\\packages\\optional\\4.0.0\\optional.4.0.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\phaber.unsplash\\2.0.0\\phaber.unsplash.2.0.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\postsharp.redist\\5.0.27\\postsharp.redist.5.0.27.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.debian.8-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.23-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl\\4.3.0\\runtime.fedora.24-x64.runtime.native.system.security.cryptography.openssl.4.3.0.nupkg.sha512",

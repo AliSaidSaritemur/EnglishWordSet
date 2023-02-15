@@ -38,11 +38,13 @@
             this.btnAdd = new System.Windows.Forms.Button();
             this.label4 = new System.Windows.Forms.Label();
             this.prWord = new System.Windows.Forms.ErrorProvider(this.components);
-            this.prSentence = new System.Windows.Forms.ErrorProvider(this.components);
             this.prMeanning = new System.Windows.Forms.ErrorProvider(this.components);
+            this.prSentence = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnNewSentence = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.prWord)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prSentence)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prMeanning)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prSentence)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNewSentence)).BeginInit();
             this.SuspendLayout();
             // 
             // txtWord
@@ -57,7 +59,7 @@
             // 
             this.txtSentence.Location = new System.Drawing.Point(122, 136);
             this.txtSentence.Name = "txtSentence";
-            this.txtSentence.Size = new System.Drawing.Size(197, 57);
+            this.txtSentence.Size = new System.Drawing.Size(218, 82);
             this.txtSentence.TabIndex = 1;
             this.txtSentence.Text = "";
             this.txtSentence.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSentence_KeyDown);
@@ -89,7 +91,7 @@
             this.label2.AutoSize = true;
             this.label2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(11, 229);
+            this.label2.Location = new System.Drawing.Point(11, 240);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(89, 27);
             this.label2.TabIndex = 5;
@@ -97,7 +99,7 @@
             // 
             // txtMeaning
             // 
-            this.txtMeaning.Location = new System.Drawing.Point(122, 229);
+            this.txtMeaning.Location = new System.Drawing.Point(122, 240);
             this.txtMeaning.Name = "txtMeaning";
             this.txtMeaning.Size = new System.Drawing.Size(125, 27);
             this.txtMeaning.TabIndex = 6;
@@ -128,20 +130,32 @@
             // 
             this.prWord.ContainerControl = this;
             // 
+            // prMeanning
+            // 
+            this.prMeanning.ContainerControl = this;
+            // 
             // prSentence
             // 
             this.prSentence.ContainerControl = this;
             // 
-            // prMeanning
+            // btnNewSentence
             // 
-            this.prMeanning.ContainerControl = this;
+            this.btnNewSentence.Image = global::EnglishWordSet.Properties.Resources.newButton;
+            this.btnNewSentence.Location = new System.Drawing.Point(346, 149);
+            this.btnNewSentence.Name = "btnNewSentence";
+            this.btnNewSentence.Size = new System.Drawing.Size(72, 46);
+            this.btnNewSentence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNewSentence.TabIndex = 9;
+            this.btnNewSentence.TabStop = false;
+            this.btnNewSentence.Click += new System.EventHandler(this.btnNewSentence_Click);
             // 
             // ChildAdminNewLearnedWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(331, 360);
+            this.ClientSize = new System.Drawing.Size(426, 360);
+            this.Controls.Add(this.btnNewSentence);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.txtMeaning);
@@ -153,27 +167,30 @@
             this.Name = "ChildAdminNewLearnedWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewLearnedWord";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.ChildAdminNewLearnedWord_FormClosing);
+            this.Load += new System.EventHandler(this.ChildAdminNewLearnedWord_Load);
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.ChildAdminNewLearnedWord_KeyDown);
             ((System.ComponentModel.ISupportInitialize)(this.prWord)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.prSentence)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prMeanning)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prSentence)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnNewSentence)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtWord;
-        private System.Windows.Forms.RichTextBox txtSentence;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txtMeaning;
         private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider prWord;
-        private System.Windows.Forms.ErrorProvider prSentence;
         private System.Windows.Forms.ErrorProvider prMeanning;
+        private System.Windows.Forms.ErrorProvider prSentence;
+        internal System.Windows.Forms.TextBox txtWord;
+        internal System.Windows.Forms.RichTextBox txtSentence;
+        internal System.Windows.Forms.TextBox txtMeaning;
+        private System.Windows.Forms.PictureBox btnNewSentence;
     }
 }

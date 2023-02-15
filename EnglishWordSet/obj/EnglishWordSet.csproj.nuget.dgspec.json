@@ -167,6 +167,10 @@
               "target": "Package",
               "version": "[5.0.27, )"
             },
+            "RestSharp": {
+              "target": "Package",
+              "version": "[108.0.3, )"
+            },
             "Tulpep.NotificationWindow": {
               "target": "Package",
               "version": "[1.1.38, )"

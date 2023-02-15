@@ -29,6 +29,11 @@ namespace EnglishWordSet.CRUD
             selectedword = wordImpl.GetRandomWord();
             string line = selectedword.English;
             return line;
-        }     
+        }
+        public string GetMeaning()
+        {
+            string line = selectedword.Turkish;
+            return line;
+        }
     }
 }
