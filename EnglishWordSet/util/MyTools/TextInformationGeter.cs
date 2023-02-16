@@ -43,7 +43,7 @@ namespace EnglishWordSet.MyTools
                 if (templine.StartsWith("!!!"))
                     DayCount += 10;
 
-                if (MyRegex.Isthere(templine, patternForNum))
+                if (MyRegex.CheckingValue.Isthere(templine, patternForNum))
                 {
                     DayCount += (templine[0] - '0');
                 }

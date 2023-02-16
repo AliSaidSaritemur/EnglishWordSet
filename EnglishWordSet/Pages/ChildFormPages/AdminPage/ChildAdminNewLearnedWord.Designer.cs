@@ -183,7 +183,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ErrorProvider prWord;
         private System.Windows.Forms.ErrorProvider prMeanning;
@@ -191,6 +190,7 @@
         internal System.Windows.Forms.TextBox txtWord;
         internal System.Windows.Forms.RichTextBox txtSentence;
         internal System.Windows.Forms.TextBox txtMeaning;
-        private System.Windows.Forms.PictureBox btnNewSentence;
+        internal System.Windows.Forms.PictureBox btnNewSentence;
+        internal System.Windows.Forms.Button btnAdd;
     }
 }

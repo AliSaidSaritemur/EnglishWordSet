@@ -1,4 +1,6 @@
-﻿using EnglishWordSet.RefactoredStaticFuncs;
+﻿using DataAccess.Concrete;
+using EnglishWordSet.PageBackend;
+using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.util.MyTools;
 using EnglishWordSet.util.StaticTools;
@@ -20,17 +22,32 @@ namespace EnglishWordSet.ChildForms.AdminPage
         string word;
         string sentence;
         string meaning;
+      public string formLocation = "InAdminPage";
         public ChildAdminNewLearnedWord()
         {
             InitializeComponent();
             focusText = txtWord;
-            this.ActiveControl = focusText;
             focusText.Focus();
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (!MyTestInternet.IsThereInternet())
+
+            word = txtWord.Text.ToString().Trim();
+            sentence = txtSentence.Text.ToString().Trim();
+            meaning = txtMeaning.Text.ToString().Trim();
+
+            LearnedWordImpl _learnedWordImpl = new();
+
+            if (_learnedWordImpl.IsThere(word))
+            {
+                LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
+                string sentenceWord = lwpb.GetSentence(word);
+                MessageBox.Show("You already learned this word. \nSentence : " + sentenceWord, word);
+                return;
+            }
+
+           else if (!MyTestInternet.IsThereInternet())
             {
                 BasicAlerts.ErrorAlert("Learned Words can't Add.\nFor adding words," +
                " connect to the internet.", "No internet access");
@@ -38,9 +55,6 @@ namespace EnglishWordSet.ChildForms.AdminPage
             }
             else { }
 
-             word = txtWord.Text.ToString().Trim();
-             sentence = txtSentence.Text.ToString().Trim();
-             meaning = txtMeaning.Text.ToString().Trim();
 
             if (WordProviderTest()||SentenceProviderTest()||MeanningProviderTest())
                 return;
@@ -57,6 +71,11 @@ namespace EnglishWordSet.ChildForms.AdminPage
             txtSentence.Clear();
             txtMeaning.Clear();
             MyNotificationAlerts.GetSuccessMessage("The word is added to Database");
+
+            if (formLocation == "Form1")
+            {
+                Hide();
+            }
         }
 
         private void txtWord_KeyDown(object sender, KeyEventArgs e)
@@ -98,12 +117,13 @@ namespace EnglishWordSet.ChildForms.AdminPage
         
         private bool WordProviderTest()
         {
+          string  word = txtWord.Text.ToString().Trim();
             if (word.Length == 0)
             {
                 prWord.SetError(txtWord, "Word can't be empty !!!");
                 return true;
             }
-            else if (!MyRegex.IsName(word))
+            else if (!MyRegex.CheckingValue.IsName(word))
             {
                 prWord.SetError(txtWord, "Word should be invalid type !!!");
                 return true;
@@ -129,7 +149,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
         }
         private bool MeanningProviderTest()
         {
-            if (!string.IsNullOrEmpty(meaning) && !MyRegex.IsName(meaning))
+            if (!string.IsNullOrEmpty(meaning) && !MyRegex.CheckingValue.IsName(meaning))
             {
                 prMeanning.SetError(txtMeaning, "Meaning should be invalid type !!!");
                 return true;
@@ -163,9 +183,23 @@ namespace EnglishWordSet.ChildForms.AdminPage
             Hide();
         }
 
-        private void btnNewSentence_Click(object sender, EventArgs e)
+        internal void btnNewSentence_Click(object sender, EventArgs e)
         {
-            DictionaryTransections.GetSEntenceByWordtoTextBox(txtSentence,txtWord.Text.ToString());
+            prSentence.Clear();
+
+            if (WordProviderTest())
+            {
+                return;
+            }
+          else  if (MyTestInternet.IsThereInternet())
+            {
+                DictionaryTransections.GetSEntenceByWordtoTextBox(txtSentence, txtWord.Text.ToString().Trim());
+            }
+            else
+            {
+                    BasicAlerts.ErrorAlert("Senteces can't getting.\nFor adding words," +
+                   " connect to the internet.", "No internet access");
+            }
         }
     }
 }

@@ -35,12 +35,13 @@
             // 
             // rtbTrashWords
             // 
-            this.rtbTrashWords.Font = new System.Drawing.Font("Segoe UI", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.rtbTrashWords.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.rtbTrashWords.Location = new System.Drawing.Point(66, 38);
             this.rtbTrashWords.Name = "rtbTrashWords";
             this.rtbTrashWords.Size = new System.Drawing.Size(370, 333);
             this.rtbTrashWords.TabIndex = 0;
             this.rtbTrashWords.Text = "";
+            this.rtbTrashWords.TextChanged += new System.EventHandler(this.rtbTrashWords_TextChanged);
             // 
             // btnSaveChanges
             // 

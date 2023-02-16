@@ -64,7 +64,7 @@ namespace EnglishWordSet
                 prWords.SetError(txtInput, "Words can't be empty !!!");
                 return input;
             }
-            else if (!MyRegex.IsName(input))
+            else if (!MyRegex.CheckingValue.IsName(input))
             {
                string  inputWithoutEmpty =  Regex.Replace(input, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline).Trim();
                 string logMessage="";
@@ -77,7 +77,7 @@ namespace EnglishWordSet
 
                     if (line != null)
                     {
-                        if (!MyRegex.IsName(line.Trim()))
+                        if (!MyRegex.CheckingValue.IsName(line.Trim()))
                             logMessage += line+"\n";
                         else
                             WordstobeSave=line + "\n";

@@ -49,6 +49,7 @@ namespace EnglishWordSet
             this.lblWordDayAvarageOutput = new System.Windows.Forms.Label();
             this.lblWordCountOutput = new System.Windows.Forms.Label();
             this.btnGetLast = new System.Windows.Forms.Button();
+            this.cbSetDay = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).BeginInit();
             this.SuspendLayout();
@@ -255,12 +256,25 @@ namespace EnglishWordSet
             this.btnGetLast.UseVisualStyleBackColor = true;
             this.btnGetLast.Click += new System.EventHandler(this.btnGetLast_Click);
             // 
+            // cbSetDay
+            // 
+            this.cbSetDay.AutoSize = true;
+            this.cbSetDay.Checked = true;
+            this.cbSetDay.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cbSetDay.Location = new System.Drawing.Point(59, 100);
+            this.cbSetDay.Name = "cbSetDay";
+            this.cbSetDay.Size = new System.Drawing.Size(88, 24);
+            this.cbSetDay.TabIndex = 20;
+            this.cbSetDay.Text = "Set Days";
+            this.cbSetDay.UseVisualStyleBackColor = true;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1026, 554);
+            this.Controls.Add(this.cbSetDay);
             this.Controls.Add(this.btnGetLast);
             this.Controls.Add(this.lblWordDayAvarageOutput);
             this.Controls.Add(this.lblWordCountOutput);
@@ -282,6 +296,7 @@ namespace EnglishWordSet
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).EndInit();
@@ -311,6 +326,7 @@ namespace EnglishWordSet
         private System.Windows.Forms.Label lblWordDayAvarageOutput;
         private System.Windows.Forms.Label lblWordCountOutput;
         private System.Windows.Forms.Button btnGetLast;
+        private System.Windows.Forms.CheckBox cbSetDay;
     }
 }
 

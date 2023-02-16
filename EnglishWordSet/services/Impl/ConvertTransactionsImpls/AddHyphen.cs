@@ -8,7 +8,7 @@ namespace EnglishWordSet.ConvertTransactions
         public string EdditLine(string lineToSet)
         {
             string resultLine = lineToSet;
-            bool isThereHyben = MyRegex.Isthere(lineToSet, "-");
+            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, "-");
 
             if (!isThereHyben && resultLine != null)
             {

@@ -41,11 +41,11 @@
             // 
             // txtInput
             // 
-            this.txtInput.Font = new System.Drawing.Font("Segoe UI", 16F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
+            this.txtInput.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
             this.txtInput.Location = new System.Drawing.Point(51, 32);
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(254, 165);
-            this.txtInput.TabIndex = 11;
+            this.txtInput.TabIndex = 13;
             this.txtInput.Text = "";
             // 
             // btnSubmit

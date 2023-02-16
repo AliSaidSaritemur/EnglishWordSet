@@ -24,7 +24,7 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
         private void TrashBox_Load(object sender, EventArgs e)
         {
             string wrongWordsLogged= FileTransactions.ReadText(WrongWordsFileName);
-            rtbTrashWords.Text = string.Join("\r\n", wrongWordsLogged.Split('\r', '\n').Reverse());
+            rtbTrashWords.Text =  MyRegex.EddittingStringValue.ReverseString(wrongWordsLogged);
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)
@@ -47,6 +47,11 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
             string wrongWordsLogged = FileTransactions.ReadText(WrongWordsFileName);
             ChildAdminNewWord childNewWordPage = ControllersGetter.AdminPage().GetChildNewWordPage();
             childNewWordPage.SetTrashIcon();
+        }
+
+        private void rtbTrashWords_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

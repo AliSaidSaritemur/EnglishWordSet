@@ -61,7 +61,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return;
             }
 
-            else if (!MyRegex.Isthere(userName, "[A-Za-z][A-Za-z0-9_]{3,29}"))
+            else if (!MyRegex.CheckingValue.Isthere(userName, "[A-Za-z][A-Za-z0-9_]{3,29}"))
             { UserNameProvider.SetError(txtUserName, "UserName is not valid type");
                 return;
             }
@@ -80,7 +80,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return;
             }
 
-            else if (!MyRegex.IsMail(email))
+            else if (!MyRegex.CheckingValue.IsMail(email))
             { emailProvider.SetError(txtEmail, "Email is not valid type");
                 return;
             }
@@ -100,7 +100,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return;
             }
 
-            else if (!MyRegex.Isthere(phone, "^0?[0-9]{10}$"))
+            else if (!MyRegex.CheckingValue.IsPhoneNum(phone))
             { phoneProvider.SetError(txtPhone, "Phone Number is not valid type");
                 return;
             }
@@ -125,7 +125,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 againPasswordProvider.Clear();
             }
 
-            if(!MyRegex.Isthere(phone, "^0"))
+            if(!MyRegex.CheckingValue.Isthere(phone, "^0"))
             {
               phone = "0"+phone;   
             }
