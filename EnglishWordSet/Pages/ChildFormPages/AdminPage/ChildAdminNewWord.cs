@@ -3,6 +3,7 @@ using EnglishWordSet.Pages;
 using EnglishWordSet.Pages.ChildFormPages.AdminPage;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
+using EnglishWordSet.util.MyTools;
 using EnglishWordSet.util.StaticTools;
 using Entities.Concrete;
 using LogAccess.services;
@@ -118,6 +119,11 @@ namespace EnglishWordSet
                  imgTrash.Image = Properties.Resources.FullTrash;
             else
              imgTrash.Image = Properties.Resources.trash;
+        }
+
+        private void btnGetRandomWord_Click(object sender, EventArgs e)
+        {
+            DictionaryTransections.GetRandomWordtoTextBox(txtInput);
         }
     }
 }

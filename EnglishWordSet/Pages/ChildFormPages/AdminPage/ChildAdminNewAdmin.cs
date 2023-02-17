@@ -4,6 +4,7 @@ using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using Entities.Concrete;
+using LogAccess.services;
 using System;
 using System.Linq;
 using System.Windows.Forms;
@@ -133,6 +134,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             adminImpl.Add(email,password,phone,userName);
 
             MyNotificationAlerts.GetSuccessMessage("Admin added");
+            AddLog.systemLogs.Info(" " + userName + " is added to AdminsDB");
             CleanForm();
         }
 

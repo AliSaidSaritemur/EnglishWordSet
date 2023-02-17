@@ -17,7 +17,6 @@ namespace EnglishWordSet.util.MyTools
         private static string lastQueryWord = "";
         public static async void GetSEntenceByWordtoTextBox(RichTextBox textBoxtoWriteSentence, string queryWord)
         {
-
             if (queryWord == lastQueryWord)
             {
                 ChangeSentenceInTextBox(textBoxtoWriteSentence);
@@ -82,6 +81,27 @@ namespace EnglishWordSet.util.MyTools
                     examplestobeArranged[i] = examplestobeArranged[i] + ".";
             }
         }
+        public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence)
+        {
+            var client = new HttpClient();
+            var request = new HttpRequestMessage
+            {
+                Method = HttpMethod.Get,
+                RequestUri = new Uri("https://wordsapiv1.p.rapidapi.com/words/?random=true"),
+                Headers =
+    {
+        { "X-RapidAPI-Key",  Settings.SettingsInfo.Default.RapidAPIKey },
+        { "X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com" },
+    },
+            };
+            using (var response = await client.SendAsync(request))
+            {
+                response.EnsureSuccessStatusCode();
+                var body = await response.Content.ReadAsStringAsync();
+                DictionaryWords word = JsonSerializer.Deserialize<DictionaryWords>(body);
+                textBoxtoWriteSentence.Text += word.word+"\n";
+            }
 
-    }
+        }
+        }
 }

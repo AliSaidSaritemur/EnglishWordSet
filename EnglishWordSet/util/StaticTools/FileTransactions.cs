@@ -25,8 +25,12 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         public static string ReadText(string textPath)
         {
                 pathText = pathTextStart + textPath;
-
-            string text = File.ReadAllText(pathText);
+            string text;
+            using (var f = new FileStream(pathText, FileMode.Open, FileAccess.Read, FileShare.ReadWrite))
+            using (var s = new StreamReader(f))
+            {
+                text = s.ReadToEnd();
+            }
 
             return text;
         }

@@ -14,17 +14,12 @@ namespace LogAccess.services
             logger = LogManager.GetLogger("Convertedwords");
         }
         public override void Info(string message)
-        {
-            LogManager.IsLoggingEnabled();
+        {       
             logger.Info("\n" + message);
-            LogManager.Shutdown();
-
         }
         public override void Trace(string message)
-        {
-            LogManager.IsLoggingEnabled();
-            logger.Trace("\n" + message);
-            LogManager.Shutdown();
+        {       
+            logger.Trace("\n" + message);   
         }
     }
 }

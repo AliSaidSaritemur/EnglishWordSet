@@ -4,6 +4,7 @@ using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.util.MyTools;
 using EnglishWordSet.util.StaticTools;
+using LogAccess.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -71,7 +72,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             txtSentence.Clear();
             txtMeaning.Clear();
             MyNotificationAlerts.GetSuccessMessage("The word is added to Database");
-
+            AddLog.systemLogs.Info(" "+word+" is added to LearnedWords");
             if (formLocation == "Form1")
             {
                 Hide();

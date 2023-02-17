@@ -35,6 +35,7 @@
             this.imgTrash = new System.Windows.Forms.PictureBox();
             this.timerTresh = new System.Windows.Forms.Timer(this.components);
             this.prWords = new System.Windows.Forms.ErrorProvider(this.components);
+            this.btnGetRandomWord = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
             this.SuspendLayout();
@@ -81,12 +82,23 @@
             // 
             this.prWords.ContainerControl = this;
             // 
+            // btnGetRandomWord
+            // 
+            this.btnGetRandomWord.Location = new System.Drawing.Point(142, 1);
+            this.btnGetRandomWord.Name = "btnGetRandomWord";
+            this.btnGetRandomWord.Size = new System.Drawing.Size(88, 25);
+            this.btnGetRandomWord.TabIndex = 15;
+            this.btnGetRandomWord.Text = "Random";
+            this.btnGetRandomWord.UseVisualStyleBackColor = true;
+            this.btnGetRandomWord.Click += new System.EventHandler(this.btnGetRandomWord_Click);
+            // 
             // ChildAdminNewWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(355, 323);
+            this.Controls.Add(this.btnGetRandomWord);
             this.Controls.Add(this.imgTrash);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtInput);
@@ -108,5 +120,6 @@
         private System.Windows.Forms.Timer timerTresh;
         internal System.Windows.Forms.PictureBox imgTrash;
         private System.Windows.Forms.ErrorProvider prWords;
+        private System.Windows.Forms.Button btnGetRandomWord;
     }
 }
