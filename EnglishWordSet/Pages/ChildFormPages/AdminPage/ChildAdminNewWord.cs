@@ -46,14 +46,18 @@ namespace EnglishWordSet
 
             string WordstobeSave = GetWordstobeSave();
 
-            if (string.IsNullOrEmpty(WordstobeSave))
-                return;
-
-            AdminController pageBackend = ControllersGetter.AdminPage();
-            txtInput.Text = Regex.Replace(WordstobeSave, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
-            pageBackend.AddNewWords(txtInput.Text.ToString().Trim());    
+            if (string.IsNullOrEmpty(WordstobeSave)) {
+            
+            }
+            else
+            {
+                AdminController pageBackend = ControllersGetter.AdminPage();
+                txtInput.Text = Regex.Replace(WordstobeSave, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
+                pageBackend.AddNewWords(txtInput.Text.ToString().Trim());
+                MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
+            }
             txtInput.Clear();
-            MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
+          
         }
 
 
@@ -88,8 +92,8 @@ namespace EnglishWordSet
                         break;
                     }
                 }
-                imgTrash.Image = MyImageFilter.RedFilter(Properties.Resources.trash);
-                timerTresh.Start();
+               MyImageFilter.RedFilterToImageEffect(imgTrash);
+    
                 AddLog.WrongWordsLogs.Info(logMessage);
                 prWords.Clear();
                 return WordstobeSave;
@@ -100,12 +104,6 @@ namespace EnglishWordSet
                 return input;
             }
         }
-
-        private void timerTresh_Tick(object sender, EventArgs e)
-        {
-            imgTrash.Image =Properties.Resources.FullTrash;
-        }
-
         private void imgTrash_Click(object sender, EventArgs e)
         {
             Form TrashWrongWordPage = new TrashBox();
@@ -123,7 +121,21 @@ namespace EnglishWordSet
 
         private void btnGetRandomWord_Click(object sender, EventArgs e)
         {
+            string getRandomCountString = txtToBeGEttingRandomWordCount.Text.ToString();
+            int getRandomCountInt = int.Parse(getRandomCountString);
+
+            if (getRandomCountInt<1)
             DictionaryTransections.GetRandomWordtoTextBox(txtInput);
+            else 
+            DictionaryTransections.GetRandomWordtoTextBox(txtInput, getRandomCountInt);
+        }
+
+        private void txtToBeGEttingRandomWordCount_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

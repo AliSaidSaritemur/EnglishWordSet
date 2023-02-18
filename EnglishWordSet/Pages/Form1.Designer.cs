@@ -43,7 +43,6 @@ namespace EnglishWordSet
             this.pbCopy = new System.Windows.Forms.PictureBox();
             this.timerCopySuccess = new System.Windows.Forms.Timer(this.components);
             this.pbPaste = new System.Windows.Forms.PictureBox();
-            this.timerPasteSuccess = new System.Windows.Forms.Timer(this.components);
             this.lblWordCountInput = new System.Windows.Forms.Label();
             this.lblWordDayAvarageInput = new System.Windows.Forms.Label();
             this.lblWordDayAvarageOutput = new System.Windows.Forms.Label();
@@ -193,11 +192,6 @@ namespace EnglishWordSet
             this.pbPaste.TabStop = false;
             this.pbPaste.Click += new System.EventHandler(this.pbPaste_Click);
             // 
-            // timerPasteSuccess
-            // 
-            this.timerPasteSuccess.Interval = 500;
-            this.timerPasteSuccess.Tick += new System.EventHandler(this.timerPasteSuccess_Tick);
-            // 
             // lblWordCountInput
             // 
             this.lblWordCountInput.AutoSize = true;
@@ -320,7 +314,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.PictureBox pbCopy;
         private System.Windows.Forms.Timer timerCopySuccess;
         private System.Windows.Forms.PictureBox pbPaste;
-        private System.Windows.Forms.Timer timerPasteSuccess;
         private System.Windows.Forms.Label lblWordCountInput;
         private System.Windows.Forms.Label lblWordDayAvarageInput;
         private System.Windows.Forms.Label lblWordDayAvarageOutput;

@@ -108,12 +108,11 @@ namespace EnglishWordSet.Pages
         private void WifiConnectionAlert()
         {
             Image disConnectImage = EnglishWordSet.Properties.Resources.wifiDisconnect;
-            pBLearned.Image = MyImageFilter.RedFilter(disConnectImage);
+             MyImageFilter.RedFilterToImageEffect(pBLearned);
             epWifiConnectionImage.SetError(pBLearned, "No Internet connection !!!");
             pBLearned.Enabled = true;
             btnChangeImage.Visible = false;
-            isConnectWifi = false;
-            WifiEPtimer.Start();       
+            isConnectWifi = false;  
         }
        
     }

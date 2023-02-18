@@ -33,9 +33,9 @@
             this.txtInput = new System.Windows.Forms.RichTextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.imgTrash = new System.Windows.Forms.PictureBox();
-            this.timerTresh = new System.Windows.Forms.Timer(this.components);
             this.prWords = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnGetRandomWord = new System.Windows.Forms.Button();
+            this.txtToBeGEttingRandomWordCount = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
             this.SuspendLayout();
@@ -73,18 +73,13 @@
             this.imgTrash.TabStop = false;
             this.imgTrash.Click += new System.EventHandler(this.imgTrash_Click);
             // 
-            // timerTresh
-            // 
-            this.timerTresh.Interval = 500;
-            this.timerTresh.Tick += new System.EventHandler(this.timerTresh_Tick);
-            // 
             // prWords
             // 
             this.prWords.ContainerControl = this;
             // 
             // btnGetRandomWord
             // 
-            this.btnGetRandomWord.Location = new System.Drawing.Point(142, 1);
+            this.btnGetRandomWord.Location = new System.Drawing.Point(217, 3);
             this.btnGetRandomWord.Name = "btnGetRandomWord";
             this.btnGetRandomWord.Size = new System.Drawing.Size(88, 25);
             this.btnGetRandomWord.TabIndex = 15;
@@ -92,12 +87,23 @@
             this.btnGetRandomWord.UseVisualStyleBackColor = true;
             this.btnGetRandomWord.Click += new System.EventHandler(this.btnGetRandomWord_Click);
             // 
+            // txtToBeGEttingRandomWordCount
+            // 
+            this.txtToBeGEttingRandomWordCount.Location = new System.Drawing.Point(311, 3);
+            this.txtToBeGEttingRandomWordCount.Name = "txtToBeGEttingRandomWordCount";
+            this.txtToBeGEttingRandomWordCount.Size = new System.Drawing.Size(36, 27);
+            this.txtToBeGEttingRandomWordCount.TabIndex = 17;
+            this.txtToBeGEttingRandomWordCount.Text = "0";
+            this.txtToBeGEttingRandomWordCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtToBeGEttingRandomWordCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToBeGEttingRandomWordCount_KeyPress);
+            // 
             // ChildAdminNewWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(355, 323);
+            this.ClientSize = new System.Drawing.Size(352, 323);
+            this.Controls.Add(this.txtToBeGEttingRandomWordCount);
             this.Controls.Add(this.btnGetRandomWord);
             this.Controls.Add(this.imgTrash);
             this.Controls.Add(this.btnSubmit);
@@ -117,9 +123,9 @@
 
         public System.Windows.Forms.RichTextBox txtInput;
         private System.Windows.Forms.Button btnSubmit;
-        private System.Windows.Forms.Timer timerTresh;
         internal System.Windows.Forms.PictureBox imgTrash;
         private System.Windows.Forms.ErrorProvider prWords;
         private System.Windows.Forms.Button btnGetRandomWord;
+        private System.Windows.Forms.TextBox txtToBeGEttingRandomWordCount;
     }
 }

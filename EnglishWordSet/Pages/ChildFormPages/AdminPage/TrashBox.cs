@@ -24,7 +24,8 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
         private void TrashBox_Load(object sender, EventArgs e)
         {
             string wrongWordsLogged= FileTransactions.ReadText(WrongWordsFileName);
-            rtbTrashWords.Text =  MyRegex.EddittingStringValue.ReverseString(wrongWordsLogged);
+        string reversedTExt= MyRegex.EddittingStringValue.ReverseString(wrongWordsLogged);
+            rtbTrashWords.Text = MyRegex.EddittingStringValue.RemoveSpaces(reversedTExt);
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)

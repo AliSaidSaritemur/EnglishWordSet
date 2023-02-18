@@ -191,21 +191,12 @@ namespace EnglishWordSet
 
         private void pbPaste_Click(object sender, EventArgs e)
         {
-
             Image pasteImg = Properties.Resources.paste;
             txtInput.Clear();
             txtInput.Paste();
-
-            pbPaste.Image = MyImageFilter.GreenFilter(pasteImg);
-            timerPasteSuccess.Start();
+            MyImageFilter.GreenFilterToImageEffect(pbPaste);
             SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
         }
-
-        private void timerPasteSuccess_Tick(object sender, EventArgs e)
-        {
-            pbPaste.Image = Properties.Resources.paste;
-        }
-
         private void txtInput_TextChanged(object sender, EventArgs e)
         {
 

@@ -2,9 +2,11 @@
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Net.Http;
 using System.Text;
 using System.Text.Json;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EnglishWordSet.util.MyTools
@@ -16,42 +18,14 @@ namespace EnglishWordSet.util.MyTools
         private static int wordSentencelistNum = 0;
         private static string lastQueryWord = "";
         public static async void GetSEntenceByWordtoTextBox(RichTextBox textBoxtoWriteSentence, string queryWord)
-        {
-            if (queryWord == lastQueryWord)
-            {
-                ChangeSentenceInTextBox(textBoxtoWriteSentence);
-                return;
-            }
-            try
-            {
-                var request = new HttpRequestMessage
-                {
-                    Method = HttpMethod.Get,
-                    RequestUri = new Uri("https://wordsapiv1.p.rapidapi.com/words/" + queryWord + "/examples"),
-                    Headers =
-    {
-        { "X-RapidAPI-Key", Settings.SettingsInfo.Default.RapidAPIKey},
-        { "X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com" },
-    },
-                };
-                using (var response = await client.SendAsync(request))
-                {
-                    response.EnsureSuccessStatusCode();
-                    var body = await response.Content.ReadAsStringAsync();
-                    DictionaryWords wordList = JsonSerializer.Deserialize<DictionaryWords>(body);
-
+        {  
+                    string RequestUri = "https://wordsapiv1.p.rapidapi.com/words/" + queryWord + "/examples";
+                    DictionaryWords wordlist = await GetWordsapiWordwithRequestUri(RequestUri);           
                     wordSentencelist.Clear();
-                    wordSentencelist = new List<String>(wordList.examples);
+                    wordSentencelist = new List<String>(wordlist.examples);
                     ExamplesArrange(wordSentencelist);
                     ChangeSentenceInTextBox(textBoxtoWriteSentence);
                     lastQueryWord = queryWord;
-                }
-            }
-            catch (HttpRequestException e)
-            {
-                Console.WriteLine("Error: {0}", e);
-            }
-
         }
         private static async void ChangeSentenceInTextBox(RichTextBox textBoxtoWriteSentence)
         {
@@ -81,13 +55,14 @@ namespace EnglishWordSet.util.MyTools
                     examplestobeArranged[i] = examplestobeArranged[i] + ".";
             }
         }
-        public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence)
-        {
+
+        public static async Task<DictionaryWords> GetWordsapiWordwithRequestUri(string RequestUri){
+            DictionaryWords  resultWord;
             var client = new HttpClient();
             var request = new HttpRequestMessage
             {
                 Method = HttpMethod.Get,
-                RequestUri = new Uri("https://wordsapiv1.p.rapidapi.com/words/?random=true"),
+                RequestUri = new Uri(RequestUri),
                 Headers =
     {
         { "X-RapidAPI-Key",  Settings.SettingsInfo.Default.RapidAPIKey },
@@ -98,10 +73,23 @@ namespace EnglishWordSet.util.MyTools
             {
                 response.EnsureSuccessStatusCode();
                 var body = await response.Content.ReadAsStringAsync();
-                DictionaryWords word = JsonSerializer.Deserialize<DictionaryWords>(body);
-                textBoxtoWriteSentence.Text += word.word+"\n";
-            }
+                resultWord = JsonSerializer.Deserialize<DictionaryWords>(body);
 
+            }
+            return resultWord;
         }
+
+        public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence)
+        {
+            string RequestUri = "https://wordsapiv1.p.rapidapi.com/words/?random=true";
+            DictionaryWords word = await GetWordsapiWordwithRequestUri(RequestUri);
+            textBoxtoWriteSentence.Text += word.word + "\n";
         }
+        public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence,int getttingCount)
+        {
+            for (int i = 0; i < getttingCount; i++)
+                GetRandomWordtoTextBox(textBoxtoWriteSentence);
+        }
+
+    }
 }

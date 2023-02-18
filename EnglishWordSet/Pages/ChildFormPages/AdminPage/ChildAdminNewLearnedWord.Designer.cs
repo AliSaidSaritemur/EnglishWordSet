@@ -140,6 +140,7 @@
             // 
             // btnNewSentence
             // 
+            this.btnNewSentence.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnNewSentence.Image = global::EnglishWordSet.Properties.Resources.newButton;
             this.btnNewSentence.Location = new System.Drawing.Point(346, 149);
             this.btnNewSentence.Name = "btnNewSentence";
