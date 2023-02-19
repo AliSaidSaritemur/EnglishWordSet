@@ -2,6 +2,7 @@
 using LogAccess;
 using LogAccess.services;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Design;
 
 namespace DataAccess.Concrete
 {

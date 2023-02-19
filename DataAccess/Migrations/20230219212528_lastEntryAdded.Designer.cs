@@ -3,6 +3,7 @@ using DataAccess.Concrete;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace EnglishWordSet.Migrations
 {
     [DbContext(typeof(WordContext))]
-    partial class WordContextModelSnapshot : ModelSnapshot
+    [Migration("20230219212528_lastEntryAdded")]
+    partial class lastEntryAdded
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -42,7 +45,7 @@ namespace EnglishWordSet.Migrations
                     b.Property<string>("UserName")
                         .HasColumnType("nvarchar(450)");
 
-                    b.Property<string>("lastEntryDay")
+                    b.Property<string>("lastEntry")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("token")

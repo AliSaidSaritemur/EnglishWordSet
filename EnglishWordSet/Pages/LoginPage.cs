@@ -52,6 +52,7 @@ namespace EnglishWordSet
                 epUserName.Clear();
                 adminPage = PageTransactions.GetAdminPage();
                  AdminSession.username_Admin = userName;
+                loginB.RefreshTokens();
                 adminPage.Show();
                 this.Close();
             }

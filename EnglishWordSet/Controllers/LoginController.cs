@@ -4,6 +4,7 @@ using EnglishWordSet.MyTools;
 using EnglishWordSet.Sessions;
 using Entities.Concrete;
 using Entities.DTOs;
+using System;
 using System.Linq;
 
 
@@ -23,6 +24,16 @@ namespace EnglishWordSet.ToolsBackend
         {
             loginUser.Password=password;
             return adminImpl.IsThereLoginUser(loginUser);
+        }
+
+        public void RefreshTokens () {
+            DateTime now = DateTime.Now;
+            string nowDateString = DateTime.Now.ToString("yyyy-MM-dd").ToString();
+         if (adminImpl.GetLastEntryDay(loginUser.UserName) != nowDateString)
+            {
+                adminImpl.UpdateLastEntryDay(loginUser.UserName, nowDateString);
+                adminImpl.UpdateToken(loginUser.UserName,100);
+            }
         }
     }
 }

@@ -8,5 +8,7 @@ namespace Entities.Concrete
         public string Email { get; set; }
         public string Phone { get; set; }
         public string Password{ get; set; }
+        public int token { get; set; }
+        public string lastEntryDay { get; set; }
     }
 }

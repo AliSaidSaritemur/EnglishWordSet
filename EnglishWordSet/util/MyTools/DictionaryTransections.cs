@@ -8,6 +8,7 @@ using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
 namespace EnglishWordSet.util.MyTools
 {
@@ -81,9 +82,13 @@ namespace EnglishWordSet.util.MyTools
 
         public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence)
         {
-            string RequestUri = "https://wordsapiv1.p.rapidapi.com/words/?random=true";
-            DictionaryWords word = await GetWordsapiWordwithRequestUri(RequestUri);
-            textBoxtoWriteSentence.Text += word.word + "\n";
+            HttpClient client = new HttpClient();
+            HttpResponseMessage response = await client.GetAsync("https://random-word-api.herokuapp.com/word");
+
+            response.EnsureSuccessStatusCode();
+            var body = await response.Content.ReadAsStringAsync();
+            var resultWords = JsonSerializer.Deserialize<List<string>>(body);
+            textBoxtoWriteSentence.Text += resultWords[0] + "\n";
         }
         public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence,int getttingCount)
         {

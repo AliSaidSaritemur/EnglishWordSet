@@ -36,8 +36,10 @@
             this.prWords = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnGetRandomWord = new System.Windows.Forms.Button();
             this.txtToBeGEttingRandomWordCount = new System.Windows.Forms.TextBox();
+            this.prToken = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prToken)).BeginInit();
             this.SuspendLayout();
             // 
             // txtInput
@@ -65,7 +67,7 @@
             // 
             this.imgTrash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgTrash.Image = ((System.Drawing.Image)(resources.GetObject("imgTrash.Image")));
-            this.imgTrash.Location = new System.Drawing.Point(294, 258);
+            this.imgTrash.Location = new System.Drawing.Point(311, 259);
             this.imgTrash.Name = "imgTrash";
             this.imgTrash.Size = new System.Drawing.Size(59, 62);
             this.imgTrash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -97,12 +99,16 @@
             this.txtToBeGEttingRandomWordCount.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtToBeGEttingRandomWordCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtToBeGEttingRandomWordCount_KeyPress);
             // 
+            // prToken
+            // 
+            this.prToken.ContainerControl = this;
+            // 
             // ChildAdminNewWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(352, 323);
+            this.ClientSize = new System.Drawing.Size(367, 323);
             this.Controls.Add(this.txtToBeGEttingRandomWordCount);
             this.Controls.Add(this.btnGetRandomWord);
             this.Controls.Add(this.imgTrash);
@@ -114,6 +120,7 @@
             this.Text = "ChildAdminNewWord";
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prToken)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -127,5 +134,6 @@
         private System.Windows.Forms.ErrorProvider prWords;
         private System.Windows.Forms.Button btnGetRandomWord;
         private System.Windows.Forms.TextBox txtToBeGEttingRandomWordCount;
+        private System.Windows.Forms.ErrorProvider prToken;
     }
 }

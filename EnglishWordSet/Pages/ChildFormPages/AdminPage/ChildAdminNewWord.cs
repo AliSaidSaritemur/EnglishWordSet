@@ -1,7 +1,9 @@
-﻿using EnglishWordSet.MyTools;
+﻿using DataAccess.Concrete;
+using EnglishWordSet.MyTools;
 using EnglishWordSet.Pages;
 using EnglishWordSet.Pages.ChildFormPages.AdminPage;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.util.MyTools;
 using EnglishWordSet.util.StaticTools;
@@ -27,6 +29,7 @@ namespace EnglishWordSet
 {
     public partial class ChildAdminNewWord : Form
     {
+        private AdminImpl adminImpl;
         private string WrongWordsFileName = "/logs/WrongWords/WronWordsUser.log";
         public ChildAdminNewWord()
         {
@@ -100,6 +103,7 @@ namespace EnglishWordSet
             }
             else
             {
+                prToken.Clear();
                 prWords.Clear();
                 return input;
             }
@@ -123,11 +127,26 @@ namespace EnglishWordSet
         {
             string getRandomCountString = txtToBeGEttingRandomWordCount.Text.ToString();
             int getRandomCountInt = int.Parse(getRandomCountString);
+            adminImpl = new AdminImpl();
 
-            if (getRandomCountInt<1)
+            if (!adminImpl.IsTokenEnough(AdminSession.username_Admin, getRandomCountInt)) {
+                prToken.SetError(txtToBeGEttingRandomWordCount,"Your Token amount is not enough");
+                return;
+            }
+            else
+            {
+                prToken.Clear();
+            }
+
+
+            if (getRandomCountInt < 1) { 
             DictionaryTransections.GetRandomWordtoTextBox(txtInput);
-            else 
+            }
+            else
+            { 
             DictionaryTransections.GetRandomWordtoTextBox(txtInput, getRandomCountInt);
+            }
+            adminImpl.ToReduceToken(AdminSession.username_Admin, getRandomCountInt);
         }
 
         private void txtToBeGEttingRandomWordCount_KeyPress(object sender, KeyPressEventArgs e)

@@ -31,6 +31,13 @@ namespace DataAccess.Concrete
             return context.Admins.FirstOrDefault(I => I.UserName == username);
         }
 
+        public string GetLastEntryDay(string username)
+        {
+            Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
+            return admin.lastEntryDay;
+
+        }
+
         public bool IsThereLoginUser(LoginUser loginUser)
         {
             dataEncryption ??= new();
@@ -53,12 +60,47 @@ namespace DataAccess.Concrete
             return 0 < context.Admins.Count(I => I.UserName == username);
         }
 
-        public void Update(string email, string password, string phone, string username)
+        public bool IsTokenEnough(string username, int tokenAmount)
+        {
+            Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
+            return admin.token >= tokenAmount;
+        }
+
+        public void ToIncreaseToken(string username, int tokenAmount)
+        {
+            Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
+            admin.token =admin.token + tokenAmount;
+            context.SaveChanges();
+        }
+
+        public void ToReduceToken(string username, int tokenAmount)
+        {
+            Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
+            admin.token = admin.token - tokenAmount;
+            context.SaveChanges();
+        }
+
+        public void Update(string email, string password, string phone, string username, int tokenAmount)
         {
             Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
             admin.Email = email;
             admin.Password = password;
             admin.Phone = phone;
+            admin.token = tokenAmount;
+            context.SaveChanges();
+        }
+
+        public void UpdateLastEntryDay(string username, string lastEntryTime)
+        {
+            Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
+            admin.lastEntryDay = lastEntryTime;
+            context.SaveChanges();
+        }
+
+        public void UpdateToken(string username, int tokenAmount)
+        {
+            Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
+            admin.token = tokenAmount;
             context.SaveChanges();
         }
     }

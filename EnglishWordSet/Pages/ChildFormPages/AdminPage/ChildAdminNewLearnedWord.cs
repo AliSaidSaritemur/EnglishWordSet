@@ -161,17 +161,6 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return false;
             }
         }
-        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
-        {
-            if (keyData == Keys.Enter)
-            {
-                object sender = new object();
-                EventArgs e = new EventArgs();
-                this.btnAdd_Click(sender, e);
-                return true;
-            }
-            return base.ProcessCmdKey(ref msg, keyData);
-        }
 
         private void ChildAdminNewLearnedWord_Load(object sender, EventArgs e)
         {
@@ -194,6 +183,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             }
           else  if (MyTestInternet.IsThereInternet())
             {
+                MyImageFilter.GreenFilterToImageEffect(btnNewSentence);
                 DictionaryTransections.GetSEntenceByWordtoTextBox(txtSentence, txtWord.Text.ToString().Trim());
             }
             else
