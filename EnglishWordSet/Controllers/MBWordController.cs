@@ -21,7 +21,7 @@ namespace EnglishWordSet.CRUD
 
         public string GetWordWithMeanig()
         {
-            string line = selectedword.English + " - " + selectedword.Turkish;
+            string line = selectedword.English + " ~ " + selectedword.Turkish;
             return line;
         }
         public string GetWord()

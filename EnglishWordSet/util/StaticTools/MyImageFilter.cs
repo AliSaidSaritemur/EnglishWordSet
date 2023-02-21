@@ -5,45 +5,56 @@ using System.Windows.Forms;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
-    static class MyImageFilter
+    internal class MyImageFilter
     {
-        private static System.Timers.Timer imageFilterTimer;
-        private static Image _image;
-        private static PictureBox _pictureBoxToBeEffect;
-        private static Image GreenFilter (Image image)
+        private  System.Timers.Timer imageFilterTimer;
+        private  Image _image;
+        private  PictureBox _pictureBoxToBeEffect;
+        private  Image GreenFilter (Image image)
         {
             return FilterImage(image,Color.Green);
         }
-        private static Image RedFilter(Image image)
+        private  Image RedFilter(Image image)
         {
             return FilterImage(image, Color.Red);
         }
-        private static void SetTimer()
+        private  void SetTimer()
         {
             imageFilterTimer = new System.Timers.Timer(500);
             imageFilterTimer.Elapsed += OnTimedEvent;
             imageFilterTimer.AutoReset = true;
             imageFilterTimer.Enabled = true;
         }
-        public static void GreenFilterToImageEffect(PictureBox pictureBoxToBeEffect)
+        public  void GreenFilterToImageEffect(PictureBox pictureBoxToBeEffect)
         {
-            _pictureBoxToBeEffect=pictureBoxToBeEffect;
+            if (imageFilterTimer != null)
+            {
+                _pictureBoxToBeEffect.Image = _image;
+                imageFilterTimer.Close();
+            }
+             _pictureBoxToBeEffect =pictureBoxToBeEffect;
             _image = pictureBoxToBeEffect.Image;
             pictureBoxToBeEffect.Image = GreenFilter(_image);
             SetTimer();
         }
-        public static void RedFilterToImageEffect(PictureBox pictureBoxToBeEffect)
+        public  void RedFilterToImageEffect(PictureBox pictureBoxToBeEffect)
         {
+            if (imageFilterTimer != null)
+            {
+                _pictureBoxToBeEffect.Image = _image;
+                imageFilterTimer.Close();
+            }
             _pictureBoxToBeEffect = pictureBoxToBeEffect;
             _image = pictureBoxToBeEffect.Image;
-            pictureBoxToBeEffect.Image = RedFilter(_image);
+            pictureBoxToBeEffect.Image = RedFilter(pictureBoxToBeEffect.Image);
             SetTimer();
         }
-        private static void OnTimedEvent(Object source, ElapsedEventArgs e)
+        private  void OnTimedEvent(Object source, ElapsedEventArgs e)
         {
             _pictureBoxToBeEffect.Image = _image;
+          
         }
-        private static  Image FilterImage(Image inputImage,Color color){
+        private  Image FilterImage(Image inputImage,Color color){
             Bitmap outputImage = new Bitmap(inputImage.Width, inputImage.Height);
             Graphics imageGraphics = Graphics.FromImage(outputImage);
             imageGraphics.DrawImage(inputImage, 0, 0);

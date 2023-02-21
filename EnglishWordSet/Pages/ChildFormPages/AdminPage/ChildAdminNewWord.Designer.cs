@@ -37,6 +37,9 @@
             this.btnGetRandomWord = new System.Windows.Forms.Button();
             this.txtToBeGEttingRandomWordCount = new System.Windows.Forms.TextBox();
             this.prToken = new System.Windows.Forms.ErrorProvider(this.components);
+            this.label1 = new System.Windows.Forms.Label();
+            this.lblTokenAmount = new System.Windows.Forms.Label();
+            this.getMeaningWithMark = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prToken)).BeginInit();
@@ -45,7 +48,7 @@
             // txtInput
             // 
             this.txtInput.Font = new System.Drawing.Font("Segoe UI", 13F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.World);
-            this.txtInput.Location = new System.Drawing.Point(51, 32);
+            this.txtInput.Location = new System.Drawing.Point(51, 53);
             this.txtInput.Name = "txtInput";
             this.txtInput.Size = new System.Drawing.Size(254, 165);
             this.txtInput.TabIndex = 13;
@@ -54,7 +57,7 @@
             // btnSubmit
             // 
             this.btnSubmit.AutoSize = true;
-            this.btnSubmit.Location = new System.Drawing.Point(111, 205);
+            this.btnSubmit.Location = new System.Drawing.Point(111, 234);
             this.btnSubmit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(133, 76);
@@ -67,7 +70,7 @@
             // 
             this.imgTrash.Cursor = System.Windows.Forms.Cursors.Hand;
             this.imgTrash.Image = ((System.Drawing.Image)(resources.GetObject("imgTrash.Image")));
-            this.imgTrash.Location = new System.Drawing.Point(311, 259);
+            this.imgTrash.Location = new System.Drawing.Point(327, 258);
             this.imgTrash.Name = "imgTrash";
             this.imgTrash.Size = new System.Drawing.Size(59, 62);
             this.imgTrash.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -103,21 +106,56 @@
             // 
             this.prToken.ContainerControl = this;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(12, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(66, 18);
+            this.label1.TabIndex = 18;
+            this.label1.Text = "Token :";
+            // 
+            // lblTokenAmount
+            // 
+            this.lblTokenAmount.AutoSize = true;
+            this.lblTokenAmount.Font = new System.Drawing.Font("Showcard Gothic", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblTokenAmount.Location = new System.Drawing.Point(73, 5);
+            this.lblTokenAmount.Name = "lblTokenAmount";
+            this.lblTokenAmount.Size = new System.Drawing.Size(17, 18);
+            this.lblTokenAmount.TabIndex = 19;
+            this.lblTokenAmount.Text = "0";
+            // 
+            // getMeaningWithMark
+            // 
+            this.getMeaningWithMark.Location = new System.Drawing.Point(305, 109);
+            this.getMeaningWithMark.Name = "getMeaningWithMark";
+            this.getMeaningWithMark.Size = new System.Drawing.Size(75, 29);
+            this.getMeaningWithMark.TabIndex = 20;
+            this.getMeaningWithMark.Text = "Meannig";
+            this.getMeaningWithMark.UseVisualStyleBackColor = true;
+            this.getMeaningWithMark.Click += new System.EventHandler(this.getMeaningWithMark_Click);
+            // 
             // ChildAdminNewWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(367, 323);
+            this.ClientSize = new System.Drawing.Size(392, 323);
+            this.Controls.Add(this.getMeaningWithMark);
+            this.Controls.Add(this.lblTokenAmount);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtToBeGEttingRandomWordCount);
             this.Controls.Add(this.btnGetRandomWord);
             this.Controls.Add(this.imgTrash);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtInput);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ChildAdminNewWord";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewWord";
+            this.Load += new System.EventHandler(this.ChildAdminNewWord_Load);
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prToken)).EndInit();
@@ -135,5 +173,8 @@
         private System.Windows.Forms.Button btnGetRandomWord;
         private System.Windows.Forms.TextBox txtToBeGEttingRandomWordCount;
         private System.Windows.Forms.ErrorProvider prToken;
+        private System.Windows.Forms.Label lblTokenAmount;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button getMeaningWithMark;
     }
 }

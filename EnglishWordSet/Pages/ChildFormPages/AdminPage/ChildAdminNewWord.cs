@@ -1,8 +1,10 @@
 ﻿using DataAccess.Concrete;
+using EnglishWordSet.ConvertTransactions;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.Pages;
 using EnglishWordSet.Pages.ChildFormPages.AdminPage;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.services.Impl.ConvertImpls;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.util.MyTools;
@@ -29,16 +31,19 @@ namespace EnglishWordSet
 {
     public partial class ChildAdminNewWord : Form
     {
-        private AdminImpl adminImpl;
-        private string WrongWordsFileName = "/logs/WrongWords/WronWordsUser.log";
+       private AdminController pageBackend = ControllersGetter.AdminPage();
+        private AdminImpl adminImpl= new AdminImpl();
+        private MyImageFilter _myImageFilter= new();
         public ChildAdminNewWord()
         {
             InitializeComponent();
-            SetTrashIcon();
+            SetSystem();
         }
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
+      
+
             if (!MyTestInternet.IsThereInternet())
             {
                 BasicAlerts.ErrorAlert("Words can't Add.\nFor adding words," +
@@ -46,7 +51,6 @@ namespace EnglishWordSet
                 return;
             }
             else { }
-
             string WordstobeSave = GetWordstobeSave();
 
             if (string.IsNullOrEmpty(WordstobeSave)) {
@@ -54,7 +58,7 @@ namespace EnglishWordSet
             }
             else
             {
-                AdminController pageBackend = ControllersGetter.AdminPage();
+                
                 txtInput.Text = Regex.Replace(WordstobeSave, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
                 pageBackend.AddNewWords(txtInput.Text.ToString().Trim());
                 MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
@@ -66,7 +70,13 @@ namespace EnglishWordSet
 
         private string GetWordstobeSave()
         {
-           string input = txtInput.Text.ToString().Trim();
+          
+
+            string input = txtInput.Text.ToString().Trim();
+
+            Converter converter = new Converter(new ConvertingRemoveWordsAfterMark());
+            input= converter.CovertText(input);
+
             if (input.Length == 0)
             {
                 prWords.SetError(txtInput, "Words can't be empty !!!");
@@ -95,9 +105,9 @@ namespace EnglishWordSet
                         break;
                     }
                 }
-               MyImageFilter.RedFilterToImageEffect(imgTrash);
-    
+               _myImageFilter.RedFilterToImageEffect(imgTrash);
                 AddLog.WrongWordsLogs.Info(logMessage);
+                FileTransactions.AddTextToFile(Settings.SettingsInfo.Default.WrongWordLogAdres, logMessage);
                 prWords.Clear();
                 return WordstobeSave;
             }
@@ -116,7 +126,7 @@ namespace EnglishWordSet
 
         internal void SetTrashIcon()
         {
-            string wrongWordsLogged = FileTransactions.ReadText(WrongWordsFileName);
+            string wrongWordsLogged = FileTransactions.ReadText(Settings.SettingsInfo.Default.WrongWordLogAdres);
             if (!string.IsNullOrEmpty(wrongWordsLogged))
                  imgTrash.Image = Properties.Resources.FullTrash;
             else
@@ -125,9 +135,16 @@ namespace EnglishWordSet
 
         private void btnGetRandomWord_Click(object sender, EventArgs e)
         {
+            AdminController pageBackend = ControllersGetter.AdminPage();
             string getRandomCountString = txtToBeGEttingRandomWordCount.Text.ToString();
+            if (string.IsNullOrEmpty(getRandomCountString))
+            {
+                prToken.SetError(txtToBeGEttingRandomWordCount, "Please enter amount of words to be getting");
+                return;
+            }
+         
             int getRandomCountInt = int.Parse(getRandomCountString);
-            adminImpl = new AdminImpl();
+
 
             if (!adminImpl.IsTokenEnough(AdminSession.username_Admin, getRandomCountInt)) {
                 prToken.SetError(txtToBeGEttingRandomWordCount,"Your Token amount is not enough");
@@ -147,6 +164,7 @@ namespace EnglishWordSet
             DictionaryTransections.GetRandomWordtoTextBox(txtInput, getRandomCountInt);
             }
             adminImpl.ToReduceToken(AdminSession.username_Admin, getRandomCountInt);
+            SetSystem();
         }
 
         private void txtToBeGEttingRandomWordCount_KeyPress(object sender, KeyPressEventArgs e)
@@ -155,6 +173,23 @@ namespace EnglishWordSet
             {
                 e.Handled = true;
             }
+        }
+
+        private void ChildAdminNewWord_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void SetSystem()
+        {
+            lblTokenAmount.Text = adminImpl.GetToken(AdminSession.username_Admin).ToString();
+            SetTrashIcon();
+        }
+
+        private void getMeaningWithMark_Click(object sender, EventArgs e)
+        {
+            string englishWords =txtInput.Text.ToString().Trim();
+            string markedAndTranslatedWords = pageBackend.getMeaningWithMark(englishWords);
+            txtInput.Text = markedAndTranslatedWords;
         }
     }
 }

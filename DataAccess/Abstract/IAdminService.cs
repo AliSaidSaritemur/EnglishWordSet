@@ -16,6 +16,7 @@ namespace DataAccess.Abstract
         public void UpdateToken(string username,int tokenAmount);
         public void UpdateLastEntryDay(string username, string lastEntryTime);
         public string GetLastEntryDay(string username);
+        public int GetToken(string username);
         public bool IsTokenEnough(string username, int tokenAmount);
         public void ToReduceToken(string username, int tokenAmount);
         public void ToIncreaseToken(string username, int tokenAmount);

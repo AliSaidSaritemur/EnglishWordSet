@@ -18,7 +18,7 @@ namespace EnglishWordSet.MyTools
 
         public int GetWordCount()
         {
-            int wordsCount = inputText.ToCharArray().Count(c => c == '-');
+            int wordsCount = inputText.ToCharArray().Count(c => c == '~');
             return wordsCount;   
         }
 

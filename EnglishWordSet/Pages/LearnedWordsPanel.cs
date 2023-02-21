@@ -23,6 +23,7 @@ namespace EnglishWordSet.Pages
         UnsplashImagesTransaction tran;
         string searchedWord;
         bool isConnectWifi=false;
+        private MyImageFilter _myImageFilter = new();
         public LearnedWordsPanel()
         {
             InitializeComponent();
@@ -108,7 +109,7 @@ namespace EnglishWordSet.Pages
         private void WifiConnectionAlert()
         {
             Image disConnectImage = EnglishWordSet.Properties.Resources.wifiDisconnect;
-             MyImageFilter.RedFilterToImageEffect(pBLearned);
+            _myImageFilter.RedFilterToImageEffect(pBLearned);
             epWifiConnectionImage.SetError(pBLearned, "No Internet connection !!!");
             pBLearned.Enabled = true;
             btnChangeImage.Visible = false;

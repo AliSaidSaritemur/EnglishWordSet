@@ -145,7 +145,7 @@
             this.btnNewSentence.Location = new System.Drawing.Point(346, 149);
             this.btnNewSentence.Name = "btnNewSentence";
             this.btnNewSentence.Size = new System.Drawing.Size(72, 46);
-            this.btnNewSentence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnNewSentence.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnNewSentence.TabIndex = 9;
             this.btnNewSentence.TabStop = false;
             this.btnNewSentence.Click += new System.EventHandler(this.btnNewSentence_Click);
@@ -165,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSentence);
             this.Controls.Add(this.txtWord);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "ChildAdminNewLearnedWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewLearnedWord";

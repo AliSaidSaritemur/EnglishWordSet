@@ -38,6 +38,12 @@ namespace DataAccess.Concrete
 
         }
 
+        public int GetToken(string username)
+        {
+            Admin admin = context.Admins.FirstOrDefault(I => I.UserName == username);
+            return admin.token;
+        }
+
         public bool IsThereLoginUser(LoginUser loginUser)
         {
             dataEncryption ??= new();

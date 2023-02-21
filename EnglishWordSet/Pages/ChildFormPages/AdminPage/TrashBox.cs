@@ -20,7 +20,7 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
         {
             InitializeComponent();
         }
-        private string WrongWordsFileName = "/logs/WrongWords/WronWordsUser.log";
+        private string WrongWordsFileName = Settings.SettingsInfo.Default.WrongWordLogAdres;
         private void TrashBox_Load(object sender, EventArgs e)
         {
             string wrongWordsLogged= FileTransactions.ReadText(WrongWordsFileName);
@@ -31,8 +31,8 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
         private void btnSaveChanges_Click(object sender, EventArgs e)
         {
             FileTransactions.WriteText(WrongWordsFileName, rtbTrashWords.Text.ToString());
-            MyNotificationAlerts.GetSuccessMessage("The save operation was successful");
-            AddLog.WrongWordsLogs.Trace("Wrong words list updated new version: \n" + rtbTrashWords.Text.ToString());
+            AddLog.WrongWordsLogs.Info("Wrong words list updated new version: \n" + rtbTrashWords.Text.ToString());
+            MyNotificationAlerts.GetSuccessMessage("The save operation was successful");      
         }
 
         private void btnCleanWrongWords_Click(object sender, EventArgs e)
@@ -40,7 +40,7 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
             rtbTrashWords.Text = "";
             FileTransactions.WriteText(WrongWordsFileName, rtbTrashWords.Text.ToString());
             MyNotificationAlerts.GetSuccessMessage("The clean operation was successful");
-            AddLog.WrongWordsLogs.Trace("Wrong words list cleaned" );
+            AddLog.WrongWordsLogs.Info("Wrong words list cleaned" );
         }
 
         private void TrashBox_FormClosed(object sender, FormClosedEventArgs e)

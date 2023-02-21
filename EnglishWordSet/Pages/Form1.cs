@@ -28,6 +28,7 @@ namespace EnglishWordSet
         private string savesFileName = "/logs/ConvertedWord/ConvertedWords.log";
         private string saveTexts;
         private MBWordController mBWord;
+        private MyImageFilter _myImageFilter = new();
         public Main()
         {
             InitializeComponent();
@@ -50,6 +51,7 @@ namespace EnglishWordSet
             }
 
             converter.spaceStatu = cbSpace.Checked;
+            converter.randomStatue = true;
             tempText = converter.CovertText(tempText);
 
             txtOutput.Text = tempText;
@@ -194,7 +196,7 @@ namespace EnglishWordSet
             Image pasteImg = Properties.Resources.paste;
             txtInput.Clear();
             txtInput.Paste();
-            MyImageFilter.GreenFilterToImageEffect(pbPaste);
+            _myImageFilter.GreenFilterToImageEffect(pbPaste);
             SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
         }
         private void txtInput_TextChanged(object sender, EventArgs e)
@@ -239,7 +241,7 @@ namespace EnglishWordSet
         {
 
             saveTexts = " ";
-            saveTexts = FileTransactions.ReadText(savesFileName);
+            saveTexts = FileTransactions.ReadText(Settings.SettingsInfo.Default.ConvertedWordLog);
             saveTexts = string.Join("\r\n", saveTexts.Split('\r', '\n').Reverse());
             if (!string.IsNullOrEmpty(saveTexts))
                 return true;

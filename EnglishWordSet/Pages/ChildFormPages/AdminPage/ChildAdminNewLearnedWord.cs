@@ -23,7 +23,8 @@ namespace EnglishWordSet.ChildForms.AdminPage
         string word;
         string sentence;
         string meaning;
-      public string formLocation = "InAdminPage";
+        private MyImageFilter _myImageFilter = new();
+        public string formLocation = "InAdminPage";
         public ChildAdminNewLearnedWord()
         {
             InitializeComponent();
@@ -183,7 +184,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             }
           else  if (MyTestInternet.IsThereInternet())
             {
-                MyImageFilter.GreenFilterToImageEffect(btnNewSentence);
+                _myImageFilter.GreenFilterToImageEffect(btnNewSentence);
                 DictionaryTransections.GetSEntenceByWordtoTextBox(txtSentence, txtWord.Text.ToString().Trim());
             }
             else

@@ -97,7 +97,7 @@ namespace EnglishWordSet
             this.Controls.Add(this.btnAddLearnedWord);
             this.Controls.Add(this.btnAddNewWord);
             this.Controls.Add(this.btnAddNewAdmin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.Name = "AdminPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

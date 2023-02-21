@@ -8,6 +8,7 @@ namespace EnglishWordSet.MyTools
     {
 
         public bool spaceStatu = false;
+        public bool randomStatue = false;
         IConverts convert;
         public Converter(IConverts _converts)
         {
@@ -36,8 +37,13 @@ namespace EnglishWordSet.MyTools
 
                     if (convertedText != "")
                     {
+                        if(randomStatue)
                         convertedText = rnd.Next(10) < 5 ? tempText + spaceAmount + convertedText : convertedText + spaceAmount + tempText;
 
+                        else
+                        {
+                            convertedText = convertedText + spaceAmount + tempText;
+                        }
                     }
                     else
                     {

@@ -286,7 +286,7 @@ namespace EnglishWordSet
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.txtInput);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
@@ -313,13 +313,13 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button getLaarnedWordPage;
         private System.Windows.Forms.PictureBox pbCopy;
         private System.Windows.Forms.Timer timerCopySuccess;
-        private System.Windows.Forms.PictureBox pbPaste;
         private System.Windows.Forms.Label lblWordCountInput;
         private System.Windows.Forms.Label lblWordDayAvarageInput;
         private System.Windows.Forms.Label lblWordDayAvarageOutput;
         private System.Windows.Forms.Label lblWordCountOutput;
         private System.Windows.Forms.Button btnGetLast;
         private System.Windows.Forms.CheckBox cbSetDay;
+        internal System.Windows.Forms.PictureBox pbPaste;
     }
 }
 
