@@ -1,5 +1,6 @@
 ﻿using DataAccess.Concrete;
 using DataAccess.util;
+using EnglishWordSet.util.StaticTools;
 using Entities.Concrete;
 
 namespace EnglishWordSet.CRUD
@@ -21,7 +22,7 @@ namespace EnglishWordSet.CRUD
 
         public string GetWordWithMeanig()
         {
-            string line = selectedword.English + " ~ " + selectedword.Turkish;
+            string line = selectedword.English + " "+ Marks.SeparatorMark + " " + selectedword.Turkish;
             return line;
         }
         public string GetWord()

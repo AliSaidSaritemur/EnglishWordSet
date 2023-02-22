@@ -1,4 +1,5 @@
 ﻿using EnglishWordSet.Intefaces;
+using EnglishWordSet.util.StaticTools;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace EnglishWordSet.services.Impl.ConvertTransactionsImpls
     {
         public string EdditLine(string lineToSet)
         {
-            return lineToSet.Replace("~", "");
+            return lineToSet.Replace(Marks.SeparatorMark, "");
         }
     }
 }

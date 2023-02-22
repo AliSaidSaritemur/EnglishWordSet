@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Query;
+﻿using EnglishWordSet.util.StaticTools;
+using Microsoft.EntityFrameworkCore.Query;
 using System.Linq;
 using System.Text.RegularExpressions;
 
@@ -47,7 +48,13 @@ namespace EnglishWordSet.RefactoredStaticFuncs
                 result = matchRgL.Success;
                 return result;
             }
-
+            public static bool IsThereSpreatorMark(string text)
+            {
+                Regex rgLine = new(Marks.SeparatorMark);
+                Match matchRgL = rgLine.Match(text);
+                result = matchRgL.Success;
+                return result;
+            }
         }
 
        public static class EddittingStringValue

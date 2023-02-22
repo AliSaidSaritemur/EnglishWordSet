@@ -1,5 +1,6 @@
 ﻿using EnglishWordSet.Intefaces;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.util.StaticTools;
 
 namespace EnglishWordSet.ConvertTransactions
 {
@@ -8,11 +9,11 @@ namespace EnglishWordSet.ConvertTransactions
         public string EdditLine(string lineToSet)
         {
             string resultLine = lineToSet;
-            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, "~");
+            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, Marks.SeparatorMark);
 
             if (!isThereHyben && resultLine != null)
             {
-                resultLine += " ~";
+                resultLine += " "+ Marks.SeparatorMark;
             }
             return resultLine;
         }

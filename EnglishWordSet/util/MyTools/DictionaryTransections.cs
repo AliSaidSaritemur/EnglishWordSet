@@ -1,7 +1,10 @@
 ﻿using EnglishWordSet.RefactoredStaticFuncs;
 using Entities.DTOs;
+using LogAccess.services;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
+using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Text;
@@ -23,10 +26,16 @@ namespace EnglishWordSet.util.MyTools
                     string RequestUri = "https://wordsapiv1.p.rapidapi.com/words/" + queryWord + "/examples";
                     DictionaryWords wordlist = await GetWordsapiWordwithRequestUri(RequestUri);           
                     wordSentencelist.Clear();
+            if (wordlist != null) { 
                     wordSentencelist = new List<String>(wordlist.examples);
-                    ExamplesArrange(wordSentencelist);
-                    ChangeSentenceInTextBox(textBoxtoWriteSentence);
-                    lastQueryWord = queryWord;
+            }
+            else
+            {
+                wordSentencelist = new List<String>();
+            }
+            ExamplesArrange(wordSentencelist);
+            ChangeSentenceInTextBox(textBoxtoWriteSentence);
+            lastQueryWord = queryWord;
         }
         private static async void ChangeSentenceInTextBox(RichTextBox textBoxtoWriteSentence)
         {
@@ -43,6 +52,19 @@ namespace EnglishWordSet.util.MyTools
             textBoxtoWriteSentence.Text = wordSentencelist[wordSentencelistNum];
             wordSentencelistNum++;
         }
+        private static async Task<bool> IsWordHasSentence(string queryWord)
+        {
+            string RequestUri = "https://wordsapiv1.p.rapidapi.com/words/" + queryWord + "/examples";
+            DictionaryWords wordlist = await GetWordsapiWordwithRequestUri(RequestUri);
+            if (wordlist == null|| wordlist.examples.Count<1)
+            {
+                return false;
+            }
+            else
+            {
+              return true;
+            }
+        }  
 
         private static async void ExamplesArrange(List<String> examplestobeArranged)
         {
@@ -70,14 +92,21 @@ namespace EnglishWordSet.util.MyTools
         { "X-RapidAPI-Host", "wordsapiv1.p.rapidapi.com" },
     },
             };
-            using (var response = await client.SendAsync(request))
+            try
             {
-                response.EnsureSuccessStatusCode();
-                var body = await response.Content.ReadAsStringAsync();
-                resultWord = JsonSerializer.Deserialize<DictionaryWords>(body);
-
+                using (var response = await client.SendAsync(request))
+                {
+                    response.EnsureSuccessStatusCode();
+                    var body = await response.Content.ReadAsStringAsync();
+                    resultWord = JsonSerializer.Deserialize<DictionaryWords>(body);
+                    return resultWord;
+                }
             }
-            return resultWord;
+            catch (HttpRequestException e)
+            {
+                AddLog.systemLogs.Warn("Link could not be accessed : " + RequestUri);
+                return null;
+            }          
         }
 
         public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence)
@@ -88,11 +117,15 @@ namespace EnglishWordSet.util.MyTools
             response.EnsureSuccessStatusCode();
             var body = await response.Content.ReadAsStringAsync();
             var resultWords = JsonSerializer.Deserialize<List<string>>(body);
+            if (!await IsWordHasSentence(resultWords[0]))
+            { GetRandomWordtoTextBox(textBoxtoWriteSentence); }
+            else { 
             textBoxtoWriteSentence.Text += resultWords[0] + "\n";
+            }
         }
         public static async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence,int getttingCount)
         {
-            for (int i = 0; i < getttingCount; i++)
+            for (int i = 0; i < getttingCount; i++) 
                 GetRandomWordtoTextBox(textBoxtoWriteSentence);
         }
 

@@ -42,8 +42,7 @@ namespace EnglishWordSet
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-      
-
+     
             if (!MyTestInternet.IsThereInternet())
             {
                 BasicAlerts.ErrorAlert("Words can't Add.\nFor adding words," +
@@ -135,6 +134,13 @@ namespace EnglishWordSet
 
         private void btnGetRandomWord_Click(object sender, EventArgs e)
         {
+            if (!MyTestInternet.IsThereInternet())
+            {
+                BasicAlerts.ErrorAlert("Random words can't get.\nFor getting words," +
+               " connect to the internet.", "No internet access");
+                return;
+            }
+            else { }
             AdminController pageBackend = ControllersGetter.AdminPage();
             string getRandomCountString = txtToBeGEttingRandomWordCount.Text.ToString();
             if (string.IsNullOrEmpty(getRandomCountString))
@@ -187,9 +193,29 @@ namespace EnglishWordSet
 
         private void getMeaningWithMark_Click(object sender, EventArgs e)
         {
+            if (!MyTestInternet.IsThereInternet())
+            {
+                BasicAlerts.ErrorAlert("Words meanning can't get.\nFor getting words," +
+               " connect to the internet.", "No internet access");
+                return;
+            }
+            else { }
+            if (!adminImpl.IsTokenEnough(AdminSession.username_Admin, 1))
+            {
+                prToken.SetError(lblTokenAmount, "Your Token amount is not enough");
+                return;
+            }
+            else
+            {
+                prToken.Clear();
+            }
+
             string englishWords =txtInput.Text.ToString().Trim();
             string markedAndTranslatedWords = pageBackend.getMeaningWithMark(englishWords);
             txtInput.Text = markedAndTranslatedWords;
+
+            adminImpl.ToReduceToken(AdminSession.username_Admin, 1);
+            SetSystem();
         }
     }
 }

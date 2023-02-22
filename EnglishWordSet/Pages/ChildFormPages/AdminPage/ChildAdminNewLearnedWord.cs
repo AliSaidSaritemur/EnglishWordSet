@@ -176,6 +176,14 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         internal void btnNewSentence_Click(object sender, EventArgs e)
         {
+            if (!MyTestInternet.IsThereInternet())
+            {
+                BasicAlerts.ErrorAlert("Sentences can't Add.\nFor getting sentences," +
+               " connect to the internet.", "No internet access");
+                return;
+            }
+            else { }
+
             prSentence.Clear();
 
             if (WordProviderTest())

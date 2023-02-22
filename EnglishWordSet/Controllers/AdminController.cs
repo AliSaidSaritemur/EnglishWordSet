@@ -2,6 +2,8 @@
 using DataAccess.util;
 using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.MyTools;
+using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.util.StaticTools;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -26,7 +28,7 @@ namespace EnglishWordSet.ToolsBackend
                 childAdminAddWord = new ChildAdminNewWord();
                 childAdminAddWord.FormBorderStyle = FormBorderStyle.None;
                 childAdminAddWord.MdiParent = AdminPage.ActiveForm;
-                childAdminAddWord.Location = new Point(230, 100);
+                childAdminAddWord.Location = new Point(180, 100);
             }
             return childAdminAddWord;
         }
@@ -124,11 +126,15 @@ namespace EnglishWordSet.ToolsBackend
             {
                 willTranslateLine = stringReader.ReadLine();
 
-                if (willTranslateLine != null)
+                if (willTranslateLine!=null &&MyRegex.CheckingValue.IsThereSpreatorMark(willTranslateLine))
+                {
+                    resultText += willTranslateLine + "\n";
+                }            
+               else if (willTranslateLine != null)
                 {
                     string translatedWord;
                     translatedWord = currentWord.Value;
-                    resultText +=willTranslateLine +" ~ "+translatedWord+"\n";
+                    resultText +=willTranslateLine +" "+ Marks.SeparatorMark + " "+translatedWord+"\n";
                 }
                 else
                 {
