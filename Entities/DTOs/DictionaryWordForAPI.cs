@@ -11,6 +11,7 @@ namespace Entities.DTOs
     {
         public string word { get; set; }
         public List<String> examples { get; set; }
+        public List<string> tags{ get; set; }
     }
 
 }

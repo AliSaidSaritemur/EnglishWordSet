@@ -8,9 +8,8 @@ using System.Threading.Tasks;
 namespace APIAccess.Abstract
 {
    public interface IRapidAPIService
-    {
-
-         Task<List<string>> GetExammples(string queryWord);
+    {         Task<List<string>> GetExammples(string queryWord);
         Task<DictionaryWords> GetDictionaryWords(string RequestUri);
+
     }
 }

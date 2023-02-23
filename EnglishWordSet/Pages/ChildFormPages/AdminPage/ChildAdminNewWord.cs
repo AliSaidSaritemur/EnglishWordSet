@@ -162,14 +162,8 @@ namespace EnglishWordSet
                 prToken.Clear();
             }
 
+            _dictionaryTransections.GetRandomWordtoTextBox(txtInput, getRandomCountInt);
 
-            if (getRandomCountInt < 1) {
-                _dictionaryTransections.GetRandomWordtoTextBox(txtInput);
-            }
-            else
-            {
-                _dictionaryTransections.GetRandomWordtoTextBox(txtInput, getRandomCountInt);
-            }
             adminImpl.ToReduceToken(AdminSession.username_Admin, getRandomCountInt);
             SetSystem();
         }
