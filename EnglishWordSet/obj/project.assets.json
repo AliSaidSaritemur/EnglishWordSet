@@ -797,6 +797,19 @@
           }
         }
       },
+      "OxfordDictionariesAPI/2.0.0": {
+        "type": "package",
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "12.0.2"
+        },
+        "compile": {
+          "lib/netstandard1.1/OxfordDictionariesAPI.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.1/OxfordDictionariesAPI.dll": {}
+        }
+      },
       "Phaber.Unsplash/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -2399,6 +2412,21 @@
           "lib/netstandard1.4/Unsplasharp.dll": {}
         }
       },
+      "APIAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "LogAccess": "1.0.0",
+          "Settings": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/APIAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APIAccess.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
@@ -3571,6 +3599,19 @@
         "lib/netstandard2.0/Optional.xml",
         "optional.4.0.0.nupkg.sha512",
         "optional.nuspec"
+      ]
+    },
+    "OxfordDictionariesAPI/2.0.0": {
+      "sha512": "VLA6+yd/e8LbjkCDqpI8gbHogYxews1BFZ85q91aaft5V9tpPPvZfAtpWNyviSW/2cI7vX2lqHFrw0uk+gBNGg==",
+      "type": "package",
+      "path": "oxforddictionariesapi/2.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.md",
+        "lib/netstandard1.1/OxfordDictionariesAPI.dll",
+        "oxforddictionariesapi.2.0.0.nupkg.sha512",
+        "oxforddictionariesapi.nuspec"
       ]
     },
     "Phaber.Unsplash/2.0.0": {
@@ -7617,6 +7658,11 @@
         "unsplasharp.api.nuspec"
       ]
     },
+    "APIAccess/1.0.0": {
+      "type": "project",
+      "path": "../APIAccess/APIAccess.csproj",
+      "msbuildProject": "../APIAccess/APIAccess.csproj"
+    },
     "DataAccess/1.0.0": {
       "type": "project",
       "path": "../DataAccess/DataAccess.csproj",
@@ -7640,11 +7686,13 @@
   },
   "projectFileDependencyGroups": {
     "net6.0-windows7.0": [
+      "APIAccess >= 1.0.0",
       "DataAccess >= 1.0.0",
       "Entities >= 1.0.0",
       "Google.Cloud.Translation.V2 >= 2.1.0",
       "LogAccess >= 1.0.0",
       "Microsoft.IdentityModel.JsonWebTokens >= 6.26.0",
+      "OxfordDictionariesAPI >= 2.0.0",
       "Phaber.Unsplash >= 2.0.0",
       "PostSharp.Redist >= 5.0.27",
       "RestSharp >= 108.0.3",
@@ -7686,6 +7734,9 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "projectReferences": {
+            "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\APIAccess\\APIAccess.csproj": {
+              "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\APIAccess\\APIAccess.csproj"
+            },
             "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\DataAccess\\DataAccess.csproj": {
               "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\DataAccess\\DataAccess.csproj"
             },
@@ -7718,6 +7769,10 @@
           "Microsoft.IdentityModel.JsonWebTokens": {
             "target": "Package",
             "version": "[6.26.0, )"
+          },
+          "OxfordDictionariesAPI": {
+            "target": "Package",
+            "version": "[2.0.0, )"
           },
           "Phaber.Unsplash": {
             "target": "Package",

@@ -90,3 +90,6 @@ C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windo
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\PostSharp.dll
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.ChildFormPages.AdminPage.TrashBox.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\RestSharp.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\OxfordDictionariesAPI.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\APIAccess.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\APIAccess.pdb

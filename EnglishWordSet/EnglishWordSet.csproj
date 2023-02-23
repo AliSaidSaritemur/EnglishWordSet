@@ -13,6 +13,7 @@
   <ItemGroup>
     <PackageReference Include="Google.Cloud.Translation.V2" Version="2.1.0" />
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.26.0" />
+    <PackageReference Include="OxfordDictionariesAPI" Version="2.0.0" />
     <PackageReference Include="Phaber.Unsplash" Version="2.0.0" />
     <PackageReference Include="PostSharp.Redist" Version="5.0.27" />
     <PackageReference Include="RestSharp" Version="108.0.3" />
@@ -49,6 +50,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\APIAccess\APIAccess.csproj" />
     <ProjectReference Include="..\DataAccess\DataAccess.csproj" />
     <ProjectReference Include="..\Entities\Entities.csproj" />
     <ProjectReference Include="..\LogAccess\LogAccess.csproj" />

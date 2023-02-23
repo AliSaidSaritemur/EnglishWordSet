@@ -8,11 +8,13 @@
     ".NETCoreApp,Version=v6.0": {
       "EnglishWordSet/1.0.0": {
         "dependencies": {
+          "APIAccess": "1.0.0",
           "DataAccess": "1.0.0",
           "Entities": "1.0.0",
           "Google.Cloud.Translation.V2": "2.1.0",
           "LogAccess": "1.0.0",
           "Microsoft.IdentityModel.JsonWebTokens": "6.26.0",
+          "OxfordDictionariesAPI": "2.0.0",
           "Phaber.Unsplash": "2.0.0",
           "PostSharp.Redist": "5.0.27",
           "RestSharp": "108.0.3",
@@ -550,6 +552,18 @@
           "lib/netstandard2.0/Optional.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "OxfordDictionariesAPI/2.0.0": {
+        "dependencies": {
+          "NETStandard.Library": "1.6.1",
+          "Newtonsoft.Json": "12.0.3"
+        },
+        "runtime": {
+          "lib/netstandard1.1/OxfordDictionariesAPI.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.0.0.0"
           }
         }
       },
@@ -1308,6 +1322,16 @@
           }
         }
       },
+      "APIAccess/1.0.0": {
+        "dependencies": {
+          "Entities": "1.0.0",
+          "LogAccess": "1.0.0",
+          "Settings": "1.0.0"
+        },
+        "runtime": {
+          "APIAccess.dll": {}
+        }
+      },
       "DataAccess/1.0.0": {
         "dependencies": {
           "Entities": "1.0.0",
@@ -1666,6 +1690,13 @@
       "sha512": "sha512-Q9NdZ39K/tPuV8JDs6ntRxW3idN9J4jSoBK/2ovld+Gh8if4Yhs+OTPvI84mN5YGAI3pzbhLcNUrm+VFKutC3Q==",
       "path": "optional/4.0.0",
       "hashPath": "optional.4.0.0.nupkg.sha512"
+    },
+    "OxfordDictionariesAPI/2.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VLA6+yd/e8LbjkCDqpI8gbHogYxews1BFZ85q91aaft5V9tpPPvZfAtpWNyviSW/2cI7vX2lqHFrw0uk+gBNGg==",
+      "path": "oxforddictionariesapi/2.0.0",
+      "hashPath": "oxforddictionariesapi.2.0.0.nupkg.sha512"
     },
     "Phaber.Unsplash/2.0.0": {
       "type": "package",
@@ -2324,6 +2355,11 @@
       "sha512": "sha512-1hMCnx2cpZrAHh4Qlg5BX8P/lA8fXjLC7bOB8IAGW4deF/SfaMTwkz7NZm7AvaHItVuvwwXXzdp0sOM26MCrsg==",
       "path": "unsplasharp.api/0.7.0",
       "hashPath": "unsplasharp.api.0.7.0.nupkg.sha512"
+    },
+    "APIAccess/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "DataAccess/1.0.0": {
       "type": "project",
