@@ -71,6 +71,7 @@
             this.Controls.Add(this.btnAddRandomWordtoDB);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "AdminTransactionsPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminTransactionsPage";
             this.ResumeLayout(false);
             this.PerformLayout();

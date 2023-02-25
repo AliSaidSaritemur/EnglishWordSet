@@ -2416,7 +2416,6 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
-          "DataAccess": "1.0.0",
           "Entities": "1.0.0",
           "LogAccess": "1.0.0",
           "Settings": "1.0.0"
@@ -2432,6 +2431,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "APIAccess": "1.0.0",
           "Entities": "1.0.0",
           "LogAccess": "1.0.0",
           "Microsoft.EntityFrameworkCore": "7.0.2",

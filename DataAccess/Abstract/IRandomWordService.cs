@@ -14,6 +14,6 @@ namespace DataAccess.Abstract
         void Delete(RandomWord randomWordToBeDelete);
         void DeleteWithWord(string word);
         string getRandomWord();
-        string getRandomWordWtihFrequencyList(List<string> frequencies);
+        string getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(List<string> frequencies, int wordCountToBeGet);
     }
 }

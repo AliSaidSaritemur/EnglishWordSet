@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace APIAccess.Concrete
 {
-    internal class DataMuseAPISImpl : IDataMuseAPIService
+    public class DataMuseAPISImpl : IDataMuseAPIService
     {
         HttpClient client = new HttpClient();
         public async Task<float> GetFrequency(string word)

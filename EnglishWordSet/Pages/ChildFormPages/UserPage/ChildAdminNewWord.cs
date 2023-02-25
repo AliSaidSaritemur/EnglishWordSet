@@ -1,4 +1,5 @@
 ﻿using DataAccess.Concrete;
+using DataAccess.util;
 using EnglishWordSet.ConvertTransactions;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.Pages;
@@ -9,16 +10,9 @@ using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.util.MyTools;
 using EnglishWordSet.util.StaticTools;
-using Entities.Concrete;
 using LogAccess.services;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Diagnostics.Metrics;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -31,6 +25,8 @@ namespace EnglishWordSet
 {
     public partial class ChildAdminNewWord : Form
     {
+        private List<string> frequencyCheckBoxList = new(); 
+        private RandomWordImpl _RandomWordImpl = new();
         private DictionaryTransections _dictionaryTransections = new();
        private UserController pageBackend = ControllersGetter.AdminPage();
         private UserImpl adminImpl= new UserImpl();
@@ -162,8 +158,10 @@ namespace EnglishWordSet
                 prToken.Clear();
             }
 
-            _dictionaryTransections.GetRandomWordtoTextBox(txtInput, getRandomCountInt);
+            FrequencyCheckBoxListSet();
+           string randomWords= _RandomWordImpl.getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(frequencyCheckBoxList, getRandomCountInt);
 
+            txtInput.Text = randomWords;
             adminImpl.ToReduceToken(AdminSession.username_Admin, getRandomCountInt);
             SetSystem();
         }
@@ -215,6 +213,21 @@ namespace EnglishWordSet
 
         private void txtToBeGEttingRandomWordCount_TextChanged(object sender, EventArgs e)
         {
+
+        }
+
+        private void FrequencyCheckBoxListSet()
+        {
+            frequencyCheckBoxList.Clear();
+            if (cbBasicWord.Checked)
+                frequencyCheckBoxList.Add("basic");
+            else { }
+            if (cbRegularWord.Checked)
+                frequencyCheckBoxList.Add("regular");
+            else { }
+            if (cbRareWord.Checked)
+                frequencyCheckBoxList.Add("rare");
+            else { }
 
         }
     }

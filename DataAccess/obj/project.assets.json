@@ -1498,6 +1498,21 @@
           "lib/netstandard1.3/System.Xml.XmlSerializer.dll": {}
         }
       },
+      "APIAccess/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "Entities": "1.0.0",
+          "LogAccess": "1.0.0",
+          "Settings": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/APIAccess.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/APIAccess.dll": {}
+        }
+      },
       "Entities/1.0.0": {
         "type": "project",
         "compile": {
@@ -1514,6 +1529,15 @@
         },
         "runtime": {
           "bin/placeholder/LogAccess.dll": {}
+        }
+      },
+      "Settings/1.0.0": {
+        "type": "project",
+        "compile": {
+          "bin/placeholder/Settings.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Settings.dll": {}
         }
       }
     }
@@ -5023,6 +5047,11 @@
         "system.xml.xmlserializer.nuspec"
       ]
     },
+    "APIAccess/1.0.0": {
+      "type": "project",
+      "path": "../APIAccess/APIAccess.csproj",
+      "msbuildProject": "../APIAccess/APIAccess.csproj"
+    },
     "Entities/1.0.0": {
       "type": "project",
       "path": "../Entities/Entities.csproj",
@@ -5032,10 +5061,16 @@
       "type": "project",
       "path": "../LogAccess/LogAccess.csproj",
       "msbuildProject": "../LogAccess/LogAccess.csproj"
+    },
+    "Settings/1.0.0": {
+      "type": "project",
+      "path": "../Settings/Settings.csproj",
+      "msbuildProject": "../Settings/Settings.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net6.0": [
+      "APIAccess >= 1.0.0",
       "Entities >= 1.0.0",
       "LogAccess >= 1.0.0",
       "Microsoft.EntityFrameworkCore >= 7.0.2",
@@ -5078,6 +5113,9 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
+            "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\APIAccess\\APIAccess.csproj": {
+              "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\APIAccess\\APIAccess.csproj"
+            },
             "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj": {
               "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Entities\\Entities.csproj"
             },

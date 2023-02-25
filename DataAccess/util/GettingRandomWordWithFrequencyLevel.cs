@@ -9,33 +9,22 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace APIAccess.util
+namespace DataAccess.util
 {
     public class GettingRandomWordWithFrequencyLevel
     {
         int rareWordCount = 0;
         int basicWordCount = 0;
         int regualrWordCount = 0;
-        RandomWordImpl _randomWordImpl=new();
+        RandomWordImpl _randomWordImpl;
         HerokuappRandomWordAPISImpl _randomAPI = new();
         DataMuseAPISImpl _frequencyAPI=new();
-        public async Task<string> GetRandomWordMidFrequenc()
-        {
-            string randomWord = await _randomAPI.GetRandomWordAsync();
 
-            if (await _frequencyAPI.GetFrequency(randomWord) > 0)
-            {
-                return randomWord;
-            }
-            else
-            {
-                return await GetRandomWordMidFrequenc();
-            }
-
-        }
 
         public async void AddRandomWordstoDB(int wordsToBeAddCount)
         {
+            _randomWordImpl ??=new();
+
             int wordstobeAddCountTemp = wordsToBeAddCount;
             for (int i = 0; i < wordstobeAddCountTemp; i++)
             {
@@ -62,7 +51,7 @@ namespace APIAccess.util
 
            float wordsFrequencyFloat = await _frequencyAPI.GetFrequency(wordToBeGetFrequecy);
 
-            if (wordsFrequencyFloat > 50)
+            if (wordsFrequencyFloat > 20)
             {
                 basicWordCount++;
                 return "basic";
@@ -80,5 +69,26 @@ namespace APIAccess.util
             else
                 return "very rare";
         }
+
+        public async void AddWordToDbWithFrequency(int wordsToBeAddCount,string frequency)
+        {
+            _randomWordImpl ??= new();
+            int wordstobeAddCountTemp = wordsToBeAddCount+5;
+            for (int i = 0; i < wordstobeAddCountTemp; i++)
+            {
+                string randomWord = await _randomAPI.GetRandomWordAsync();
+                string wordFrequency = await GetFrequency(randomWord);
+                if (wordFrequency != frequency)
+                {
+                    wordstobeAddCountTemp++;
+                }
+                else
+                {
+                    _randomWordImpl.Add(randomWord, wordFrequency);
+                }
+
+            }
+        }
+      
     }
 }

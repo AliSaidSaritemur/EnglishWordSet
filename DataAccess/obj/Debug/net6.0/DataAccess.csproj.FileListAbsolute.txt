@@ -20,3 +20,8 @@ C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\LogAccess
 C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\NLog.dll
 C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\LogAccess.pdb
 C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\NLog.xml
+C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\APIAccess.dll
+C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\Settings.dll
+C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\APIAccess.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\Settings.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\DataAccess\bin\Debug\net6.0\Settings.dll.config

@@ -1,5 +1,5 @@
 ﻿using APIAccess.Concrete;
-using APIAccess.util;
+using DataAccess.util;
 using EnglishWordSet.RefactoredStaticFuncs;
 using Entities.DTOs;
 using LogAccess.services;
@@ -10,8 +10,6 @@ using System.Linq.Expressions;
 using System.Net;
 using System.Net.Http;
 using System.Text;
-using System.Text.Json;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using static System.Windows.Forms.VisualStyles.VisualStyleElement.Tab;
 
@@ -64,16 +62,7 @@ namespace EnglishWordSet.util.MyTools
         public  async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence, int getttingCount)
         {
 
-            if (getttingCount < 1)
-                return;
-
-            textBoxtoWriteSentence.Cursor = Cursors.WaitCursor;
-            for (int i = 0; i < getttingCount; i++)
-            {
-                string randomWords = await _RandomWordWithFrequency.GetRandomWordMidFrequenc();
-                textBoxtoWriteSentence.Text += randomWords+"\n";
-            }    
-            textBoxtoWriteSentence.Cursor = Cursors.IBeam;
+          
         }
 
     }
