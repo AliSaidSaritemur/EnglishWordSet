@@ -159,11 +159,18 @@ namespace EnglishWordSet
             }
 
             FrequencyCheckBoxListSet();
-           string randomWords= _RandomWordImpl.getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(frequencyCheckBoxList, getRandomCountInt);
-
-            txtInput.Text = randomWords;
-            adminImpl.ToReduceToken(AdminSession.username_Admin, getRandomCountInt);
-            SetSystem();
+            if (frequencyCheckBoxList.Count > 0)
+            {
+                string randomWords = _RandomWordImpl.getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(frequencyCheckBoxList, getRandomCountInt);
+                txtInput.Text += randomWords;
+                adminImpl.ToReduceToken(AdminSession.username_Admin, getRandomCountInt);
+                SetSystem();
+                prRandomWord.Clear();
+            }
+            else
+            {
+                prRandomWord.SetError(txtToBeGEttingRandomWordCount,"Schoose frequencies");
+            }
         }
 
         private void txtToBeGEttingRandomWordCount_KeyPress(object sender, KeyPressEventArgs e)

@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "TxnMzGWfe7I6c++mdfDaURqIQX9CRn4e0iW9iJZPdoiCptBUGCx4sG4qmGV5bOP8jBq+Uem3wd42Ca8vCY2mmA==",
+  "dgSpecHash": "IdENCJ639Cyq/qK7FGoT2zOvYSI74eYemBh4cBXhOwYF/qlWr9GjwtQkNJ1ry7snN+o9JtRtcQjZLEVhn1aZSA==",
   "success": true,
   "projectFilePath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\EnglishWordSet\\EnglishWordSet.csproj",
   "expectedPackageFiles": [
@@ -48,7 +48,6 @@
     "C:\\Users\\alisa\\.nuget\\packages\\netstandard.library\\1.6.1\\netstandard.library.1.6.1.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\optional\\4.0.0\\optional.4.0.0.nupkg.sha512",
-    "C:\\Users\\alisa\\.nuget\\packages\\oxforddictionariesapi\\2.0.0\\oxforddictionariesapi.2.0.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\phaber.unsplash\\2.0.0\\phaber.unsplash.2.0.0.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\postsharp.redist\\5.0.27\\postsharp.redist.5.0.27.nupkg.sha512",
     "C:\\Users\\alisa\\.nuget\\packages\\restsharp\\108.0.3\\restsharp.108.0.3.nupkg.sha512",

@@ -146,7 +146,7 @@ namespace EnglishWordSet
             this.btnToAdminPage.Name = "btnToAdminPage";
             this.btnToAdminPage.Size = new System.Drawing.Size(136, 29);
             this.btnToAdminPage.TabIndex = 11;
-            this.btnToAdminPage.Text = "Admin Page";
+            this.btnToAdminPage.Text = "User Page";
             this.btnToAdminPage.UseVisualStyleBackColor = true;
             this.btnToAdminPage.Click += new System.EventHandler(this.btnToAdminPage_Click);
             // 

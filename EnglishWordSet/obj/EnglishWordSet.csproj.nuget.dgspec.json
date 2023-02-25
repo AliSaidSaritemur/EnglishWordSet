@@ -235,10 +235,6 @@
               "target": "Package",
               "version": "[6.26.0, )"
             },
-            "OxfordDictionariesAPI": {
-              "target": "Package",
-              "version": "[2.0.0, )"
-            },
             "Phaber.Unsplash": {
               "target": "Package",
               "version": "[2.0.0, )"

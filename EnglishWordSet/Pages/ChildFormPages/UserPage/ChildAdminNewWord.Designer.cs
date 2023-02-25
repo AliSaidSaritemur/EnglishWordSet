@@ -43,9 +43,11 @@
             this.cbBasicWord = new System.Windows.Forms.CheckBox();
             this.cbRegularWord = new System.Windows.Forms.CheckBox();
             this.cbRareWord = new System.Windows.Forms.CheckBox();
+            this.prRandomWord = new System.Windows.Forms.ErrorProvider(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prToken)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prRandomWord)).BeginInit();
             this.SuspendLayout();
             // 
             // txtInput
@@ -180,6 +182,10 @@
             this.cbRareWord.Text = "Rare";
             this.cbRareWord.UseVisualStyleBackColor = true;
             // 
+            // prRandomWord
+            // 
+            this.prRandomWord.ContainerControl = this;
+            // 
             // ChildAdminNewWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
@@ -206,6 +212,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.imgTrash)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prWords)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.prToken)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.prRandomWord)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -226,5 +233,6 @@
         private System.Windows.Forms.CheckBox cbRareWord;
         private System.Windows.Forms.CheckBox cbRegularWord;
         private System.Windows.Forms.CheckBox cbBasicWord;
+        private System.Windows.Forms.ErrorProvider prRandomWord;
     }
 }

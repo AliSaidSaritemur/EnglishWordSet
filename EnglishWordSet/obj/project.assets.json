@@ -797,19 +797,6 @@
           }
         }
       },
-      "OxfordDictionariesAPI/2.0.0": {
-        "type": "package",
-        "dependencies": {
-          "NETStandard.Library": "1.6.1",
-          "Newtonsoft.Json": "12.0.2"
-        },
-        "compile": {
-          "lib/netstandard1.1/OxfordDictionariesAPI.dll": {}
-        },
-        "runtime": {
-          "lib/netstandard1.1/OxfordDictionariesAPI.dll": {}
-        }
-      },
       "Phaber.Unsplash/2.0.0": {
         "type": "package",
         "dependencies": {
@@ -3600,19 +3587,6 @@
         "lib/netstandard2.0/Optional.xml",
         "optional.4.0.0.nupkg.sha512",
         "optional.nuspec"
-      ]
-    },
-    "OxfordDictionariesAPI/2.0.0": {
-      "sha512": "VLA6+yd/e8LbjkCDqpI8gbHogYxews1BFZ85q91aaft5V9tpPPvZfAtpWNyviSW/2cI7vX2lqHFrw0uk+gBNGg==",
-      "type": "package",
-      "path": "oxforddictionariesapi/2.0.0",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "LICENSE.md",
-        "lib/netstandard1.1/OxfordDictionariesAPI.dll",
-        "oxforddictionariesapi.2.0.0.nupkg.sha512",
-        "oxforddictionariesapi.nuspec"
       ]
     },
     "Phaber.Unsplash/2.0.0": {
@@ -7693,7 +7667,6 @@
       "Google.Cloud.Translation.V2 >= 2.1.0",
       "LogAccess >= 1.0.0",
       "Microsoft.IdentityModel.JsonWebTokens >= 6.26.0",
-      "OxfordDictionariesAPI >= 2.0.0",
       "Phaber.Unsplash >= 2.0.0",
       "PostSharp.Redist >= 5.0.27",
       "RestSharp >= 108.0.3",
@@ -7770,10 +7743,6 @@
           "Microsoft.IdentityModel.JsonWebTokens": {
             "target": "Package",
             "version": "[6.26.0, )"
-          },
-          "OxfordDictionariesAPI": {
-            "target": "Package",
-            "version": "[2.0.0, )"
           },
           "Phaber.Unsplash": {
             "target": "Package",
