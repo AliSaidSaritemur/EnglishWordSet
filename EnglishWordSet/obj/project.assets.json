@@ -2416,6 +2416,7 @@
         "type": "project",
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
+          "DataAccess": "1.0.0",
           "Entities": "1.0.0",
           "LogAccess": "1.0.0",
           "Settings": "1.0.0"

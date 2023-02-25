@@ -28,7 +28,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Pages\ChildFormPages\AdminPage\ChildAdminNewWord.cs">
+    <Compile Update="Pages\ChildFormPages\UserPage\ChildAdminNewWord.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="Properties\Resources.Designer.cs">

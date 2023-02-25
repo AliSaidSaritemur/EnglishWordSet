@@ -36,6 +36,7 @@ namespace EnglishWordSet
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.epUserName = new System.Windows.Forms.ErrorProvider(this.components);
+            this.lblCreateAccount = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.epUserName)).BeginInit();
             this.SuspendLayout();
             // 
@@ -96,11 +97,23 @@ namespace EnglishWordSet
             // 
             this.epUserName.ContainerControl = this;
             // 
+            // lblCreateAccount
+            // 
+            this.lblCreateAccount.AutoSize = true;
+            this.lblCreateAccount.Location = new System.Drawing.Point(29, 174);
+            this.lblCreateAccount.Name = "lblCreateAccount";
+            this.lblCreateAccount.Size = new System.Drawing.Size(123, 20);
+            this.lblCreateAccount.TabIndex = 5;
+            this.lblCreateAccount.TabStop = true;
+            this.lblCreateAccount.Text = "Create an Acount";
+            this.lblCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCreateAccount_LinkClicked);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 211);
+            this.Controls.Add(this.lblCreateAccount);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
             this.Controls.Add(this.txtUserName);
@@ -126,5 +139,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.TextBox txtPassword;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.ErrorProvider epUserName;
+        private System.Windows.Forms.LinkLabel lblCreateAccount;
     }
 }

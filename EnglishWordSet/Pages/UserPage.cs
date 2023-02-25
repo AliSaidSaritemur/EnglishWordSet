@@ -7,10 +7,10 @@ using EnglishWordSet.util.StaticTools;
 
 namespace EnglishWordSet
 {
-    public partial class AdminPage : Form
+    public partial class UserPage : Form
     {
-        AdminController pageBackend;
-        public AdminPage()
+        UserController pageBackend;
+        public UserPage()
         {      
             InitializeComponent();
             pageBackend = ControllersGetter.AdminPage();
@@ -137,6 +137,11 @@ namespace EnglishWordSet
             e.Cancel = true; 
             this.Hide();
             PageTransactions.GetForm1().Show();
+        }
+
+        private void pbAdminPageOpen_Click(object sender, EventArgs e)
+        {
+          PageTransactions.GetAdminTransactionsPage().Show();
         }
     }
 

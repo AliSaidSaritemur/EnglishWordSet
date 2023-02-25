@@ -6,14 +6,14 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 {
     static class ControllersGetter
     {
-        private static  AdminController adminPageBackend;
+        private static  UserController adminPageBackend;
         private static LoginController loginPageBackend;
         private static MBWordController mBWordPageBackend;
         private static LearnedWordsController learnedWordsPageBackend;
 
-        public static AdminController AdminPage()
+        public static UserController AdminPage()
         {
-            adminPageBackend ??= new AdminController();  
+            adminPageBackend ??= new UserController();  
             return adminPageBackend;    
         }
 
@@ -33,5 +33,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             learnedWordsPageBackend ??= new LearnedWordsController();
             return learnedWordsPageBackend;
         }
+        
     }
 }

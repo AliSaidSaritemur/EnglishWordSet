@@ -11,11 +11,11 @@ using System.Windows.Forms;
 
 namespace EnglishWordSet.ChildForms.AdminPage
 {
-    public partial class ChildAdminNewAdmin : Form
+    public partial class ChildAdminNewUser : Form
     {
-        AdminImpl adminImpl;
+        UserImpl adminImpl;
         TextBox focusText;
-        public ChildAdminNewAdmin()
+        public ChildAdminNewUser()
         {
             InitializeComponent();
             focusText = txtUserName;
@@ -40,7 +40,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         private void btnSubmitNewAdmin_Click(object sender, EventArgs e)
         {
-            AdminController pageBackend = ControllersGetter.AdminPage();
+            UserController pageBackend = ControllersGetter.AdminPage();
             adminImpl ??= new ();
 
             TrimForm();

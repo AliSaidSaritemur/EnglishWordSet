@@ -21,42 +21,6 @@ namespace EnglishWordSet.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("Entities.Concrete.Admin", b =>
-                {
-                    b.Property<int>("id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
-
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("Phone")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("UserName")
-                        .HasColumnType("nvarchar(450)");
-
-                    b.Property<string>("lastEntryDay")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("token")
-                        .HasColumnType("int");
-
-                    b.HasKey("id");
-
-                    b.HasIndex("UserName")
-                        .IsUnique()
-                        .HasFilter("[UserName] IS NOT NULL");
-
-                    b.ToTable("Admins");
-                });
-
             modelBuilder.Entity("Entities.Concrete.LearnedWord", b =>
                 {
                     b.Property<int>("Id")
@@ -107,6 +71,64 @@ namespace EnglishWordSet.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Words");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.RandomWord", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Word")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("frequency")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("RandomWords");
+                });
+
+            modelBuilder.Entity("Entities.Concrete.User", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("Email")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Password")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Phone")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Role")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("lastEntryDay")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("token")
+                        .HasColumnType("int");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("UserName")
+                        .IsUnique()
+                        .HasFilter("[UserName] IS NOT NULL");
+
+                    b.ToTable("Users");
                 });
 #pragma warning restore 612, 618
         }

@@ -9,8 +9,9 @@ namespace DataAccess.Concrete
    internal class WordContext :DbContext 
     {
         public DbSet<NWords> Words { get; set; }
-        public DbSet<Admin> Admins { get; set; }
+        public DbSet<User> Users { get; set; }
         public DbSet<LearnedWord> LearnedWords { get; set;}
+        public DbSet<RandomWord> RandomWords { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -30,8 +31,8 @@ namespace DataAccess.Concrete
             modelBuilder.Entity<LearnedWord>().Property(a => a.wordTurkish).HasColumnName("learnedWord_meanig");
             modelBuilder.Entity<LearnedWord>().Property(a => a.wordSentence).HasColumnName("learnedWord_sentence");
             modelBuilder.Entity<LearnedWord>().Property(a => a.meaningWordSentence).HasColumnName("learnedWord_meanigSentence");
-            modelBuilder.Entity<Admin>().HasIndex(a => a.UserName).IsUnique(true);
-            modelBuilder.Entity<Admin>().Property(a => a.Password).IsRequired();
+            modelBuilder.Entity<User>().HasIndex(a => a.UserName).IsUnique(true);
+            modelBuilder.Entity<User>().Property(a => a.Password).IsRequired();
             
             base.OnModelCreating(modelBuilder);
         }

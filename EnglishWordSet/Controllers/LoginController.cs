@@ -13,7 +13,7 @@ namespace EnglishWordSet.ToolsBackend
 {
     class LoginController
     {
-        private AdminImpl adminImpl=new();
+        private UserImpl adminImpl=new();
         private LoginUser loginUser=new();
         public bool IsThereUserName(string userName)
         {

@@ -1,7 +1,7 @@
 ﻿
 namespace EnglishWordSet
 {
-    partial class AdminPage
+    partial class UserPage
     {
         /// <summary>
         /// Required designer variable.
@@ -34,7 +34,9 @@ namespace EnglishWordSet
             this.sqlCommandBuilder1 = new Microsoft.Data.SqlClient.SqlCommandBuilder();
             this.btnAddLearnedWord = new System.Windows.Forms.Button();
             this.pbBack = new System.Windows.Forms.PictureBox();
+            this.pbAdminPageOpen = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdminPageOpen)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddNewWord
@@ -88,18 +90,32 @@ namespace EnglishWordSet
             this.pbBack.TabStop = false;
             this.pbBack.Click += new System.EventHandler(this.pbBack_Click);
             // 
-            // AdminPage
+            // pbAdminPageOpen
+            // 
+            this.pbAdminPageOpen.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pbAdminPageOpen.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbAdminPageOpen.Image = global::EnglishWordSet.Properties.Resources.adminIcon;
+            this.pbAdminPageOpen.Location = new System.Drawing.Point(663, 404);
+            this.pbAdminPageOpen.Name = "pbAdminPageOpen";
+            this.pbAdminPageOpen.Size = new System.Drawing.Size(125, 107);
+            this.pbAdminPageOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbAdminPageOpen.TabIndex = 18;
+            this.pbAdminPageOpen.TabStop = false;
+            this.pbAdminPageOpen.Click += new System.EventHandler(this.pbAdminPageOpen_Click);
+            // 
+            // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 523);
+            this.Controls.Add(this.pbAdminPageOpen);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.btnAddLearnedWord);
             this.Controls.Add(this.btnAddNewWord);
             this.Controls.Add(this.btnAddNewAdmin);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
-            this.Name = "AdminPage";
+            this.Name = "UserPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "5";
             this.Activated += new System.EventHandler(this.AdminPage_Activated);
@@ -107,6 +123,7 @@ namespace EnglishWordSet
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbAdminPageOpen)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -118,5 +135,6 @@ namespace EnglishWordSet
         private Microsoft.Data.SqlClient.SqlCommandBuilder sqlCommandBuilder1;
         private System.Windows.Forms.Button btnAddLearnedWord;
         private System.Windows.Forms.PictureBox pbBack;
+        private System.Windows.Forms.PictureBox pbAdminPageOpen;
     }
 }

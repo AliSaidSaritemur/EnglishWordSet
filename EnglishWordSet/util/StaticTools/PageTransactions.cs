@@ -1,13 +1,15 @@
 ﻿
 using EnglishWordSet.ChildForms.AdminPage;
+using EnglishWordSet.Pages.ChildFormPages.UserPage;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
     static class PageTransactions
     {
         private static Main form1;
-        private static AdminPage adminpage;
+        private static UserPage userpage;
         private static ChildAdminNewLearnedWord childAdminNewLearnedWord;
+        private static AdminTransactionsPage adminTransactionsPage;
 
         public  static void SetForm1(Main frm1)
         {
@@ -18,12 +20,17 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             return form1;
         }
 
-        public static AdminPage GetAdminPage()
+        public static UserPage GetUserPage()
         {
-            adminpage ??= new();
-            return adminpage;
+            userpage ??= new();
+            return userpage;
         }
 
+        public static AdminTransactionsPage GetAdminTransactionsPage()
+        {
+            adminTransactionsPage ??= new();
+            return adminTransactionsPage;
+        }
         public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPage()
         {
             childAdminNewLearnedWord ??= new();

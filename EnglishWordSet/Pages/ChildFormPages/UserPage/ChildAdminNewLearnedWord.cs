@@ -62,7 +62,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             if (WordProviderTest()||SentenceProviderTest()||MeanningProviderTest())
                 return;
        
-            AdminController pageBackend = ControllersGetter.AdminPage();
+            UserController pageBackend = ControllersGetter.AdminPage();
             if (pageBackend.IsLEarnedWordAdded(word))
             {
                 MyNotificationAlerts.GetErrorMessage("The word is already added to Database");

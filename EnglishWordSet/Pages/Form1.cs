@@ -131,7 +131,7 @@ namespace EnglishWordSet
         {
             Form page;
             if (!string.IsNullOrEmpty(AdminSession.username_Admin))
-            { page = PageTransactions.GetAdminPage(); }
+            { page = PageTransactions.GetUserPage(); }
             else
             { page = new LoginPage(); }
             page.Show();

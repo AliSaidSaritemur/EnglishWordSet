@@ -57,8 +57,6 @@ C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windo
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Entities.pdb
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.csproj.AssemblyReference.cache
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Images.resources
-C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.AdminPage.resources
-C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.ChildForms.AdminPage.ChildAdminNewAdmin.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.ChildForms.AdminPage.ChildAdminNewLearnedWord.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.ChildAdminNewWord.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Main.resources
@@ -93,3 +91,6 @@ C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windo
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\OxfordDictionariesAPI.dll
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\APIAccess.dll
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\APIAccess.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.ChildForms.AdminPage.ChildAdminNewUser.resources
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.UserPage.resources
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.ChildFormPages.UserPage.AdminTransactionsPage.resources

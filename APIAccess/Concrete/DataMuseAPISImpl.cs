@@ -20,15 +20,17 @@ namespace APIAccess.Concrete
             var body = await response.Content.ReadAsStringAsync();
             var resultWords = JsonSerializer.Deserialize<List<DictionaryWords>>(body);
 
-            if (resultWords== null|| resultWords.First()==null|| resultWords.First().tags== null)
+            try
+            {
+                string frequencString = resultWords.First().tags.First();
+                float frequencyFloat = float.Parse(frequencString.Remove(0, 2));
+
+                return frequencyFloat;
+            }
+            catch
+            {
                 return 0;
-
-            string frequencString = resultWords.First().tags.First();
-            int pFrom = frequencString.IndexOf(":")+1;
-            int pTo = frequencString.LastIndexOf(".");
-
-            string resultString = frequencString.Substring(pFrom, pTo - pFrom);
-            return int.Parse(resultString);
+            }
 
         }
     }

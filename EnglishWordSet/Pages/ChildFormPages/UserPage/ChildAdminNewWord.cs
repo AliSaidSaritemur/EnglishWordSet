@@ -32,8 +32,8 @@ namespace EnglishWordSet
     public partial class ChildAdminNewWord : Form
     {
         private DictionaryTransections _dictionaryTransections = new();
-       private AdminController pageBackend = ControllersGetter.AdminPage();
-        private AdminImpl adminImpl= new AdminImpl();
+       private UserController pageBackend = ControllersGetter.AdminPage();
+        private UserImpl adminImpl= new UserImpl();
         private MyImageFilter _myImageFilter= new();
         public ChildAdminNewWord()
         {
@@ -142,7 +142,7 @@ namespace EnglishWordSet
                 return;
             }
             else { }
-            AdminController pageBackend = ControllersGetter.AdminPage();
+            UserController pageBackend = ControllersGetter.AdminPage();
             string getRandomCountString = txtToBeGEttingRandomWordCount.Text.ToString();
             if (string.IsNullOrEmpty(getRandomCountString))
             {
@@ -211,6 +211,11 @@ namespace EnglishWordSet
 
             adminImpl.ToReduceToken(AdminSession.username_Admin, 1);
             SetSystem();
+        }
+
+        private void txtToBeGEttingRandomWordCount_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

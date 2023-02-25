@@ -1,4 +1,5 @@
-﻿using EnglishWordSet.MyTools;
+﻿using EnglishWordSet.ChildForms.AdminPage;
+using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
@@ -18,7 +19,7 @@ namespace EnglishWordSet
             this.ActiveControl = txtUserName;
             txtUserName.Focus();
         }
-        AdminPage adminPage;
+        UserPage adminPage;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -50,7 +51,7 @@ namespace EnglishWordSet
                 MyNotificationAlerts.GetSuccessMessage("Login verified");
                 AddLog.systemLogs.Info(userName + "  Loged");
                 epUserName.Clear();
-                adminPage = PageTransactions.GetAdminPage();
+                adminPage = PageTransactions.GetUserPage();
                  AdminSession.username_Admin = userName;
                 loginB.RefreshTokens();
                 adminPage.Show();
@@ -108,6 +109,13 @@ namespace EnglishWordSet
         private void txtPassword_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void lblCreateAccount_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            ChildAdminNewUser newAdmin = new();
+            newAdmin.StartPosition = FormStartPosition.CenterScreen;    
+            newAdmin.Show();
         }
     }
 }

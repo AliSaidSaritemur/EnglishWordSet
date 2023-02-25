@@ -1,6 +1,6 @@
 ﻿namespace EnglishWordSet.ChildForms.AdminPage
 {
-    partial class ChildAdminNewAdmin
+    partial class ChildAdminNewUser
     {
         /// <summary>
         /// Required designer variable.

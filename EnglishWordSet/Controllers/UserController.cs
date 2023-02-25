@@ -11,14 +11,14 @@ using System.Windows.Forms;
 
 namespace EnglishWordSet.ToolsBackend
 {
-    class AdminController
+    class UserController
     {
         private LearnedWordImpl _learnedWordImpl = new();
         public WordImpl wordImpl = new();
         Translater translater;
 
         private ChildAdminNewWord childAdminAddWord;
-        private ChildAdminNewAdmin childAdminAddAdmin;
+        private ChildAdminNewUser childAdminAddAdmin;
         private ChildAdminNewLearnedWord newLearnedWord;
 
         public ChildAdminNewWord GetChildNewWordPage()
@@ -27,20 +27,20 @@ namespace EnglishWordSet.ToolsBackend
             {
                 childAdminAddWord = new ChildAdminNewWord();
                 childAdminAddWord.FormBorderStyle = FormBorderStyle.None;
-                childAdminAddWord.MdiParent = AdminPage.ActiveForm;
+                childAdminAddWord.MdiParent = UserPage.ActiveForm;
                 childAdminAddWord.Location = new Point(180, 100);
             }
             return childAdminAddWord;
         }
 
 
-        public ChildAdminNewAdmin GetChildNewAdminPage()
+        public ChildAdminNewUser GetChildNewAdminPage()
         {
             if (childAdminAddAdmin == null)
             {
-                childAdminAddAdmin = new ChildAdminNewAdmin();
+                childAdminAddAdmin = new ChildAdminNewUser();
                 childAdminAddAdmin.FormBorderStyle = FormBorderStyle.None;
-                childAdminAddAdmin.MdiParent = AdminPage.ActiveForm;
+                childAdminAddAdmin.MdiParent = UserPage.ActiveForm;
                 childAdminAddAdmin.Location = new Point(230, 111);
             }
             return childAdminAddAdmin;
@@ -52,7 +52,7 @@ namespace EnglishWordSet.ToolsBackend
             {
                 newLearnedWord = new ChildAdminNewLearnedWord();
                 newLearnedWord.FormBorderStyle = FormBorderStyle.None;
-                newLearnedWord.MdiParent = AdminPage.ActiveForm;
+                newLearnedWord.MdiParent = UserPage.ActiveForm;
                 newLearnedWord.Location = new Point(230, 111);
             }
             return newLearnedWord;
