@@ -2,7 +2,11 @@
 using DataAccess.Concrete;
 using DataAccess.util;
 using EnglishWordSet.Pages.ChildFormPages.UserPage;
+using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.util.StaticTools;
 using LogAccess.services;
+using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,9 +18,8 @@ namespace EnglishWordSet.Controllers
 {
     internal class AdminTransactionsController
     {
-        int rareWordCount = 0;
-        int basicWordCount = 0;
-        int regualrWordCount = 0;
+
+        Dictionary<string, int> randomWordsFrequencyList =new Dictionary<string, int>();
         RandomWordImpl _randomWordImpl;
         HerokuappRandomWordAPISImpl _randomAPI = new();
         DataMuseAPISImpl _frequencyAPI = new();
@@ -26,6 +29,9 @@ namespace EnglishWordSet.Controllers
         public AdminTransactionsController(AdminTransactionsPage _transactionsPage)
         {
             transationpage = _transactionsPage;
+            randomWordsFrequencyList.Add("basic",0);
+            randomWordsFrequencyList.Add("regular", 0);
+            randomWordsFrequencyList.Add("rare", 0);
         }
 
         public async void AddRandomWordstoDB(int wordsToBeAddCount)
@@ -40,22 +46,29 @@ namespace EnglishWordSet.Controllers
                 string wordFrequency = await gettingRandomWordWithFrequencyLevel.GetFrequency(randomWord);
                 if (wordFrequency == "very rare")
                 {
-                    wordstobeAddCountTemp++;
+                   
+                     wordstobeAddCountTemp++;
                 }
                 else
                 {
                     _randomWordImpl.Add(randomWord, wordFrequency);
+                    randomWordsFrequencyList[wordFrequency]++;
                     transationpage.pBarAddingRandomWords.Value++;
                 }
 
             }
-            AddLog.systemLogs.Info("Random " + wordsToBeAddCount + " Words Added \n Basic : " + basicWordCount + ",Regular : " + regualrWordCount + " ,Rare : " + rareWordCount);
-            rareWordCount = 0;
-            basicWordCount = 0;
-            regualrWordCount = 0;
+            AddLog.systemLogs.Info("Random " + wordsToBeAddCount + " Words Added \n Basic : " + randomWordsFrequencyList["basic"] + ",Regular : " + randomWordsFrequencyList["regular"] + " ,Rare : " + randomWordsFrequencyList["rare"]);
+            
+            foreach (KeyValuePair<string, int> entry in randomWordsFrequencyList)
+            {
+                randomWordsFrequencyList[entry.Key] = 0;
+            }
+
+
             transationpage.pBarAddingRandomWords.Value = 0;
             transationpage.pBarAddingRandomWords.Visible = false;
             transationpage.btnAddRandomWordtoDB.Enabled = true;
+            MyNotificationAlerts.GetSuccessMessage("Random Words added to DB");
         }
     }
 }

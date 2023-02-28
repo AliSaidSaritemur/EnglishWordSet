@@ -14,10 +14,6 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
             File.AppendAllText(textPath, "\n" + textToAdd + "\n");
             string newText = textToAdd + File.ReadAllText(textPath);
-            StreamWriter writer = new StreamWriter(textPath);
-            writer.Write(newText);
-            writer.Close();
-
         }
         public static string ReadText(string textPath)
         {
