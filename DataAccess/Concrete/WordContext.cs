@@ -33,7 +33,8 @@ namespace DataAccess.Concrete
             modelBuilder.Entity<LearnedWord>().Property(a => a.meaningWordSentence).HasColumnName("learnedWord_meanigSentence");
             modelBuilder.Entity<User>().HasIndex(a => a.UserName).IsUnique(true);
             modelBuilder.Entity<User>().Property(a => a.Password).IsRequired();
-            
+            modelBuilder.Entity<User>().Property(a => a.Role).HasDefaultValue("user");
+
             base.OnModelCreating(modelBuilder);
         }
 

@@ -20,28 +20,28 @@ namespace DataAccess.Concrete
 
         public void Delete(string username)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName== username);
-            if (admin == null)
-            context.Users.Remove(admin);
+            User user = context.Users.FirstOrDefault(I => I.UserName== username);
+            if (user == null)
+            context.Users.Remove(user);
             context.SaveChanges();
         }
 
-        public User GetAdmin(string username)
+        public User GetUser(string username)
         {
             return context.Users.FirstOrDefault(I => I.UserName == username);
         }
 
         public string GetLastEntryDay(string username)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            return admin.lastEntryDay;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            return user.lastEntryDay;
 
         }
 
         public int GetToken(string username)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            return admin.token;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            return user.token;
         }
 
         public bool IsThereLoginUser(LoginUser loginUser)
@@ -68,46 +68,52 @@ namespace DataAccess.Concrete
 
         public bool IsTokenEnough(string username, int tokenAmount)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            return admin.token >= tokenAmount;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            return user.token >= tokenAmount;
         }
 
         public void ToIncreaseToken(string username, int tokenAmount)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            admin.token =admin.token + tokenAmount;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            user.token = user.token + tokenAmount;
             context.SaveChanges();
         }
 
         public void ToReduceToken(string username, int tokenAmount)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            admin.token = admin.token - tokenAmount;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            user.token = user.token - tokenAmount;
             context.SaveChanges();
         }
 
         public void Update(string email, string password, string phone, string username, int tokenAmount)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            admin.Email = email;
-            admin.Password = password;
-            admin.Phone = phone;
-            admin.token = tokenAmount;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            user.Email = email;
+            user.Password = password;
+            user.Phone = phone;
+            user.token = tokenAmount;
             context.SaveChanges();
         }
 
         public void UpdateLastEntryDay(string username, string lastEntryTime)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            admin.lastEntryDay = lastEntryTime;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            user.lastEntryDay = lastEntryTime;
             context.SaveChanges();
         }
 
         public void UpdateToken(string username, int tokenAmount)
         {
-            User admin = context.Users.FirstOrDefault(I => I.UserName == username);
-            admin.token = tokenAmount;
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            user.token = tokenAmount;
             context.SaveChanges();
+        }
+
+        public string GetRole(string username)
+        {
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            return user.Role;
         }
     }
 }

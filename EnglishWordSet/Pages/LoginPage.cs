@@ -52,7 +52,7 @@ namespace EnglishWordSet
                 AddLog.systemLogs.Info(userName + "  Loged");
                 epUserName.Clear();
                 adminPage = PageTransactions.GetUserPage();
-                 AdminSession.username_Admin = userName;
+                 UserSession.SetUserSession(userName);
                 loginB.RefreshTokens();
                 adminPage.Show();
                 this.Close();

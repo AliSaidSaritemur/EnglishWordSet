@@ -12,7 +12,7 @@ namespace DataAccess.Abstract
         public bool IsThereMail(string mail);
         public bool IsTherePhone(string phone);
         public bool IsThereLoginUser(LoginUser loginUser);
-        public User GetAdmin(string username);
+        public User GetUser(string username);
         public void UpdateToken(string username,int tokenAmount);
         public void UpdateLastEntryDay(string username, string lastEntryTime);
         public string GetLastEntryDay(string username);
@@ -20,5 +20,6 @@ namespace DataAccess.Abstract
         public bool IsTokenEnough(string username, int tokenAmount);
         public void ToReduceToken(string username, int tokenAmount);
         public void ToIncreaseToken(string username, int tokenAmount);
+        public string GetRole(string username);
     }
 }

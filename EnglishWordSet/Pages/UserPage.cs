@@ -4,6 +4,7 @@ using System.Drawing;
 using System.Windows.Forms;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.Sessions;
 
 namespace EnglishWordSet
 {
@@ -11,17 +12,18 @@ namespace EnglishWordSet
     {
         UserController pageBackend;
         public UserPage()
-        {      
+        {
             InitializeComponent();
             pageBackend = ControllersGetter.AdminPage();
             this.ActiveControl = btnAddNewAdmin;
             btnAddNewAdmin.Focus();
-
         }
 
         private void Form2_Load(object sender, EventArgs e)
         {
-
+  
+            if (UserSession.role_Admin == "admin")
+                pbAdminPageOpen.Visible = true;
         }
 
         Form childAdmin;

@@ -28,9 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnAddRandomWordtoDB = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtRandomWordToBeAddCount = new System.Windows.Forms.TextBox();
+            this.prAddRandomWords = new System.Windows.Forms.ErrorProvider(this.components);
+            this.pBarAddingRandomWords = new System.Windows.Forms.ProgressBar();
+            this.bgw = new System.ComponentModel.BackgroundWorker();
+            ((System.ComponentModel.ISupportInitialize)(this.prAddRandomWords)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddRandomWordtoDB
@@ -61,11 +66,29 @@
             this.txtRandomWordToBeAddCount.Size = new System.Drawing.Size(125, 27);
             this.txtRandomWordToBeAddCount.TabIndex = 2;
             // 
+            // prAddRandomWords
+            // 
+            this.prAddRandomWords.ContainerControl = this;
+            // 
+            // pBarAddingRandomWords
+            // 
+            this.pBarAddingRandomWords.Location = new System.Drawing.Point(437, 10);
+            this.pBarAddingRandomWords.Name = "pBarAddingRandomWords";
+            this.pBarAddingRandomWords.Size = new System.Drawing.Size(150, 29);
+            this.pBarAddingRandomWords.TabIndex = 3;
+            this.pBarAddingRandomWords.Visible = false;
+            this.pBarAddingRandomWords.Click += new System.EventHandler(this.pBarAddingRandomWords_Click);
+            // 
+            // bgw
+            // 
+            this.bgw.ProgressChanged += new System.ComponentModel.ProgressChangedEventHandler(this.bgw_ProgressChanged);
+            // 
             // AdminTransactionsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pBarAddingRandomWords);
             this.Controls.Add(this.txtRandomWordToBeAddCount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddRandomWordtoDB);
@@ -73,15 +96,20 @@
             this.Name = "AdminTransactionsPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminTransactionsPage";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminTransactionsPage_FormClosing);
+            this.Load += new System.EventHandler(this.AdminTransactionsPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.prAddRandomWords)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Button btnAddRandomWordtoDB;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtRandomWordToBeAddCount;
+        private System.Windows.Forms.ErrorProvider prAddRandomWords;
+        private System.ComponentModel.BackgroundWorker bgw;
+        internal System.Windows.Forms.ProgressBar pBarAddingRandomWords;
+        internal System.Windows.Forms.Button btnAddRandomWordtoDB;
     }
 }

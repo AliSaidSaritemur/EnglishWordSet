@@ -145,11 +145,15 @@ namespace EnglishWordSet
                 prToken.SetError(txtToBeGEttingRandomWordCount, "Please enter amount of words to be getting");
                 return;
             }
-         
+            else if(!MyRegex.CheckingValue.IsNumber(getRandomCountString))
+            {
+                prToken.SetError(txtToBeGEttingRandomWordCount, "Please enter just number of words to be getting");
+                return;
+            }
             int getRandomCountInt = int.Parse(getRandomCountString);
 
 
-            if (!adminImpl.IsTokenEnough(AdminSession.username_Admin, getRandomCountInt)) {
+            if (!adminImpl.IsTokenEnough(UserSession.username_Admin, getRandomCountInt)) {
                 prToken.SetError(txtToBeGEttingRandomWordCount,"Your Token amount is not enough");
                 return;
             }
@@ -163,7 +167,7 @@ namespace EnglishWordSet
             {
                 string randomWords = _RandomWordImpl.getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(frequencyCheckBoxList, getRandomCountInt);
                 txtInput.Text += randomWords;
-                adminImpl.ToReduceToken(AdminSession.username_Admin, getRandomCountInt);
+                adminImpl.ToReduceToken(UserSession.username_Admin, getRandomCountInt);
                 SetSystem();
                 prRandomWord.Clear();
             }
@@ -187,7 +191,7 @@ namespace EnglishWordSet
         }
         private void SetSystem()
         {
-            lblTokenAmount.Text = adminImpl.GetToken(AdminSession.username_Admin).ToString();
+            lblTokenAmount.Text = adminImpl.GetToken(UserSession.username_Admin).ToString();
             SetTrashIcon();
         }
 
@@ -200,7 +204,7 @@ namespace EnglishWordSet
                 return;
             }
             else { }
-            if (!adminImpl.IsTokenEnough(AdminSession.username_Admin, 1))
+            if (!adminImpl.IsTokenEnough(UserSession.username_Admin, 1))
             {
                 prToken.SetError(lblTokenAmount, "Your Token amount is not enough");
                 return;
@@ -214,7 +218,7 @@ namespace EnglishWordSet
             string markedAndTranslatedWords = pageBackend.getMeaningWithMark(englishWords);
             txtInput.Text = markedAndTranslatedWords;
 
-            adminImpl.ToReduceToken(AdminSession.username_Admin, 1);
+            adminImpl.ToReduceToken(UserSession.username_Admin, 1);
             SetSystem();
         }
 

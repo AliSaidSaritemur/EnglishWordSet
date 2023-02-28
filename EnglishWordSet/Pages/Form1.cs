@@ -130,7 +130,7 @@ namespace EnglishWordSet
         private void btnToAdminPage_Click(object sender, EventArgs e)
         {
             Form page;
-            if (!string.IsNullOrEmpty(AdminSession.username_Admin))
+            if (!string.IsNullOrEmpty(UserSession.username_Admin))
             { page = PageTransactions.GetUserPage(); }
             else
             { page = new LoginPage(); }
@@ -260,8 +260,8 @@ namespace EnglishWordSet
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if (!string.IsNullOrEmpty(AdminSession.username_Admin))
-                AddLog.systemLogs.Info(AdminSession.username_Admin + "  Logged out");
+            if (!string.IsNullOrEmpty(UserSession.username_Admin))
+                AddLog.systemLogs.Info(UserSession.username_Admin + "  Logged out");
         }
     }
 }

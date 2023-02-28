@@ -101,6 +101,7 @@ namespace EnglishWordSet
             this.pbAdminPageOpen.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbAdminPageOpen.TabIndex = 18;
             this.pbAdminPageOpen.TabStop = false;
+            this.pbAdminPageOpen.Visible = false;
             this.pbAdminPageOpen.Click += new System.EventHandler(this.pbAdminPageOpen_Click);
             // 
             // UserPage
@@ -117,7 +118,7 @@ namespace EnglishWordSet
             this.IsMdiContainer = true;
             this.Name = "UserPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "5";
+            this.Text = "User Page";
             this.Activated += new System.EventHandler(this.AdminPage_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminPage_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);

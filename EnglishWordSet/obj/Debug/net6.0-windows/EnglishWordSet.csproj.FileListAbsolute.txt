@@ -93,3 +93,6 @@ C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windo
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.ChildForms.AdminPage.ChildAdminNewUser.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.UserPage.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.ChildFormPages.UserPage.AdminTransactionsPage.resources
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Xamarin.Forms.Core.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Xamarin.Forms.Platform.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Xamarin.Forms.Xaml.dll

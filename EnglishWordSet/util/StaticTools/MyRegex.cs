@@ -55,6 +55,13 @@ namespace EnglishWordSet.RefactoredStaticFuncs
                 result = matchRgL.Success;
                 return result;
             }
+            public static bool IsNumber(string text)
+            {
+                Regex rgLine = new("^\\d+$");
+                Match matchRgL = rgLine.Match(text);
+                result = matchRgL.Success;
+                return result;
+            }
         }
 
        public static class EddittingStringValue

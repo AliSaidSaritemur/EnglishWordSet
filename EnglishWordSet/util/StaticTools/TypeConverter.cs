@@ -6,10 +6,9 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 {
     internal static class TypeConverter
     {
-        static WebClient wc;
         public static Image ConverterURLtoImage(string url)
         {
-            wc ??= new();
+            WebClient wc= new();
             byte[] bytes = wc.DownloadData(url);
             MemoryStream ms = new MemoryStream(bytes);
             Image img = Image.FromStream(ms);
