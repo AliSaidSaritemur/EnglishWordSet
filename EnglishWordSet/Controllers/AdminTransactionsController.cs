@@ -9,6 +9,7 @@ using Microsoft.EntityFrameworkCore.Metadata.Internal;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,14 +19,14 @@ namespace EnglishWordSet.Controllers
 {
     internal class AdminTransactionsController
     {
-
-        Dictionary<string, int> randomWordsFrequencyList =new Dictionary<string, int>();
+        Random random = new();
+        List<string> randomWordsList;
         RandomWordImpl _randomWordImpl;
         HerokuappRandomWordAPISImpl _randomAPI = new();
-        DataMuseAPISImpl _frequencyAPI = new();
         GettingRandomWordWithFrequencyLevel gettingRandomWordWithFrequencyLevel = new();
         private AdminTransactionsPage transationpage;
 
+        Dictionary<string, int> randomWordsFrequencyList = new Dictionary<string, int>();
         public AdminTransactionsController(AdminTransactionsPage _transactionsPage)
         {
             transationpage = _transactionsPage;
@@ -42,7 +43,7 @@ namespace EnglishWordSet.Controllers
             int wordstobeAddCountTemp = wordsToBeAddCount;
             for (int i = 0; i < wordstobeAddCountTemp; i++)
             {
-                string randomWord = await _randomAPI.GetRandomWordAsync();
+                string randomWord = await GetRandomWordFromList();
                 string wordFrequency = await gettingRandomWordWithFrequencyLevel.GetFrequency(randomWord);
                 if (wordFrequency == "very rare")
                 {
@@ -69,6 +70,14 @@ namespace EnglishWordSet.Controllers
             transationpage.pBarAddingRandomWords.Visible = false;
             transationpage.btnAddRandomWordtoDB.Enabled = true;
             MyNotificationAlerts.GetSuccessMessage("Random Words added to DB");
+        }
+
+
+      private async Task<string> GetRandomWordFromList()
+        {
+            randomWordsList ??= await _randomAPI.GetRandomWordsAsync();
+             string randomWord= randomWordsList[random.Next(randomWordsList.Count-1)];
+            return randomWord;
         }
     }
 }

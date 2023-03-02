@@ -1,7 +1,9 @@
-﻿using DataAccess.util;
+﻿using DataAccess.Concrete;
+using DataAccess.util;
 using EnglishWordSet.Controllers;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.util.StaticTools;
+using LogAccess.services;
 using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
@@ -17,6 +19,7 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
 {
     public partial class AdminTransactionsPage : Form
     {
+        LearnedWordImpl _learnedWordImpl;
         GettingRandomWordWithFrequencyLevel gettingRandom=new();
         AdminTransactionsController adminTransactionsController;
         public AdminTransactionsPage()
@@ -74,6 +77,30 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
         {
             e.Cancel = true;
             this.Hide();
+        }
+
+        private void btnDeleteWordFromLearned_Click(object sender, EventArgs e)
+        {
+            _learnedWordImpl ??= new LearnedWordImpl();
+
+            string word = txtWordtoBeDeleteFromLearned.Text.ToString().Trim();
+            if (string.IsNullOrEmpty(word))
+            {
+                prDeleteLeanerdWords.SetError(txtWordtoBeDeleteFromLearned,"Enter the word you want to delete");
+                return;
+            }
+           else if (!_learnedWordImpl.IsThere(word))
+            {
+                MyNotificationAlerts.GetErrorMessage(word +" is not a Learned Word");
+
+            }
+            else
+            {
+                _learnedWordImpl.Delete(word);
+                AddLog.systemLogs.Info(" " + word + " was Deleted ");
+                MyNotificationAlerts.GetSuccessMessage(" " + word + " was Deleted ");
+            }
+            prDeleteLeanerdWords.Clear();
         }
     }
 }

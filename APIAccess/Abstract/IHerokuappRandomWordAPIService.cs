@@ -9,5 +9,6 @@ namespace APIAccess.Abstract
     interface IHerokuappRandomWordAPIService
     {
         Task<string> GetRandomWordAsync();
+        Task<List<string>> GetRandomWordsAsync();
     }
 }
