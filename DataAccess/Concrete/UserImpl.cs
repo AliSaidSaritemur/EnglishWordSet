@@ -28,7 +28,13 @@ namespace DataAccess.Concrete
 
         public User GetUser(string username)
         {
-            return context.Users.FirstOrDefault(I => I.UserName == username);
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            if (user == null)
+                return user;
+            else
+            {
+                return null;
+            }
         }
 
         public string GetLastEntryDay(string username)

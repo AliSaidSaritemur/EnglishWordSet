@@ -1,4 +1,5 @@
-﻿using EnglishWordSet.ChildForms.AdminPage;
+﻿using DataAccess.Concrete;
+using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
@@ -6,6 +7,7 @@ using EnglishWordSet.ToolsBackend;
 using LogAccess;
 using LogAccess.services;
 using System;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
@@ -18,8 +20,9 @@ namespace EnglishWordSet
             InitializeComponent();
             this.ActiveControl = txtUserName;
             txtUserName.Focus();
+            LoadAsync();
         }
-        UserPage adminPage;
+        Main mainPage;
         private void label1_Click(object sender, EventArgs e)
         {
 
@@ -51,11 +54,11 @@ namespace EnglishWordSet
                 MyNotificationAlerts.GetSuccessMessage("Login verified");
                 AddLog.systemLogs.Info(userName + "  Loged");
                 epUserName.Clear();
-                adminPage = PageTransactions.GetUserPage();
+                mainPage = PageTransactions.GetForm1();
                  UserSession.SetUserSession(userName);
                 loginB.RefreshTokens();
-                adminPage.Show();
-                this.Close();
+                mainPage.Show();
+                this.Hide();
             }
 
 
@@ -63,7 +66,7 @@ namespace EnglishWordSet
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-
+            PageTransactions.SetLoginPage(this);
         }
 
         private void txtUserName_KeyDown(object sender, KeyEventArgs e)
@@ -89,7 +92,7 @@ namespace EnglishWordSet
 
         private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(e.CloseReason == CloseReason.UserClosing&&adminPage==null)
+            if(e.CloseReason == CloseReason.UserClosing&& mainPage == null)
             {
                 PageTransactions.GetForm1().Show();
             }
@@ -116,6 +119,24 @@ namespace EnglishWordSet
             ChildAdminNewUser newAdmin = new();
             newAdmin.StartPosition = FormStartPosition.CenterScreen;    
             newAdmin.Show();
+        }
+
+        private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
+        {
+        }
+
+        private async void LoadAsync()
+        {
+            await SetContext();
+        }
+        private Task SetContext()
+        {
+            return Task.Run(() =>
+            {
+                UserImpl userImpl = new UserImpl();
+                userImpl.GetUser("");
+              
+            });
         }
     }
 }

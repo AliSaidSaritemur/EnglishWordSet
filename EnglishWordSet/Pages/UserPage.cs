@@ -145,6 +145,11 @@ namespace EnglishWordSet
         {
           PageTransactions.GetAdminTransactionsPage().Show();
         }
+
+        private void pbOpenGamePanel_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 
        

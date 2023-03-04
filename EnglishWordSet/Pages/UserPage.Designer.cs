@@ -35,8 +35,10 @@ namespace EnglishWordSet
             this.btnAddLearnedWord = new System.Windows.Forms.Button();
             this.pbBack = new System.Windows.Forms.PictureBox();
             this.pbAdminPageOpen = new System.Windows.Forms.PictureBox();
+            this.pbOpenGamePanel = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminPageOpen)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOpenGamePanel)).BeginInit();
             this.SuspendLayout();
             // 
             // btnAddNewWord
@@ -104,11 +106,25 @@ namespace EnglishWordSet
             this.pbAdminPageOpen.Visible = false;
             this.pbAdminPageOpen.Click += new System.EventHandler(this.pbAdminPageOpen_Click);
             // 
+            // pbOpenGamePanel
+            // 
+            this.pbOpenGamePanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pbOpenGamePanel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbOpenGamePanel.Image = global::EnglishWordSet.Properties.Resources.GameIcon;
+            this.pbOpenGamePanel.Location = new System.Drawing.Point(22, 346);
+            this.pbOpenGamePanel.Name = "pbOpenGamePanel";
+            this.pbOpenGamePanel.Size = new System.Drawing.Size(73, 67);
+            this.pbOpenGamePanel.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbOpenGamePanel.TabIndex = 20;
+            this.pbOpenGamePanel.TabStop = false;
+            this.pbOpenGamePanel.Click += new System.EventHandler(this.pbOpenGamePanel_Click);
+            // 
             // UserPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 523);
+            this.Controls.Add(this.pbOpenGamePanel);
             this.Controls.Add(this.pbAdminPageOpen);
             this.Controls.Add(this.pbBack);
             this.Controls.Add(this.btnAddLearnedWord);
@@ -125,6 +141,7 @@ namespace EnglishWordSet
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminPageOpen)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbOpenGamePanel)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -137,5 +154,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnAddLearnedWord;
         private System.Windows.Forms.PictureBox pbBack;
         private System.Windows.Forms.PictureBox pbAdminPageOpen;
+        private System.Windows.Forms.PictureBox pbOpenGamePanel;
     }
 }

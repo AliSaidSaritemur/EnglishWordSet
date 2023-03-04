@@ -108,7 +108,7 @@ namespace EnglishWordSet
             // 
             // btnGetSaveText
             // 
-            this.btnGetSaveText.Location = new System.Drawing.Point(910, 117);
+            this.btnGetSaveText.Location = new System.Drawing.Point(719, 165);
             this.btnGetSaveText.Name = "btnGetSaveText";
             this.btnGetSaveText.Size = new System.Drawing.Size(94, 29);
             this.btnGetSaveText.TabIndex = 6;

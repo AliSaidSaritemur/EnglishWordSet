@@ -218,6 +218,7 @@ namespace EnglishWordSet
             string markedAndTranslatedWords = pageBackend.getMeaningWithMark(englishWords);
             txtInput.Text = markedAndTranslatedWords;
 
+
             adminImpl.ToReduceToken(UserSession.username_Admin, 1);
             SetSystem();
         }

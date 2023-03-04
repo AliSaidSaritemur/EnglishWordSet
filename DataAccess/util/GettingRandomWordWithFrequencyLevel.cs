@@ -72,7 +72,7 @@ namespace DataAccess.util
         public async void AddWordToDbWithFrequency(int wordsToBeAddCount,string frequency)
         {
             _randomWordImpl ??= new();
-            int wordstobeAddCountTemp = wordsToBeAddCount+5;
+            int wordstobeAddCountTemp = wordsToBeAddCount;
             for (int i = 0; i < wordstobeAddCountTemp; i++)
             {
                 string randomWord = await _randomAPI.GetRandomWordAsync();

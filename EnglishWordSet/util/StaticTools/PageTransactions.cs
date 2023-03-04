@@ -7,6 +7,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
     static class PageTransactions
     {
         private static Main form1;
+        private static LoginPage _loginPage;
         private static UserPage userpage;
         private static ChildAdminNewLearnedWord childAdminNewLearnedWord;
         private static AdminTransactionsPage adminTransactionsPage;
@@ -17,7 +18,16 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         }
         public static Main GetForm1()
         {
+            form1??=new Main(); 
             return form1;
+        }
+        public static void SetLoginPage(LoginPage loginPage)
+        {
+            _loginPage = loginPage;
+        }
+        public static LoginPage GetLoginPage()
+        {
+            return _loginPage;
         }
 
         public static UserPage GetUserPage()
