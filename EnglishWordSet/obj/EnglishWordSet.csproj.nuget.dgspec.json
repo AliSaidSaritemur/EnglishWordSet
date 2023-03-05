@@ -145,6 +145,14 @@
               "target": "Package",
               "version": "[7.0.2, )"
             },
+            "Microsoft.Extensions.Configuration.FileExtensions": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
+            "Microsoft.Extensions.Configuration.Json": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "PostSharp.Redist": {
               "target": "Package",
               "version": "[5.0.27, )"
@@ -227,6 +235,10 @@
         "net6.0-windows7.0": {
           "targetAlias": "net6.0-windows",
           "dependencies": {
+            "FluentAssertions": {
+              "target": "Package",
+              "version": "[6.10.0, )"
+            },
             "Google.Cloud.Translation.V2": {
               "target": "Package",
               "version": "[2.1.0, )"

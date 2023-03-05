@@ -20,7 +20,7 @@ namespace EnglishWordSet
             InitializeComponent();
             this.ActiveControl = txtUserName;
             txtUserName.Focus();
-            LoadAsync();
+
         }
         Main mainPage;
         private void label1_Click(object sender, EventArgs e)
@@ -92,11 +92,7 @@ namespace EnglishWordSet
 
         private void LoginPage_FormClosed(object sender, FormClosedEventArgs e)
         {
-            if(e.CloseReason == CloseReason.UserClosing&& mainPage == null)
-            {
-                PageTransactions.GetForm1().Show();
-            }
-            
+      
         }
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -125,18 +121,6 @@ namespace EnglishWordSet
         {
         }
 
-        private async void LoadAsync()
-        {
-            await SetContext();
-        }
-        private Task SetContext()
-        {
-            return Task.Run(() =>
-            {
-                UserImpl userImpl = new UserImpl();
-                userImpl.GetUser("");
-              
-            });
-        }
+
     }
 }

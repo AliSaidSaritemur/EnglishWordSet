@@ -1,6 +1,8 @@
 ﻿
 using EnglishWordSet.ChildForms.AdminPage;
+using EnglishWordSet.Pages;
 using EnglishWordSet.Pages.ChildFormPages.UserPage;
+using EnglishWordSet.Pages.Games;
 
 namespace EnglishWordSet.RefactoredStaticFuncs
 {
@@ -11,6 +13,8 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         private static UserPage userpage;
         private static ChildAdminNewLearnedWord childAdminNewLearnedWord;
         private static AdminTransactionsPage adminTransactionsPage;
+        private static GamePanel _gamePanel;
+        private static LastLetterGamePage _lastLetterGamePage;
 
         public  static void SetForm1(Main frm1)
         {
@@ -45,6 +49,16 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
             childAdminNewLearnedWord ??= new();
             return childAdminNewLearnedWord;
+        }
+        public static GamePanel GetGamePanel()
+        {
+            _gamePanel ??= new();
+            return _gamePanel;
+        }
+        public static LastLetterGamePage GetLastLetterGamePage()
+        {
+            _lastLetterGamePage ??= new();
+            return _lastLetterGamePage;
         }
     }
 }
