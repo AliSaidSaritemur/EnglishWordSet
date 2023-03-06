@@ -70,6 +70,7 @@
             this.txtRandomWordToBeAddCount.Name = "txtRandomWordToBeAddCount";
             this.txtRandomWordToBeAddCount.Size = new System.Drawing.Size(125, 27);
             this.txtRandomWordToBeAddCount.TabIndex = 2;
+            this.txtRandomWordToBeAddCount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtRandomWordToBeAddCount_KeyPress_1);
             // 
             // prAddRandomWords
             // 

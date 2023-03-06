@@ -1,6 +1,8 @@
 ﻿using DataAccess.Concrete;
 using DataAccess.util;
 using EnglishWordSet.MyTools;
+using EnglishWordSet.PageBackend;
+using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
 using Entities.Concrete;
@@ -130,11 +132,31 @@ namespace EnglishWordSet.ChildForms.AdminPage
             {
               phone = "0"+phone;   
             }
+            else { }
 
+            if (!cbEmailVerification.Checked)
+            {
+                DialogResult dialogResult;
+
+                dialogResult = MessageBox.Show( "Do you allow me to send code to your e-mail address ? \n (Required for this registration)","Mail Verification", MessageBoxButtons.YesNoCancel);
+                
+                if (dialogResult == DialogResult.Yes)
+                {
+                    EmailCheckPage emailCheck = new(email,cbEmailVerification) ;
+                    emailCheck.Show();
+                }
+                else if (dialogResult == DialogResult.No)
+                {
+                   
+                }
+                return;
+            }
+      
             adminImpl.Add(email,password,phone,userName);
 
             MyNotificationAlerts.GetSuccessMessage("Admin added");
             AddLog.systemLogs.Info(" " + userName + " is added to AdminsDB");
+            cbEmailVerification.Checked = false;
             CleanForm();
         }
 
@@ -243,6 +265,20 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return true;
             }
             return base.ProcessCmdKey(ref msg, keyData);
+        }
+
+        private void cbEmailVerification_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cbEmailVerification.Checked == true)
+            {
+                txtEmail.Enabled = false;
+                cbEmailVerification.Enabled = true;
+            }
+            else
+            {
+                cbEmailVerification.Enabled = false;
+                txtEmail.Enabled = true;
+            }
         }
     }
 }

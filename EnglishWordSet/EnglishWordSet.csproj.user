@@ -4,6 +4,9 @@
     <Compile Update="Pages\ChildFormPages\UserPage\AdminTransactionsPage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pages\EmailCheckPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Pages\GamePanel.cs">
       <SubType>Form</SubType>
     </Compile>

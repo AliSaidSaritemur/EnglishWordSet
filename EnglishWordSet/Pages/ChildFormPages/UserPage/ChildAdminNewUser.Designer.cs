@@ -46,6 +46,7 @@
             this.btnSubmitNewAdmin = new System.Windows.Forms.Button();
             this.againPasswordProvider = new System.Windows.Forms.ErrorProvider(this.components);
             this.passwordProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.cbEmailVerification = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.phoneProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emailProvider)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.UserNameProvider)).BeginInit();
@@ -132,9 +133,9 @@
             this.label5.ForeColor = System.Drawing.SystemColors.ControlText;
             this.label5.Location = new System.Drawing.Point(41, 19);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(244, 30);
+            this.label5.Size = new System.Drawing.Size(222, 30);
             this.label5.TabIndex = 9;
-            this.label5.Text = "New Admin Properties";
+            this.label5.Text = "New User Properties";
             // 
             // txtPassword
             // 
@@ -195,12 +196,24 @@
             // 
             this.passwordProvider.ContainerControl = this;
             // 
-            // ChildAdminNewAdmin
+            // cbEmailVerification
+            // 
+            this.cbEmailVerification.AutoSize = true;
+            this.cbEmailVerification.Enabled = false;
+            this.cbEmailVerification.Location = new System.Drawing.Point(324, 144);
+            this.cbEmailVerification.Name = "cbEmailVerification";
+            this.cbEmailVerification.Size = new System.Drawing.Size(18, 17);
+            this.cbEmailVerification.TabIndex = 15;
+            this.cbEmailVerification.UseVisualStyleBackColor = true;
+            this.cbEmailVerification.CheckedChanged += new System.EventHandler(this.cbEmailVerification_CheckedChanged);
+            // 
+            // ChildAdminNewUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
-            this.ClientSize = new System.Drawing.Size(357, 381);
+            this.ClientSize = new System.Drawing.Size(354, 381);
+            this.Controls.Add(this.cbEmailVerification);
             this.Controls.Add(this.btnSubmitNewAdmin);
             this.Controls.Add(this.txtAgainPassword);
             this.Controls.Add(this.label6);
@@ -214,7 +227,7 @@
             this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
-            this.Name = "ChildAdminNewAdmin";
+            this.Name = "ChildAdminNewUser";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewAdmin";
             this.Load += new System.EventHandler(this.ChildAdminNewAdmin_Load);
@@ -248,5 +261,6 @@
         private System.Windows.Forms.ErrorProvider phoneProvider;
         private System.Windows.Forms.ErrorProvider againPasswordProvider;
         private System.Windows.Forms.ErrorProvider passwordProvider;
+        private System.Windows.Forms.CheckBox cbEmailVerification;
     }
 }

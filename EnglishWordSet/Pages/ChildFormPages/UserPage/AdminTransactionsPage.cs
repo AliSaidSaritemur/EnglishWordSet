@@ -102,5 +102,13 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
             }
             prDeleteLeanerdWords.Clear();
         }
+
+        private void txtRandomWordToBeAddCount_KeyPress_1(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }
