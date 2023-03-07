@@ -2,6 +2,7 @@
 using DataAccess.util;
 using Entities.Concrete;
 using Entities.DTOs;
+using System.Numerics;
 
 
 namespace DataAccess.Concrete
@@ -120,6 +121,13 @@ namespace DataAccess.Concrete
         {
             User user = context.Users.FirstOrDefault(I => I.UserName == username);
             return user.Role;
+        }
+
+        public void UpdateUserPassword(string username, string password)
+        {
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            user.Password = password;
+            context.SaveChanges();
         }
     }
 }

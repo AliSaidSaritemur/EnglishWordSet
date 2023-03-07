@@ -34,6 +34,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.txtVerificationCode = new System.Windows.Forms.TextBox();
             this.btnCheckCode = new System.Windows.Forms.Button();
+            this.pbSendNewCodeToMail = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbSendNewCodeToMail)).BeginInit();
             this.SuspendLayout();
             // 
             // tmrCode
@@ -81,18 +83,35 @@
             this.btnCheckCode.UseVisualStyleBackColor = true;
             this.btnCheckCode.Click += new System.EventHandler(this.btnCheckCode_Click);
             // 
+            // pbSendNewCodeToMail
+            // 
+            this.pbSendNewCodeToMail.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbSendNewCodeToMail.Image = global::EnglishWordSet.Properties.Resources.againIcon;
+            this.pbSendNewCodeToMail.Location = new System.Drawing.Point(354, 151);
+            this.pbSendNewCodeToMail.Name = "pbSendNewCodeToMail";
+            this.pbSendNewCodeToMail.Size = new System.Drawing.Size(28, 27);
+            this.pbSendNewCodeToMail.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbSendNewCodeToMail.TabIndex = 4;
+            this.pbSendNewCodeToMail.TabStop = false;
+            this.pbSendNewCodeToMail.Visible = false;
+            this.pbSendNewCodeToMail.Click += new System.EventHandler(this.pbSendNewCodeToMail_Click);
+            // 
             // EmailCheckPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(601, 336);
+            this.Controls.Add(this.pbSendNewCodeToMail);
             this.Controls.Add(this.btnCheckCode);
             this.Controls.Add(this.txtVerificationCode);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTimeToEnterCode);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.Name = "EmailCheckPage";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmailCheckPage";
+            ((System.ComponentModel.ISupportInitialize)(this.pbSendNewCodeToMail)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,5 +124,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtVerificationCode;
         private System.Windows.Forms.Button btnCheckCode;
+        private System.Windows.Forms.PictureBox pbSendNewCodeToMail;
     }
 }

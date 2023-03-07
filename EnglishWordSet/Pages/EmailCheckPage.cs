@@ -34,6 +34,15 @@ namespace EnglishWordSet.Pages
             tmrCode.Interval = 1000;
             lastSecondTimer--;
             lblTimeToEnterCode.Text = lastSecondTimer.ToString();
+            if(lastSecondTimer < 1)
+            {
+                MyNotificationAlerts.GetWarningMessage("Timeout, try again");
+                lblTimeToEnterCode.Text = "00";
+                pbSendNewCodeToMail.Visible = true;
+                tmrCode.Stop();              
+                btnCheckCode.Enabled = false;
+            }
+
 
         }
 
@@ -55,6 +64,15 @@ namespace EnglishWordSet.Pages
 
         }
 
-       
+        private void pbSendNewCodeToMail_Click(object sender, EventArgs e)
+        {
+            _verificationCode = _emailPageController.SendVerificationCodeWithEmailAndReturn(_userMail);
+            lastSecondTimer = 60;
+            pbSendNewCodeToMail.Visible = false;
+            lblTimeToEnterCode.Text = "60";
+            btnCheckCode.Enabled = true;
+            tmrCode.Start();
+            MyNotificationAlerts.GetInfoMessage("New code sended to mail adress");
+        }
     }
 }

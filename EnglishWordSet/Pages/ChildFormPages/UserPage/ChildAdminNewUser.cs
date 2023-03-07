@@ -5,6 +5,7 @@ using EnglishWordSet.PageBackend;
 using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
+using EnglishWordSet.util.StaticTools;
 using Entities.Concrete;
 using LogAccess.services;
 using System;
@@ -134,11 +135,18 @@ namespace EnglishWordSet.ChildForms.AdminPage
             }
             else { }
 
-            if (!cbEmailVerification.Checked)
+            if(!MyTestInternet.IsThereInternet())
+            {
+                BasicAlerts.ErrorAlert("User can't Add.\nFor adding user," +
+             " connect to the internet.", "No internet access");
+                return;
+            }
+
+          else if (!cbEmailVerification.Checked)
             {
                 DialogResult dialogResult;
 
-                dialogResult = MessageBox.Show( "Do you allow me to send code to your e-mail address ? \n (Required for this registration)","Mail Verification", MessageBoxButtons.YesNoCancel);
+                dialogResult = MessageBox.Show( "Do you allow us to send code to your e-mail address ? \n (Required for this registration)","Mail Verification", MessageBoxButtons.YesNoCancel);
                 
                 if (dialogResult == DialogResult.Yes)
                 {

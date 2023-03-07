@@ -20,6 +20,7 @@ namespace DataAccess.Abstract
         public bool IsTokenEnough(string username, int tokenAmount);
         public void ToReduceToken(string username, int tokenAmount);
         public void ToIncreaseToken(string username, int tokenAmount);
+        public void UpdateUserPassword(string username, string password);
         public string GetRole(string username);
     }
 }
