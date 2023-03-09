@@ -20,7 +20,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
 
             public static bool IsName(string line)
             {
-                Regex rgLine = new("^[\\w'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}|~<>;:[\\]]{2,}$");
+                Regex rgLine = new("^[\\w'\\-,.][^0-9_!¡?÷?¿/\\\\+=@#$%ˆ&*(){}.|~<>;:[\\]]{2,}$");
                 Match matchRgL = rgLine.Match(line);
                 result = matchRgL.Success;
                 return result;

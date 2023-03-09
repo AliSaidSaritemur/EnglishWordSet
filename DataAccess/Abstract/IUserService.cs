@@ -22,5 +22,7 @@ namespace DataAccess.Abstract
         public void ToIncreaseToken(string username, int tokenAmount);
         public void UpdateUserPassword(string username, string password);
         public string GetRole(string username);
+        public string GetMailWithUserName(string username);
+
     }
 }

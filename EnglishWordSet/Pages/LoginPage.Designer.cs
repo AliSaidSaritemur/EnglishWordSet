@@ -37,6 +37,7 @@ namespace EnglishWordSet
             this.btnLogin = new System.Windows.Forms.Button();
             this.epUserName = new System.Windows.Forms.ErrorProvider(this.components);
             this.lblCreateAccount = new System.Windows.Forms.LinkLabel();
+            this.llblForgetPasswordPageOpen = new System.Windows.Forms.LinkLabel();
             ((System.ComponentModel.ISupportInitialize)(this.epUserName)).BeginInit();
             this.SuspendLayout();
             // 
@@ -100,7 +101,7 @@ namespace EnglishWordSet
             // lblCreateAccount
             // 
             this.lblCreateAccount.AutoSize = true;
-            this.lblCreateAccount.Location = new System.Drawing.Point(29, 174);
+            this.lblCreateAccount.Location = new System.Drawing.Point(12, 174);
             this.lblCreateAccount.Name = "lblCreateAccount";
             this.lblCreateAccount.Size = new System.Drawing.Size(123, 20);
             this.lblCreateAccount.TabIndex = 5;
@@ -108,11 +109,23 @@ namespace EnglishWordSet
             this.lblCreateAccount.Text = "Create an Acount";
             this.lblCreateAccount.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.lblCreateAccount_LinkClicked);
             // 
+            // llblForgetPasswordPageOpen
+            // 
+            this.llblForgetPasswordPageOpen.AutoSize = true;
+            this.llblForgetPasswordPageOpen.Location = new System.Drawing.Point(177, 174);
+            this.llblForgetPasswordPageOpen.Name = "llblForgetPasswordPageOpen";
+            this.llblForgetPasswordPageOpen.Size = new System.Drawing.Size(150, 20);
+            this.llblForgetPasswordPageOpen.TabIndex = 6;
+            this.llblForgetPasswordPageOpen.TabStop = true;
+            this.llblForgetPasswordPageOpen.Text = "I forgot my password";
+            this.llblForgetPasswordPageOpen.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.llblForgetPasswordPageOpen_LinkClicked);
+            // 
             // LoginPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(474, 211);
+            this.Controls.Add(this.llblForgetPasswordPageOpen);
             this.Controls.Add(this.lblCreateAccount);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.txtPassword);
@@ -141,5 +154,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.ErrorProvider epUserName;
         private System.Windows.Forms.LinkLabel lblCreateAccount;
+        private System.Windows.Forms.LinkLabel llblForgetPasswordPageOpen;
     }
 }

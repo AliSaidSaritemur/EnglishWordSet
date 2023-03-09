@@ -61,6 +61,11 @@ namespace EnglishWordSet.Pages
                 _checkBox.Checked = true;
                 Close();
             }
+            else
+            {
+                MyNotificationAlerts.GetErrorMessage("Wrong Key ");
+                txtVerificationCode.Clear();
+            }
 
         }
 

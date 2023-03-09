@@ -1,6 +1,7 @@
 ﻿using DataAccess.Concrete;
 using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.MyTools;
+using EnglishWordSet.Pages;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
@@ -121,6 +122,10 @@ namespace EnglishWordSet
         {
         }
 
-
+        private void llblForgetPasswordPageOpen_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            UserPasswordResetPage _userPasswordResetPage = new ();
+            _userPasswordResetPage.Show();
+        }
     }
 }

@@ -125,9 +125,16 @@ namespace DataAccess.Concrete
 
         public void UpdateUserPassword(string username, string password)
         {
+            dataEncryption ??= new();
             User user = context.Users.FirstOrDefault(I => I.UserName == username);
-            user.Password = password;
+            user.Password = dataEncryption.Encrypt(password); ;
             context.SaveChanges();
+        }
+
+        public string GetMailWithUserName(string username)
+        {
+            User user = context.Users.FirstOrDefault(I => I.UserName == username);
+            return user.Email;
         }
     }
 }
