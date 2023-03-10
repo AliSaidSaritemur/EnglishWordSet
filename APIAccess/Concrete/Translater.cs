@@ -1,10 +1,11 @@
-﻿using Google.Cloud.Translation.V2;
+﻿using APIAccess.Abstract;
+using Google.Cloud.Translation.V2;
 using LogAccess;
 using LogAccess.services;
 
-namespace EnglishWordSet.MyTools
+namespace APIAccess.Concrete
 {
-    public class Translater
+    public class Translater:GoogleCLoudTranslateService
     {
 
         private string fromLanguage = LanguageCodes.Turkish;

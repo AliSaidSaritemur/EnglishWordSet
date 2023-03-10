@@ -2,24 +2,23 @@
 using System.Collections.Generic;
 using System.Drawing;
 using Unsplasharp;
-using System.Windows.Forms;
-using EnglishWordSet.RefactoredStaticFuncs;
 using LogAccess;
 using Unsplasharp.Models;
 using LogAccess.services;
+using APIAccess.Abstract;
 
-namespace EnglishWordSet.MyTools
+namespace APIAccess.Concrete
 {
-    public class UnsplashImagesTransaction
+    public class UnsplashImagesTransaction : UnsplashAPIService
     {
         private string lastSearchedWord;
         private  List<Unsplasharp.Models.Photo> lastPhotos;
         private UnsplasharpClient client;
         private int photonum=0;
-        public async void getImageWithWord(PictureBox pbLearned,String searchedWord)
+        public async Task<string> getImageWithWord(String searchedWord)
         {
             List<Unsplasharp.Models.Photo> photos;
-            if (searchedWord == null)return;
+            if (searchedWord == null)return null;
             else { }
             if (lastSearchedWord == searchedWord&&client!=null)
             {
@@ -36,19 +35,17 @@ namespace EnglishWordSet.MyTools
 
             if (photos.Count < 2)
             {
-                pbLearned.Image = Properties.Resources.noImageAvaIlable;
                 Photo photosErrorCheck = await client.GetRandomPhoto();
                  if (string.IsNullOrEmpty(photosErrorCheck.Urls.Regular))
                 {
                     AddLog.systemLogs.Error("Unsplash API Key is failed to start ");
                     client=null;
                 }
-                return;
+                return null;
             }
 
             var nowPhoto = photos[photonum];
-            Image img = TypeConverter.ConverterURLtoImage(nowPhoto.Urls.Regular);
-            pbLearned.Image = img;
+            return nowPhoto.Urls.Regular;
         }
 
         private void RefreshSystem(string searchedWord, List<Unsplasharp.Models.Photo> photos)

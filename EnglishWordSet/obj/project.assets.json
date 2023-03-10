@@ -2517,8 +2517,10 @@
         "framework": ".NETCoreApp,Version=v6.0",
         "dependencies": {
           "Entities": "1.0.0",
+          "Google.Cloud.Translation.V2": "2.0.0",
           "LogAccess": "1.0.0",
-          "Settings": "1.0.0"
+          "Settings": "1.0.0",
+          "unsplasharp.api": "0.7.0"
         },
         "compile": {
           "bin/placeholder/APIAccess.dll": {}

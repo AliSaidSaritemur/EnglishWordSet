@@ -62,6 +62,11 @@ namespace EnglishWordSet.RefactoredStaticFuncs
                 result = matchRgL.Success;
                 return result;
             }
+            public static bool IsInt(string text)
+            {
+                result = IsNumber(text) && text.Length < 10 ? true : false;
+                return result;
+            }
         }
 
        public static class EddittingStringValue

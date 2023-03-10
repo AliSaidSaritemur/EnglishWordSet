@@ -130,7 +130,7 @@
             this.btnChangeImage.Text = "Change";
             this.btnChangeImage.UseVisualStyleBackColor = true;
             this.btnChangeImage.Visible = false;
-            this.btnChangeImage.Click += new System.EventHandler(this.btnChangeImage_Click);
+            this.btnChangeImage.Click += new System.EventHandler(this.btnChangeImage_ClickAsync);
             // 
             // LearnedWordsPanel
             // 

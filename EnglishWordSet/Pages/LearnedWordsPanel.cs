@@ -1,20 +1,12 @@
-﻿using EnglishWordSet.MyTools;
+﻿using APIAccess.Concrete;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.RefactoredStaticFuncs;
-using EnglishWordSet.ToolsBackend;
 using Entities.Concrete;
 using System;
-using System.Collections.Generic;
-using System.Collections.Specialized;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Windows.Forms.VisualStyles;
-
+using TypeConverter = EnglishWordSet.RefactoredStaticFuncs.TypeConverter;
 
 namespace EnglishWordSet.Pages
 {
@@ -78,9 +70,9 @@ namespace EnglishWordSet.Pages
         {                   
             pBLearned.Enabled= false;
             btnChangeImage.Visible = true;
-            btnChangeImage_Click(sender, e);
+            btnChangeImage_ClickAsync(sender, e);
         }
-        private void btnChangeImage_Click(object sender, EventArgs e)
+        private async void btnChangeImage_ClickAsync(object sender, EventArgs e)
         {
             if (!MyTestInternet.IsThereInternet())
             {
@@ -93,7 +85,11 @@ namespace EnglishWordSet.Pages
                 isConnectWifi = true;
             }
                 
-            tran.getImageWithWord(pBLearned, searchedWord);
+          string wordImgUrl = await tran.getImageWithWord(searchedWord);
+            if (wordImgUrl != null)
+                pBLearned.Image = TypeConverter.ConverterURLtoImage(wordImgUrl);
+            else
+                pBLearned.Image = Properties.Resources.noImageAvaIlable;
             btnChangeImage.Enabled = false;
             timerImageEnable.Start();
         }

@@ -4,15 +4,8 @@ using EnglishWordSet.Controllers;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.util.StaticTools;
 using LogAccess.services;
-using Newtonsoft.Json.Linq;
 using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EnglishWordSet.Pages.ChildFormPages.UserPage
@@ -48,6 +41,11 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
             else if (!MyRegex.CheckingValue.IsNumber(txtRandomWordToBeAddCount.Text.ToString()))
             {
                 prAddRandomWords.SetError(txtRandomWordToBeAddCount, "Please enter just number of words to be getting");
+                return;
+            }
+            else if (txtRandomWordToBeAddCount.Text.ToString().Length > 9)
+            {
+                prAddRandomWords.SetError(txtRandomWordToBeAddCount, "Please enter a smaller number");
                 return;
             }
             else
@@ -106,6 +104,10 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
         private void txtRandomWordToBeAddCount_KeyPress_1(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (txtRandomWordToBeAddCount.Text.ToString().Length > 9 && !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }

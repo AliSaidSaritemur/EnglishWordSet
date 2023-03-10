@@ -150,6 +150,11 @@ namespace EnglishWordSet
                 prToken.SetError(txtToBeGEttingRandomWordCount, "Please enter just number of words to be getting");
                 return;
             }
+            else if (getRandomCountString.Length>9)
+            {
+                prToken.SetError(txtToBeGEttingRandomWordCount, "Please enter a smaller number");
+                return;
+            }
             int getRandomCountInt = int.Parse(getRandomCountString);
 
 
@@ -180,6 +185,10 @@ namespace EnglishWordSet
         private void txtToBeGEttingRandomWordCount_KeyPress(object sender, KeyPressEventArgs e)
         {
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+            else if (txtToBeGEttingRandomWordCount.Text.ToString().Length > 9&& !char.IsControl(e.KeyChar))
             {
                 e.Handled = true;
             }

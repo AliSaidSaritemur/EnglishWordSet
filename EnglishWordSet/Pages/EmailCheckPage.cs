@@ -52,6 +52,10 @@ namespace EnglishWordSet.Pages
             {
                 e.Handled = true;
             }
+            else if (txtVerificationCode.Text.ToString().Length > 5 && !char.IsControl(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void btnCheckCode_Click(object sender, EventArgs e)

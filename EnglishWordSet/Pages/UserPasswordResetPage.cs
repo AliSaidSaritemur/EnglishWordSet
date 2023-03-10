@@ -45,9 +45,9 @@ namespace EnglishWordSet.Pages
             string password = txtPassword.Text.ToString().Trim();
             string againPassword = txtPasswordAgain.Text.ToString().Trim();
 
-            if (password==null)
+            if (string.IsNullOrEmpty(password))
             {
-                prPassword.SetError(txtPassword, "Cannot be empty");
+                prPassword.SetError(txtPassword, "Password cannot be empty");
                 return;
             }
           else  if (password!=againPassword)
