@@ -22,7 +22,7 @@ namespace EnglishWordSet.CRUD
 
         public string GetWordWithMeanig()
         {
-            string line = selectedword.English + " "+ Marks.SeparatorMark + " " + selectedword.Turkish;
+            string line = selectedword.English + " "+ Settings.SettingsInfo.Default.SeparatorMark + " " + selectedword.Turkish;
             return line;
         }
         public string GetWord()

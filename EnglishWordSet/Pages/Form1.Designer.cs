@@ -49,6 +49,7 @@ namespace EnglishWordSet
             this.lblWordCountOutput = new System.Windows.Forms.Label();
             this.btnGetLast = new System.Windows.Forms.Button();
             this.cbSetDay = new System.Windows.Forms.CheckBox();
+            this.btnOpenTurkishWordPage = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).BeginInit();
             this.SuspendLayout();
@@ -131,7 +132,7 @@ namespace EnglishWordSet
             // btnGetNewWord
             // 
             this.btnGetNewWord.Enabled = false;
-            this.btnGetNewWord.Location = new System.Drawing.Point(887, 67);
+            this.btnGetNewWord.Location = new System.Drawing.Point(887, 95);
             this.btnGetNewWord.Name = "btnGetNewWord";
             this.btnGetNewWord.Size = new System.Drawing.Size(136, 29);
             this.btnGetNewWord.TabIndex = 10;
@@ -142,7 +143,7 @@ namespace EnglishWordSet
             // btnToAdminPage
             // 
             this.btnToAdminPage.Enabled = false;
-            this.btnToAdminPage.Location = new System.Drawing.Point(887, 21);
+            this.btnToAdminPage.Location = new System.Drawing.Point(887, 51);
             this.btnToAdminPage.Name = "btnToAdminPage";
             this.btnToAdminPage.Size = new System.Drawing.Size(136, 29);
             this.btnToAdminPage.TabIndex = 11;
@@ -242,7 +243,7 @@ namespace EnglishWordSet
             // 
             // btnGetLast
             // 
-            this.btnGetLast.Location = new System.Drawing.Point(151, 165);
+            this.btnGetLast.Location = new System.Drawing.Point(157, 165);
             this.btnGetLast.Name = "btnGetLast";
             this.btnGetLast.Size = new System.Drawing.Size(140, 29);
             this.btnGetLast.TabIndex = 19;
@@ -262,12 +263,23 @@ namespace EnglishWordSet
             this.cbSetDay.Text = "Set Days";
             this.cbSetDay.UseVisualStyleBackColor = true;
             // 
+            // btnOpenTurkishWordPage
+            // 
+            this.btnOpenTurkishWordPage.Location = new System.Drawing.Point(887, 12);
+            this.btnOpenTurkishWordPage.Name = "btnOpenTurkishWordPage";
+            this.btnOpenTurkishWordPage.Size = new System.Drawing.Size(136, 29);
+            this.btnOpenTurkishWordPage.TabIndex = 21;
+            this.btnOpenTurkishWordPage.Text = "TurkishWordPage";
+            this.btnOpenTurkishWordPage.UseVisualStyleBackColor = true;
+            this.btnOpenTurkishWordPage.Click += new System.EventHandler(this.btnOpenTurkishWordPage_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1026, 554);
+            this.Controls.Add(this.btnOpenTurkishWordPage);
             this.Controls.Add(this.cbSetDay);
             this.Controls.Add(this.btnGetLast);
             this.Controls.Add(this.lblWordDayAvarageOutput);
@@ -320,6 +332,7 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnGetLast;
         private System.Windows.Forms.CheckBox cbSetDay;
         internal System.Windows.Forms.PictureBox pbPaste;
+        private System.Windows.Forms.Button btnOpenTurkishWordPage;
     }
 }
 

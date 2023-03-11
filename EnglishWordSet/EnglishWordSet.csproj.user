@@ -13,6 +13,9 @@
     <Compile Update="Pages\Games\LastLetterGamePage.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="Pages\TurkishWordPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="Pages\UserPage.cs">
       <SubType>Form</SubType>
     </Compile>

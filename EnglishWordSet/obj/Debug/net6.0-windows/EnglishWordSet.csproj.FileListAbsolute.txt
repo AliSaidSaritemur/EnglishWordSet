@@ -104,3 +104,4 @@ C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windo
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.Games.LastLetterGamePage.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.EmailCheckPage.resources
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.UserPasswordResetPage.resources
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.TurkishWordPage.resources

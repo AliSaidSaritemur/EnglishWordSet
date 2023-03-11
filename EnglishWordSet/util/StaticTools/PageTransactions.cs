@@ -15,6 +15,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         private static AdminTransactionsPage adminTransactionsPage;
         private static GamePanel _gamePanel;
         private static LastLetterGamePage _lastLetterGamePage;
+        private static TurkishWordPage _turkishWordPage;
 
         public  static void SetForm1(Main frm1)
         {
@@ -59,6 +60,11 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
             _lastLetterGamePage ??= new();
             return _lastLetterGamePage;
+        }
+        public static TurkishWordPage GetTurkishWordPage()
+        {
+            _turkishWordPage ??= new();
+            return _turkishWordPage;
         }
     }
 }

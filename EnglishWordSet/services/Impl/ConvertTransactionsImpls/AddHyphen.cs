@@ -9,11 +9,11 @@ namespace EnglishWordSet.ConvertTransactions
         public string EdditLine(string lineToSet)
         {
             string resultLine = lineToSet;
-            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, Marks.SeparatorMark);
+            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, Settings.SettingsInfo.Default.SeparatorMark);
 
             if (!isThereHyben && resultLine != null)
             {
-                resultLine += " "+ Marks.SeparatorMark;
+                resultLine += " "+ Settings.SettingsInfo.Default.SeparatorMark;
             }
             return resultLine;
         }

@@ -12,7 +12,7 @@ namespace EnglishWordSet.services.Impl.ConvertTransactionsImpls
     {
         public string EdditLine(string lineToSet)
         {
-            return lineToSet.Replace(Marks.SeparatorMark, "");
+            return lineToSet.Replace(Settings.SettingsInfo.Default.SeparatorMark, "");
         }
     }
 }

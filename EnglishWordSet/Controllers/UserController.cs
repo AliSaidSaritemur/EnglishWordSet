@@ -135,7 +135,7 @@ namespace EnglishWordSet.ToolsBackend
                 {
                     string translatedWord;
                     translatedWord = currentWord.Value;
-                    resultText +=willTranslateLine +" "+ Marks.SeparatorMark + " "+translatedWord+"\n";
+                    resultText +=willTranslateLine +" "+ Settings.SettingsInfo.Default.SeparatorMark + " "+translatedWord+"\n";
                 }
                 else
                 {

@@ -260,6 +260,18 @@ namespace EnglishWordSet
                 AddLog.systemLogs.Info(UserSession.username_Admin + "  Logged out");
                 Environment.Exit(0);
         }
+
+        private void cbWordLanguage_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnOpenTurkishWordPage_Click(object sender, EventArgs e)
+        {
+        PageTransactions.GetTurkishWordPage().Show();
+            Hide();
+
+        }
     }
 }
 

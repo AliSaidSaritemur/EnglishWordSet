@@ -50,7 +50,7 @@ namespace EnglishWordSet.RefactoredStaticFuncs
             }
             public static bool IsThereSpreatorMark(string text)
             {
-                Regex rgLine = new(Marks.SeparatorMark);
+                Regex rgLine = new(Settings.SettingsInfo.Default.SeparatorMark);
                 Match matchRgL = rgLine.Match(text);
                 result = matchRgL.Success;
                 return result;

@@ -9,11 +9,11 @@ namespace EnglishWordSet.ConvertTransactions
         public string EdditLine(string lineToSet)
         {
             string deletedLine = lineToSet;
-            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, Marks.SeparatorMark);
+            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, Settings.SettingsInfo.Default.SeparatorMark);
 
             if (isThereHyben)
             {
-                deletedLine = deletedLine.Substring(0, (deletedLine.IndexOf(Marks.SeparatorMark) + 1));
+                deletedLine = deletedLine.Substring(0, (deletedLine.IndexOf(Settings.SettingsInfo.Default.SeparatorMark) + 1));
             }
 
             return deletedLine;

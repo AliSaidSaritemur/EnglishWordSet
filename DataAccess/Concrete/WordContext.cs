@@ -12,6 +12,7 @@ namespace DataAccess.Concrete
         public DbSet<User> Users { get; set; }
         public DbSet<LearnedWord> LearnedWords { get; set;}
         public DbSet<RandomWord> RandomWords { get; set; }
+        public DbSet<TrWord> TrWords { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -34,6 +35,7 @@ namespace DataAccess.Concrete
             modelBuilder.Entity<User>().HasIndex(a => a.UserName).IsUnique(true);
             modelBuilder.Entity<User>().Property(a => a.Password).IsRequired();
             modelBuilder.Entity<User>().Property(a => a.Role).HasDefaultValue("user");
+            modelBuilder.Entity<TrWord>().Property(a => a.level).HasDefaultValue(1);
 
             base.OnModelCreating(modelBuilder);
         }
