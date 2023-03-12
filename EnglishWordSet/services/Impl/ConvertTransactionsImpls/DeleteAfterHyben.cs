@@ -4,7 +4,7 @@ using EnglishWordSet.util.StaticTools;
 
 namespace EnglishWordSet.ConvertTransactions
 {
-    class SetTurkishWord : IConvertTransactions
+    class DeleteAfterHyben : IConvertTransactions
     {
         public string EdditLine(string lineToSet)
         {

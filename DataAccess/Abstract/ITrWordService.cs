@@ -16,6 +16,8 @@ namespace DataAccess.Abstract
         List<TrWord> GetTurksihWordsWithLevel(int level);
         string GetTurkishWordAndLevelsAsStringText();
         void CheckWordsEnglishIfIsTrueIncLevel(string trWord, string wordEng);
+        bool CheckWordsEnglishMeaning(string trWord, string wordEng);
+        void IncWordLevel(string trWord);
         int GetMaxLevel();
     }
 }

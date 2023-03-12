@@ -16,7 +16,7 @@ namespace EnglishWordSet.services.Impl.ConvertImpls
             string output = inputTxt;
             IConvertTransactions convertTransaction;
 
-            convertTransaction = new SetTurkishWord();
+            convertTransaction = new DeleteAfterHyben();
             output = convertTransaction.EdditLine(output);
 
             convertTransaction = new RemovingMark();

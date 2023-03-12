@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    internal class TrWordImpl : ITrWordService
+    public class TrWordImpl : ITrWordService
     {
         private WordContext context = MyDBTransactions.GetContext();
 
@@ -21,9 +21,21 @@ namespace DataAccess.Concrete
 
         public void CheckWordsEnglishIfIsTrueIncLevel(string trWord, string wordEng)
         {
+            if (string.IsNullOrEmpty(trWord) || string.IsNullOrEmpty(wordEng))
+                return;
+
             TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord);
             trWordToBeCheck.level = trWordToBeCheck.English == wordEng ? trWordToBeCheck.level + 1 : trWordToBeCheck.level;
             context.SaveChanges();
+        }
+
+        public bool CheckWordsEnglishMeaning(string trWord, string wordEng)
+        {
+            if (string.IsNullOrEmpty(trWord) || string.IsNullOrEmpty(wordEng))
+                return false;
+
+            TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord);
+           return trWordToBeCheck.English == wordEng;
         }
 
         public string GetEnglishMeaning(string wordTr)
@@ -43,10 +55,10 @@ namespace DataAccess.Concrete
             string result="";
             for(int i =1;i<= GetMaxLevel();i++)
             {
-                 result = $"\n{i}.";
+                 result += $"\n{i}.";
                 foreach (var turkishWordToBeAddString in GetTurksihWordsWithLevel(i))
                 {
-                    result += "\n" + turkishWordToBeAddString.Turkish;
+                    result += "\n" + turkishWordToBeAddString.Turkish+" "+Settings.SettingsInfo.Default.SeparatorMark;
                 }
             }
             return result;
@@ -57,6 +69,13 @@ namespace DataAccess.Concrete
         {
             List<TrWord> trWords = context.TrWords.Where(a=>a.level==level).ToList();
             return trWords;
+        }
+
+        public void IncWordLevel(string trWord)
+        {
+            TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord);
+            trWordToBeCheck.level = trWordToBeCheck.level+1;
+            context.SaveChanges();
         }
 
         public bool IsThere(string wordTr)

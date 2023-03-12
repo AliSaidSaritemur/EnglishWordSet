@@ -14,7 +14,7 @@ namespace EnglishWordSet
             convertTransaction = new SetDays();
             output = convertTransaction.EdditLine(output);
 
-            convertTransaction = new SetTurkishWord();
+            convertTransaction = new DeleteAfterHyben();
             output = convertTransaction.EdditLine(output);
 
             convertTransaction = new AddHyphen();
