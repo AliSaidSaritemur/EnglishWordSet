@@ -1,4 +1,5 @@
 ﻿using EnglishWordSet.Intefaces;
+using EnglishWordSet.RefactoredStaticFuncs;
 using System;
 using System.IO;
 
@@ -57,7 +58,8 @@ namespace EnglishWordSet.MyTools
                 }
             }
 
-            return convertedText;
+            string spaceDeltedConvertedText = MyRegex.EddittingStringValue.RemoveSpaces(convertedText);
+            return spaceDeltedConvertedText;
         }
     }
 }

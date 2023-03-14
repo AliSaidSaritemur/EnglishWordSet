@@ -1,6 +1,6 @@
 ﻿using EnglishWordSet.ConvertTransactions;
 using EnglishWordSet.Intefaces;
-
+using EnglishWordSet.services.Impl.ConvertTransactionsImpls;
 
 namespace EnglishWordSet
 {
@@ -11,6 +11,11 @@ namespace EnglishWordSet
             string output = inputTxt;
             IConvertTransactions convertTransaction;
 
+            convertTransaction = new LearnedWordAddingToDB();
+            output = convertTransaction.EdditLine(output);
+            if (string.IsNullOrEmpty(output))
+                return output;
+
             convertTransaction = new SetDays();
             output = convertTransaction.EdditLine(output);
 
@@ -19,7 +24,7 @@ namespace EnglishWordSet
 
             convertTransaction = new AddHyphen();
             output = convertTransaction.EdditLine(output);
-
+         
             return output;
         }
     }

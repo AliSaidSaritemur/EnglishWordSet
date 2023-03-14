@@ -27,6 +27,7 @@ namespace DataAccess.Concrete
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<TrWord>().HasIndex(a => a.English).IsUnique(true);
             modelBuilder.Entity<LearnedWord>().HasIndex(a => a.wordEnglish).IsUnique(true);
             modelBuilder.Entity<LearnedWord>().Property(a => a.wordEnglish).HasColumnName("learnedWord_word");
             modelBuilder.Entity<LearnedWord>().Property(a => a.wordTurkish).HasColumnName("learnedWord_meanig");
@@ -34,6 +35,8 @@ namespace DataAccess.Concrete
             modelBuilder.Entity<LearnedWord>().Property(a => a.meaningWordSentence).HasColumnName("learnedWord_meanigSentence");
             modelBuilder.Entity<User>().HasIndex(a => a.UserName).IsUnique(true);
             modelBuilder.Entity<User>().Property(a => a.Password).IsRequired();
+            modelBuilder.Entity<TrWord>().Property(a => a.English).IsRequired();
+            modelBuilder.Entity<TrWord>().Property(a => a.Turkish).IsRequired();
             modelBuilder.Entity<User>().Property(a => a.Role).HasDefaultValue("user");
             modelBuilder.Entity<TrWord>().Property(a => a.level).HasDefaultValue(1);
 
