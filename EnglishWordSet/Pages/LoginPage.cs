@@ -19,6 +19,7 @@ namespace EnglishWordSet
         public LoginPage()
         {
             InitializeComponent();
+            this.Show();
             this.ActiveControl = txtUserName;
             txtUserName.Focus();
 

@@ -3,6 +3,7 @@ using LogAccess;
 using LogAccess.services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace DataAccess.Concrete
 {
@@ -13,12 +14,15 @@ namespace DataAccess.Concrete
         public DbSet<LearnedWord> LearnedWords { get; set;}
         public DbSet<RandomWord> RandomWords { get; set; }
         public DbSet<TrWord> TrWords { get; set; }
+        public DbSet<UserTexts> _UserTexts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             try { 
             optionsBuilder.UseSqlServer("server=(localdb)\\mssqllocaldb; database= EWordEfCore;" +
                 "integrated security=true;");
+                optionsBuilder
+        .ConfigureWarnings(b => b.Ignore(RelationalEventId.AmbientTransactionWarning));
             }
             catch
             {
@@ -34,11 +38,13 @@ namespace DataAccess.Concrete
             modelBuilder.Entity<LearnedWord>().Property(a => a.wordSentence).HasColumnName("learnedWord_sentence");
             modelBuilder.Entity<LearnedWord>().Property(a => a.meaningWordSentence).HasColumnName("learnedWord_meanigSentence");
             modelBuilder.Entity<User>().HasIndex(a => a.UserName).IsUnique(true);
+            modelBuilder.Entity<UserTexts>().HasIndex(a => a.UserName).IsUnique(true);
             modelBuilder.Entity<User>().Property(a => a.Password).IsRequired();
             modelBuilder.Entity<TrWord>().Property(a => a.English).IsRequired();
             modelBuilder.Entity<TrWord>().Property(a => a.Turkish).IsRequired();
             modelBuilder.Entity<User>().Property(a => a.Role).HasDefaultValue("user");
             modelBuilder.Entity<TrWord>().Property(a => a.level).HasDefaultValue(1);
+            modelBuilder.Entity<User>().ToTable(tb=>tb.HasTrigger("UserTextAdding"));
 
             base.OnModelCreating(modelBuilder);
         }

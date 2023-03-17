@@ -1,12 +1,13 @@
 ﻿using DataAccess.Abstract;
 using DataAccess.util;
 using Entities.Concrete;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using EntityFramework.Extensions;
 namespace DataAccess.Concrete
 {
     public class TrWordImpl : ITrWordService
@@ -15,6 +16,9 @@ namespace DataAccess.Concrete
 
         public void AddWtithoutLevel(string wordTr, string wordEng, string userName)
         {
+            if (IsThere(wordTr))
+                return;
+
             context.TrWords.Add(new TrWord { English = wordEng, Turkish = wordTr,UserName= userName });
             context.SaveChanges();
         }
@@ -31,7 +35,7 @@ namespace DataAccess.Concrete
 
         public bool CheckWordsEnglishMeaning(string trWord, string wordEng)
         {
-            if (string.IsNullOrEmpty(trWord) || string.IsNullOrEmpty(wordEng))
+            if (string.IsNullOrEmpty(trWord) || string.IsNullOrEmpty(wordEng)||!IsThere(trWord))
                 return false;
 
             TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord);
@@ -82,6 +86,16 @@ namespace DataAccess.Concrete
         {
             TrWord nword = context.TrWords.FirstOrDefault(I => I.Turkish == wordTr);
             return nword != null;
+        }
+
+        public void RemoveWordsWithLevel(int level)
+        {
+            var trWordLİst = context.TrWords.Where(c => c.level > 3).ToList();
+            foreach (var word in trWordLİst)
+            {
+                context.TrWords.Remove(word);
+            }
+            context.SaveChanges();
         }
 
         public void Update(string wordTr, string wordEng, string userName,int level)

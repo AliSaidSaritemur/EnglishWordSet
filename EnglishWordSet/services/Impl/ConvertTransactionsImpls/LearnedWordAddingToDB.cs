@@ -23,7 +23,7 @@ namespace EnglishWordSet.services.Impl.ConvertTransactionsImpls
                 lineToBeCut = lineToBeCut.Replace("+", "");
 
                 string[] wordsToAddDB = lineToBeCut.Split(Settings.SettingsInfo.Default.SeparatorMark);
-            if (!MyRegex.CheckingValue.IsName(wordsToAddDB[0]) || !MyRegex.CheckingValue.IsName(wordsToAddDB[1]))
+            if (string.IsNullOrEmpty(wordsToAddDB[0]) || string.IsNullOrEmpty(wordsToAddDB[1]))
                 return lineToSet;
 
              TrWordImpl _trWordImpl = new ();

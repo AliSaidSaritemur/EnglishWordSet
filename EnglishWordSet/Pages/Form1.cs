@@ -29,6 +29,7 @@ namespace EnglishWordSet
         private string saveTexts;
         private MBWordController mBWord;
         private MyImageFilter _myImageFilter = new();
+        private  UserTextsImpl _UserTextsImpl = new();
         public Main()
         {
             InitializeComponent();
@@ -57,22 +58,22 @@ namespace EnglishWordSet
             txtOutput.Text = tempText;
             SetWordInform(txtOutput, lblWordCountOutput, lblWordDayAvarageOutput);
             string noSpaceOutput = MyRegex.EddittingStringValue.RemoveSpaces(tempText);
+           
             if (saveStatu)
             {
-                AddLog.ConvertedWordsLogs.Info(tempText);
+                _UserTextsImpl.AddToConvertedWords(tempText,Sessions.UserSession.username_Admin);
+             //   AddLog.ConvertedWordsLogs.Info(tempText);
 
             }
             else
             {
-                AddLog.ConvertedWordsLogs.Trace(noSpaceOutput);
+               // AddLog.ConvertedWordsLogs.Trace(noSpaceOutput);
             }
         }
 
         private async void btnGetSaveText_Click(object sender, EventArgs e)
         {
-            if (!ReadSaveText())
-                return;
-            txtOutput.Text = saveTexts;
+            txtOutput.Text = _UserTextsImpl.GetConvertedWords(Sessions.UserSession.username_Admin);
         }
 
         private void btnGetNewWord_Click(object sender, EventArgs e)
@@ -219,7 +220,7 @@ namespace EnglishWordSet
         {
             if (!ReadSaveText())
                 return;
-            string words = GetLastWordsFromSaves();
+            string words = _UserTextsImpl.GetLastConvertedWords(Sessions.UserSession.username_Admin);
             words = Regex.Replace(words, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
             txtInput.Text = words;
             SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);

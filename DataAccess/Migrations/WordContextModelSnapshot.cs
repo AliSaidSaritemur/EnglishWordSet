@@ -164,6 +164,38 @@ namespace EnglishWordSet.Migrations
 
                     b.ToTable("Users");
                 });
+
+            modelBuilder.Entity("Entities.Concrete.UserTexts", b =>
+                {
+                    b.Property<int>("id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("id"));
+
+                    b.Property<string>("LastConvertedWords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SavedConvertedWords")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TrashBox")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("id");
+
+                    b.HasIndex("UserName")
+                        .IsUnique()
+                        .HasFilter("[UserName] IS NOT NULL");
+
+                    b.ToTable("_UserTexts", t =>
+                        {
+                            t.HasTrigger("UserTextAdding");
+                        });
+                });
 #pragma warning restore 612, 618
         }
     }

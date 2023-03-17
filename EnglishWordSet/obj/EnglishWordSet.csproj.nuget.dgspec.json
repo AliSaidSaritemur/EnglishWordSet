@@ -135,6 +135,14 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "EntityFramework.Extensions": {
+              "target": "Package",
+              "version": "[0.0.2, )"
+            },
+            "EntityFrameworkExtended": {
+              "target": "Package",
+              "version": "[6.2.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
               "version": "[7.0.2, )"
@@ -166,6 +174,10 @@
             "PostSharp.Redist": {
               "target": "Package",
               "version": "[5.0.27, )"
+            },
+            "System.Data.SqlClient": {
+              "target": "Package",
+              "version": "[4.8.5, )"
             }
           },
           "imports": [

@@ -19,5 +19,6 @@ namespace DataAccess.Abstract
         bool CheckWordsEnglishMeaning(string trWord, string wordEng);
         void IncWordLevel(string trWord);
         int GetMaxLevel();
+        void RemoveWordsWithLevel(int level);
     }
 }
