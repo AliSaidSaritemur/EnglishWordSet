@@ -1,5 +1,7 @@
 ﻿using DataAccess.Concrete;
 using DataAccess.util;
+using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.Sessions;
 using EnglishWordSet.util.StaticTools;
 using Entities.Concrete;
 
@@ -12,12 +14,12 @@ namespace EnglishWordSet.CRUD
 
         public MBWordController()
         {
-            selectedword = wordImpl.GetRandomWord();
+            selectedword = wordImpl.GetRandomWord(UserSession.username_Admin);
         }
         
         public void RemoveWord()
         {
-            wordImpl.Delete(selectedword.English);
+            wordImpl.Delete(selectedword.English, UserSession.username_Admin);
         }
 
         public string GetWordWithMeanig()
@@ -27,7 +29,12 @@ namespace EnglishWordSet.CRUD
         }
         public string GetWord()
         {
-            selectedword = wordImpl.GetRandomWord();
+            selectedword = wordImpl.GetRandomWord(UserSession.username_Admin);
+            if(selectedword == null)
+            {
+                MyNotificationAlerts.GetWarningMessage("There is no New Word");
+                return "";
+            }            
             string line = selectedword.English;
             return line;
         }

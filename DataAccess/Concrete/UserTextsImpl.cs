@@ -41,6 +41,12 @@ namespace DataAccess.Concrete
             return userTexts.LastConvertedWords;
         }
 
+        public string GetTrashBoxText(string UserName)
+        {
+            UserTexts userTexts = context._UserTexts.FirstOrDefault(I => I.UserName == UserName);
+            return userTexts.TrashBox;
+        }
+
         public void UpdateToTrashBox(string updatedVersion, string UserName)
         {
             UserTexts userTexts = context._UserTexts.FirstOrDefault(I => I.UserName == UserName);

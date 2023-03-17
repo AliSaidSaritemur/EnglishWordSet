@@ -80,6 +80,8 @@ namespace EnglishWordSet
         {
             mBWord ??= new();
             string word = mBWord.GetWord();
+            if (string.IsNullOrEmpty(word))
+                return;
 
             DialogResult dialogResult;
 
@@ -94,7 +96,7 @@ namespace EnglishWordSet
             {
                 LearnedWordImpl _learnedWordImpl = new();
 
-                if (_learnedWordImpl.IsThere(word))
+                if (_learnedWordImpl.IsThere(word, UserSession.username_Admin))
                 {
                     LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
                     string sentenceWord = lwpb.GetSentence(word);

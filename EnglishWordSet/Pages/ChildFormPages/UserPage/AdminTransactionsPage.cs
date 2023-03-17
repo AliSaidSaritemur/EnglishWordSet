@@ -2,6 +2,7 @@
 using DataAccess.util;
 using EnglishWordSet.Controllers;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.Sessions;
 using EnglishWordSet.util.StaticTools;
 using LogAccess.services;
 using System;
@@ -87,14 +88,14 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
                 prDeleteLeanerdWords.SetError(txtWordtoBeDeleteFromLearned,"Enter the word you want to delete");
                 return;
             }
-           else if (!_learnedWordImpl.IsThere(word))
+           else if (!_learnedWordImpl.IsThere(word, UserSession.username_Admin))
             {
                 MyNotificationAlerts.GetErrorMessage(word +" is not a Learned Word");
 
             }
             else
             {
-                _learnedWordImpl.Delete(word);
+                _learnedWordImpl.Delete(word, UserSession.username_Admin);
                 AddLog.systemLogs.Info(" " + word + " was Deleted ");
                 MyNotificationAlerts.GetSuccessMessage(" " + word + " was Deleted ");
             }

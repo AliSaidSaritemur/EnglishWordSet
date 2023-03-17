@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ChildAdminNewWord));
             this.txtInput = new System.Windows.Forms.RichTextBox();
             this.btnSubmit = new System.Windows.Forms.Button();
             this.imgTrash = new System.Windows.Forms.PictureBox();
@@ -74,7 +73,6 @@
             // imgTrash
             // 
             this.imgTrash.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.imgTrash.Image = ((System.Drawing.Image)(resources.GetObject("imgTrash.Image")));
             this.imgTrash.Location = new System.Drawing.Point(376, 272);
             this.imgTrash.Name = "imgTrash";
             this.imgTrash.Size = new System.Drawing.Size(59, 62);

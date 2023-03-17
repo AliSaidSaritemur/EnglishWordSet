@@ -14,5 +14,6 @@ namespace DataAccess.Abstract
         void UpdateToTrashBox(string updatedVersion, string UserName);
         string GetLastConvertedWords(string UserName);
         string GetConvertedWords(string UserName);
+        string GetTrashBoxText(string UserName);
     }
 }

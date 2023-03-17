@@ -91,10 +91,6 @@ namespace EnglishWordSet
           
         }
 
-        private void AdminPage_Activated(object sender, EventArgs e)
-        {
-            
-        }
 
         private void btnAddNewAdmin_KeyDown(object sender, KeyEventArgs e)
         {

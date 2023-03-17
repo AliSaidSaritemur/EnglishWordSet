@@ -1,6 +1,7 @@
 ﻿using DataAccess.Concrete;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
 using EnglishWordSet.util.MyTools;
 using EnglishWordSet.util.StaticTools;
@@ -42,7 +43,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
             LearnedWordImpl _learnedWordImpl = new();
 
-            if (_learnedWordImpl.IsThere(word))
+            if (_learnedWordImpl.IsThere(word, UserSession.username_Admin))
             {
                 LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
                 string sentenceWord = lwpb.GetSentence(word);

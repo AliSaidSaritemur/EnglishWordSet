@@ -4,6 +4,7 @@ using DataAccess.util;
 using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.MyTools;
 using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.Sessions;
 using EnglishWordSet.util.StaticTools;
 using System.Collections.Generic;
 using System.Drawing;
@@ -90,7 +91,7 @@ namespace EnglishWordSet.ToolsBackend
                 {
                     string translatedWord;
                     translatedWord = currentWord.Value;
-                    wordImpl.Add(willTranslateLine, translatedWord);
+                    wordImpl.Add(willTranslateLine, translatedWord, UserSession.username_Admin);
                 }
                 else
                 {
@@ -156,13 +157,13 @@ namespace EnglishWordSet.ToolsBackend
 
             string meaningOfSentence= translater.Translate(sentence); 
 
-            _learnedWordImpl.Add(word,sentence,meaning, meaningOfSentence);
+            _learnedWordImpl.Add(word,sentence,meaning, meaningOfSentence, UserSession.username_Admin);
            
         }
 
         public bool IsLEarnedWordAdded(string word)
         {
-            return (_learnedWordImpl.IsThere(word));
+            return (_learnedWordImpl.IsThere(word, UserSession.username_Admin));
         }
     }
 

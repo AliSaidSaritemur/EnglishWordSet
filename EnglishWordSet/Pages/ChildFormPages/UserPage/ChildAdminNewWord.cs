@@ -31,6 +31,7 @@ namespace EnglishWordSet
        private UserController pageBackend = ControllersGetter.AdminPage();
         private UserImpl adminImpl= new UserImpl();
         private MyImageFilter _myImageFilter= new();
+        private UserTextsImpl _userTextsImpl = new UserTextsImpl();
         public ChildAdminNewWord()
         {
             InitializeComponent();
@@ -50,7 +51,7 @@ namespace EnglishWordSet
             string WordstobeSave = GetWordstobeSave();
 
             if (string.IsNullOrEmpty(WordstobeSave)) {
-            
+               
             }
             else
             {
@@ -58,7 +59,7 @@ namespace EnglishWordSet
                 txtInput.Text = Regex.Replace(WordstobeSave, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
                 pageBackend.AddNewWords(txtInput.Text.ToString().Trim());
                 MyNotificationAlerts.GetSuccessMessage("The words are added to Database");
-            }
+            } 
             txtInput.Clear();
           
         }
@@ -101,9 +102,11 @@ namespace EnglishWordSet
                         break;
                     }
                 }
-               _myImageFilter.RedFilterToImageEffect(imgTrash);
+
+                imgTrash.Image = Properties.Resources.FullTrash;
+                _myImageFilter.RedFilterToImageEffect(imgTrash);
                 AddLog.WrongWordsLogs.Info(logMessage);
-                FileTransactions.AddTextToFile(Settings.SettingsInfo.Default.WrongWordLogAdres, logMessage);
+                _userTextsImpl.AddToTrashbox(logMessage,UserSession.username_Admin);
                 prWords.Clear();
                 return WordstobeSave;
             }
@@ -122,11 +125,11 @@ namespace EnglishWordSet
 
         internal void SetTrashIcon()
         {
-            string wrongWordsLogged = FileTransactions.ReadText(Settings.SettingsInfo.Default.WrongWordLogAdres);
+            string wrongWordsLogged = _userTextsImpl.GetTrashBoxText(Sessions.UserSession.username_Admin);
             if (!string.IsNullOrEmpty(wrongWordsLogged))
                  imgTrash.Image = Properties.Resources.FullTrash;
             else
-             imgTrash.Image = Properties.Resources.trash;
+                 imgTrash.Image = Properties.Resources.trash;
         }
 
         private void btnGetRandomWord_Click(object sender, EventArgs e)

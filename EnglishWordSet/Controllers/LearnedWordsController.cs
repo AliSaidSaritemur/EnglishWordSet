@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess.util;
+using EnglishWordSet.Sessions;
 
 namespace EnglishWordSet.PageBackend
 {
@@ -21,7 +22,7 @@ namespace EnglishWordSet.PageBackend
         {      
             word =word.ToLower();
             if (selectedWord==null || selectedWord.wordEnglish != word)
-                selectedWord = _learnedWordImpl.GetLearnedWord(word);
+                selectedWord = _learnedWordImpl.GetLearnedWord(word,UserSession.username_Admin);
 
             return selectedWord;    
         }

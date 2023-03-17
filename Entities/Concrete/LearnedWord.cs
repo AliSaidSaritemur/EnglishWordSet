@@ -8,5 +8,6 @@ namespace Entities.Concrete
         public string wordTurkish{ get; set; }
         public string wordSentence { get; set; }
         public string meaningWordSentence { get; set; }
+        public string UserName { get; set; }
     }
 }

@@ -2,6 +2,7 @@
 using EnglishWordSet.ConvertTransactions;
 using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.services.Impl.ConvertTransactionsImpls;
+using EnglishWordSet.Sessions;
 using EnglishWordSet.util.StaticTools;
 using System;
 using System.Collections.Generic;
@@ -36,15 +37,15 @@ namespace EnglishWordSet.Pages
 
         private void btnGetTurkishWord_Click(object sender, EventArgs e)
         {
-            txtInputTurkishWords.Text = _trWordImpl.GetTurkishWordAndLevelsAsStringText();
+            txtInputTurkishWords.Text = _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
         }
 
         private void btnConvertTrWords_Click(object sender, EventArgs e)
         {
         string convertedText= StringTransactions.ReadStringWithAction(txtInputTurkishWords.Text.ToString(), getAndSetTurkishLine);
             txtInputTurkishWords.Text = convertedText;
-            txtOutputTurkishWords.Text= _trWordImpl.GetTurkishWordAndLevelsAsStringText();
-            _trWordImpl.RemoveWordsWithLevel(3);
+            txtOutputTurkishWords.Text= _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
+            _trWordImpl.RemoveWordsWithLevel(3, UserSession.username_Admin);
         }
 
         DeleteAfterHyben deleteAfterHyben = new();
@@ -57,14 +58,14 @@ namespace EnglishWordSet.Pages
             string english = deleteBeforeHyben.EdditLine(line).Trim();
             if (MyRegex.CheckingValue.IsName(turkish))
             {
-                if(_trWordImpl.CheckWordsEnglishMeaning(turkish, english))
+                if(_trWordImpl.CheckWordsEnglishMeaning(turkish, english, UserSession.username_Admin))
                 {
-                    _trWordImpl.IncWordLevel(turkish);
+                    _trWordImpl.IncWordLevel(turkish, UserSession.username_Admin);
                     resultLine += " true" ;
                 }
                 else
                 {
-                    resultLine += $"  false // true :{_trWordImpl.GetEnglishMeaning(turkish)}";
+                    resultLine += $"  false // true :{_trWordImpl.GetEnglishMeaning(turkish, UserSession.username_Admin)}";
                 }
             }
             return resultLine;

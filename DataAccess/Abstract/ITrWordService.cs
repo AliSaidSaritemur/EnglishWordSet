@@ -11,14 +11,14 @@ namespace DataAccess.Abstract
     {
         void AddWtithoutLevel(string wordTr, string wordEng,string UserName);
         void Update(string wordTr, string wordEng, string UserName, int level);
-        string GetEnglishMeaning(string wordTr);
-        bool IsThere(string wordTr);
-        List<TrWord> GetTurksihWordsWithLevel(int level);
-        string GetTurkishWordAndLevelsAsStringText();
-        void CheckWordsEnglishIfIsTrueIncLevel(string trWord, string wordEng);
-        bool CheckWordsEnglishMeaning(string trWord, string wordEng);
-        void IncWordLevel(string trWord);
-        int GetMaxLevel();
-        void RemoveWordsWithLevel(int level);
+        string GetEnglishMeaning(string wordTr, string UserName);
+        bool IsThere(string wordTr, string UserName);
+        List<TrWord> GetTurksihWordsWithLevel(int level, string UserName);
+        string GetTurkishWordAndLevelsAsStringText(string userName);
+        void CheckWordsEnglishIfIsTrueIncLevel(string trWord, string wordEng, string UserName);
+        bool CheckWordsEnglishMeaning(string trWord, string wordEng, string UserName);
+        void IncWordLevel(string trWord, string UserName);
+        int GetMaxLevel(string UserName);
+        void RemoveWordsWithLevel(int level, string UserName);
     }
 }

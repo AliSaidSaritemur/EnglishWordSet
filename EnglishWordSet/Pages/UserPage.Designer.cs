@@ -135,7 +135,6 @@ namespace EnglishWordSet
             this.Name = "UserPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Page";
-            this.Activated += new System.EventHandler(this.AdminPage_Activated);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminPage_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
             this.Load += new System.EventHandler(this.Form2_Load);
