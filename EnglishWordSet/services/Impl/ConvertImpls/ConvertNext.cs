@@ -16,12 +16,15 @@ namespace EnglishWordSet
             if (string.IsNullOrEmpty(output))
                 return output;
 
+            convertTransaction = new ReducingFullDays();
+            output = convertTransaction.EdditLine(output);
+
             convertTransaction = new SetDays();
             output = convertTransaction.EdditLine(output);
 
             convertTransaction = new DeleteAfterHyben();
             output = convertTransaction.EdditLine(output);
-
+          
             convertTransaction = new AddHyphen();
             output = convertTransaction.EdditLine(output);
          

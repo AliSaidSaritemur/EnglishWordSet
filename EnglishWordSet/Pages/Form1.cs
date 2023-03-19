@@ -6,27 +6,16 @@ using EnglishWordSet.RefactoredStaticFuncs;
 using DataAccess.Concrete;
 using EnglishWordSet.Sessions;
 using System;
-using System.Drawing;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-using DataAccess.util;
 using LogAccess.services;
 using System.Text.RegularExpressions;
-using System.Linq;
-using Image = System.Drawing.Image;
-using LogAccess;
-using System.Windows.Markup;
-using EnglishWordSet.util.StaticTools;
 using EnglishWordSet.ChildForms.AdminPage;
-using EnglishWordSet.util.MyTools;
 using EnglishWordSet.services.Impl.ConvertImpls;
 
 namespace EnglishWordSet
 {
     public partial class Main : Form
     {
-        private string savesFileName = "/logs/ConvertedWord/ConvertedWords.log";
-        private string saveTexts;
         private MBWordController mBWord;
         private MyImageFilter _myImageFilter = new();
         private  UserTextsImpl _UserTextsImpl = new();
@@ -62,16 +51,16 @@ namespace EnglishWordSet
             if (saveStatu)
             {
                 _UserTextsImpl.AddToConvertedWords(tempText,Sessions.UserSession.username_Admin);
-             //   AddLog.ConvertedWordsLogs.Info(tempText);
+                AddLog.ConvertedWordsLogs.Info(tempText);
 
             }
             else
             {
-               // AddLog.ConvertedWordsLogs.Trace(noSpaceOutput);
+               AddLog.ConvertedWordsLogs.Trace(noSpaceOutput);
             }
         }
 
-        private async void btnGetSaveText_Click(object sender, EventArgs e)
+        private  void btnGetSaveText_Click(object sender, EventArgs e)
         {
             txtOutput.Text = _UserTextsImpl.GetConvertedWords(Sessions.UserSession.username_Admin);
         }
@@ -105,7 +94,7 @@ namespace EnglishWordSet
                 }
 
                 ChildAdminNewLearnedWordPAgeGetter(word, mBWord.GetMeaning());
-                Random rnd = new Random();
+                Random rnd = new ();
                 txtInput.Text = rnd.Next(10) < 5 ? mBWord.GetWordWithMeanig() + "\n" + txtInput.Text.ToString() : txtInput.Text.ToString() + "\n " + mBWord.GetWordWithMeanig();
                 mBWord.RemoveWord();
                 SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
@@ -140,30 +129,6 @@ namespace EnglishWordSet
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            LoadAsync();
-        }
-
-        private async void LoadAsync()
-        {
-            await SetContext();
-            await LoadMBAsync();
-            btnGetNewWord.Enabled = true;
-            btnToAdminPage.Enabled = true;
-            getLaarnedWordPage.Enabled = true;
-        }
-        private Task LoadMBAsync()
-        {
-            return Task.Run(() =>
-            {
-                mBWord = ControllersGetter.mBWordPage();
-            });
-        }
-        private Task SetContext()
-        {
-            return Task.Run(() =>
-            {
-                mBWord ??= new();
-            });
         }
 
         private void getLaarnedWordPage_Click(object sender, EventArgs e)
@@ -172,7 +137,7 @@ namespace EnglishWordSet
             page.Show();
         }
 
-        private async void pbCopy_Click(object sender, EventArgs e)
+        private  void pbCopy_Click(object sender, EventArgs e)
         {
             txtOutput.SelectionStart = 0;
             txtOutput.SelectionLength = txtOutput.Text.Length;
@@ -193,7 +158,6 @@ namespace EnglishWordSet
 
         private void pbPaste_Click(object sender, EventArgs e)
         {
-            Image pasteImg = Properties.Resources.paste;
             txtInput.Clear();
             txtInput.Paste();
             _myImageFilter.GreenFilterToImageEffect(pbPaste);
@@ -220,42 +184,11 @@ namespace EnglishWordSet
 
         private void btnGetLast_Click(object sender, EventArgs e)
         {
-            if (!ReadSaveText())
-                return;
+
             string words = _UserTextsImpl.GetLastConvertedWords(Sessions.UserSession.username_Admin);
             words = Regex.Replace(words, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
             txtInput.Text = words;
             SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
-        }
-
-
-        private string GetLastWordsFromSaves()
-        {
-            Regex regex = new Regex("\\d{4}-\\d{2}-\\d{2} \\d{2}:\\d{2}:\\d{2}\\.\\d{4}");
-            string vals = regex.Split(saveTexts)[0];
-            vals ??= vals.Remove(vals.TrimEnd().LastIndexOf(Environment.NewLine));
-            return vals;
-        }
-
-        private bool ReadSaveText()
-        {
-
-            saveTexts = " ";
-            saveTexts = FileTransactions.ReadText(Settings.SettingsInfo.Default.ConvertedWordLog);
-            saveTexts = string.Join("\r\n", saveTexts.Split('\r', '\n').Reverse());
-            if (!string.IsNullOrEmpty(saveTexts))
-                return true;
-            else
-            {
-                AddLog.systemLogs.Error("There was a problem opening the Converter Word file.");
-                return false;
-                btnGetSaveText.Visible = false;
-                btnGetLast.Visible = false;
-                BasicAlerts.ErrorAlert("There are some technical problems with the display of transactions currently made. You can fix the problem by restarting the program.",
-                    "Unable to access files");
-                return false;
-            }
-
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)

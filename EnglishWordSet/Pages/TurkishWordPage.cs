@@ -44,8 +44,9 @@ namespace EnglishWordSet.Pages
         {
         string convertedText= StringTransactions.ReadStringWithAction(txtInputTurkishWords.Text.ToString(), getAndSetTurkishLine);
             txtInputTurkishWords.Text = convertedText;
-            txtOutputTurkishWords.Text= _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
             _trWordImpl.RemoveWordsWithLevel(3, UserSession.username_Admin);
+            txtOutputTurkishWords.Text= _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
+       
         }
 
         DeleteAfterHyben deleteAfterHyben = new();

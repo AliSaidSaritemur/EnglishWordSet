@@ -73,10 +73,16 @@ namespace EnglishWordSet.RefactoredStaticFuncs
         {
             public static string ReverseString(string text)
             {
+                if (string.IsNullOrEmpty(text))
+                    return "";
+
                 return string.Join("\r\n", text.Split('\r', '\n').Reverse());
             }
             public static string RemoveSpaces(string text)
             {
+                if (string.IsNullOrEmpty(text))
+                    return "";
+
                 return Regex.Replace(text, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline); ;
             }         
         }

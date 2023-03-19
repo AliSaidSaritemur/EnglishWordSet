@@ -34,7 +34,6 @@ namespace EnglishWordSet.Pages
              searchedWord = txtSearch.Text.ToString().Trim();
             LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
              LearnedWord learnedWord = lwpb.SelectWord(searchedWord);
-            string learnedwordString;
 
             if(learnedWord == null)
             {

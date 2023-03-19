@@ -48,7 +48,7 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
 
         private void TrashBox_FormClosed(object sender, FormClosedEventArgs e)
         {
-            string wrongWordsLogged = FileTransactions.ReadText(WrongWordsFileName);
+            string wrongWordsLogged = _UserTextsImpl.GetTrashBoxText(Sessions.UserSession.username_Admin);
             ChildAdminNewWord childNewWordPage = ControllersGetter.AdminPage().GetChildNewWordPage();
             childNewWordPage.SetTrashIcon();
         }

@@ -120,8 +120,6 @@ namespace EnglishWordSet
             // cbSpace
             // 
             this.cbSpace.AutoSize = true;
-            this.cbSpace.Checked = true;
-            this.cbSpace.CheckState = System.Windows.Forms.CheckState.Checked;
             this.cbSpace.Location = new System.Drawing.Point(61, 72);
             this.cbSpace.Name = "cbSpace";
             this.cbSpace.Size = new System.Drawing.Size(195, 24);
@@ -131,7 +129,6 @@ namespace EnglishWordSet
             // 
             // btnGetNewWord
             // 
-            this.btnGetNewWord.Enabled = false;
             this.btnGetNewWord.Location = new System.Drawing.Point(887, 95);
             this.btnGetNewWord.Name = "btnGetNewWord";
             this.btnGetNewWord.Size = new System.Drawing.Size(136, 29);
@@ -142,7 +139,6 @@ namespace EnglishWordSet
             // 
             // btnToAdminPage
             // 
-            this.btnToAdminPage.Enabled = false;
             this.btnToAdminPage.Location = new System.Drawing.Point(887, 51);
             this.btnToAdminPage.Name = "btnToAdminPage";
             this.btnToAdminPage.Size = new System.Drawing.Size(136, 29);
@@ -153,7 +149,6 @@ namespace EnglishWordSet
             // 
             // getLaarnedWordPage
             // 
-            this.getLaarnedWordPage.Enabled = false;
             this.getLaarnedWordPage.Location = new System.Drawing.Point(423, 12);
             this.getLaarnedWordPage.Name = "getLaarnedWordPage";
             this.getLaarnedWordPage.Size = new System.Drawing.Size(160, 29);
