@@ -133,7 +133,8 @@
             this.Controls.Add(this.txtRandomWordToBeAddCount);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnAddRandomWordtoDB);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "AdminTransactionsPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminTransactionsPage";

@@ -165,7 +165,8 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtSentence);
             this.Controls.Add(this.txtWord);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ChildAdminNewLearnedWord";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "ChildAdminNewLearnedWord";

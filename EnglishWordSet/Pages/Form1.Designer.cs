@@ -293,7 +293,8 @@ namespace EnglishWordSet
             this.Controls.Add(this.btnConvert);
             this.Controls.Add(this.txtOutput);
             this.Controls.Add(this.txtInput);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

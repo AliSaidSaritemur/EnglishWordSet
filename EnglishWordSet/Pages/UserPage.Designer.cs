@@ -130,8 +130,9 @@ namespace EnglishWordSet
             this.Controls.Add(this.btnAddLearnedWord);
             this.Controls.Add(this.btnAddNewWord);
             this.Controls.Add(this.btnAddNewAdmin);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.IsMdiContainer = true;
+            this.MaximizeBox = false;
             this.Name = "UserPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Page";

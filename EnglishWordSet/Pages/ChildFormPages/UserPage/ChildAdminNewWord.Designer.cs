@@ -201,7 +201,8 @@
             this.Controls.Add(this.imgTrash);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtInput);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "ChildAdminNewWord";
             this.RightToLeftLayout = true;
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;

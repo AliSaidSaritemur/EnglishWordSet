@@ -144,7 +144,8 @@
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.Sentence);
             this.Controls.Add(this.txtSearch);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MinimizeBox = false;
             this.Name = "LearnedWordsPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearnedWordsPanel";

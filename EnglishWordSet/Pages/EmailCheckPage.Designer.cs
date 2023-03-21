@@ -107,7 +107,8 @@
             this.Controls.Add(this.txtVerificationCode);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblTimeToEnterCode);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "EmailCheckPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "EmailCheckPage";

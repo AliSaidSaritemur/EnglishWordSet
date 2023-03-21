@@ -81,6 +81,8 @@
             this.Controls.Add(this.btnGetTurkishWord);
             this.Controls.Add(this.txtOutputTurkishWords);
             this.Controls.Add(this.txtInputTurkishWords);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "TurkishWordPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TurkishWordPage";

@@ -139,6 +139,7 @@
             this.Controls.Add(this.txtPasswordAgain);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtUserName);
+            this.MaximizeBox = false;
             this.Name = "UserPasswordResetPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "UserPasswordResetPage";

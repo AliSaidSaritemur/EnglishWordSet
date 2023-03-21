@@ -71,7 +71,8 @@
             this.Controls.Add(this.btnCleanWrongWords);
             this.Controls.Add(this.btnSaveChanges);
             this.Controls.Add(this.rtbTrashWords);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.MaximizeBox = false;
             this.Name = "TrashBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrashBox";
