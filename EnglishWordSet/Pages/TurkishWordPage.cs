@@ -46,7 +46,8 @@ namespace EnglishWordSet.Pages
             txtInputTurkishWords.Text = convertedText;
             _trWordImpl.RemoveWordsWithLevel(3, UserSession.username_Admin);
             txtOutputTurkishWords.Text= _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
-       
+            ChangeTxtInputWordsColor("true", Color.Green);
+            ChangeTxtInputWordsColor("false",Color.Red);
         }
 
         DeleteAfterHyben deleteAfterHyben = new();
@@ -70,6 +71,21 @@ namespace EnglishWordSet.Pages
                 }
             }
             return resultLine;
+        }
+            
+        public void ChangeTxtInputWordsColor(string word,Color color)
+        {
+            string tempInputWords = txtInputTurkishWords.Text.ToString();
+
+            while (tempInputWords.IndexOf(word) >=0)
+            {
+                int indexOfWord = tempInputWords.IndexOf(word);
+                int lengthofWord = word.Length;
+                txtInputTurkishWords.Select(indexOfWord, lengthofWord);
+                txtInputTurkishWords.SelectionColor = color;
+
+                tempInputWords= tempInputWords.Remove(indexOfWord, 1).Insert(indexOfWord, $"{(char)(word[0]+1)}");
+            }        
         }
       
     }

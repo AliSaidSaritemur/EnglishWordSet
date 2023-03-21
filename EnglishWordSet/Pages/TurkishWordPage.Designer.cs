@@ -32,6 +32,7 @@
             this.txtOutputTurkishWords = new System.Windows.Forms.RichTextBox();
             this.btnGetTurkishWord = new System.Windows.Forms.Button();
             this.btnConvertTrWords = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtInputTurkishWords
@@ -72,11 +73,23 @@
             this.btnConvertTrWords.UseVisualStyleBackColor = true;
             this.btnConvertTrWords.Click += new System.EventHandler(this.btnConvertTrWords_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Viner Hand ITC", 18F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(330, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(335, 48);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Turkish Words Panel";
+            // 
             // TurkishWordPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1026, 604);
+            this.BackColor = System.Drawing.Color.LightCoral;
+            this.ClientSize = new System.Drawing.Size(1026, 554);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConvertTrWords);
             this.Controls.Add(this.btnGetTurkishWord);
             this.Controls.Add(this.txtOutputTurkishWords);
@@ -89,6 +102,7 @@
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TurkishWordPage_FormClosing);
             this.Load += new System.EventHandler(this.TurkishWordPage_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -98,5 +112,6 @@
         private System.Windows.Forms.RichTextBox txtOutputTurkishWords;
         private System.Windows.Forms.Button btnGetTurkishWord;
         private System.Windows.Forms.Button btnConvertTrWords;
+        private System.Windows.Forms.Label label1;
     }
 }
