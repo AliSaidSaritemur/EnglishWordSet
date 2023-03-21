@@ -1,6 +1,6 @@
 <h2 align="center">EnglishWordSet</h2>
 To improve their English skills, it randomly asks for the English words that the user has added, and then together with a sentence using these words
-Expressions of these words after recording and It is a project where you can see images about words.
+Expressions of these words after saving and It is a project where you can see images about words.
 
 
 <h3 align="center">APIs used</h3>
