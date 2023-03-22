@@ -109,7 +109,7 @@
           }
         }
       },
-      "Google.Api.Gax/3.3.0": {
+      "Google.Api.Gax/3.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.Bcl.AsyncInterfaces": "1.0.0",
@@ -126,11 +126,11 @@
           }
         }
       },
-      "Google.Api.Gax.Rest/3.3.0": {
+      "Google.Api.Gax.Rest/3.0.0": {
         "type": "package",
         "dependencies": {
-          "Google.Api.Gax": "3.3.0",
-          "Google.Apis.Auth": "[1.48.0, 2.0.0)"
+          "Google.Api.Gax": "3.0.0",
+          "Google.Apis.Auth": "1.44.1"
         },
         "compile": {
           "lib/netstandard2.0/Google.Api.Gax.Rest.dll": {
@@ -143,10 +143,10 @@
           }
         }
       },
-      "Google.Apis/1.51.0": {
+      "Google.Apis/1.44.1": {
         "type": "package",
         "dependencies": {
-          "Google.Apis.Core": "1.51.0"
+          "Google.Apis.Core": "1.44.1"
         },
         "compile": {
           "lib/netstandard2.0/Google.Apis.dll": {
@@ -159,11 +159,11 @@
           }
         }
       },
-      "Google.Apis.Auth/1.51.0": {
+      "Google.Apis.Auth/1.44.1": {
         "type": "package",
         "dependencies": {
-          "Google.Apis": "1.51.0",
-          "Google.Apis.Core": "1.51.0"
+          "Google.Apis": "1.44.1",
+          "Google.Apis.Core": "1.44.1"
         },
         "compile": {
           "lib/netstandard2.0/Google.Apis.Auth.PlatformServices.dll": {},
@@ -178,7 +178,7 @@
           }
         }
       },
-      "Google.Apis.Core/1.51.0": {
+      "Google.Apis.Core/1.44.1": {
         "type": "package",
         "dependencies": {
           "Newtonsoft.Json": "12.0.3"
@@ -194,11 +194,11 @@
           }
         }
       },
-      "Google.Apis.Translate.v2/1.51.0.875": {
+      "Google.Apis.Translate.v2/1.42.0.875": {
         "type": "package",
         "dependencies": {
-          "Google.Apis": "1.51.0",
-          "Google.Apis.Auth": "1.51.0"
+          "Google.Apis": "1.42.0",
+          "Google.Apis.Auth": "1.42.0"
         },
         "compile": {
           "lib/netstandard2.0/Google.Apis.Translate.v2.dll": {
@@ -211,11 +211,11 @@
           }
         }
       },
-      "Google.Cloud.Translation.V2/2.1.0": {
+      "Google.Cloud.Translation.V2/2.0.0": {
         "type": "package",
         "dependencies": {
-          "Google.Api.Gax.Rest": "[3.3.0, 4.0.0)",
-          "Google.Apis.Translate.v2": "[1.51.0.875, 2.0.0)"
+          "Google.Api.Gax.Rest": "3.0.0",
+          "Google.Apis.Translate.v2": "1.42.0.875"
         },
         "compile": {
           "lib/netstandard2.0/Google.Cloud.Translation.V2.dll": {
@@ -860,23 +860,23 @@
           }
         }
       },
-      "Microsoft.Win32.SystemEvents/5.0.0": {
+      "Microsoft.Win32.SystemEvents/7.0.0": {
         "type": "package",
-        "dependencies": {
-          "Microsoft.NETCore.Platforms": "5.0.0"
-        },
         "compile": {
-          "ref/netstandard2.0/_._": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll": {
+          "lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll": {
+          "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -1377,27 +1377,26 @@
           }
         }
       },
-      "System.Drawing.Common/5.0.0": {
+      "System.Drawing.Common/7.0.0": {
         "type": "package",
         "dependencies": {
-          "Microsoft.Win32.SystemEvents": "5.0.0"
+          "Microsoft.Win32.SystemEvents": "7.0.0"
         },
         "compile": {
-          "ref/netcoreapp3.0/System.Drawing.Common.dll": {
+          "lib/net6.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "lib/net6.0/System.Drawing.Common.dll": {
             "related": ".xml"
           }
         },
+        "build": {
+          "buildTransitive/net6.0/_._": {}
+        },
         "runtimeTargets": {
-          "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll": {
-            "assetType": "runtime",
-            "rid": "unix"
-          },
-          "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll": {
+          "runtimes/win/lib/net6.0/System.Drawing.Common.dll": {
             "assetType": "runtime",
             "rid": "win"
           }
@@ -2688,6 +2687,21 @@
         "runtime": {
           "bin/placeholder/Settings.dll": {}
         }
+      },
+      "Util/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v6.0",
+        "dependencies": {
+          "FluentAssertions": "6.10.0",
+          "Settings": "1.0.0",
+          "System.Drawing.Common": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/Util.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/Util.dll": {}
+        }
       }
     }
   },
@@ -2906,16 +2920,16 @@
         "lib/netstandard2.1/FluentAssertions.xml"
       ]
     },
-    "Google.Api.Gax/3.3.0": {
-      "sha512": "l23HaRgpvNMIULAWhih11CMukWflA2o4/mourEpB+7tVwheJsF8mWUmtKYcc6U19WagzJFm6Pzm3zAqCxl5k/w==",
+    "Google.Api.Gax/3.0.0": {
+      "sha512": "jDXWaxeOjzUmaFBtEaGuWZmIl6CkR3yRrFuiMPFL9YNR6TWA4EZXl9K8mxae1fi7Z7H0j1CRfyAt2iZlomk9bw==",
       "type": "package",
-      "path": "google.api.gax/3.3.0",
+      "path": "google.api.gax/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.api.gax.3.3.0.nupkg.sha512",
+        "google.api.gax.3.0.0.nupkg.sha512",
         "google.api.gax.nuspec",
         "lib/net461/Google.Api.Gax.dll",
         "lib/net461/Google.Api.Gax.pdb",
@@ -2925,16 +2939,16 @@
         "lib/netstandard2.0/Google.Api.Gax.xml"
       ]
     },
-    "Google.Api.Gax.Rest/3.3.0": {
-      "sha512": "/D3FTV5FH3I4vzbLSRWmeU/1ckFP6kk195Wga51UTWip7EYRUSEFEQzCWb+VHcB7HgCYp98KvIxg3B6cDKPJQQ==",
+    "Google.Api.Gax.Rest/3.0.0": {
+      "sha512": "BwqDdrOCkA4vi3JlB98B5Ta9rkNa1cY23bxJSJaEcXeshl9AIYJ7TAe/ur3rw+DoHqnPHG5qMzT4AVns9NujvQ==",
       "type": "package",
-      "path": "google.api.gax.rest/3.3.0",
+      "path": "google.api.gax.rest/3.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.api.gax.rest.3.3.0.nupkg.sha512",
+        "google.api.gax.rest.3.0.0.nupkg.sha512",
         "google.api.gax.rest.nuspec",
         "lib/net461/Google.Api.Gax.Rest.dll",
         "lib/net461/Google.Api.Gax.Rest.pdb",
@@ -2944,16 +2958,16 @@
         "lib/netstandard2.0/Google.Api.Gax.Rest.xml"
       ]
     },
-    "Google.Apis/1.51.0": {
-      "sha512": "4QL7S1PnDN/VumfzrLOGw8tiFLYRL/oPVQkCuIVltAh/gSPWxLu7UFZeum4S3B/ry7794Wigg53jclLlYX/haQ==",
+    "Google.Apis/1.44.1": {
+      "sha512": "5l8vy1bwhuKDuE4Uku8qz2YnLaDhK1YJBGqzohx3MiaXyTucZWutovpEGYkvo6014rKUHa4hWDDuPxBJs/yxpA==",
       "type": "package",
-      "path": "google.apis/1.51.0",
+      "path": "google.apis/1.44.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.apis.1.51.0.nupkg.sha512",
+        "google.apis.1.44.1.nupkg.sha512",
         "google.apis.nuspec",
         "lib/net45/Google.Apis.PlatformServices.dll",
         "lib/net45/Google.Apis.dll",
@@ -2967,16 +2981,16 @@
         "lib/netstandard2.0/Google.Apis.xml"
       ]
     },
-    "Google.Apis.Auth/1.51.0": {
-      "sha512": "rwyLkiXev6esCRXq+srUcEb8zWylNg7eyE9zO8GxiQplrn1+Jhn8WlwhyJ/xXM83Mrd7Fi0p/UpnOo+m8NBI2g==",
+    "Google.Apis.Auth/1.44.1": {
+      "sha512": "5gIhSOw362+daGBT2YgElpQUWgLERsKOS7k8d2FzIxi6wXTpeu7ov5kT4fWrnoX4fUJ+ibxqTfhmEY8UThCxyA==",
       "type": "package",
-      "path": "google.apis.auth/1.51.0",
+      "path": "google.apis.auth/1.44.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.apis.auth.1.51.0.nupkg.sha512",
+        "google.apis.auth.1.44.1.nupkg.sha512",
         "google.apis.auth.nuspec",
         "lib/net45/Google.Apis.Auth.PlatformServices.dll",
         "lib/net45/Google.Apis.Auth.dll",
@@ -2992,16 +3006,16 @@
         "lib/netstandard2.0/Google.Apis.Auth.xml"
       ]
     },
-    "Google.Apis.Core/1.51.0": {
-      "sha512": "2HBwN81SB5DBI/TKbJr6y6u2I5sBlLxUHYUkc26Y4FSFachdDlWISZZreO0AVKdJrHsbmKDhHdqkRjkLSGeiNw==",
+    "Google.Apis.Core/1.44.1": {
+      "sha512": "VjN2tpE5++8xRjBcHgXuW7HoxgvPYoAsONj6ekq1Uv20TaC3aDsw+1tVCt1M60pO4mK0vnoZAxupb49B308+0Q==",
       "type": "package",
-      "path": "google.apis.core/1.51.0",
+      "path": "google.apis.core/1.44.1",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.apis.core.1.51.0.nupkg.sha512",
+        "google.apis.core.1.44.1.nupkg.sha512",
         "google.apis.core.nuspec",
         "lib/net45/Google.Apis.Core.dll",
         "lib/net45/Google.Apis.Core.pdb",
@@ -3014,16 +3028,15 @@
         "lib/netstandard2.0/Google.Apis.Core.xml"
       ]
     },
-    "Google.Apis.Translate.v2/1.51.0.875": {
-      "sha512": "Xojs8Qd4Gqir6kzGiVwitPYQiH4H9Vhe8F1m6TK0ssdd05FL6KDBAtsTuACvYim3M68AwfYuPljbI64AUEBt2Q==",
+    "Google.Apis.Translate.v2/1.42.0.875": {
+      "sha512": "tyGzu4pbtapDXppZnmw8rD8xzXPcgrt+dcrRn7j6ZkNalBFz8WZTFvI/lWCVmlKh1RuhCe0hZXOlsUQAp/QBxA==",
       "type": "package",
-      "path": "google.apis.translate.v2/1.51.0.875",
+      "path": "google.apis.translate.v2/1.42.0.875",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
-        "NuGetIcon.png",
-        "google.apis.translate.v2.1.51.0.875.nupkg.sha512",
+        "google.apis.translate.v2.1.42.0.875.nupkg.sha512",
         "google.apis.translate.v2.nuspec",
         "lib/net40/Google.Apis.Translate.v2.dll",
         "lib/net40/Google.Apis.Translate.v2.pdb",
@@ -3042,16 +3055,16 @@
         "lib/netstandard2.0/Google.Apis.Translate.v2.xml"
       ]
     },
-    "Google.Cloud.Translation.V2/2.1.0": {
-      "sha512": "ui7IxLcIADG96Kbkym7CL+u/N8NCj7cRjC2pOExUh0jV/mnTNAeQJpXMdUbTRcz8HVT5GNnF2gFBbs32tCajsQ==",
+    "Google.Cloud.Translation.V2/2.0.0": {
+      "sha512": "85HkHroDSCtIffxxaPoVWJZnIqH1OYuu/fu/JVUBmqWWe0kxuNCSYLOiII028NK0/w4rqYIVt1HPK2M9HpiH2Q==",
       "type": "package",
-      "path": "google.cloud.translation.v2/2.1.0",
+      "path": "google.cloud.translation.v2/2.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "LICENSE",
         "NuGetIcon.png",
-        "google.cloud.translation.v2.2.1.0.nupkg.sha512",
+        "google.cloud.translation.v2.2.0.0.nupkg.sha512",
         "google.cloud.translation.v2.nuspec",
         "lib/net461/Google.Cloud.Translation.V2.dll",
         "lib/net461/Google.Cloud.Translation.V2.pdb",
@@ -3982,32 +3995,35 @@
         "version.txt"
       ]
     },
-    "Microsoft.Win32.SystemEvents/5.0.0": {
-      "sha512": "Bh6blKG8VAKvXiLe2L+sEsn62nc1Ij34MrNxepD2OCrS5cpCwQa9MeLyhVQPQ/R4Wlzwuy6wMK8hLb11QPDRsQ==",
+    "Microsoft.Win32.SystemEvents/7.0.0": {
+      "sha512": "2nXPrhdAyAzir0gLl8Yy8S5Mnm/uBSQQA7jEsILOS1MTyS7DbmV1NgViMtvV1sfCD1ebITpNwb1NIinKeJgUVQ==",
       "type": "package",
-      "path": "microsoft.win32.systemevents/5.0.0",
+      "path": "microsoft.win32.systemevents/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net461/Microsoft.Win32.SystemEvents.dll",
-        "lib/net461/Microsoft.Win32.SystemEvents.xml",
+        "buildTransitive/net461/Microsoft.Win32.SystemEvents.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/Microsoft.Win32.SystemEvents.targets",
+        "lib/net462/Microsoft.Win32.SystemEvents.dll",
+        "lib/net462/Microsoft.Win32.SystemEvents.xml",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "lib/net7.0/Microsoft.Win32.SystemEvents.xml",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
         "lib/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "microsoft.win32.systemevents.5.0.0.nupkg.sha512",
+        "microsoft.win32.systemevents.7.0.0.nupkg.sha512",
         "microsoft.win32.systemevents.nuspec",
-        "ref/net461/Microsoft.Win32.SystemEvents.dll",
-        "ref/net461/Microsoft.Win32.SystemEvents.xml",
-        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.dll",
-        "ref/netstandard2.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/netcoreapp2.0/Microsoft.Win32.SystemEvents.xml",
-        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll",
-        "runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.xml",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net6.0/Microsoft.Win32.SystemEvents.xml",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.dll",
+        "runtimes/win/lib/net7.0/Microsoft.Win32.SystemEvents.xml",
+        "useSharedDesignerContext.txt"
       ]
     },
     "NETStandard.Library/1.6.1": {
@@ -5020,46 +5036,41 @@
         "system.diagnostics.tracing.nuspec"
       ]
     },
-    "System.Drawing.Common/5.0.0": {
-      "sha512": "SztFwAnpfKC8+sEKXAFxCBWhKQaEd97EiOL7oZJZP56zbqnLpmxACWA8aGseaUExciuEAUuR9dY8f7HkTRAdnw==",
+    "System.Drawing.Common/7.0.0": {
+      "sha512": "KIX+oBU38pxkKPxvLcLfIkOV5Ien8ReN78wro7OF5/erwcmortzeFx+iBswlh2Vz6gVne0khocQudGwaO1Ey6A==",
       "type": "package",
-      "path": "system.drawing.common/5.0.0",
+      "path": "system.drawing.common/7.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
+        "buildTransitive/net461/System.Drawing.Common.targets",
+        "buildTransitive/net462/_._",
+        "buildTransitive/net6.0/_._",
+        "buildTransitive/netcoreapp2.0/System.Drawing.Common.targets",
         "lib/MonoAndroid10/_._",
         "lib/MonoTouch10/_._",
-        "lib/net461/System.Drawing.Common.dll",
-        "lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "lib/netcoreapp3.0/System.Drawing.Common.xml",
+        "lib/net462/System.Drawing.Common.dll",
+        "lib/net462/System.Drawing.Common.xml",
+        "lib/net6.0/System.Drawing.Common.dll",
+        "lib/net6.0/System.Drawing.Common.xml",
+        "lib/net7.0/System.Drawing.Common.dll",
+        "lib/net7.0/System.Drawing.Common.xml",
         "lib/netstandard2.0/System.Drawing.Common.dll",
+        "lib/netstandard2.0/System.Drawing.Common.xml",
         "lib/xamarinios10/_._",
         "lib/xamarinmac20/_._",
         "lib/xamarintvos10/_._",
         "lib/xamarinwatchos10/_._",
-        "ref/MonoAndroid10/_._",
-        "ref/MonoTouch10/_._",
-        "ref/net461/System.Drawing.Common.dll",
-        "ref/netcoreapp3.0/System.Drawing.Common.dll",
-        "ref/netcoreapp3.0/System.Drawing.Common.xml",
-        "ref/netstandard2.0/System.Drawing.Common.dll",
-        "ref/xamarinios10/_._",
-        "ref/xamarinmac20/_._",
-        "ref/xamarintvos10/_._",
-        "ref/xamarinwatchos10/_._",
-        "runtimes/unix/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.xml",
-        "runtimes/win/lib/netcoreapp2.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll",
-        "runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.xml",
-        "system.drawing.common.5.0.0.nupkg.sha512",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net6.0/System.Drawing.Common.xml",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.dll",
+        "runtimes/win/lib/net7.0/System.Drawing.Common.xml",
+        "system.drawing.common.7.0.0.nupkg.sha512",
         "system.drawing.common.nuspec",
-        "useSharedDesignerContext.txt",
-        "version.txt"
+        "useSharedDesignerContext.txt"
       ]
     },
     "System.Formats.Asn1/5.0.0": {
@@ -8290,6 +8301,11 @@
       "type": "project",
       "path": "../Settings/Settings.csproj",
       "msbuildProject": "../Settings/Settings.csproj"
+    },
+    "Util/1.0.0": {
+      "type": "project",
+      "path": "../Util/Util.csproj",
+      "msbuildProject": "../Util/Util.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -8297,8 +8313,6 @@
       "APIAccess >= 1.0.0",
       "DataAccess >= 1.0.0",
       "Entities >= 1.0.0",
-      "FluentAssertions >= 6.10.0",
-      "Google.Cloud.Translation.V2 >= 2.1.0",
       "LogAccess >= 1.0.0",
       "Microsoft.IdentityModel.JsonWebTokens >= 6.26.0",
       "Phaber.Unsplash >= 2.0.0",
@@ -8306,7 +8320,7 @@
       "RestSharp >= 108.0.3",
       "Settings >= 1.0.0",
       "Tulpep.NotificationWindow >= 1.1.38",
-      "unsplasharp.api >= 0.7.0"
+      "Util >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -8356,6 +8370,9 @@
             },
             "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj": {
               "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Settings\\Settings.csproj"
+            },
+            "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Util\\Util.csproj": {
+              "projectPath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Util\\Util.csproj"
             }
           }
         }
@@ -8370,14 +8387,6 @@
       "net6.0-windows7.0": {
         "targetAlias": "net6.0-windows",
         "dependencies": {
-          "FluentAssertions": {
-            "target": "Package",
-            "version": "[6.10.0, )"
-          },
-          "Google.Cloud.Translation.V2": {
-            "target": "Package",
-            "version": "[2.1.0, )"
-          },
           "Microsoft.IdentityModel.JsonWebTokens": {
             "target": "Package",
             "version": "[6.26.0, )"
@@ -8397,10 +8406,6 @@
           "Tulpep.NotificationWindow": {
             "target": "Package",
             "version": "[1.1.38, )"
-          },
-          "unsplasharp.api": {
-            "target": "Package",
-            "version": "[0.7.0, )"
           }
         },
         "imports": [

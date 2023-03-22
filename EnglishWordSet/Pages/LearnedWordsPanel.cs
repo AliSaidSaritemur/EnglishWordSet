@@ -1,12 +1,14 @@
 ﻿using APIAccess.Concrete;
 using EnglishWordSet.PageBackend;
-using EnglishWordSet.RefactoredStaticFuncs;
 using Entities.Concrete;
+using Util;
 using System;
+using System.ComponentModel;
 using System.Drawing;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using TypeConverter = EnglishWordSet.RefactoredStaticFuncs.TypeConverter;
+using TypeConverter = Util.TypeConverter;
+using EnglishWordSet.util;
 
 namespace EnglishWordSet.Pages
 {

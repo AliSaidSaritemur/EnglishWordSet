@@ -1,5 +1,5 @@
 ﻿using DataAccess.Concrete;
-using EnglishWordSet.RefactoredStaticFuncs;
+using EnglishWordSet.util;
 using LogAccess.services;
 using System;
 using System.Collections.Generic;

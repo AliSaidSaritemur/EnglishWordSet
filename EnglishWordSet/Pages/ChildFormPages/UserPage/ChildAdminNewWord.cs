@@ -1,15 +1,12 @@
 ﻿using DataAccess.Concrete;
 using DataAccess.util;
 using EnglishWordSet.ConvertTransactions;
-using EnglishWordSet.MyTools;
 using EnglishWordSet.Pages;
 using EnglishWordSet.Pages.ChildFormPages.AdminPage;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.services.Impl.ConvertImpls;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
-using EnglishWordSet.util.MyTools;
-using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.util;
 using LogAccess.services;
 using System;
 using System.Collections.Generic;
@@ -19,6 +16,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Util;
 using static System.Net.Mime.MediaTypeNames;
 
 namespace EnglishWordSet
@@ -79,7 +77,7 @@ namespace EnglishWordSet
                 prWords.SetError(txtInput, "Words can't be empty !!!");
                 return input;
             }
-            else if (!MyRegex.CheckingValue.IsName(input))
+            else if (!RegexTransactions.CheckingValue.IsName(input))
             {
                string  inputWithoutEmpty =  Regex.Replace(input, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline).Trim();
                 string logMessage="";
@@ -92,7 +90,7 @@ namespace EnglishWordSet
 
                     if (line != null)
                     {
-                        if (!MyRegex.CheckingValue.IsName(line.Trim()))
+                        if (!RegexTransactions.CheckingValue.IsName(line.Trim()))
                             logMessage += line+"\n";
                         else
                             WordstobeSave=line + "\n";
@@ -148,7 +146,7 @@ namespace EnglishWordSet
                 prToken.SetError(txtToBeGEttingRandomWordCount, "Please enter amount of words to be getting");
                 return;
             }
-            else if(!MyRegex.CheckingValue.IsNumber(getRandomCountString))
+            else if(!RegexTransactions.CheckingValue.IsNumber(getRandomCountString))
             {
                 prToken.SetError(txtToBeGEttingRandomWordCount, "Please enter just number of words to be getting");
                 return;

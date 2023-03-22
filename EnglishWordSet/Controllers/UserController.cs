@@ -1,15 +1,12 @@
 ﻿using APIAccess.Concrete;
 using DataAccess.Concrete;
-using DataAccess.util;
 using EnglishWordSet.ChildForms.AdminPage;
-using EnglishWordSet.MyTools;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
-using EnglishWordSet.util.StaticTools;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Windows.Forms;
+using Util;
 
 namespace EnglishWordSet.ToolsBackend
 {
@@ -128,7 +125,7 @@ namespace EnglishWordSet.ToolsBackend
             {
                 willTranslateLine = stringReader.ReadLine();
 
-                if (willTranslateLine!=null &&MyRegex.CheckingValue.IsThereSpreatorMark(willTranslateLine))
+                if (willTranslateLine!=null && RegexTransactions.CheckingValue.IsThereSpreatorMark(willTranslateLine))
                 {
                     resultText += willTranslateLine + "\n";
                 }            

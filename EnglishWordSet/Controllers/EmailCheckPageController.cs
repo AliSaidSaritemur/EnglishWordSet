@@ -1,9 +1,5 @@
-﻿using EnglishWordSet.util.StaticTools;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System;
+using Util;
 
 namespace EnglishWordSet.Controllers
 {
@@ -18,9 +14,6 @@ namespace EnglishWordSet.Controllers
             SendingMail.WithTemplates.SendCheckMail(userMail, verificationCode);
             return verificationCode;
         }
-
-
-
 
         private string CodeCraete()
         {

@@ -1,10 +1,9 @@
 ﻿using DataAccess.Concrete;
 using EnglishWordSet.ChildForms.AdminPage;
-using EnglishWordSet.MyTools;
 using EnglishWordSet.Pages;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
+using EnglishWordSet.util;
 using LogAccess;
 using LogAccess.services;
 using System;

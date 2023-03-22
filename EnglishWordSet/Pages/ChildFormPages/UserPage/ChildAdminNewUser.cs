@@ -1,16 +1,11 @@
 ﻿using DataAccess.Concrete;
-using DataAccess.util;
-using EnglishWordSet.MyTools;
-using EnglishWordSet.PageBackend;
 using EnglishWordSet.Pages;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.ToolsBackend;
-using EnglishWordSet.util.StaticTools;
-using Entities.Concrete;
+using EnglishWordSet.util;
 using LogAccess.services;
 using System;
-using System.Linq;
 using System.Windows.Forms;
+using Util;
 
 namespace EnglishWordSet.ChildForms.AdminPage
 {
@@ -65,7 +60,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return;
             }
 
-            else if (!MyRegex.CheckingValue.Isthere(userName, "[A-Za-z][A-Za-z0-9_]{3,29}"))
+            else if (!RegexTransactions.CheckingValue.Isthere(userName, "[A-Za-z][A-Za-z0-9_]{3,29}"))
             { UserNameProvider.SetError(txtUserName, "UserName is not valid type");
                 return;
             }
@@ -84,7 +79,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return;
             }
 
-            else if (!MyRegex.CheckingValue.IsMail(email))
+            else if (!RegexTransactions.CheckingValue.IsMail(email))
             { emailProvider.SetError(txtEmail, "Email is not valid type");
                 return;
             }
@@ -104,7 +99,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 return;
             }
 
-            else if (!MyRegex.CheckingValue.IsPhoneNum(phone))
+            else if (!RegexTransactions.CheckingValue.IsPhoneNum(phone))
             { phoneProvider.SetError(txtPhone, "Phone Number is not valid type");
                 return;
             }
@@ -129,7 +124,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 againPasswordProvider.Clear();
             }
 
-            if(!MyRegex.CheckingValue.Isthere(phone, "^0"))
+            if(!RegexTransactions.CheckingValue.Isthere(phone, "^0"))
             {
               phone = "0"+phone;   
             }

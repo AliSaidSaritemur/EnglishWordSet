@@ -1,18 +1,9 @@
 ﻿using DataAccess.Concrete;
-using EnglishWordSet.RefactoredStaticFuncs;
-using Entities.Concrete;
+using EnglishWordSet.util;
 using LogAccess.services;
-using Microsoft.VisualBasic.Logging;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Util;
 
 namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
 {
@@ -27,8 +18,8 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
         private void TrashBox_Load(object sender, EventArgs e)
         {
             string wrongWordsLogged= _UserTextsImpl.GetTrashBoxText(Sessions.UserSession.username_Admin);
-            string reversedTExt= MyRegex.EddittingStringValue.ReverseString(wrongWordsLogged);
-            rtbTrashWords.Text = MyRegex.EddittingStringValue.RemoveSpaces(reversedTExt);
+            string reversedTExt= RegexTransactions.EddittingStringValue.ReverseString(wrongWordsLogged);
+            rtbTrashWords.Text = RegexTransactions.EddittingStringValue.RemoveSpaces(reversedTExt);
         }
 
         private void btnSaveChanges_Click(object sender, EventArgs e)

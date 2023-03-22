@@ -2,18 +2,11 @@
 using DataAccess.Concrete;
 using DataAccess.util;
 using EnglishWordSet.Pages.ChildFormPages.UserPage;
-using EnglishWordSet.RefactoredStaticFuncs;
-using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.util;
 using LogAccess.services;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
-using System.Drawing;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
-using System.Windows.Forms;
 
 namespace EnglishWordSet.Controllers
 {

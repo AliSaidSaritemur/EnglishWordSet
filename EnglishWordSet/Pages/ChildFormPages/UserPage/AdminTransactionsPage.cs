@@ -1,13 +1,13 @@
 ﻿using DataAccess.Concrete;
 using DataAccess.util;
 using EnglishWordSet.Controllers;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
-using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.util;
 using LogAccess.services;
 using System;
 using System.ComponentModel;
 using System.Windows.Forms;
+using Util;
 
 namespace EnglishWordSet.Pages.ChildFormPages.UserPage
 {
@@ -39,7 +39,7 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
                " connect to the internet.", "No internet access");
                 return;
             }
-            else if (!MyRegex.CheckingValue.IsNumber(txtRandomWordToBeAddCount.Text.ToString()))
+            else if (!RegexTransactions.CheckingValue.IsNumber(txtRandomWordToBeAddCount.Text.ToString()))
             {
                 prAddRandomWords.SetError(txtRandomWordToBeAddCount, "Please enter just number of words to be getting");
                 return;

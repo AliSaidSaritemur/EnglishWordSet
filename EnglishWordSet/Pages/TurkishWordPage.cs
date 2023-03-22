@@ -1,18 +1,12 @@
 ﻿using DataAccess.Concrete;
 using EnglishWordSet.ConvertTransactions;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.services.Impl.ConvertTransactionsImpls;
 using EnglishWordSet.Sessions;
-using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.util;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+using Util;
 
 namespace EnglishWordSet.Pages
 {
@@ -42,7 +36,7 @@ namespace EnglishWordSet.Pages
 
         private void btnConvertTrWords_Click(object sender, EventArgs e)
         {
-        string convertedText= StringTransactions.ReadStringWithAction(txtInputTurkishWords.Text.ToString(), getAndSetTurkishLine);
+        string convertedText= StringTransactionsWithFunc.ReadStringWithAction(txtInputTurkishWords.Text.ToString(), getAndSetTurkishLine);
             txtInputTurkishWords.Text = convertedText;
             _trWordImpl.RemoveWordsWithLevel(3, UserSession.username_Admin);
             txtOutputTurkishWords.Text= _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
@@ -58,7 +52,7 @@ namespace EnglishWordSet.Pages
             string resultLine = line;
             string turkish = removingMark.EdditLine(deleteAfterHyben.EdditLine(line)).Trim();
             string english = deleteBeforeHyben.EdditLine(line).Trim();
-            if (MyRegex.CheckingValue.IsName(turkish))
+            if (RegexTransactions.CheckingValue.IsName(turkish))
             {
                 if(_trWordImpl.CheckWordsEnglishMeaning(turkish, english, UserSession.username_Admin))
                 {

@@ -1,10 +1,8 @@
 ﻿using DataAccess.Concrete;
 using EnglishWordSet.PageBackend;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.ToolsBackend;
-using EnglishWordSet.util.MyTools;
-using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.util;
 using LogAccess.services;
 using System;
 using System.Collections.Generic;
@@ -15,6 +13,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Util;
 
 namespace EnglishWordSet.ChildForms.AdminPage
 {
@@ -127,7 +126,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
                 prWord.SetError(txtWord, "Word can't be empty !!!");
                 return true;
             }
-            else if (!MyRegex.CheckingValue.IsName(word))
+            else if (!RegexTransactions.CheckingValue.IsName(word))
             {
                 prWord.SetError(txtWord, "Word should be invalid type !!!");
                 return true;
@@ -153,7 +152,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
         }
         private bool MeanningProviderTest()
         {
-            if (!string.IsNullOrEmpty(meaning) && !MyRegex.CheckingValue.IsName(meaning))
+            if (!string.IsNullOrEmpty(meaning) && !RegexTransactions.CheckingValue.IsName(meaning))
             {
                 prMeanning.SetError(txtMeaning, "Meaning should be invalid type !!!");
                 return true;

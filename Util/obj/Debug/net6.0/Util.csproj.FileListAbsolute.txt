@@ -1,0 +1,16 @@
+C:\Users\alisa\source\repos\EnglishWordSet\Util\bin\Debug\net6.0\Util.deps.json
+C:\Users\alisa\source\repos\EnglishWordSet\Util\bin\Debug\net6.0\Util.dll
+C:\Users\alisa\source\repos\EnglishWordSet\Util\bin\Debug\net6.0\Util.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.csproj.AssemblyReference.cache
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.AssemblyInfoInputs.cache
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.AssemblyInfo.cs
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.csproj.CoreCompileInputs.cache
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.dll
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\refint\Util.dll
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\ref\Util.dll
+C:\Users\alisa\source\repos\EnglishWordSet\Util\bin\Debug\net6.0\Settings.dll
+C:\Users\alisa\source\repos\EnglishWordSet\Util\bin\Debug\net6.0\Settings.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\Util\bin\Debug\net6.0\Settings.dll.config
+C:\Users\alisa\source\repos\EnglishWordSet\Util\obj\Debug\net6.0\Util.csproj.CopyComplete

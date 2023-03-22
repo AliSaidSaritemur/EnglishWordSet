@@ -1,12 +1,6 @@
 ﻿using DataAccess.Concrete;
-using DataAccess.util;
-using EnglishWordSet.MyTools;
-using EnglishWordSet.Sessions;
-using Entities.Concrete;
 using Entities.DTOs;
 using System;
-using System.Linq;
-
 
 
 namespace EnglishWordSet.ToolsBackend

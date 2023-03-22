@@ -1,10 +1,9 @@
-﻿using EnglishWordSet.RefactoredStaticFuncs;
-using System;
+﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
 using EnglishWordSet.ToolsBackend;
-using EnglishWordSet.util.StaticTools;
 using EnglishWordSet.Sessions;
+using EnglishWordSet.util;
 
 namespace EnglishWordSet
 {

@@ -1,4 +1,4 @@
-﻿using EnglishWordSet.RefactoredStaticFuncs;
+﻿using EnglishWordSet.util;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

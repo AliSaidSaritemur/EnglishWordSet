@@ -115,3 +115,9 @@ C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windo
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\runtimes\win-x86\native\sni.dll
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Microsoft.Win32.SystemEvents.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\System.Drawing.Common.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Util.dll
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Util.pdb

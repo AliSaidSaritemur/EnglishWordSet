@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "iJdkNWWW4TwIjquI7ju1DtFxfpolFbI7tRE3/7O3BDH9M2kxqUm4JiyGems0/P7pBs81gCSfOdpsADHICz26EA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\alisa\\source\\repos\\EnglishWordSet\\Util\\Util.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\alisa\\.nuget\\packages\\fluentassertions\\6.10.0\\fluentassertions.6.10.0.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.0\\system.configuration.configurationmanager.4.4.0.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\alisa\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512"
+  ],
+  "logs": []
+}

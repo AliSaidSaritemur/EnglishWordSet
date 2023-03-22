@@ -1,6 +1,6 @@
 ﻿using EnglishWordSet.Intefaces;
-using EnglishWordSet.RefactoredStaticFuncs;
 using System.Text;
+using Util;
 
 namespace EnglishWordSet.ConvertTransactions
 {
@@ -11,7 +11,7 @@ namespace EnglishWordSet.ConvertTransactions
             lineToSet = lineToSet.Trim();
             string incLine;
             string pattern = "^[1-9]";
-            bool startWithNum = MyRegex.CheckingValue.Isthere(lineToSet, pattern);
+            bool startWithNum = RegexTransactions.CheckingValue.Isthere(lineToSet, pattern);
 
             if (lineToSet.StartsWith("9"))
             {

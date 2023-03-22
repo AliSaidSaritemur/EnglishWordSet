@@ -1,8 +1,6 @@
 ﻿using DataAccess.Concrete;
-using DataAccess.util;
-using EnglishWordSet.RefactoredStaticFuncs;
 using EnglishWordSet.Sessions;
-using EnglishWordSet.util.StaticTools;
+using EnglishWordSet.util;
 using Entities.Concrete;
 
 namespace EnglishWordSet.CRUD

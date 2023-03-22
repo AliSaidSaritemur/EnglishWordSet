@@ -1,10 +1,5 @@
 ﻿using EnglishWordSet.Intefaces;
-using EnglishWordSet.RefactoredStaticFuncs;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using Util;
 
 namespace EnglishWordSet.services.Impl.ConvertTransactionsImpls
 {
@@ -13,7 +8,7 @@ namespace EnglishWordSet.services.Impl.ConvertTransactionsImpls
         public string EdditLine(string lineToSet)
         {
             string deletedLine = lineToSet;
-            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, Settings.SettingsInfo.Default.SeparatorMark);
+            bool isThereHyben = RegexTransactions.CheckingValue.Isthere(lineToSet, Settings.SettingsInfo.Default.SeparatorMark);
 
             if (isThereHyben)
             {

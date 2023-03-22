@@ -1,6 +1,5 @@
 ﻿using EnglishWordSet.Intefaces;
-using EnglishWordSet.RefactoredStaticFuncs;
-using EnglishWordSet.util.StaticTools;
+using Util;
 
 namespace EnglishWordSet.ConvertTransactions
 {
@@ -9,7 +8,7 @@ namespace EnglishWordSet.ConvertTransactions
         public string EdditLine(string lineToSet)
         {
             string deletedLine = lineToSet;
-            bool isThereHyben = MyRegex.CheckingValue.Isthere(lineToSet, Settings.SettingsInfo.Default.SeparatorMark);
+            bool isThereHyben = RegexTransactions.CheckingValue.Isthere(lineToSet, Settings.SettingsInfo.Default.SeparatorMark);
 
             if (isThereHyben)
             {

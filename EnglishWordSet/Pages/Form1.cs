@@ -1,8 +1,6 @@
 ﻿using EnglishWordSet.CRUD;
-using EnglishWordSet.MyTools;
 using EnglishWordSet.PageBackend;
 using EnglishWordSet.Pages;
-using EnglishWordSet.RefactoredStaticFuncs;
 using DataAccess.Concrete;
 using EnglishWordSet.Sessions;
 using System;
@@ -11,6 +9,8 @@ using LogAccess.services;
 using System.Text.RegularExpressions;
 using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.services.Impl.ConvertImpls;
+using Util;
+using EnglishWordSet.util;
 
 namespace EnglishWordSet
 {
@@ -46,7 +46,7 @@ namespace EnglishWordSet
 
             txtOutput.Text = tempText;
             SetWordInform(txtOutput, lblWordCountOutput, lblWordDayAvarageOutput);
-            string noSpaceOutput = MyRegex.EddittingStringValue.RemoveSpaces(tempText);
+            string noSpaceOutput = RegexTransactions.EddittingStringValue.RemoveSpaces(tempText);
            
             if (saveStatu)
             {
