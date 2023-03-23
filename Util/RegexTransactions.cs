@@ -81,7 +81,7 @@ namespace Util
                 if (string.IsNullOrEmpty(text))
                     return "";
 
-                return Regex.Replace(text, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline); ;
+                return Regex.Replace(text, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline); 
             }         
         }
 
