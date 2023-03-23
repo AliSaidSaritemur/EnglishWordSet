@@ -3,7 +3,7 @@ using Entities.Concrete;
 using System;
 using EnglishWordSet.Sessions;
 
-namespace EnglishWordSet.PageBackend
+namespace EnglishWordSet.Controllers
 {
      class LearnedWordsController
     {

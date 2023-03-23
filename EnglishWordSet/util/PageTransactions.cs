@@ -34,36 +34,17 @@ namespace EnglishWordSet.util
             return _loginPage;
         }
 
-        public static UserPage GetUserPage()
-        {
-            userpage ??= new();
-            return userpage;
-        }
+        public static UserPage GetUserPage() => userpage ??= new();
 
-        public static AdminTransactionsPage GetAdminTransactionsPage()
-        {
-            adminTransactionsPage ??= new();
-            return adminTransactionsPage;
-        }
-        public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPage()
-        {
-            childAdminNewLearnedWord ??= new();
-            return childAdminNewLearnedWord;
-        }
-        public static GamePanel GetGamePanel()
-        {
-            _gamePanel ??= new();
-            return _gamePanel;
-        }
-        public static LastLetterGamePage GetLastLetterGamePage()
-        {
-            _lastLetterGamePage ??= new();
-            return _lastLetterGamePage;
-        }
-        public static TurkishWordPage GetTurkishWordPage()
-        {
-            _turkishWordPage ??= new();
-            return _turkishWordPage;
-        }
+        public static AdminTransactionsPage GetAdminTransactionsPage() => adminTransactionsPage ??= new();
+
+        public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPage() => childAdminNewLearnedWord ??= new ();
+
+        public static GamePanel GetGamePanel() => _gamePanel ??= new();
+
+        public static LastLetterGamePage GetLastLetterGamePage() => _lastLetterGamePage ??= new();
+
+        public static TurkishWordPage GetTurkishWordPage() => _turkishWordPage ??= new();
+
     }
 }

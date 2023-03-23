@@ -3,7 +3,7 @@ using EnglishWordSet.Sessions;
 using EnglishWordSet.util;
 using Entities.Concrete;
 
-namespace EnglishWordSet.CRUD
+namespace EnglishWordSet.Controllers
 {
     class MBWordController
     {

@@ -3,7 +3,7 @@ using Entities.DTOs;
 using System;
 
 
-namespace EnglishWordSet.ToolsBackend
+namespace EnglishWordSet.Controllers
 {
     class LoginController
     {

@@ -36,7 +36,6 @@ namespace EnglishWordSet
             this.label1 = new System.Windows.Forms.Label();
             this.cBSave = new System.Windows.Forms.CheckBox();
             this.btnGetSaveText = new System.Windows.Forms.Button();
-            this.cbSpace = new System.Windows.Forms.CheckBox();
             this.btnGetNewWord = new System.Windows.Forms.Button();
             this.btnToAdminPage = new System.Windows.Forms.Button();
             this.getLaarnedWordPage = new System.Windows.Forms.Button();
@@ -116,16 +115,6 @@ namespace EnglishWordSet
             this.btnGetSaveText.Text = "SaveTexts";
             this.btnGetSaveText.UseVisualStyleBackColor = true;
             this.btnGetSaveText.Click += new System.EventHandler(this.btnGetSaveText_Click);
-            // 
-            // cbSpace
-            // 
-            this.cbSpace.AutoSize = true;
-            this.cbSpace.Location = new System.Drawing.Point(61, 72);
-            this.cbSpace.Name = "cbSpace";
-            this.cbSpace.Size = new System.Drawing.Size(195, 24);
-            this.cbSpace.TabIndex = 7;
-            this.cbSpace.Text = "Space between each line";
-            this.cbSpace.UseVisualStyleBackColor = true;
             // 
             // btnGetNewWord
             // 
@@ -251,7 +240,7 @@ namespace EnglishWordSet
             this.cbSetDay.AutoSize = true;
             this.cbSetDay.Checked = true;
             this.cbSetDay.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.cbSetDay.Location = new System.Drawing.Point(59, 100);
+            this.cbSetDay.Location = new System.Drawing.Point(61, 72);
             this.cbSetDay.Name = "cbSetDay";
             this.cbSetDay.Size = new System.Drawing.Size(88, 24);
             this.cbSetDay.TabIndex = 20;
@@ -286,7 +275,6 @@ namespace EnglishWordSet
             this.Controls.Add(this.getLaarnedWordPage);
             this.Controls.Add(this.btnToAdminPage);
             this.Controls.Add(this.btnGetNewWord);
-            this.Controls.Add(this.cbSpace);
             this.Controls.Add(this.btnGetSaveText);
             this.Controls.Add(this.cBSave);
             this.Controls.Add(this.label1);
@@ -315,7 +303,6 @@ namespace EnglishWordSet
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.CheckBox cBSave;
         private System.Windows.Forms.Button btnGetSaveText;
-        private System.Windows.Forms.CheckBox cbSpace;
         private System.Windows.Forms.Button btnGetNewWord;
         private System.Windows.Forms.Button btnToAdminPage;
         private System.Windows.Forms.Button getLaarnedWordPage;

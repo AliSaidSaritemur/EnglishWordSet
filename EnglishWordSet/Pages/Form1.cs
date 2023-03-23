@@ -1,6 +1,4 @@
-﻿using EnglishWordSet.CRUD;
-using EnglishWordSet.PageBackend;
-using EnglishWordSet.Pages;
+﻿using EnglishWordSet.Pages;
 using DataAccess.Concrete;
 using EnglishWordSet.Sessions;
 using System;
@@ -11,6 +9,7 @@ using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.services.Impl.ConvertImpls;
 using Util;
 using EnglishWordSet.util;
+using EnglishWordSet.Controllers;
 
 namespace EnglishWordSet
 {
@@ -40,7 +39,6 @@ namespace EnglishWordSet
                  converter = new Converter(new ConvertingWtihoutDays());
             }
 
-            converter.spaceStatu = cbSpace.Checked;
             converter.randomStatue = true;
             tempText = converter.CovertText(tempText);
 

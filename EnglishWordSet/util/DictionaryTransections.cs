@@ -10,8 +10,6 @@ namespace EnglishWordSet.util
 {
     internal class DictionaryTransections
     {
-        GettingRandomWordWithFrequencyLevel _RandomWordWithFrequency = new();
-        private HttpClient client = new();
         private List<string> wordSentencelist = new List<string>();
         private int wordSentencelistNum = 0;
         private RapidAPISImpl _rapidAPISImpl = new();
@@ -50,12 +48,6 @@ namespace EnglishWordSet.util
                 if (!RegexTransactions.CheckingValue.IsLastCharPunctuation(examplestobeArranged[i]))
                     examplestobeArranged[i] = examplestobeArranged[i] + ".";
             }
-        }
-
-        public async void GetRandomWordtoTextBox(RichTextBox textBoxtoWriteSentence, int getttingCount)
-        {
-
-
         }
 
     }

@@ -11,13 +11,12 @@ namespace EnglishWordSet.util
 
         public TextInformationGeter(string inputText)
         {
-            inputText = Regex.Replace(inputText, @"^\s+$[\r\n]*", string.Empty, RegexOptions.Multiline);
-            this.inputText = inputText;
+            this.inputText = Regex.Replace(inputText, @"^\s+$[\r\n]*", string.Empty, RegexOptions.Multiline);       
         }
 
         public int GetWordCount()
         {
-            int wordsCount = inputText.ToCharArray().Count(c => c == '~');
+            int wordsCount = Regex.Matches(inputText, Settings.SettingsInfo.Default.SeparatorMark).Count;
             return wordsCount;
         }
 
@@ -29,23 +28,19 @@ namespace EnglishWordSet.util
             int DayCount = 0;
             int avarageDayWord;
             string templine;
-            StringReader stringReader = new(inputText);
-            string patternForNum = "^[1-9]";
+            using (StringReader stringReader = new(inputText)) { 
+                string patternForNum = "^[1-9]";
 
-            while (true)
+            while ((templine = stringReader.ReadLine()) != null)
             {
-                templine = stringReader.ReadLine();
-
-                if (templine == null)
-                    break;
-
                 if (templine.StartsWith("!!!"))
                     DayCount += 10;
 
-                if (RegexTransactions.CheckingValue.Isthere(templine, patternForNum))
+               else if (RegexTransactions.CheckingValue.Isthere(templine, patternForNum))
                 {
                     DayCount += templine[0] - '0';
                 }
+            }
             }
             avarageDayWord = DayCount / wordsCount;
             return avarageDayWord;

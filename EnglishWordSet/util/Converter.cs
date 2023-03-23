@@ -7,7 +7,6 @@ namespace EnglishWordSet.util
 {
     class Converter
     {
-        public bool spaceStatu = false;
         public bool randomStatue = false;
         IConverts convert;
         public Converter(IConverts _converts)
@@ -17,45 +16,24 @@ namespace EnglishWordSet.util
 
         public string CovertText(string textToConvert)
         {
-            string spaceAmount = spaceStatu ? "\n\n" : "\n";
-            StringReader stringReader = new(textToConvert);
-            string convertedText = "";
+            string spaceAmount ="\n"; 
+            string convertedText="";
             string lineToAdd;
             string tempText;
             Random rnd = new();
+            int randomNumLimit = randomStatue ? 10 : 4;
 
-            while (true)
-            {
-                lineToAdd = stringReader.ReadLine();
-                if (lineToAdd != null)
-                {
-                    if (lineToAdd == string.Empty)
+            using StringReader stringReader = new(textToConvert);
+            while ((lineToAdd = stringReader.ReadLine())!=null)
+            {              
+                    if (string.IsNullOrEmpty(lineToAdd))
                         continue;
 
                     tempText = convert.Convert(lineToAdd);
 
-
-                    if (convertedText != "")
-                    {
-                        if (randomStatue)
-                            convertedText = rnd.Next(10) < 5 ? tempText + spaceAmount + convertedText : convertedText + spaceAmount + tempText;
-
-                        else
-                        {
-                            convertedText = convertedText + spaceAmount + tempText;
-                        }
-                    }
-                    else
-                    {
-                        convertedText = tempText;
-                    }
+                    convertedText = rnd.Next(randomNumLimit) < 5 ? tempText + spaceAmount + convertedText : convertedText + spaceAmount + tempText;
 
                 }
-                else
-                {
-                    break;
-                }
-            }
 
             string spaceDeltedConvertedText = RegexTransactions.EddittingStringValue.RemoveSpaces(convertedText);
             return spaceDeltedConvertedText;

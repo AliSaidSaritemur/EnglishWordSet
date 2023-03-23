@@ -8,7 +8,7 @@ using System.IO;
 using System.Windows.Forms;
 using Util;
 
-namespace EnglishWordSet.ToolsBackend
+namespace EnglishWordSet.Controllers
 {
     class UserController
     {
