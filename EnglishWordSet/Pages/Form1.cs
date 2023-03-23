@@ -49,12 +49,12 @@ namespace EnglishWordSet
             if (saveStatu)
             {
                 _UserTextsImpl.AddToConvertedWords(tempText,Sessions.UserSession.username_Admin);
-                AddLog.ConvertedWordsLogs.Info(tempText);
+                AddLog.ConvertedWordsLogs.Info($"{UserSession.username_Admin} Converted words : \n {tempText}");
 
             }
             else
             {
-               AddLog.ConvertedWordsLogs.Trace(noSpaceOutput);
+               AddLog.ConvertedWordsLogs.Trace($"{UserSession.username_Admin} Converted words : \n {tempText}");
             }
         }
 

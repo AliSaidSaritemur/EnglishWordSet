@@ -11,27 +11,15 @@ namespace LogAccess.services
         private static SystemLogs tempSystemLogs;
         private static ConvertedWordsLogs tempConvertedWordsLogs;
         private static WrongWords tempWrongWords;
+        private static ConvertedwordsTurkishLogs tempTurkishLogs;
 
-        public static SystemLogs systemLogs { get {
-                tempSystemLogs = (tempSystemLogs == null) ? new SystemLogs() : tempSystemLogs;
-                return tempSystemLogs;
-            } }
-       
-        public static ConvertedWordsLogs ConvertedWordsLogs
-        {
-            get
-            {
-                tempConvertedWordsLogs = (tempConvertedWordsLogs == null) ? new ConvertedWordsLogs() : tempConvertedWordsLogs;
-                return tempConvertedWordsLogs;
-            }
-        }
-        public static WrongWords WrongWordsLogs
-        {
-            get
-            {
-                tempWrongWords = (tempWrongWords == null) ? new WrongWords() : tempWrongWords;
-                return tempWrongWords;
-            }
-        }
+        public static SystemLogs systemLogs => tempSystemLogs ?? new SystemLogs();
+        
+        public static ConvertedWordsLogs ConvertedWordsLogs => tempConvertedWordsLogs ?? new ConvertedWordsLogs();
+
+        public static WrongWords WrongWordsLogs => tempWrongWords ?? new WrongWords();
+
+        public static ConvertedwordsTurkishLogs ConvertedwordsTurkih => tempTurkishLogs ?? new ConvertedwordsTurkishLogs();
+
     }
 }

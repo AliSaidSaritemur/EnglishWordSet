@@ -54,6 +54,7 @@
     <Compile Include="Class1.cs" />
     <Compile Include="services\AddLog.cs" />
     <Compile Include="services\ConvertedWordsLogs.cs" />
+    <Compile Include="services\ConvertedwordsTurkishLogs.cs" />
     <Compile Include="services\Logs.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="services\SystemLogs.cs" />

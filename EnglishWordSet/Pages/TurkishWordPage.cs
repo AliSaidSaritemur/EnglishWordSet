@@ -3,6 +3,8 @@ using EnglishWordSet.ConvertTransactions;
 using EnglishWordSet.services.Impl.ConvertTransactionsImpls;
 using EnglishWordSet.Sessions;
 using EnglishWordSet.util;
+using LogAccess.services;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Drawing;
 using System.Windows.Forms;
@@ -39,7 +41,9 @@ namespace EnglishWordSet.Pages
         string convertedText= StringTransactionsWithFunc.ReadStringWithAction(txtInputTurkishWords.Text.ToString(), getAndSetTurkishLine);
             txtInputTurkishWords.Text = convertedText;
             _trWordImpl.RemoveWordsWithLevel(3, UserSession.username_Admin);
-            txtOutputTurkishWords.Text= _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
+            string outputTurkishWord = _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
+            txtOutputTurkishWords.Text = outputTurkishWord;
+            AddLog.ConvertedwordsTurkih.Info($"{Sessions.UserSession.username_Admin} Last Convertion Transaction : \n {outputTurkishWord}");
             ChangeTxtInputWordsColor("true", Color.Green);
             ChangeTxtInputWordsColor("false",Color.Red);
         }

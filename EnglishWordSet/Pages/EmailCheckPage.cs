@@ -1,5 +1,6 @@
 ﻿using EnglishWordSet.Controllers;
 using EnglishWordSet.util;
+using LogAccess.services;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -62,6 +63,7 @@ namespace EnglishWordSet.Pages
         {
             if (txtVerificationCode.Text.ToString().Trim() == _verificationCode)
             {
+                AddLog.systemLogs.Trace($"Checked {_userMail}");
                 _checkBox.Checked = true;
                 Close();
             }
