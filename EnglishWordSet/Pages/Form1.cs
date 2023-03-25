@@ -48,7 +48,8 @@ namespace EnglishWordSet
            
             if (saveStatu)
             {
-                _UserTextsImpl.AddToConvertedWords(tempText,Sessions.UserSession.username_Admin);
+                DateTime timeOnly = new DateTime(DateTime.Now.TimeOfDay.Ticks);
+                _UserTextsImpl.AddToConvertedWords( tempText,Sessions.UserSession.username_Admin);
                 AddLog.ConvertedWordsLogs.Info($"{UserSession.username_Admin} Converted words : \n {tempText}");
 
             }

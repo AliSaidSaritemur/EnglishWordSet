@@ -52,7 +52,7 @@ namespace EnglishWordSet.util
         private void OnTimedEvent(object source, ElapsedEventArgs e)
         {
             _pictureBoxToBeEffect.Image = _image;
-
+            imageFilterTimer.Enabled = false;
         }
         private Image FilterImage(Image inputImage, Color color)
         {

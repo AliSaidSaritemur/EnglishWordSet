@@ -40,14 +40,19 @@ namespace EnglishWordSet.Pages.ChildFormPages.AdminPage
 
         private void TrashBox_FormClosed(object sender, FormClosedEventArgs e)
         {
-            string wrongWordsLogged = _UserTextsImpl.GetTrashBoxText(Sessions.UserSession.username_Admin);
-            ChildAdminNewWord childNewWordPage = ControllersGetter.AdminPage().GetChildNewWordPage();
-            childNewWordPage.SetTrashIcon();
+
+
         }
 
         private void rtbTrashWords_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void TrashBox_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            ChildAdminNewWord childNewWordPage = ControllersGetter.AdminPage().GetChildNewWordPage();
+            childNewWordPage.SetTrashIcon();     
         }
     }
 }

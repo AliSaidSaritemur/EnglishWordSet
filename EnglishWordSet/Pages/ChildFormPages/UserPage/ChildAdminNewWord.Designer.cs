@@ -221,7 +221,6 @@
 
         public System.Windows.Forms.RichTextBox txtInput;
         private System.Windows.Forms.Button btnSubmit;
-        internal System.Windows.Forms.PictureBox imgTrash;
         private System.Windows.Forms.ErrorProvider prWords;
         private System.Windows.Forms.Button btnGetRandomWord;
         private System.Windows.Forms.TextBox txtToBeGEttingRandomWordCount;
@@ -233,5 +232,6 @@
         private System.Windows.Forms.CheckBox cbRegularWord;
         private System.Windows.Forms.CheckBox cbBasicWord;
         private System.Windows.Forms.ErrorProvider prRandomWord;
+        internal System.Windows.Forms.PictureBox imgTrash;
     }
 }

@@ -76,6 +76,7 @@
             this.Name = "TrashBox";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TrashBox";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TrashBox_FormClosing);
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.TrashBox_FormClosed);
             this.Load += new System.EventHandler(this.TrashBox_Load);
             this.ResumeLayout(false);

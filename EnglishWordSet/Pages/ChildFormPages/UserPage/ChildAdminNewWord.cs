@@ -61,9 +61,7 @@ namespace EnglishWordSet
 
 
         private string GetWordstobeSave()
-        {
-          
-
+        {        
             string input = txtInput.Text.ToString().Trim();
 
             Converter converter = new Converter(new ConvertingRemoveWordsAfterMark());
@@ -98,10 +96,10 @@ namespace EnglishWordSet
                     }
                 }
 
-                imgTrash.Image = Properties.Resources.FullTrash;
+                _userTextsImpl.AddToTrashbox(logMessage, UserSession.username_Admin);
+                SetTrashIcon();
                 _myImageFilter.RedFilterToImageEffect(imgTrash);
                 AddLog.WrongWordsLogs.Info(logMessage);
-                _userTextsImpl.AddToTrashbox(logMessage,UserSession.username_Admin);
                 prWords.Clear();
                 return WordstobeSave;
             }
@@ -114,17 +112,20 @@ namespace EnglishWordSet
         }
         private void imgTrash_Click(object sender, EventArgs e)
         {
+            
             Form TrashWrongWordPage = new TrashBox();
             TrashWrongWordPage.Show();
         }
 
-        internal void SetTrashIcon()
+        internal  void SetTrashIcon()
         {
             string wrongWordsLogged = _userTextsImpl.GetTrashBoxText(Sessions.UserSession.username_Admin);
-            if (!string.IsNullOrEmpty(wrongWordsLogged))
-                 imgTrash.Image = Properties.Resources.FullTrash;
+
+            if (string.IsNullOrWhiteSpace(wrongWordsLogged))
+                imgTrash.Image = Properties.Resources.trash;
             else
-                 imgTrash.Image = Properties.Resources.trash;
+                  imgTrash.Image = Properties.Resources.FullTrash;
+
         }
 
         private void btnGetRandomWord_Click(object sender, EventArgs e)
