@@ -62,11 +62,15 @@ namespace DataAccess.Concrete
             string result="";
             for(int i =1;i<= GetMaxLevel(UserName);i++)
             {
-                 result += $"\n{i}.";
+                if (GetTurksihWordsWithLevel(i, UserName).Count < 1)
+                    continue;
+
+                 result += $"{i}.";
                 foreach (var turkishWordToBeAddString in GetTurksihWordsWithLevel(i, UserName))
                 {
                     result += "\n" + turkishWordToBeAddString.Turkish+" "+Settings.SettingsInfo.Default.SeparatorMark;
                 }
+                result += "\n";
             }
             return result;
 

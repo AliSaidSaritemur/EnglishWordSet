@@ -18,7 +18,7 @@ namespace DataAccess.Concrete
         {
             UserTexts userTexts = context._UserTexts.FirstOrDefault(I => I.UserName == UserName);
             userTexts.LastConvertedWords = convertedWords;
-            userTexts.SavedConvertedWords = convertedWords +"\n"+ userTexts.SavedConvertedWords;
+            userTexts.SavedConvertedWords = "\n" + DateTime.Now + "\n" + convertedWords +"\n"+ userTexts.SavedConvertedWords;
             context.SaveChanges();
         }
 
