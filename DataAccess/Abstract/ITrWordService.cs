@@ -15,10 +15,12 @@ namespace DataAccess.Abstract
         bool IsThere(string wordTr, string UserName);
         List<TrWord> GetTurksihWordsWithLevel(int level, string UserName);
         string GetTurkishWordAndLevelsAsStringText(string userName);
-        void CheckWordsEnglishIfIsTrueIncLevel(string trWord, string wordEng, string UserName);
+        void CheckWordsEnglishIfIsTrueIncLevelOrDescLevel(string trWord, string wordEng, string UserName);
         bool CheckWordsEnglishMeaning(string trWord, string wordEng, string UserName);
         void IncWordLevel(string trWord, string UserName);
+        void DescWordLevel(string trWord, string UserName);
         int GetMaxLevel(string UserName);
         void RemoveWordsWithLevel(int level, string UserName);
+        int GetWordLevel(string trWord, string UserName);
     }
 }

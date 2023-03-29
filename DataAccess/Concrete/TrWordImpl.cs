@@ -23,13 +23,14 @@ namespace DataAccess.Concrete
             context.SaveChanges();
         }
 
-        public void CheckWordsEnglishIfIsTrueIncLevel(string trWord, string wordEng, string UserName)
+        public void CheckWordsEnglishIfIsTrueIncLevelOrDescLevel(string trWord, string wordEng, string UserName)
         {
             if (string.IsNullOrEmpty(trWord) || string.IsNullOrEmpty(wordEng))
                 return;
 
             TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord && I.UserName == UserName);
-            trWordToBeCheck.level = trWordToBeCheck.English == wordEng ? trWordToBeCheck.level + 1 : trWordToBeCheck.level;
+            trWordToBeCheck.level = trWordToBeCheck.English == wordEng ? trWordToBeCheck.level + 1 : 
+                trWordToBeCheck.level>1 ? trWordToBeCheck.level-1:trWordToBeCheck.level;
             context.SaveChanges();
         }
 
@@ -40,6 +41,13 @@ namespace DataAccess.Concrete
 
             TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord && I.UserName == UserName);
            return trWordToBeCheck.English == wordEng;
+        }
+
+        public void DescWordLevel(string trWord, string UserName)
+        {
+            TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord && I.UserName == UserName);
+            trWordToBeCheck.level--;
+            context.SaveChanges();
         }
 
         public string GetEnglishMeaning(string wordTr, string UserName)
@@ -80,6 +88,12 @@ namespace DataAccess.Concrete
         {
             List<TrWord> trWords = context.TrWords.Where(I=>I.level==level && I.UserName == UserName).ToList();
             return trWords;
+        }
+
+        public int GetWordLevel(string trWord, string UserName)
+        {
+            TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord && I.UserName == UserName);
+            return trWordToBeCheck.level;
         }
 
         public void IncWordLevel(string trWord, string UserName)

@@ -65,6 +65,9 @@ namespace EnglishWordSet.Pages
                 }
                 else
                 {
+                    if(_trWordImpl.GetWordLevel(turkish, UserSession.username_Admin)>1)
+                    _trWordImpl.DescWordLevel(turkish, UserSession.username_Admin);
+
                     resultLine += $"  false // true :{_trWordImpl.GetEnglishMeaning(turkish, UserSession.username_Admin)}";
                 }
             }
