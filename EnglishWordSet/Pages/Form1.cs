@@ -30,13 +30,17 @@ namespace EnglishWordSet
 
             bool saveStatu = cBSave.Checked;
             Converter converter;
-            if (cbSetDay.Checked)
+            if (!cbSetDay.Checked)
             {
-                 converter = new Converter(new ConvertNext());
+                converter = new Converter(new ConvertingWtihoutDays());
+            }
+            else if (cBSave.Checked)
+            {
+                converter = new Converter(new ConvertNext());
             }
             else
             {
-                 converter = new Converter(new ConvertingWtihoutDays());
+                converter = new Converter(new ConvertingWithoutSave());
             }
 
             converter.randomStatue = true;
@@ -206,6 +210,16 @@ namespace EnglishWordSet
         PageTransactions.GetTurkishWordPage().Show();
             Hide();
 
+        }
+
+        private void btnInputClean_Click(object sender, EventArgs e)
+        {
+            txtInput.Text = "";
+        }
+
+        private void btnOutputClean_Click(object sender, EventArgs e)
+        {
+            txtOutput.Text = "";
         }
     }
 }

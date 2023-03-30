@@ -49,6 +49,8 @@ namespace EnglishWordSet
             this.btnGetLast = new System.Windows.Forms.Button();
             this.cbSetDay = new System.Windows.Forms.CheckBox();
             this.btnOpenTurkishWordPage = new System.Windows.Forms.Button();
+            this.btnOutputClean = new System.Windows.Forms.Button();
+            this.btnInputClean = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).BeginInit();
             this.SuspendLayout();
@@ -66,7 +68,7 @@ namespace EnglishWordSet
             // txtOutput
             // 
             this.txtOutput.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtOutput.Location = new System.Drawing.Point(560, 200);
+            this.txtOutput.Location = new System.Drawing.Point(547, 200);
             this.txtOutput.Name = "txtOutput";
             this.txtOutput.ReadOnly = true;
             this.txtOutput.Size = new System.Drawing.Size(406, 286);
@@ -151,7 +153,7 @@ namespace EnglishWordSet
             this.pbCopy.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pbCopy.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbCopy.Image = global::EnglishWordSet.Properties.Resources.Copy;
-            this.pbCopy.Location = new System.Drawing.Point(887, 390);
+            this.pbCopy.Location = new System.Drawing.Point(874, 390);
             this.pbCopy.Name = "pbCopy";
             this.pbCopy.Size = new System.Drawing.Size(79, 96);
             this.pbCopy.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -257,12 +259,34 @@ namespace EnglishWordSet
             this.btnOpenTurkishWordPage.UseVisualStyleBackColor = true;
             this.btnOpenTurkishWordPage.Click += new System.EventHandler(this.btnOpenTurkishWordPage_Click);
             // 
+            // btnOutputClean
+            // 
+            this.btnOutputClean.Location = new System.Drawing.Point(894, 200);
+            this.btnOutputClean.Name = "btnOutputClean";
+            this.btnOutputClean.Size = new System.Drawing.Size(59, 29);
+            this.btnOutputClean.TabIndex = 22;
+            this.btnOutputClean.Text = "Clean";
+            this.btnOutputClean.UseVisualStyleBackColor = true;
+            this.btnOutputClean.Click += new System.EventHandler(this.btnOutputClean_Click);
+            // 
+            // btnInputClean
+            // 
+            this.btnInputClean.Location = new System.Drawing.Point(366, 200);
+            this.btnInputClean.Name = "btnInputClean";
+            this.btnInputClean.Size = new System.Drawing.Size(59, 29);
+            this.btnInputClean.TabIndex = 23;
+            this.btnInputClean.Text = "Clean";
+            this.btnInputClean.UseVisualStyleBackColor = true;
+            this.btnInputClean.Click += new System.EventHandler(this.btnInputClean_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1026, 554);
+            this.Controls.Add(this.btnInputClean);
+            this.Controls.Add(this.btnOutputClean);
             this.Controls.Add(this.btnOpenTurkishWordPage);
             this.Controls.Add(this.cbSetDay);
             this.Controls.Add(this.btnGetLast);
@@ -316,6 +340,8 @@ namespace EnglishWordSet
         private System.Windows.Forms.CheckBox cbSetDay;
         internal System.Windows.Forms.PictureBox pbPaste;
         private System.Windows.Forms.Button btnOpenTurkishWordPage;
+        private System.Windows.Forms.Button btnOutputClean;
+        private System.Windows.Forms.Button btnInputClean;
     }
 }
 

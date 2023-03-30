@@ -33,6 +33,8 @@
             this.btnGetTurkishWord = new System.Windows.Forms.Button();
             this.btnConvertTrWords = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnInputClean = new System.Windows.Forms.Button();
+            this.btnOutputClean = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // txtInputTurkishWords
@@ -83,12 +85,34 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Turkish Words Panel";
             // 
+            // btnInputClean
+            // 
+            this.btnInputClean.Location = new System.Drawing.Point(371, 227);
+            this.btnInputClean.Name = "btnInputClean";
+            this.btnInputClean.Size = new System.Drawing.Size(59, 29);
+            this.btnInputClean.TabIndex = 24;
+            this.btnInputClean.Text = "Clean";
+            this.btnInputClean.UseVisualStyleBackColor = true;
+            this.btnInputClean.Click += new System.EventHandler(this.btnInputClean_Click);
+            // 
+            // btnOutputClean
+            // 
+            this.btnOutputClean.Location = new System.Drawing.Point(884, 227);
+            this.btnOutputClean.Name = "btnOutputClean";
+            this.btnOutputClean.Size = new System.Drawing.Size(59, 29);
+            this.btnOutputClean.TabIndex = 25;
+            this.btnOutputClean.Text = "Clean";
+            this.btnOutputClean.UseVisualStyleBackColor = true;
+            this.btnOutputClean.Click += new System.EventHandler(this.btnOutputClean_Click);
+            // 
             // TurkishWordPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(1026, 554);
+            this.Controls.Add(this.btnOutputClean);
+            this.Controls.Add(this.btnInputClean);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnConvertTrWords);
             this.Controls.Add(this.btnGetTurkishWord);
@@ -113,5 +137,7 @@
         private System.Windows.Forms.Button btnGetTurkishWord;
         private System.Windows.Forms.Button btnConvertTrWords;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnInputClean;
+        private System.Windows.Forms.Button btnOutputClean;
     }
 }

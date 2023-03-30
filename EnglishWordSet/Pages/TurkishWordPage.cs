@@ -88,6 +88,15 @@ namespace EnglishWordSet.Pages
                 tempInputWords= tempInputWords.Remove(indexOfWord, 1).Insert(indexOfWord, $"{(char)(word[0]+1)}");
             }        
         }
-      
+
+        private void btnInputClean_Click(object sender, EventArgs e)
+        {
+            txtInputTurkishWords.Text = "";
+        }
+
+        private void btnOutputClean_Click(object sender, EventArgs e)
+        {
+            txtOutputTurkishWords.Text = "";
+        }
     }
 }

@@ -11,7 +11,7 @@ namespace DataAccess.Concrete
 {
     public class RandomWordImpl : IRandomWordService
     {
-        GettingRandomWordWithFrequencyLevel _GettingRandomWordWithFrequency = new();
+
         private WordContext context = MyDBTransactions.GetContext();
         private Random rand = new Random();
         public void Add(string word, string frequency)
@@ -49,12 +49,17 @@ namespace DataAccess.Concrete
             return context.RandomWords.Skip(toSkip).Take(1).First().Word;
         }
 
-        public string getRandomWordWtihFrequencyList(List<string> frequencies)
+        public RandomWord getRandomWordWtihFrequencyList(List<string> frequencies)
+        {
+            RandomWord rnword = context.RandomWords.FirstOrDefault(I =>frequencies.Contains(I.frequency));
+            return rnword;
+        }
+
+        public string getRandomWordWtihFrequencyListString(List<string> frequencies)
         {
             RandomWord rnword = context.RandomWords.FirstOrDefault(I => frequencies.Contains(I.frequency));
             return rnword.Word;
         }
-
 
         public string getRandomWordWtihFrequencyListThenDelteWord(List<string> frequencies)
         {
@@ -64,18 +69,6 @@ namespace DataAccess.Concrete
             return resultWord;
         }
 
-        public string getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(List<string> frequencies,int wordCountToBeGet)
-        {
-            string tempWord = "";
-            for (int i = 0; i < wordCountToBeGet; i++)
-            {
-                RandomWord rnword = context.RandomWords.FirstOrDefault(I => frequencies.Contains(I.frequency));
-                 tempWord += rnword.Word+"\n";
-                _GettingRandomWordWithFrequency.AddWordToDbWithFrequency(1, rnword.frequency);
-                Delete(rnword);
-            }
-           
-            return tempWord;
-        }
+        
     }
 }

@@ -16,10 +16,11 @@ namespace DataAccess.Concrete
 
         public void AddWtithoutLevel(string wordTr, string wordEng, string userName)
         {
-            if (IsThere(wordTr, userName))
+            if (IsThereTurkishWord(wordTr, userName)|| IsThereEnglishhWord(wordEng,userName))
                 return;
 
             context.TrWords.Add(new TrWord { English = wordEng, Turkish = wordTr,UserName= userName });
+
             context.SaveChanges();
         }
 
@@ -36,7 +37,7 @@ namespace DataAccess.Concrete
 
         public bool CheckWordsEnglishMeaning(string trWord, string wordEng, string UserName)
         {
-            if (string.IsNullOrEmpty(trWord) || string.IsNullOrEmpty(wordEng)||!IsThere(trWord, UserName))
+            if (string.IsNullOrEmpty(trWord) || string.IsNullOrEmpty(wordEng)||!IsThereTurkishWord(trWord, UserName))
                 return false;
 
             TrWord trWordToBeCheck = context.TrWords.FirstOrDefault(I => I.Turkish == trWord && I.UserName == UserName);
@@ -103,7 +104,13 @@ namespace DataAccess.Concrete
             context.SaveChanges();
         }
 
-        public bool IsThere(string wordTr, string UserName)
+        public bool IsThereEnglishhWord(string wordEng, string UserName)
+        {
+            TrWord nword = context.TrWords.FirstOrDefault(I => I.English == wordEng && I.UserName == UserName);
+            return nword != null;
+        }
+
+        public bool IsThereTurkishWord(string wordTr, string UserName)
         {
             TrWord nword = context.TrWords.FirstOrDefault(I => I.Turkish == wordTr&&I.UserName==UserName);
             return nword != null;

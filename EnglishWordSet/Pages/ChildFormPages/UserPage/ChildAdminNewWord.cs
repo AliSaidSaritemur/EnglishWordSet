@@ -1,4 +1,5 @@
 ﻿using DataAccess.Concrete;
+using DataAccess.util;
 using EnglishWordSet.Controllers;
 using EnglishWordSet.Pages.ChildFormPages.AdminPage;
 using EnglishWordSet.services.Impl.ConvertImpls;
@@ -23,6 +24,7 @@ namespace EnglishWordSet
         private List<string> frequencyCheckBoxList = new(); 
         private RandomWordImpl _RandomWordImpl = new();
         private DictionaryTransections _dictionaryTransections = new();
+        private GettingRandomWordWithFrequencyLevel gettingRandomWordWithFrequencyLevel = new();
        private UserController pageBackend = ControllersGetter.AdminPage();
         private UserImpl adminImpl= new UserImpl();
         private MyImageFilter _myImageFilter= new();
@@ -169,7 +171,7 @@ namespace EnglishWordSet
             FrequencyCheckBoxListSet();
             if (frequencyCheckBoxList.Count > 0)
             {
-                string randomWords = _RandomWordImpl.getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(frequencyCheckBoxList, getRandomCountInt);
+                string randomWords = gettingRandomWordWithFrequencyLevel.getRandomWordWtihFrequencyListThenDelteWordAndAddWordSameFrequency(frequencyCheckBoxList, getRandomCountInt);
                 txtInput.Text += randomWords;
                 adminImpl.ToReduceToken(UserSession.username_Admin, getRandomCountInt);
                 SetSystem();
