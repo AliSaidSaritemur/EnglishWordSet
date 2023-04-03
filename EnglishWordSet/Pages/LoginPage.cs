@@ -66,7 +66,7 @@ namespace EnglishWordSet
 
         private void LoginPage_Load(object sender, EventArgs e)
         {
-            PageTransactions.SetLoginPage(this);
+
         }
 
         private void txtUserName_KeyDown(object sender, KeyEventArgs e)
@@ -119,6 +119,8 @@ namespace EnglishWordSet
 
         private void LoginPage_FormClosing(object sender, FormClosingEventArgs e)
         {
+            if (PageTransactions.MainIsNull())
+                Environment.Exit(0);
         }
 
         private void llblForgetPasswordPageOpen_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

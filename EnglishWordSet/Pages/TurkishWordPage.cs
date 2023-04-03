@@ -26,9 +26,12 @@ namespace EnglishWordSet.Pages
 
         private void TurkishWordPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            PageTransactions.GetForm1().Show();
-            Hide();
+            if (!PageTransactions.MainIsNull())
+            {
+                e.Cancel = true;
+                this.Hide();
+                PageTransactions.GetForm1().Show();
+            }
         }
 
         private void btnGetTurkishWord_Click(object sender, EventArgs e)

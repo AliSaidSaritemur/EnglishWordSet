@@ -123,6 +123,16 @@ namespace EnglishWordSet.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap logOutIcon {
+            get {
+                object obj = ResourceManager.GetObject("logOutIcon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap newButton {
             get {
                 object obj = ResourceManager.GetObject("newButton", resourceCulture);

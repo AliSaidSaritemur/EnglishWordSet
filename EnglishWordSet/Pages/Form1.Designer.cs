@@ -51,8 +51,10 @@ namespace EnglishWordSet
             this.btnOpenTurkishWordPage = new System.Windows.Forms.Button();
             this.btnOutputClean = new System.Windows.Forms.Button();
             this.btnInputClean = new System.Windows.Forms.Button();
+            this.pbLogOutMainPage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogOutMainPage)).BeginInit();
             this.SuspendLayout();
             // 
             // txtInput
@@ -279,12 +281,25 @@ namespace EnglishWordSet
             this.btnInputClean.UseVisualStyleBackColor = true;
             this.btnInputClean.Click += new System.EventHandler(this.btnInputClean_Click);
             // 
+            // pbLogOutMainPage
+            // 
+            this.pbLogOutMainPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbLogOutMainPage.Image = global::EnglishWordSet.Properties.Resources.logOutIcon;
+            this.pbLogOutMainPage.Location = new System.Drawing.Point(9, 12);
+            this.pbLogOutMainPage.Name = "pbLogOutMainPage";
+            this.pbLogOutMainPage.Size = new System.Drawing.Size(46, 44);
+            this.pbLogOutMainPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbLogOutMainPage.TabIndex = 24;
+            this.pbLogOutMainPage.TabStop = false;
+            this.pbLogOutMainPage.Click += new System.EventHandler(this.pbLogOutMainPage_Click);
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightSeaGreen;
             this.ClientSize = new System.Drawing.Size(1026, 554);
+            this.Controls.Add(this.pbLogOutMainPage);
             this.Controls.Add(this.btnInputClean);
             this.Controls.Add(this.btnOutputClean);
             this.Controls.Add(this.btnOpenTurkishWordPage);
@@ -309,11 +324,12 @@ namespace EnglishWordSet
             this.MaximizeBox = false;
             this.Name = "Main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "MainPage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Main_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbCopy)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbPaste)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbLogOutMainPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -342,6 +358,7 @@ namespace EnglishWordSet
         private System.Windows.Forms.Button btnOpenTurkishWordPage;
         private System.Windows.Forms.Button btnOutputClean;
         private System.Windows.Forms.Button btnInputClean;
+        private System.Windows.Forms.PictureBox pbLogOutMainPage;
     }
 }
 

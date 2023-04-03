@@ -7,6 +7,7 @@ using System.Windows.Forms;
 using DataAccess.Concrete;
 using PostSharp.Aspects.Advices;
 using Microsoft.Extensions.Configuration;
+using EnglishWordSet.util;
 
 namespace EnglishWordSet
 {
@@ -20,7 +21,7 @@ namespace EnglishWordSet
             Application.SetHighDpiMode(HighDpiMode.SystemAware);
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LoginPage());
+            Application.Run(PageTransactions.GetLoginPage());
         }
 
         private static async void DbConnetcion()

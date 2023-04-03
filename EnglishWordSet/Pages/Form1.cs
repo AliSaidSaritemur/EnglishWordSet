@@ -21,7 +21,6 @@ namespace EnglishWordSet
         public Main()
         {
             InitializeComponent();
-            PageTransactions.SetForm1(this);
         }
 
         private void btnConvert_Click(object sender, EventArgs e)
@@ -196,8 +195,11 @@ namespace EnglishWordSet
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-                AddLog.systemLogs.Info(UserSession.username_Admin + "  Logged out");
+            if(!PageTransactions.MainIsNull())
                 Environment.Exit(0);
+
+            AddLog.systemLogs.Info(UserSession.username_Admin + "  Logged out");
+        
         }
 
         private void cbWordLanguage_SelectedIndexChanged(object sender, EventArgs e)
@@ -220,6 +222,12 @@ namespace EnglishWordSet
         private void btnOutputClean_Click(object sender, EventArgs e)
         {
             txtOutput.Text = "";
+        }
+
+        private void pbLogOutMainPage_Click(object sender, EventArgs e)
+        {        
+            PageTransactions.CloseAllPage();
+            PageTransactions.GetLoginPage().Show();
         }
     }
 }

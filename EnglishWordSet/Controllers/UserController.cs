@@ -2,6 +2,7 @@
 using DataAccess.Concrete;
 using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.Sessions;
+using EnglishWordSet.util;
 using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
@@ -22,9 +23,9 @@ namespace EnglishWordSet.Controllers
 
         public ChildAdminNewWord GetChildNewWordPage()
         {
-            if (childAdminAddWord == null)
-            {
-                childAdminAddWord = new ChildAdminNewWord();
+            childAdminAddWord = PageTransactions.GetChildAdminNewWordPage();
+            if (childAdminAddWord.FormBorderStyle != FormBorderStyle.None)
+            {         
                 childAdminAddWord.FormBorderStyle = FormBorderStyle.None;
                 childAdminAddWord.MdiParent = UserPage.ActiveForm;
                 childAdminAddWord.Location = new Point(180, 100);
@@ -35,9 +36,9 @@ namespace EnglishWordSet.Controllers
 
         public ChildAdminNewUser GetChildNewAdminPage()
         {
-            if (childAdminAddAdmin == null)
+            childAdminAddAdmin = PageTransactions.GetChildAdminNewUserPage();
+            if (childAdminAddAdmin.FormBorderStyle!= FormBorderStyle.None)
             {
-                childAdminAddAdmin = new ChildAdminNewUser();
                 childAdminAddAdmin.FormBorderStyle = FormBorderStyle.None;
                 childAdminAddAdmin.MdiParent = UserPage.ActiveForm;
                 childAdminAddAdmin.Location = new Point(230, 111);
@@ -47,9 +48,9 @@ namespace EnglishWordSet.Controllers
 
         public ChildAdminNewLearnedWord GetChildNewLearnedWord()
         {
-            if (newLearnedWord == null)
+            newLearnedWord = PageTransactions.GetChildAdminNewLearnedWordPage();
+            if (newLearnedWord.FormBorderStyle != FormBorderStyle.None)
             {
-                newLearnedWord = new ChildAdminNewLearnedWord();
                 newLearnedWord.FormBorderStyle = FormBorderStyle.None;
                 newLearnedWord.MdiParent = UserPage.ActiveForm;
                 newLearnedWord.Location = new Point(230, 111);

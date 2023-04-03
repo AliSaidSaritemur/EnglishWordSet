@@ -131,9 +131,13 @@ namespace EnglishWordSet
 
         private void AdminPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true; 
-            this.Hide();
-            PageTransactions.GetForm1().Show();
+              if(!PageTransactions.MainIsNull())
+                {
+                    e.Cancel = true;
+                    this.Hide();
+                    PageTransactions.GetForm1().Show();
+
+                }
         }
 
         private void pbAdminPageOpen_Click(object sender, EventArgs e)
