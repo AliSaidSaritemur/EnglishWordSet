@@ -10,6 +10,7 @@ using EnglishWordSet.services.Impl.ConvertImpls;
 using Util;
 using EnglishWordSet.util;
 using EnglishWordSet.Controllers;
+using System.Drawing;
 
 namespace EnglishWordSet
 {
@@ -23,6 +24,8 @@ namespace EnglishWordSet
             InitializeComponent();
         }
 
+        RichTextBoxBuilder richTextBoxBuilderForInputTxt;
+        RichTextBoxBuilder richTextBoxBuilderForOutputTxt;
         private void btnConvert_Click(object sender, EventArgs e)
         {
             string tempText = txtInput.Text.ToString();
@@ -60,6 +63,9 @@ namespace EnglishWordSet
             {
                AddLog.ConvertedWordsLogs.Trace($"{UserSession.username_Admin} Converted words : \n {tempText}");
             }
+            richTextBoxBuilderForOutputTxt ??= new RichTextBoxBuilder(txtOutput);
+            richTextBoxBuilderForOutputTxt.ChangeTxtInputWordsColor("!!!", Color.Red);
+
         }
 
         private  void btnGetSaveText_Click(object sender, EventArgs e)
@@ -191,15 +197,16 @@ namespace EnglishWordSet
             words = Regex.Replace(words, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
             txtInput.Text = words;
             SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
+            richTextBoxBuilderForInputTxt ??= new RichTextBoxBuilder(txtInput);
+            richTextBoxBuilderForInputTxt.ChangeTxtInputWordsColor("!!!", Color.Red);
         }
 
         private void Main_FormClosing(object sender, FormClosingEventArgs e)
         {
-            if(!PageTransactions.MainIsNull())
-                Environment.Exit(0);
-
             AddLog.systemLogs.Info(UserSession.username_Admin + "  Logged out");
-        
+
+            if (!PageTransactions.MainIsNull())
+                Environment.Exit(0);            
         }
 
         private void cbWordLanguage_SelectedIndexChanged(object sender, EventArgs e)

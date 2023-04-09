@@ -39,6 +39,7 @@ namespace EnglishWordSet.Pages
             txtInputTurkishWords.Text = _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
         }
 
+        RichTextBoxBuilder richTextBoxBuilderForInputTxt;
         private void btnConvertTrWords_Click(object sender, EventArgs e)
         {
         string convertedText= StringTransactionsWithFunc.ReadStringWithAction(txtInputTurkishWords.Text.ToString(), getAndSetTurkishLine);
@@ -47,8 +48,9 @@ namespace EnglishWordSet.Pages
             string outputTurkishWord = _trWordImpl.GetTurkishWordAndLevelsAsStringText(UserSession.username_Admin);
             txtOutputTurkishWords.Text = outputTurkishWord;
             AddLog.ConvertedwordsTurkih.Info($"{Sessions.UserSession.username_Admin} Last Convertion Transaction : \n {outputTurkishWord}");
-            ChangeTxtInputWordsColor("true", Color.Green);
-            ChangeTxtInputWordsColor("false",Color.Red);
+             richTextBoxBuilderForInputTxt ??= new RichTextBoxBuilder(txtInputTurkishWords);
+            richTextBoxBuilderForInputTxt.ChangeTxtInputWordsColor("true", Color.Green);
+            richTextBoxBuilderForInputTxt.ChangeTxtInputWordsColor("false",Color.Red);
         }
 
         DeleteAfterHyben deleteAfterHyben = new();
@@ -77,20 +79,7 @@ namespace EnglishWordSet.Pages
             return resultLine;
         }
             
-        public void ChangeTxtInputWordsColor(string word,Color color)
-        {
-            string tempInputWords = txtInputTurkishWords.Text.ToString();
-
-            while (tempInputWords.IndexOf(word) >=0)
-            {
-                int indexOfWord = tempInputWords.IndexOf(word);
-                int lengthofWord = word.Length;
-                txtInputTurkishWords.Select(indexOfWord, lengthofWord);
-                txtInputTurkishWords.SelectionColor = color;
-
-                tempInputWords= tempInputWords.Remove(indexOfWord, 1).Insert(indexOfWord, $"{(char)(word[0]+1)}");
-            }        
-        }
+        
 
         private void btnInputClean_Click(object sender, EventArgs e)
         {
