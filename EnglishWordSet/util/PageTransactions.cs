@@ -20,7 +20,8 @@ namespace EnglishWordSet.util
         private static GamePanel _gamePanel;
         private static LastLetterGamePage _lastLetterGamePage;
         private static TurkishWordPage _turkishWordPage;
-   
+        private static CreatingSentence _creatingSentence;
+
 
         public static LoginPage GetLoginPage() => _loginPage ??= new();
 
@@ -44,9 +45,11 @@ namespace EnglishWordSet.util
 
         public static TurkishWordPage GetTurkishWordPage() => _turkishWordPage ??= new();
 
+        public static CreatingSentence GetCreatingSentencePage() => _creatingSentence ??= new();
+
         public static void CloseAllPage()
         {
-
+            _creatingSentence = null;
             form1 = null;
             _loginPage = null;
             userpage = null;

@@ -18,15 +18,17 @@ namespace EnglishWordSet.Pages
             InitializeComponent();
         }
 
-        private void btnOpenLastLaterGame_Click(object sender, EventArgs e)
-        {
-            PageTransactions.GetLastLetterGamePage().Show();
-            Hide();
-        }
+
 
         private void GamePanel_FormClosing(object sender, FormClosingEventArgs e)
         {
             e.Cancel=true;
+            Hide();
+        }
+
+        private void btnOpenCreatingSentencePage_Click(object sender, EventArgs e)
+        {
+            PageTransactions.GetCreatingSentencePage().Show();
             Hide();
         }
     }

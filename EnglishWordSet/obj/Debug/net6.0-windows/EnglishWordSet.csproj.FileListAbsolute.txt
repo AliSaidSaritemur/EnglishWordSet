@@ -121,3 +121,4 @@ C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windo
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Util.dll
 C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\bin\Debug\net6.0-windows\Util.pdb
+C:\Users\alisa\source\repos\EnglishWordSet\EnglishWordSet\obj\Debug\net6.0-windows\EnglishWordSet.Pages.Games.CreatingSentence.resources

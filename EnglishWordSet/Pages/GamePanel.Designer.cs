@@ -28,25 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnOpenLastLaterGame = new System.Windows.Forms.Button();
+            this.btnOpenCreatingSentencePage = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnOpenLastLaterGame
+            // btnOpenCreatingSentencePage
             // 
-            this.btnOpenLastLaterGame.Location = new System.Drawing.Point(21, 21);
-            this.btnOpenLastLaterGame.Name = "btnOpenLastLaterGame";
-            this.btnOpenLastLaterGame.Size = new System.Drawing.Size(210, 82);
-            this.btnOpenLastLaterGame.TabIndex = 0;
-            this.btnOpenLastLaterGame.Text = "Last Letter";
-            this.btnOpenLastLaterGame.UseVisualStyleBackColor = true;
-            this.btnOpenLastLaterGame.Click += new System.EventHandler(this.btnOpenLastLaterGame_Click);
+            this.btnOpenCreatingSentencePage.Location = new System.Drawing.Point(26, 29);
+            this.btnOpenCreatingSentencePage.Name = "btnOpenCreatingSentencePage";
+            this.btnOpenCreatingSentencePage.Size = new System.Drawing.Size(176, 74);
+            this.btnOpenCreatingSentencePage.TabIndex = 0;
+            this.btnOpenCreatingSentencePage.Text = "Create Sentence";
+            this.btnOpenCreatingSentencePage.UseVisualStyleBackColor = true;
+            this.btnOpenCreatingSentencePage.Click += new System.EventHandler(this.btnOpenCreatingSentencePage_Click);
             // 
             // GamePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 300);
-            this.Controls.Add(this.btnOpenLastLaterGame);
+            this.Controls.Add(this.btnOpenCreatingSentencePage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "GamePanel";
@@ -59,6 +59,6 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnOpenLastLaterGame;
+        private System.Windows.Forms.Button btnOpenCreatingSentencePage;
     }
 }

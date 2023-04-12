@@ -148,6 +148,7 @@ namespace EnglishWordSet
         private void pbOpenGamePanel_Click(object sender, EventArgs e)
         {
             PageTransactions.GetGamePanel().Show();
+            Hide();
         }
     }
 
