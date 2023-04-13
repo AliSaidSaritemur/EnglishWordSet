@@ -11,5 +11,6 @@ namespace DataAccess.Abstract
         LearnedWord GetLearnedWord(string word, string username);
         bool IsThere(string word, string username);
         LearnedWord GetRandomWord( string username);
+        int LearnedWordCount(string username);
     }
 }

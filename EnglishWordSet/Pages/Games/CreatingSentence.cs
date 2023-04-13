@@ -31,6 +31,12 @@ namespace EnglishWordSet.Pages.Games
         LearnedWordImpl _learnedWordImpl = new();
         private void btnStartSentenceGame_Click(object sender, EventArgs e)
         {
+            if(_learnedWordImpl.LearnedWordCount(Sessions.UserSession.username_Admin) < 5)
+            {
+                MyNotificationAlerts.GetWarningMessage("You dont have enough word to play !!!");
+                return;
+            }
+
             lblWord1.Text = _learnedWordImpl.GetRandomWord(Sessions.UserSession.username_Admin).wordEnglish;
             lblWord2.Text = _learnedWordImpl.GetRandomWord(Sessions.UserSession.username_Admin).wordEnglish;
             lblWord3.Text = _learnedWordImpl.GetRandomWord(Sessions.UserSession.username_Admin).wordEnglish;

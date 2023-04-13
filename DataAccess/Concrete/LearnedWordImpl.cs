@@ -27,7 +27,7 @@ namespace DataAccess.Concrete
         {
             rand ??= new Random();
             int toSkip = rand.Next(0, context.Words.Where(I => I.UserName == username).Count());
-            return context.LearnedWords.Where(I => I.UserName == username).Skip(toSkip).Take(1).First();
+            return context.LearnedWords.Where(I => I.UserName == username).Count()>1? context.LearnedWords.Where(I => I.UserName == username).Skip(toSkip).Take(1).First():new LearnedWord();
         }
 
         public LearnedWord GetLearnedWord(string word, string username)
@@ -49,6 +49,11 @@ namespace DataAccess.Concrete
             learnedword.meaningWordSentence = senteceMeaning;
             context.SaveChanges();
 
+        }
+
+        public int LearnedWordCount(string username)
+        {
+            return context.LearnedWords.Count(I => I.UserName == username);
         }
     }
 }
