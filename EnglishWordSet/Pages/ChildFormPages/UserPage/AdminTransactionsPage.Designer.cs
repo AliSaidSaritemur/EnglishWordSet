@@ -39,6 +39,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.btnDeleteWordFromLearned = new System.Windows.Forms.Button();
             this.prDeleteLeanerdWords = new System.Windows.Forms.ErrorProvider(this.components);
+            this.txtUserWillDeleteWord = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.prAddRandomWords)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prDeleteLeanerdWords)).BeginInit();
             this.SuspendLayout();
@@ -91,9 +92,10 @@
             // 
             // txtWordtoBeDeleteFromLearned
             // 
-            this.txtWordtoBeDeleteFromLearned.Location = new System.Drawing.Point(340, 57);
+            this.txtWordtoBeDeleteFromLearned.Location = new System.Drawing.Point(506, 59);
             this.txtWordtoBeDeleteFromLearned.Name = "txtWordtoBeDeleteFromLearned";
-            this.txtWordtoBeDeleteFromLearned.Size = new System.Drawing.Size(125, 27);
+            this.txtWordtoBeDeleteFromLearned.PlaceholderText = "Word";
+            this.txtWordtoBeDeleteFromLearned.Size = new System.Drawing.Size(150, 27);
             this.txtWordtoBeDeleteFromLearned.TabIndex = 6;
             // 
             // label2
@@ -121,11 +123,21 @@
             // 
             this.prDeleteLeanerdWords.ContainerControl = this;
             // 
+            // txtUserWillDeleteWord
+            // 
+            this.txtUserWillDeleteWord.Location = new System.Drawing.Point(340, 57);
+            this.txtUserWillDeleteWord.Name = "txtUserWillDeleteWord";
+            this.txtUserWillDeleteWord.PlaceholderText = "Username";
+            this.txtUserWillDeleteWord.Size = new System.Drawing.Size(125, 27);
+            this.txtUserWillDeleteWord.TabIndex = 7;
+            this.txtUserWillDeleteWord.Tag = "";
+            // 
             // AdminTransactionsPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.txtUserWillDeleteWord);
             this.Controls.Add(this.txtWordtoBeDeleteFromLearned);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnDeleteWordFromLearned);
@@ -158,5 +170,6 @@
         private System.Windows.Forms.Label label2;
         internal System.Windows.Forms.Button btnDeleteWordFromLearned;
         private System.Windows.Forms.ErrorProvider prDeleteLeanerdWords;
+        private System.Windows.Forms.TextBox txtUserWillDeleteWord;
     }
 }

@@ -81,23 +81,30 @@ namespace EnglishWordSet.Pages.ChildFormPages.UserPage
         private void btnDeleteWordFromLearned_Click(object sender, EventArgs e)
         {
             _learnedWordImpl ??= new LearnedWordImpl();
-
+            string usernameWilldeleteWord = txtUserWillDeleteWord.Text.ToString();
             string word = txtWordtoBeDeleteFromLearned.Text.ToString().Trim();
-            if (string.IsNullOrEmpty(word))
+            
+            if (string.IsNullOrEmpty(usernameWilldeleteWord))
+            {
+                prDeleteLeanerdWords.SetError(txtUserWillDeleteWord, "Enter the username ");
+                return;
+
+            }
+            else if (string.IsNullOrEmpty(word))
             {
                 prDeleteLeanerdWords.SetError(txtWordtoBeDeleteFromLearned,"Enter the word you want to delete");
                 return;
-            }
-           else if (!_learnedWordImpl.IsThere(word, UserSession.username_Admin))
+            }        
+           else if (!_learnedWordImpl.IsThere(word, usernameWilldeleteWord))
             {
                 MyNotificationAlerts.GetErrorMessage(word +" is not a Learned Word");
 
             }
             else
             {
-                _learnedWordImpl.Delete(word, UserSession.username_Admin);
-                AddLog.systemLogs.Info(" " + word + " was Deleted ");
-                MyNotificationAlerts.GetSuccessMessage(" " + word + " was Deleted ");
+                _learnedWordImpl.Delete(word, usernameWilldeleteWord);
+                AddLog.systemLogs.Info(" "+ UserSession.username_Admin + " Deleted "+usernameWilldeleteWord+"s "+word);
+                MyNotificationAlerts.GetSuccessMessage(" " + word + " was Deleted From "+ usernameWilldeleteWord);
             }
             prDeleteLeanerdWords.Clear();
         }

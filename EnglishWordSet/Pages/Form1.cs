@@ -234,6 +234,7 @@ namespace EnglishWordSet
         private void pbLogOutMainPage_Click(object sender, EventArgs e)
         {        
             PageTransactions.CloseAllPage();
+            Sessions.UserSession.role_Admin = null;
             PageTransactions.GetLoginPage().Show();
         }
     }

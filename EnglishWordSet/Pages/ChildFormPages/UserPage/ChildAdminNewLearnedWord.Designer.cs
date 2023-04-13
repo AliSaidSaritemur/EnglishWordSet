@@ -41,6 +41,7 @@
             this.prMeanning = new System.Windows.Forms.ErrorProvider(this.components);
             this.prSentence = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnNewSentence = new System.Windows.Forms.PictureBox();
+            this.btnRemoveLearnedWord = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.prWord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prMeanning)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.prSentence)).BeginInit();
@@ -107,7 +108,7 @@
             // 
             // btnAdd
             // 
-            this.btnAdd.Location = new System.Drawing.Point(99, 301);
+            this.btnAdd.Location = new System.Drawing.Point(131, 301);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(94, 29);
             this.btnAdd.TabIndex = 7;
@@ -150,12 +151,26 @@
             this.btnNewSentence.TabStop = false;
             this.btnNewSentence.Click += new System.EventHandler(this.btnNewSentence_Click);
             // 
+            // btnRemoveLearnedWord
+            // 
+            this.btnRemoveLearnedWord.BackColor = System.Drawing.Color.White;
+            this.btnRemoveLearnedWord.Font = new System.Drawing.Font("Arial", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.btnRemoveLearnedWord.ForeColor = System.Drawing.Color.Red;
+            this.btnRemoveLearnedWord.Location = new System.Drawing.Point(-2, 330);
+            this.btnRemoveLearnedWord.Name = "btnRemoveLearnedWord";
+            this.btnRemoveLearnedWord.Size = new System.Drawing.Size(78, 29);
+            this.btnRemoveLearnedWord.TabIndex = 10;
+            this.btnRemoveLearnedWord.Text = "Remove";
+            this.btnRemoveLearnedWord.UseVisualStyleBackColor = false;
+            this.btnRemoveLearnedWord.Click += new System.EventHandler(this.btnRemoveLearnedWord_Click);
+            // 
             // ChildAdminNewLearnedWord
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CausesValidation = false;
             this.ClientSize = new System.Drawing.Size(426, 360);
+            this.Controls.Add(this.btnRemoveLearnedWord);
             this.Controls.Add(this.btnNewSentence);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.btnAdd);
@@ -195,5 +210,6 @@
         internal System.Windows.Forms.TextBox txtMeaning;
         internal System.Windows.Forms.PictureBox btnNewSentence;
         internal System.Windows.Forms.Button btnAdd;
+        private System.Windows.Forms.Button btnRemoveLearnedWord;
     }
 }

@@ -27,12 +27,13 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-
-            word = txtWord.Text.ToString().Trim();
-            sentence = txtSentence.Text.ToString().Trim();
-            meaning = txtMeaning.Text.ToString().Trim();
+          
 
             LearnedWordImpl _learnedWordImpl = new();
+
+            if (WordProviderTest() || SentenceProviderTest() || MeanningProviderTest())
+                return;
+
 
             if (_learnedWordImpl.IsThere(word, UserSession.username_Admin))
             {
@@ -51,8 +52,6 @@ namespace EnglishWordSet.ChildForms.AdminPage
             else { }
 
 
-            if (WordProviderTest()||SentenceProviderTest()||MeanningProviderTest())
-                return;
        
             UserController pageBackend = ControllersGetter.AdminPage();
             if (pageBackend.IsLEarnedWordAdded(word))
@@ -112,7 +111,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
         
         private bool WordProviderTest()
         {
-          string  word = txtWord.Text.ToString().Trim();
+            word = txtWord.Text.ToString().Trim();
             if (word.Length == 0)
             {
                 prWord.SetError(txtWord, "Word can't be empty !!!");
@@ -132,6 +131,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         private bool SentenceProviderTest()
         {
+            sentence = txtSentence.Text.ToString().Trim();
             if (sentence.Length == 0)
             {
                 prSentence.SetError(txtSentence, "Sentence can't be empty !!!");
@@ -144,6 +144,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
         }
         private bool MeanningProviderTest()
         {
+            meaning = txtMeaning.Text.ToString().Trim();
             if (!string.IsNullOrEmpty(meaning) && !RegexTransactions.CheckingValue.IsName(meaning))
             {
                 prMeanning.SetError(txtMeaning, "Meaning should be invalid type !!!");
@@ -186,6 +187,24 @@ namespace EnglishWordSet.ChildForms.AdminPage
                     BasicAlerts.ErrorAlert("Senteces can't getting.\nFor adding sentencess," +
                    " connect to the internet.", "No internet access");
             }
+        }
+
+        LearnedWordImpl _learnedWordImpl;
+        private void btnRemoveLearnedWord_Click(object sender, EventArgs e)
+        { _learnedWordImpl ??= new LearnedWordImpl();
+            if (WordProviderTest())
+                return;
+
+            else if (!_learnedWordImpl.IsThere(word.Trim(), UserSession.username_Admin))
+            {
+                MyNotificationAlerts.GetErrorMessage(word + " is not a Learned Word");
+            }
+            else { 
+            _learnedWordImpl ??= new LearnedWordImpl();
+            _learnedWordImpl.Delete(word, UserSession.username_Admin);
+            AddLog.systemLogs.Info(" " + UserSession.username_Admin + " Deleted " + word);
+            MyNotificationAlerts.GetSuccessMessage(" " + word + " was Deleted");
+                }
         }
     }
 }
