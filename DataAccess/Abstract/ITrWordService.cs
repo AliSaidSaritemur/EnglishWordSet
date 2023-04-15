@@ -23,5 +23,6 @@ namespace DataAccess.Abstract
         int GetMaxLevel(string UserName);
         void RemoveWordsWithLevel(int level, string UserName);
         int GetWordLevel(string trWord, string UserName);
+        void RemoveWord(string trWord, string UserName);
     }
 }

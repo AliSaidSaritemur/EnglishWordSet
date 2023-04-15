@@ -1,4 +1,5 @@
 ﻿using DataAccess.Concrete;
+using EnglishWordSet.Controllers;
 using EnglishWordSet.ConvertTransactions;
 using EnglishWordSet.services.Impl.ConvertTransactionsImpls;
 using EnglishWordSet.Sessions;
@@ -17,11 +18,20 @@ namespace EnglishWordSet.Pages
         public TurkishWordPage()
         {
             InitializeComponent();
+            foreach (Control control in this.Controls)
+            {
+                MdiClient client = control as MdiClient;
+                if (!(client == null))
+                {
+                    client.BackColor = Color.LightCoral;
+                    break;
+                }
+            }
         }
         TrWordImpl _trWordImpl = new();
         private void TurkishWordPage_Load(object sender, EventArgs e)
         {
-
+           
         }
 
         private void TurkishWordPage_FormClosing(object sender, FormClosingEventArgs e)
@@ -89,6 +99,27 @@ namespace EnglishWordSet.Pages
         private void btnOutputClean_Click(object sender, EventArgs e)
         {
             txtOutputTurkishWords.Text = "";
+        }
+
+        private void pbBackMainPage_Click(object sender, EventArgs e)
+        {
+            PageTransactions.GetForm1().Show();
+            Hide();
+        }
+        TurkishWordController turkishWordController;
+        private void btnDeleteWord_Click(object sender, EventArgs e)
+        {
+            if(btnDeleteWord.Text.ToString()== "Delete Word") { 
+             turkishWordController ??= new();
+            turkishWordController.GetChildRemovingTurkishWordPage().Show();
+                btnDeleteWord.Text = "Close Page";
+            }
+            else
+            {
+                btnDeleteWord.Text = "Delete Word";
+                turkishWordController.GetChildRemovingTurkishWordPage().Hide();
+            }
+
         }
     }
 }

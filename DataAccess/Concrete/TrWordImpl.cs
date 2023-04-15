@@ -116,6 +116,13 @@ namespace DataAccess.Concrete
             return nword != null;
         }
 
+        public void RemoveWord(string trWord, string UserName)
+        {
+            TrWord nword = context.TrWords.FirstOrDefault(I => I.Turkish == trWord && I.UserName == UserName);
+            context.TrWords.Remove(nword);
+            context.SaveChanges();
+        }
+
         public void RemoveWordsWithLevel(int level, string UserName)
         {
             var trWordLİst = context.TrWords.Where(I => I.level > 3 && I.UserName == UserName).ToList();

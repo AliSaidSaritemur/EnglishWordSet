@@ -1,5 +1,6 @@
 ﻿using EnglishWordSet.ChildForms.AdminPage;
 using EnglishWordSet.Pages;
+using EnglishWordSet.Pages.ChildFormPages.TurkishWordPage;
 using EnglishWordSet.Pages.ChildFormPages.UserPage;
 using EnglishWordSet.Pages.Games;
 using System;
@@ -21,6 +22,7 @@ namespace EnglishWordSet.util
         private static LastLetterGamePage _lastLetterGamePage;
         private static TurkishWordPage _turkishWordPage;
         private static CreatingSentence _creatingSentence;
+        private static RemovingTurkishWordPage _removingTurkishWord;
 
 
         public static LoginPage GetLoginPage() => _loginPage ??= new();
@@ -47,6 +49,8 @@ namespace EnglishWordSet.util
 
         public static CreatingSentence GetCreatingSentencePage() => _creatingSentence ??= new();
 
+        public static RemovingTurkishWordPage GetRemovingTurkishWordPage() => _removingTurkishWord ??= new();
+
         public static void CloseAllPage()
         {
             _creatingSentence = null;
@@ -60,6 +64,7 @@ namespace EnglishWordSet.util
             _turkishWordPage = null;
             _childAdminNewUser = null;
             _childAdminNewWord = null;
+            _removingTurkishWord = null;
 
             List<Form> openForms = new List<Form>();
 

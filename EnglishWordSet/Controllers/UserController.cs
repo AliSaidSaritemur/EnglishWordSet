@@ -53,7 +53,7 @@ namespace EnglishWordSet.Controllers
             {
                 newLearnedWord.FormBorderStyle = FormBorderStyle.None;
                 newLearnedWord.MdiParent = UserPage.ActiveForm;
-                newLearnedWord.Location = new Point(230, 111);
+                newLearnedWord.Location = new Point(200, 111);
             }
             return newLearnedWord;
         }

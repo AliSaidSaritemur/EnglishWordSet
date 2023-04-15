@@ -35,6 +35,9 @@
             this.label1 = new System.Windows.Forms.Label();
             this.btnInputClean = new System.Windows.Forms.Button();
             this.btnOutputClean = new System.Windows.Forms.Button();
+            this.pbBackMainPage = new System.Windows.Forms.PictureBox();
+            this.btnDeleteWord = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackMainPage)).BeginInit();
             this.SuspendLayout();
             // 
             // txtInputTurkishWords
@@ -105,12 +108,38 @@
             this.btnOutputClean.UseVisualStyleBackColor = true;
             this.btnOutputClean.Click += new System.EventHandler(this.btnOutputClean_Click);
             // 
+            // pbBackMainPage
+            // 
+            this.pbBackMainPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBackMainPage.Image = global::EnglishWordSet.Properties.Resources.back;
+            this.pbBackMainPage.Location = new System.Drawing.Point(-1, 110);
+            this.pbBackMainPage.Name = "pbBackMainPage";
+            this.pbBackMainPage.Size = new System.Drawing.Size(78, 61);
+            this.pbBackMainPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBackMainPage.TabIndex = 26;
+            this.pbBackMainPage.TabStop = false;
+            this.pbBackMainPage.Click += new System.EventHandler(this.pbBackMainPage_Click);
+            // 
+            // btnDeleteWord
+            // 
+            this.btnDeleteWord.Font = new System.Drawing.Font("Segoe UI Symbol", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnDeleteWord.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.btnDeleteWord.Location = new System.Drawing.Point(884, -2);
+            this.btnDeleteWord.Name = "btnDeleteWord";
+            this.btnDeleteWord.Size = new System.Drawing.Size(140, 29);
+            this.btnDeleteWord.TabIndex = 27;
+            this.btnDeleteWord.Text = "Delete Word";
+            this.btnDeleteWord.UseVisualStyleBackColor = true;
+            this.btnDeleteWord.Click += new System.EventHandler(this.btnDeleteWord_Click);
+            // 
             // TurkishWordPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LightCoral;
             this.ClientSize = new System.Drawing.Size(1026, 554);
+            this.Controls.Add(this.btnDeleteWord);
+            this.Controls.Add(this.pbBackMainPage);
             this.Controls.Add(this.btnOutputClean);
             this.Controls.Add(this.btnInputClean);
             this.Controls.Add(this.label1);
@@ -119,12 +148,14 @@
             this.Controls.Add(this.txtOutputTurkishWords);
             this.Controls.Add(this.txtInputTurkishWords);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.IsMdiContainer = true;
             this.MaximizeBox = false;
             this.Name = "TurkishWordPage";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "TurkishWordPage";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.TurkishWordPage_FormClosing);
             this.Load += new System.EventHandler(this.TurkishWordPage_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackMainPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -139,5 +170,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnInputClean;
         private System.Windows.Forms.Button btnOutputClean;
+        private System.Windows.Forms.PictureBox pbBackMainPage;
+        private System.Windows.Forms.Button btnDeleteWord;
     }
 }
