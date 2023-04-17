@@ -113,12 +113,12 @@ namespace EnglishWordSet
         private void ChildAdminNewLearnedWordPAgeGetter(string word, string meaning)
         {
             if (_childAdminNewLearned == null) { 
-             _childAdminNewLearned = PageTransactions.GetChildAdminNewLearnedWordPageForMain();
-            _childAdminNewLearned.txtWord.Text = word.Trim();
+             _childAdminNewLearned = PageTransactions.GetChildAdminNewLearnedWordPageForMain(); 
             _childAdminNewLearned.formLocation = "Form1";
-            _childAdminNewLearned.txtMeaning.Text = meaning;
             _childAdminNewLearned.StartPosition = FormStartPosition.CenterScreen;
             }
+            _childAdminNewLearned.txtWord.Text = word.Trim();
+            _childAdminNewLearned.txtMeaning.Text = meaning;
             if (MyTestInternet.IsThereInternet())
             {
                 _childAdminNewLearned.btnNewSentence_Click(new object(), new EventArgs());

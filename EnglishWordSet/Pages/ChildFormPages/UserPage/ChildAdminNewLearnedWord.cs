@@ -68,7 +68,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
             AddLog.systemLogs.Info(" "+word+" is added to LearnedWords");
             if (formLocation == "Form1")
             {
-                Hide();
+                Close();
             }
         }
 
