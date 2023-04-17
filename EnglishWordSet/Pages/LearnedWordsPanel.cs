@@ -112,6 +112,11 @@ namespace EnglishWordSet.Pages
             btnChangeImage.Visible = false;
             isConnectWifi = false;  
         }
-       
+
+        private void LearnedWordsPanel_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            e.Cancel=true;
+            Hide();
+        }
     }
 }

@@ -149,6 +149,7 @@
             this.Name = "LearnedWordsPanel";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "LearnedWordsPanel";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.LearnedWordsPanel_FormClosing);
             this.Load += new System.EventHandler(this.LearnedWordsPanel_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).EndInit();

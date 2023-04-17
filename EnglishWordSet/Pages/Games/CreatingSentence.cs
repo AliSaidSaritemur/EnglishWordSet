@@ -57,7 +57,7 @@ namespace EnglishWordSet.Pages.Games
 
         private void getLaarnedWordPage_Click(object sender, EventArgs e)
         {
-            Form page = new LearnedWordsPanel();
+            Form page = PageTransactions.GetLearnedWordsPanelPage();
             page.Show();
         }
     }

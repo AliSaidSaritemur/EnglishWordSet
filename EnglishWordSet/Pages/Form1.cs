@@ -74,7 +74,7 @@ namespace EnglishWordSet
         }
 
         private void btnGetNewWord_Click(object sender, EventArgs e)
-        {
+        { 
             mBWord ??= new();
             string word = mBWord.GetWord();
             if (string.IsNullOrEmpty(word))
@@ -109,22 +109,23 @@ namespace EnglishWordSet
             }
         }
 
+        ChildAdminNewLearnedWord _childAdminNewLearned;
         private void ChildAdminNewLearnedWordPAgeGetter(string word, string meaning)
         {
-            ChildAdminNewLearnedWord _childAdminNewLearned = PageTransactions.GetChildAdminNewLearnedWordPage();
+            if (_childAdminNewLearned == null) { 
+             _childAdminNewLearned = PageTransactions.GetChildAdminNewLearnedWordPageForMain();
             _childAdminNewLearned.txtWord.Text = word.Trim();
             _childAdminNewLearned.formLocation = "Form1";
             _childAdminNewLearned.txtMeaning.Text = meaning;
             _childAdminNewLearned.StartPosition = FormStartPosition.CenterScreen;
-
+            }
             if (MyTestInternet.IsThereInternet())
             {
                 _childAdminNewLearned.btnNewSentence_Click(new object(), new EventArgs());
             }
 
             _childAdminNewLearned.Show();
-
-
+            GC.Collect();
         }
 
         private void btnToAdminPage_Click(object sender, EventArgs e)
@@ -141,7 +142,8 @@ namespace EnglishWordSet
 
         private void getLaarnedWordPage_Click(object sender, EventArgs e)
         {
-            Form page = new LearnedWordsPanel();
+            Form page =PageTransactions.GetLearnedWordsPanelPage();
+            GC.Collect();
             page.Show();
         }
 
@@ -235,6 +237,7 @@ namespace EnglishWordSet
         {        
             PageTransactions.CloseAllPage();
             Sessions.UserSession.role_Admin = null;
+            GC.Collect();
             PageTransactions.GetLoginPage().Show();
         }
     }

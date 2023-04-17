@@ -15,6 +15,7 @@ namespace EnglishWordSet.util
         private static LoginPage _loginPage;
         private static UserPage userpage;
         private static ChildAdminNewLearnedWord childAdminNewLearnedWord;
+        private static ChildAdminNewLearnedWord childAdminNewLearnedWordForMain;
         private static ChildAdminNewUser _childAdminNewUser;
         private static ChildAdminNewWord _childAdminNewWord;
         private static AdminTransactionsPage adminTransactionsPage;
@@ -23,6 +24,7 @@ namespace EnglishWordSet.util
         private static TurkishWordPage _turkishWordPage;
         private static CreatingSentence _creatingSentence;
         private static RemovingTurkishWordPage _removingTurkishWord;
+        private static LearnedWordsPanel _learnedWordsPanel;
 
 
         public static LoginPage GetLoginPage() => _loginPage ??= new();
@@ -36,6 +38,8 @@ namespace EnglishWordSet.util
         public static AdminTransactionsPage GetAdminTransactionsPage() => adminTransactionsPage ??= new();
 
         public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPage() => childAdminNewLearnedWord ??= new ();
+
+        public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPageForMain() => childAdminNewLearnedWordForMain ??= new ();
 
         public static ChildAdminNewUser GetChildAdminNewUserPage() => _childAdminNewUser ??= new ();
 
@@ -51,6 +55,8 @@ namespace EnglishWordSet.util
 
         public static RemovingTurkishWordPage GetRemovingTurkishWordPage() => _removingTurkishWord ??= new();
 
+        public static LearnedWordsPanel GetLearnedWordsPanelPage() => _learnedWordsPanel ??= new();
+
         public static void CloseAllPage()
         {
             _creatingSentence = null;
@@ -65,6 +71,7 @@ namespace EnglishWordSet.util
             _childAdminNewUser = null;
             _childAdminNewWord = null;
             _removingTurkishWord = null;
+            childAdminNewLearnedWordForMain = null;
 
             List<Form> openForms = new List<Form>();
 
