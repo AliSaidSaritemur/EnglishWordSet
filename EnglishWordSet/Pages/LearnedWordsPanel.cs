@@ -106,6 +106,7 @@ namespace EnglishWordSet.Pages
         private void WifiConnectionAlert()
         {
             Image disConnectImage = EnglishWordSet.Properties.Resources.wifiDisconnect;
+            pBLearned.Image = disConnectImage;
             _myImageFilter.RedFilterToImageEffect(pBLearned);
             epWifiConnectionImage.SetError(pBLearned, "No Internet connection !!!");
             pBLearned.Enabled = true;
@@ -117,6 +118,15 @@ namespace EnglishWordSet.Pages
         {
             e.Cancel=true;
             Hide();
+        }
+
+
+        private void LearnedWordsPanel_Activated(object sender, EventArgs e)
+        {
+
+            txtSearch.Text = "";
+            lblSentences.Text = "";
+            pBLearned.Image = EnglishWordSet.Properties.Resources.tipMark;
         }
     }
 }

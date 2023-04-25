@@ -63,7 +63,6 @@
             this.txtSentence.Size = new System.Drawing.Size(218, 82);
             this.txtSentence.TabIndex = 1;
             this.txtSentence.Text = "";
-            this.txtSentence.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSentence_KeyDown);
             // 
             // label1
             // 

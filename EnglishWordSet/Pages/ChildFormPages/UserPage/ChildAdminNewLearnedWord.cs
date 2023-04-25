@@ -85,17 +85,7 @@ namespace EnglishWordSet.ChildForms.AdminPage
 
         }
 
-        private void txtSentence_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (MyKeyDownValueCheck.IsItDown(e))
-            {
-                txtMeaning.Focus();
-            }
-            else if (MyKeyDownValueCheck.IsItUp(e))
-            {
-                txtWord.Focus();
-            }
-        }
+
 
         private void txtMeaning_KeyDown(object sender, KeyEventArgs e)
         {
