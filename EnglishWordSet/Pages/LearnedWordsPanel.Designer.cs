@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            this.txtSearch = new System.Windows.Forms.TextBox();
             this.Sentence = new System.Windows.Forms.Label();
             this.pbSearch = new System.Windows.Forms.PictureBox();
             this.lblSentence = new System.Windows.Forms.Label();
@@ -39,20 +38,11 @@
             this.WifiEPtimer = new System.Windows.Forms.Timer(this.components);
             this.timerImageEnable = new System.Windows.Forms.Timer(this.components);
             this.btnChangeImage = new System.Windows.Forms.Button();
+            this.cBSearchedWords = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWifiConnectionImage)).BeginInit();
             this.SuspendLayout();
-            // 
-            // txtSearch
-            // 
-            this.txtSearch.Font = new System.Drawing.Font("Segoe UI", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.txtSearch.Location = new System.Drawing.Point(206, 53);
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(156, 30);
-            this.txtSearch.TabIndex = 0;
-            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
-            this.txtSearch.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtSearch_KeyDown);
             // 
             // Sentence
             // 
@@ -132,18 +122,27 @@
             this.btnChangeImage.Visible = false;
             this.btnChangeImage.Click += new System.EventHandler(this.btnChangeImage_ClickAsync);
             // 
+            // cBSearchedWords
+            // 
+            this.cBSearchedWords.FormattingEnabled = true;
+            this.cBSearchedWords.Location = new System.Drawing.Point(179, 58);
+            this.cBSearchedWords.Name = "cBSearchedWords";
+            this.cBSearchedWords.Size = new System.Drawing.Size(195, 28);
+            this.cBSearchedWords.TabIndex = 7;
+            this.cBSearchedWords.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cBSearchedWords_KeyUp);
+            // 
             // LearnedWordsPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 367);
+            this.Controls.Add(this.cBSearchedWords);
             this.Controls.Add(this.btnChangeImage);
             this.Controls.Add(this.pBLearned);
             this.Controls.Add(this.lblSentences);
             this.Controls.Add(this.lblSentence);
             this.Controls.Add(this.pbSearch);
             this.Controls.Add(this.Sentence);
-            this.Controls.Add(this.txtSearch);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.Name = "LearnedWordsPanel";
@@ -161,8 +160,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.PictureBox pbSearch;
         private System.Windows.Forms.Label lblSentence;
         private System.Windows.Forms.Label Sentence;
@@ -172,5 +169,6 @@
         private System.Windows.Forms.Timer WifiEPtimer;
         private System.Windows.Forms.Timer timerImageEnable;
         private System.Windows.Forms.Button btnChangeImage;
+        private System.Windows.Forms.ComboBox cBSearchedWords;
     }
 }

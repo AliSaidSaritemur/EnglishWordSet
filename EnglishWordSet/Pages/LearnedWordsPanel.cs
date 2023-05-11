@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using TypeConverter = Util.TypeConverter;
 using EnglishWordSet.util;
 using EnglishWordSet.Controllers;
+using DataAccess.Concrete;
 
 namespace EnglishWordSet.Pages
 {
@@ -26,14 +27,14 @@ namespace EnglishWordSet.Pages
 
         private void LearnedWordsPanel_Load(object sender, EventArgs e)
         {
-            this.ActiveControl = txtSearch;
-            txtSearch.Focus();
+            this.ActiveControl = cBSearchedWords;
+            cBSearchedWords.Focus();
         }
 
         private void pbSearch_Click(object sender, EventArgs e)
         {
             lblSentence.AutoSize = true;
-             searchedWord = txtSearch.Text.ToString().Trim();
+             searchedWord = cBSearchedWords.Text.ToString().Trim();
             LearnedWordsController lwpb = ControllersGetter.LearnedPAge();
              LearnedWord learnedWord = lwpb.SelectWord(searchedWord);
 
@@ -59,13 +60,6 @@ namespace EnglishWordSet.Pages
 
         }
 
-        private void txtSearch_KeyDown(object sender, KeyEventArgs e)
-        {
-            if (e.KeyCode == Keys.Enter)
-            {
-                this.pbSearch_Click(sender, e);
-            }
-        }
 
         private void pBLearned_Click(object sender, EventArgs e)
         {                   
@@ -124,9 +118,26 @@ namespace EnglishWordSet.Pages
         private void LearnedWordsPanel_Activated(object sender, EventArgs e)
         {
 
-            txtSearch.Text = "";
+            cBSearchedWords.Text = "";
             lblSentences.Text = "";
             pBLearned.Image = EnglishWordSet.Properties.Resources.tipMark;
+        }
+
+        LearnedWordImpl _learnedWordImpl = new();
+        private void cBSearchedWords_KeyUp(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                this.pbSearch_Click(sender, e);
+            }
+            else if (MyKeyDownValueCheck.IsItUp(e) || MyKeyDownValueCheck.IsItDown(e))
+                return;
+
+            string searchKeyWord=cBSearchedWords.Text.ToString();
+            cBSearchedWords.Items.Clear();
+            cBSearchedWords.SelectionStart = cBSearchedWords.Text.Length;
+            _learnedWordImpl.GetLearnedWordsWithStartStr(Sessions.UserSession.username_Admin, searchKeyWord).ForEach(I => cBSearchedWords.Items.Add(I.wordEnglish));
+ 
         }
     }
 }

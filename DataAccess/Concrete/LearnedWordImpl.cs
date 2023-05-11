@@ -55,5 +55,15 @@ namespace DataAccess.Concrete
         {
             return context.LearnedWords.Count(I => I.UserName == username);
         }
+
+        public List<LearnedWord> GetLearnedWords(string username)
+        {
+            return context.LearnedWords.Where(I => I.UserName == username).ToList();
+        }
+
+        public List<LearnedWord> GetLearnedWordsWithStartStr(string username, string startStr)
+        {
+            return context.LearnedWords.Where(I => I.UserName == username &&I.wordEnglish.StartsWith(startStr)).ToList();
+        }
     }
 }
