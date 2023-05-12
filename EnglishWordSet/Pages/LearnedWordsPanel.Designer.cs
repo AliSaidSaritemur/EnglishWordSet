@@ -58,7 +58,7 @@
             // 
             this.pbSearch.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pbSearch.Image = global::EnglishWordSet.Properties.Resources.search;
-            this.pbSearch.Location = new System.Drawing.Point(385, 53);
+            this.pbSearch.Location = new System.Drawing.Point(385, 58);
             this.pbSearch.Name = "pbSearch";
             this.pbSearch.Size = new System.Drawing.Size(38, 33);
             this.pbSearch.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;

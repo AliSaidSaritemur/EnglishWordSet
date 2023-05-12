@@ -65,5 +65,10 @@ namespace DataAccess.Concrete
         {
             return context.LearnedWords.Where(I => I.UserName == username &&I.wordEnglish.StartsWith(startStr)).ToList();
         }
+
+        public List<string> GetLearnedEnglishWordsWithStartStr(string username, string startStr)
+        {
+            return context.LearnedWords.Where(I => I.UserName == username && I.wordEnglish.StartsWith(startStr)).Select(I=>I.wordEnglish).ToList();
+        }
     }
 }

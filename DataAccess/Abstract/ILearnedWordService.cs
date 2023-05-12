@@ -14,5 +14,6 @@ namespace DataAccess.Abstract
         int LearnedWordCount(string username);
         List<LearnedWord> GetLearnedWords(string username);
         List<LearnedWord> GetLearnedWordsWithStartStr(string username,string startStr);
+        List<string> GetLearnedEnglishWordsWithStartStr(string username, string startStr);
     }
 }

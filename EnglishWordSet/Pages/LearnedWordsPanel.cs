@@ -10,6 +10,8 @@ using TypeConverter = Util.TypeConverter;
 using EnglishWordSet.util;
 using EnglishWordSet.Controllers;
 using DataAccess.Concrete;
+using System.Collections.Generic;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace EnglishWordSet.Pages
 {
@@ -129,15 +131,29 @@ namespace EnglishWordSet.Pages
             if (e.KeyCode == Keys.Enter)
             {
                 this.pbSearch_Click(sender, e);
+                cBSearchedWords.DroppedDown = false;
+                return;
             }
             else if (MyKeyDownValueCheck.IsItUp(e) || MyKeyDownValueCheck.IsItDown(e))
+            {
+                if (MyKeyDownValueCheck.IsItDown(e))
+                {
+                    cBSearchedWords.DroppedDown = true;
+                }
+           
                 return;
+            }
+           
 
             string searchKeyWord=cBSearchedWords.Text.ToString();
             cBSearchedWords.Items.Clear();
             cBSearchedWords.SelectionStart = cBSearchedWords.Text.Length;
-            _learnedWordImpl.GetLearnedWordsWithStartStr(Sessions.UserSession.username_Admin, searchKeyWord).ForEach(I => cBSearchedWords.Items.Add(I.wordEnglish));
- 
+            List<string> learnedWords = _learnedWordImpl.GetLearnedEnglishWordsWithStartStr
+                  (Sessions.UserSession.username_Admin, searchKeyWord);
+            learnedWords.Sort((a, b) => a.CompareTo(b));
+            learnedWords.Add(searchKeyWord);
+            learnedWords.ForEach(I => cBSearchedWords.Items.Add(I));
+
         }
     }
 }
