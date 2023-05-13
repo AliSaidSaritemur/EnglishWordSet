@@ -36,11 +36,12 @@ namespace EnglishWordSet.Pages.Games
                 MyNotificationAlerts.GetWarningMessage("You dont have enough word to play !!!");
                 return;
             }
+            List<string> randomWords =_learnedWordImpl.GetDifferentRandomWordWithCount(Sessions.UserSession.username_Admin, 4);
 
-            lblWord1.Text = _learnedWordImpl.GetRandomWord(Sessions.UserSession.username_Admin).wordEnglish;
-            lblWord2.Text = _learnedWordImpl.GetRandomWord(Sessions.UserSession.username_Admin).wordEnglish;
-            lblWord3.Text = _learnedWordImpl.GetRandomWord(Sessions.UserSession.username_Admin).wordEnglish;
-            lblWord4.Text = _learnedWordImpl.GetRandomWord(Sessions.UserSession.username_Admin).wordEnglish;
+            lblWord1.Text = randomWords[0];
+            lblWord2.Text = randomWords[1];
+            lblWord3.Text = randomWords[2];
+            lblWord4.Text = randomWords[3];
 
         }
         Translater _translater = new();

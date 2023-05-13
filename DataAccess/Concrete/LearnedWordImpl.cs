@@ -70,5 +70,26 @@ namespace DataAccess.Concrete
         {
             return context.LearnedWords.Where(I => I.UserName == username && I.wordEnglish.StartsWith(startStr)).Select(I=>I.wordEnglish).ToList();
         }
+
+        public List<string> GetDifferentRandomWordWithCount(string username, int count)
+        {
+            List<string> learnedWords = new();
+            rand ??= new Random();
+            int learnedWordCount = context.Words.Where(I => I.UserName == username).Count();
+            int toSkip; 
+            int tempCount = count;
+
+            while (tempCount>0)
+            {
+                toSkip = rand.Next(0, learnedWordCount);
+                string learnedWordRandom =context.LearnedWords.Where(I => I.UserName == username).Count() > 1 ? context.LearnedWords.Where(I => I.UserName == username).Skip(toSkip).Take(1).First().wordEnglish : " ";
+                if (!learnedWords.Contains(learnedWordRandom))
+                {
+                    learnedWords.Add(learnedWordRandom);
+                    tempCount--;
+                }
+            }
+            return learnedWords;
+        }
     }
 }
