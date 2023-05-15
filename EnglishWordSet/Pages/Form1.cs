@@ -142,8 +142,9 @@ namespace EnglishWordSet
 
         private void getLaarnedWordPage_Click(object sender, EventArgs e)
         {
-            Form page =PageTransactions.GetLearnedWordsPanelPage();
+            LearnedWordsPanel page =PageTransactions.GetLearnedWordsPanelPage();
             GC.Collect();
+            page.LearnedWordRefresh();
             page.Show();
         }
 

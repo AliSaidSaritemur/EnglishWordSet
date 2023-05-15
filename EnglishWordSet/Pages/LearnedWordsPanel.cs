@@ -120,10 +120,18 @@ namespace EnglishWordSet.Pages
         private void LearnedWordsPanel_Activated(object sender, EventArgs e)
         {
 
+          
+        }
+
+        public void LearnedWordRefresh()
+        {
             cBSearchedWords.Text = "";
             lblSentences.Text = "";
             pBLearned.Image = EnglishWordSet.Properties.Resources.tipMark;
         }
+
+
+
 
         LearnedWordImpl _learnedWordImpl = new();
         private void cBSearchedWords_KeyUp(object sender, KeyEventArgs e)
