@@ -161,7 +161,11 @@ namespace EnglishWordSet.Pages
             learnedWords.Sort((a, b) => a.CompareTo(b));
             learnedWords.Add(searchKeyWord);
             learnedWords.ForEach(I => cBSearchedWords.Items.Add(I));
-
+            SetLblLeanedWordCount(learnedWords.Count-1);
+        }
+        public void SetLblLeanedWordCount(int size)
+        {
+            lblLearnedWordCount.Text = size > 99 ? "+99" : size.ToString();
         }
     }
 }

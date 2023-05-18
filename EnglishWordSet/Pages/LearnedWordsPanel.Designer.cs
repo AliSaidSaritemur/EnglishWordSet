@@ -39,6 +39,7 @@
             this.timerImageEnable = new System.Windows.Forms.Timer(this.components);
             this.btnChangeImage = new System.Windows.Forms.Button();
             this.cBSearchedWords = new System.Windows.Forms.ComboBox();
+            this.lblLearnedWordCount = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pbSearch)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pBLearned)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.epWifiConnectionImage)).BeginInit();
@@ -131,11 +132,27 @@
             this.cBSearchedWords.TabIndex = 7;
             this.cBSearchedWords.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cBSearchedWords_KeyUp);
             // 
+            // lblLearnedWordCount
+            // 
+            this.lblLearnedWordCount.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblLearnedWordCount.BackColor = System.Drawing.Color.Yellow;
+            this.lblLearnedWordCount.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblLearnedWordCount.Font = new System.Drawing.Font("Segoe UI", 9F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblLearnedWordCount.ForeColor = System.Drawing.Color.Red;
+            this.lblLearnedWordCount.Location = new System.Drawing.Point(312, 58);
+            this.lblLearnedWordCount.Name = "lblLearnedWordCount";
+            this.lblLearnedWordCount.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblLearnedWordCount.Size = new System.Drawing.Size(45, 28);
+            this.lblLearnedWordCount.TabIndex = 8;
+            this.lblLearnedWordCount.Text = "0";
+            this.lblLearnedWordCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // LearnedWordsPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(683, 367);
+            this.Controls.Add(this.lblLearnedWordCount);
             this.Controls.Add(this.cBSearchedWords);
             this.Controls.Add(this.btnChangeImage);
             this.Controls.Add(this.pBLearned);
@@ -170,5 +187,6 @@
         private System.Windows.Forms.Timer timerImageEnable;
         private System.Windows.Forms.Button btnChangeImage;
         private System.Windows.Forms.ComboBox cBSearchedWords;
+        private System.Windows.Forms.Label lblLearnedWordCount;
     }
 }
