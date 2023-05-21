@@ -31,5 +31,11 @@ namespace EnglishWordSet.Pages
             PageTransactions.GetCreatingSentencePage().Show();
             Hide();
         }
+
+        private void btnOpenLastLetterGame_Click(object sender, EventArgs e)
+        {
+            PageTransactions.GetLastLetterGamePage().Show();
+            Hide();
+        }
     }
 }

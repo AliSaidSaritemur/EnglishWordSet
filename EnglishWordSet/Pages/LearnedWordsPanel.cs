@@ -136,6 +136,8 @@ namespace EnglishWordSet.Pages
         LearnedWordImpl _learnedWordImpl = new();
         private void cBSearchedWords_KeyUp(object sender, KeyEventArgs e)
         {
+            if (e.KeyCode == Keys.Control||e.KeyCode == Keys.Shift)
+                return;
             if (e.KeyCode == Keys.Enter)
             {
                 this.pbSearch_Click(sender, e);

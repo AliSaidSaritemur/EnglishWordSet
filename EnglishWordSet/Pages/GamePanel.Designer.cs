@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.btnOpenCreatingSentencePage = new System.Windows.Forms.Button();
+            this.btnOpenLastLetterGame = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnOpenCreatingSentencePage
@@ -41,11 +42,22 @@
             this.btnOpenCreatingSentencePage.UseVisualStyleBackColor = true;
             this.btnOpenCreatingSentencePage.Click += new System.EventHandler(this.btnOpenCreatingSentencePage_Click);
             // 
+            // btnOpenLastLetterGame
+            // 
+            this.btnOpenLastLetterGame.Location = new System.Drawing.Point(372, 29);
+            this.btnOpenLastLetterGame.Name = "btnOpenLastLetterGame";
+            this.btnOpenLastLetterGame.Size = new System.Drawing.Size(176, 74);
+            this.btnOpenLastLetterGame.TabIndex = 1;
+            this.btnOpenLastLetterGame.Text = "Last Letter";
+            this.btnOpenLastLetterGame.UseVisualStyleBackColor = true;
+            this.btnOpenLastLetterGame.Click += new System.EventHandler(this.btnOpenLastLetterGame_Click);
+            // 
             // GamePanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(659, 300);
+            this.Controls.Add(this.btnOpenLastLetterGame);
             this.Controls.Add(this.btnOpenCreatingSentencePage);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -60,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.Button btnOpenCreatingSentencePage;
+        private System.Windows.Forms.Button btnOpenLastLetterGame;
     }
 }
