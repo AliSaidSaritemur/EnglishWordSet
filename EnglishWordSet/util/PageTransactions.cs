@@ -72,6 +72,7 @@ namespace EnglishWordSet.util
             _childAdminNewWord = null;
             _removingTurkishWord = null;
             childAdminNewLearnedWordForMain = null;
+            _learnedWordsPanel = null;
 
             List<Form> openForms = new List<Form>();
 
