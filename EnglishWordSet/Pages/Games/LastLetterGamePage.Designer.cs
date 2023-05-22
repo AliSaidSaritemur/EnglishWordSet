@@ -45,6 +45,7 @@
             this.txtNewWord.Name = "txtNewWord";
             this.txtNewWord.Size = new System.Drawing.Size(230, 27);
             this.txtNewWord.TabIndex = 0;
+            this.txtNewWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewWord_KeyDown);
             // 
             // label1
             // 
@@ -70,12 +71,13 @@
             // 
             // btnApplyWord
             // 
+            this.btnApplyWord.BackColor = System.Drawing.Color.White;
             this.btnApplyWord.Location = new System.Drawing.Point(498, 220);
             this.btnApplyWord.Name = "btnApplyWord";
             this.btnApplyWord.Size = new System.Drawing.Size(69, 29);
             this.btnApplyWord.TabIndex = 4;
             this.btnApplyWord.Text = "Next";
-            this.btnApplyWord.UseVisualStyleBackColor = true;
+            this.btnApplyWord.UseVisualStyleBackColor = false;
             this.btnApplyWord.Click += new System.EventHandler(this.btnApplyWord_Click);
             // 
             // epTextNewWord

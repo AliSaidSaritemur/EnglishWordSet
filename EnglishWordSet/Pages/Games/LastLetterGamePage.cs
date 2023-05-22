@@ -2,6 +2,7 @@
 using EnglishWordSet.util;
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Util;
@@ -23,13 +24,14 @@ namespace EnglishWordSet.Pages.Games
             PageTransactions.GetUserPage().Show();
         }
 
+        ButtonTransactions buttonTransactions;
         private void LastLetterGamePage_Load(object sender, EventArgs e)
         {
-
+            buttonTransactions = new(btnApplyWord);
         }
         GettingRandomWordWithFrequencyLevel frequencyLevel=new ();
-        LearnedWordsPanel _learnedWordsPanel = new();
         List<string> usedWords = new List<string>();
+       
         private async void btnApplyWord_Click(object sender, EventArgs e)
         {
             string wordToBeApply = txtNewWord.Text.ToString().Trim().ToUpper();
@@ -54,8 +56,12 @@ namespace EnglishWordSet.Pages.Games
             else
             {
                 usedWords.Add(wordToBeApply);
-                lblrequiredLetter.Text = wordToBeApply[wordToBeApply.Length - 1].ToString();
+                requriedLetter = wordToBeApply[wordToBeApply.Length - 1].ToString();
+                lblrequiredLetter.Text = requriedLetter;
+                txtNewWord.Text = requriedLetter;
                 epTextNewWord.Clear();
+                buttonTransactions.ChangeButtonColor(Color.LightGreen,1);
+                txtNewWord.SelectionStart=txtNewWord.Text.Length;
             }
 
         }
@@ -80,6 +86,13 @@ namespace EnglishWordSet.Pages.Games
             lblrequiredLetter.Text = GetRandomLetter();
             txtNewWord.Clear();
             epTextNewWord.Clear();
+            usedWords.Clear();
+        }
+
+        private void txtNewWord_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+                btnApplyWord_Click(sender,e);
         }
     }
 }
