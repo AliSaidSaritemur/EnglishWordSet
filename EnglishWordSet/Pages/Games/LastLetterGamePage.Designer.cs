@@ -35,15 +35,18 @@
             this.btnApplyWord = new System.Windows.Forms.Button();
             this.epTextNewWord = new System.Windows.Forms.ErrorProvider(this.components);
             this.pbResetGame = new System.Windows.Forms.PictureBox();
+            this.lblSkorTittle = new System.Windows.Forms.Label();
+            this.lblScoreBoard = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.epTextNewWord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbResetGame)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNewWord
             // 
-            this.txtNewWord.Location = new System.Drawing.Point(262, 222);
+            this.txtNewWord.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.txtNewWord.Location = new System.Drawing.Point(253, 214);
             this.txtNewWord.Name = "txtNewWord";
-            this.txtNewWord.Size = new System.Drawing.Size(230, 27);
+            this.txtNewWord.Size = new System.Drawing.Size(230, 34);
             this.txtNewWord.TabIndex = 0;
             this.txtNewWord.KeyDown += new System.Windows.Forms.KeyEventHandler(this.txtNewWord_KeyDown);
             // 
@@ -72,9 +75,9 @@
             // btnApplyWord
             // 
             this.btnApplyWord.BackColor = System.Drawing.Color.White;
-            this.btnApplyWord.Location = new System.Drawing.Point(498, 220);
+            this.btnApplyWord.Location = new System.Drawing.Point(498, 214);
             this.btnApplyWord.Name = "btnApplyWord";
-            this.btnApplyWord.Size = new System.Drawing.Size(69, 29);
+            this.btnApplyWord.Size = new System.Drawing.Size(75, 34);
             this.btnApplyWord.TabIndex = 4;
             this.btnApplyWord.Text = "Next";
             this.btnApplyWord.UseVisualStyleBackColor = false;
@@ -96,12 +99,37 @@
             this.pbResetGame.TabStop = false;
             this.pbResetGame.Click += new System.EventHandler(this.pbResetGame_Click);
             // 
+            // lblSkorTittle
+            // 
+            this.lblSkorTittle.AutoSize = true;
+            this.lblSkorTittle.BackColor = System.Drawing.Color.White;
+            this.lblSkorTittle.Font = new System.Drawing.Font("Stencil", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblSkorTittle.ForeColor = System.Drawing.Color.Brown;
+            this.lblSkorTittle.Location = new System.Drawing.Point(0, 411);
+            this.lblSkorTittle.Name = "lblSkorTittle";
+            this.lblSkorTittle.Size = new System.Drawing.Size(107, 40);
+            this.lblSkorTittle.TabIndex = 6;
+            this.lblSkorTittle.Text = "Skor";
+            // 
+            // lblScoreBoard
+            // 
+            this.lblScoreBoard.AutoSize = true;
+            this.lblScoreBoard.BackColor = System.Drawing.Color.White;
+            this.lblScoreBoard.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.lblScoreBoard.Location = new System.Drawing.Point(103, 411);
+            this.lblScoreBoard.Name = "lblScoreBoard";
+            this.lblScoreBoard.Size = new System.Drawing.Size(37, 43);
+            this.lblScoreBoard.TabIndex = 7;
+            this.lblScoreBoard.Text = "0";
+            // 
             // LastLetterGamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblScoreBoard);
+            this.Controls.Add(this.lblSkorTittle);
             this.Controls.Add(this.pbResetGame);
             this.Controls.Add(this.btnApplyWord);
             this.Controls.Add(this.lblrequiredLetter);
@@ -129,5 +157,7 @@
         private System.Windows.Forms.Button btnApplyWord;
         private System.Windows.Forms.ErrorProvider epTextNewWord;
         private System.Windows.Forms.PictureBox pbResetGame;
+        private System.Windows.Forms.Label lblScoreBoard;
+        private System.Windows.Forms.Label lblSkorTittle;
     }
 }

@@ -37,9 +37,14 @@ namespace EnglishWordSet.Pages.Games
             string wordToBeApply = txtNewWord.Text.ToString().Trim().ToUpper();
             string requriedLetter = lblrequiredLetter.Text.ToString();
             string wordsFreqeuncylevel =await frequencyLevel.GetFrequency(wordToBeApply);
+            Color btnAlertColor = Color.Red;
             if (!RegexTransactions.CheckingValue.IsName(wordToBeApply))
             {
                 epTextNewWord.SetError(txtNewWord, "This word isn't in a decent type.");
+            }
+            else if (wordToBeApply.Length<3)
+            {
+                epTextNewWord.SetError(txtNewWord, "This word is not long enough.");
             }
             else if (!Regex.IsMatch(wordToBeApply, $"^{requriedLetter}.+$", RegexOptions.IgnoreCase))
             {
@@ -56,28 +61,31 @@ namespace EnglishWordSet.Pages.Games
             else
             {
                 usedWords.Add(wordToBeApply);
-                requriedLetter = wordToBeApply[wordToBeApply.Length - 1].ToString();
+                requriedLetter = wordToBeApply[wordToBeApply.Length - 1]!='X'? wordToBeApply[wordToBeApply.Length - 1].ToString(): requriedLetter;
                 lblrequiredLetter.Text = requriedLetter;
                 txtNewWord.Text = requriedLetter;
+                txtNewWord.SelectionStart = txtNewWord.Text.Length;
                 epTextNewWord.Clear();
-                buttonTransactions.ChangeButtonColor(Color.LightGreen,1);
-                txtNewWord.SelectionStart=txtNewWord.Text.Length;
+                btnAlertColor = Color.LightGreen;                  
+                lblScoreBoard.Text = (int.Parse(lblScoreBoard.Text.ToString())+1).ToString();
             }
-
+            buttonTransactions.ChangeButtonColor(btnAlertColor, 1);
         }
+
 
         private string GetRandomLetter()
         {
             Random random = new Random();
             string randomLetter = "";
             randomLetter += (char)random.Next('A', 'Z' + 1);
-            return randomLetter;
+            return randomLetter=="X"?GetRandomLetter(): randomLetter;
         }
 
         private void pbResetGame_Click(object sender, EventArgs e)
         {
             MyImageFilter _myImageFilter = new();
             _myImageFilter.GreenFilterToImageEffect(pbResetGame);
+            lblScoreBoard.Text = "0";
             ResetGame();
 
         }
@@ -87,6 +95,8 @@ namespace EnglishWordSet.Pages.Games
             txtNewWord.Clear();
             epTextNewWord.Clear();
             usedWords.Clear();
+            txtNewWord.Text = lblrequiredLetter.Text;
+            txtNewWord.SelectionStart = txtNewWord.Text.Length;
         }
 
         private void txtNewWord_KeyDown(object sender, KeyEventArgs e)
