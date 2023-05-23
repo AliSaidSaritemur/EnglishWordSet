@@ -169,5 +169,13 @@ namespace EnglishWordSet.Pages
         {
             lblLearnedWordCount.Text = size > 99 ? "+99" : size.ToString();
         }
+        private void cBSearchedWords_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                e.SuppressKeyPress = true;
+            }
+          
+        }
     }
 }

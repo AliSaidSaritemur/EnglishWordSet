@@ -130,6 +130,7 @@
             this.cBSearchedWords.Name = "cBSearchedWords";
             this.cBSearchedWords.Size = new System.Drawing.Size(195, 28);
             this.cBSearchedWords.TabIndex = 7;
+            this.cBSearchedWords.KeyDown += new System.Windows.Forms.KeyEventHandler(this.cBSearchedWords_KeyDown);
             this.cBSearchedWords.KeyUp += new System.Windows.Forms.KeyEventHandler(this.cBSearchedWords_KeyUp);
             // 
             // lblLearnedWordCount

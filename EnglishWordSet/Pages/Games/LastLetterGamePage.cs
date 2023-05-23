@@ -92,7 +92,11 @@ namespace EnglishWordSet.Pages.Games
         private void txtNewWord_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
-                btnApplyWord_Click(sender,e);
+            {
+                btnApplyWord_Click(sender, e);
+                e.SuppressKeyPress = true;
+            }
+    
         }
     }
 }
