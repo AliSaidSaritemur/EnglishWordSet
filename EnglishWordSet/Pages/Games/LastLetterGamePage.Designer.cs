@@ -37,6 +37,9 @@
             this.pbResetGame = new System.Windows.Forms.PictureBox();
             this.lblSkorTittle = new System.Windows.Forms.Label();
             this.lblScoreBoard = new System.Windows.Forms.Label();
+            this.lblGameTimer = new System.Windows.Forms.Label();
+            this.tmrGameTimer = new System.Windows.Forms.Timer(this.components);
+            this.btnStartGame = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.epTextNewWord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbResetGame)).BeginInit();
             this.SuspendLayout();
@@ -107,20 +110,48 @@
             this.lblSkorTittle.ForeColor = System.Drawing.Color.Brown;
             this.lblSkorTittle.Location = new System.Drawing.Point(0, 411);
             this.lblSkorTittle.Name = "lblSkorTittle";
-            this.lblSkorTittle.Size = new System.Drawing.Size(107, 40);
+            this.lblSkorTittle.Size = new System.Drawing.Size(117, 39);
             this.lblSkorTittle.TabIndex = 6;
-            this.lblSkorTittle.Text = "Skor";
+            this.lblSkorTittle.Text = "Score";
             // 
             // lblScoreBoard
             // 
             this.lblScoreBoard.AutoSize = true;
             this.lblScoreBoard.BackColor = System.Drawing.Color.White;
             this.lblScoreBoard.Font = new System.Drawing.Font("Trebuchet MS", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.lblScoreBoard.Location = new System.Drawing.Point(103, 411);
+            this.lblScoreBoard.Location = new System.Drawing.Point(111, 411);
             this.lblScoreBoard.Name = "lblScoreBoard";
-            this.lblScoreBoard.Size = new System.Drawing.Size(37, 43);
+            this.lblScoreBoard.Size = new System.Drawing.Size(35, 42);
             this.lblScoreBoard.TabIndex = 7;
             this.lblScoreBoard.Text = "0";
+            // 
+            // lblGameTimer
+            // 
+            this.lblGameTimer.AutoSize = true;
+            this.lblGameTimer.BackColor = System.Drawing.Color.Transparent;
+            this.lblGameTimer.Font = new System.Drawing.Font("Showcard Gothic", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.lblGameTimer.Location = new System.Drawing.Point(341, 151);
+            this.lblGameTimer.Name = "lblGameTimer";
+            this.lblGameTimer.Size = new System.Drawing.Size(53, 37);
+            this.lblGameTimer.TabIndex = 8;
+            this.lblGameTimer.Text = "60";
+            // 
+            // tmrGameTimer
+            // 
+            this.tmrGameTimer.Interval = 1000;
+            this.tmrGameTimer.Tick += new System.EventHandler(this.tmrGameTimer_Tick);
+            // 
+            // btnStartGame
+            // 
+            this.btnStartGame.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnStartGame.Font = new System.Drawing.Font("Showcard Gothic", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnStartGame.Location = new System.Drawing.Point(211, 135);
+            this.btnStartGame.Name = "btnStartGame";
+            this.btnStartGame.Size = new System.Drawing.Size(362, 192);
+            this.btnStartGame.TabIndex = 9;
+            this.btnStartGame.Text = "Start Game";
+            this.btnStartGame.UseVisualStyleBackColor = true;
+            this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
             // LastLetterGamePage
             // 
@@ -128,6 +159,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.btnStartGame);
+            this.Controls.Add(this.lblGameTimer);
             this.Controls.Add(this.lblScoreBoard);
             this.Controls.Add(this.lblSkorTittle);
             this.Controls.Add(this.pbResetGame);
@@ -159,5 +192,8 @@
         private System.Windows.Forms.PictureBox pbResetGame;
         private System.Windows.Forms.Label lblScoreBoard;
         private System.Windows.Forms.Label lblSkorTittle;
+        private System.Windows.Forms.Label lblGameTimer;
+        private System.Windows.Forms.Timer tmrGameTimer;
+        private System.Windows.Forms.Button btnStartGame;
     }
 }

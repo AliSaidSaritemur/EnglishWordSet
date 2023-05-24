@@ -1,5 +1,6 @@
 ﻿using DataAccess.util;
 using EnglishWordSet.util;
+using Entities.Concrete;
 using System;
 using System.Collections.Generic;
 using System.Drawing;
@@ -14,7 +15,7 @@ namespace EnglishWordSet.Pages.Games
         public LastLetterGamePage()
         {
             InitializeComponent();
-            ResetGame();
+
         }
 
         private void LastLetterGamePage_FormClosing(object sender, FormClosingEventArgs e)
@@ -68,6 +69,7 @@ namespace EnglishWordSet.Pages.Games
                 epTextNewWord.Clear();
                 btnAlertColor = Color.LightGreen;                  
                 lblScoreBoard.Text = (int.Parse(lblScoreBoard.Text.ToString())+1).ToString();
+                lblGameTimer.Text = (int.Parse(lblGameTimer.Text.ToString()) +8).ToString();
             }
             buttonTransactions.ChangeButtonColor(btnAlertColor, 1);
         }
@@ -85,18 +87,19 @@ namespace EnglishWordSet.Pages.Games
         {
             MyImageFilter _myImageFilter = new();
             _myImageFilter.GreenFilterToImageEffect(pbResetGame);
-            lblScoreBoard.Text = "0";
             ResetGame();
+            btnStartGame.Visible = true;
 
         }
         private void ResetGame()
         {
-            lblrequiredLetter.Text = GetRandomLetter();
             txtNewWord.Clear();
             epTextNewWord.Clear();
             usedWords.Clear();
             txtNewWord.Text = lblrequiredLetter.Text;
             txtNewWord.SelectionStart = txtNewWord.Text.Length;
+            lblGameTimer.Text = "60";
+            lblScoreBoard.Text = "0";
         }
 
         private void txtNewWord_KeyDown(object sender, KeyEventArgs e)
@@ -107,6 +110,45 @@ namespace EnglishWordSet.Pages.Games
                 e.SuppressKeyPress = true;
             }
     
+        }
+
+        private void tmrGameTimer_Tick(object sender, EventArgs e)
+        {
+            string currentLblGameTimer = (int.Parse(lblGameTimer.Text.ToString()) - 1).ToString();
+                lblGameTimer.Text = currentLblGameTimer;
+            if (currentLblGameTimer == "0")
+            {
+                tmrGameTimer.Stop();
+                FinishGame();      
+            }
+                
+        }
+        private void FinishGame()
+        {
+            txtNewWord.Enabled=false;
+            btnApplyWord.Enabled=false;
+            DialogResult dialogResult;
+            dialogResult = MessageBox.Show($"Your Game is Over\n Your Score :{lblScoreBoard.Text}", "Do you want to start a new Game ?", MessageBoxButtons.YesNoCancel);
+            if (dialogResult == DialogResult.Yes)
+            {
+                StartANewGame();
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+            }
+        }
+        private void btnStartGame_Click(object sender, EventArgs e)
+        {
+            btnStartGame.Visible = false;
+            StartANewGame();
+        }
+        private void StartANewGame()
+        {
+            lblrequiredLetter.Text = GetRandomLetter();
+            ResetGame();
+            txtNewWord.Enabled = true;
+            btnApplyWord.Enabled = true;
+            tmrGameTimer.Start();
         }
     }
 }
