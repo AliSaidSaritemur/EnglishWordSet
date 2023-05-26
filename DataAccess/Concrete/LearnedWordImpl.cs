@@ -75,7 +75,7 @@ namespace DataAccess.Concrete
         {
             List<string> learnedWords = new();
             rand ??= new Random();
-            int learnedWordCount = context.Words.Where(I => I.UserName == username).Count();
+            int learnedWordCount = context.LearnedWords.Where(I => I.UserName == username).Count();
             int toSkip; 
             int tempCount = count;
 

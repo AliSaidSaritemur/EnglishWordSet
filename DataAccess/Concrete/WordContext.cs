@@ -15,6 +15,8 @@ namespace DataAccess.Concrete
         public DbSet<RandomWord> RandomWords { get; set; }
         public DbSet<TrWord> TrWords { get; set; }
         public DbSet<UserTexts> _UserTexts { get; set; }
+        public DbSet<UserGameScore> _UserGameScores { get; set; }
+
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -44,8 +46,9 @@ namespace DataAccess.Concrete
             modelBuilder.Entity<TrWord>().Property(a => a.Turkish).IsRequired();
             modelBuilder.Entity<User>().Property(a => a.Role).HasDefaultValue("user");
             modelBuilder.Entity<TrWord>().Property(a => a.level).HasDefaultValue(1);
+            modelBuilder.Entity<UserGameScore>().Property(a => a.LastLetterGameBestScore).HasDefaultValue(0);
             modelBuilder.Entity<User>().ToTable(tb=>tb.HasTrigger("UserTextAdding"));
-
+            modelBuilder.Entity<User>().ToTable(tb => tb.HasTrigger("UserGameScoreAdding"));
             base.OnModelCreating(modelBuilder);
         }
 

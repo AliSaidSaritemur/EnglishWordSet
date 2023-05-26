@@ -46,6 +46,7 @@
     <Compile Include="Concrete\User.cs" />
     <Compile Include="Concrete\LearnedWord.cs" />
     <Compile Include="Concrete\NWords.cs" />
+    <Compile Include="Concrete\UserGameScore.cs" />
     <Compile Include="Concrete\UserTexts.cs" />
     <Compile Include="DTOs\DictionaryWordForAPI.cs" />
     <Compile Include="DTOs\LoginUser.cs" />
