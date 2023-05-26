@@ -22,8 +22,12 @@ namespace EnglishWordSet.Pages
 
         private void GamePanel_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel=true;
-            Hide();
+            if (!PageTransactions.MainIsNull())
+            {
+                e.Cancel = true;
+                this.Hide();
+                PageTransactions.GetUserPage().Show();
+            }
         }
 
         private void btnOpenCreatingSentencePage_Click(object sender, EventArgs e)

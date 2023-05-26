@@ -31,19 +31,19 @@ namespace EnglishWordSet.util
 
         public static Main GetForm1() => form1 ??= new();
 
-        public static Boolean MainIsNull() => form1==null ?true:false;
+        public static Boolean MainIsNull() => form1 == null ? true : false;
 
         public static UserPage GetUserPage() => userpage ??= new();
 
         public static AdminTransactionsPage GetAdminTransactionsPage() => adminTransactionsPage ??= new();
 
-        public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPage() => childAdminNewLearnedWord ??= new ();
+        public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPage() => childAdminNewLearnedWord ??= new();
 
-        public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPageForMain() => childAdminNewLearnedWordForMain ??= new ();
+        public static ChildAdminNewLearnedWord GetChildAdminNewLearnedWordPageForMain() => childAdminNewLearnedWordForMain ??= new();
 
-        public static ChildAdminNewUser GetChildAdminNewUserPage() => _childAdminNewUser ??= new ();
+        public static ChildAdminNewUser GetChildAdminNewUserPage() => _childAdminNewUser ??= new();
 
-        public static ChildAdminNewWord GetChildAdminNewWordPage() => _childAdminNewWord ??= new ();
+        public static ChildAdminNewWord GetChildAdminNewWordPage() => _childAdminNewWord ??= new();
 
         public static GamePanel GetGamePanel() => _gamePanel ??= new();
 
@@ -80,12 +80,12 @@ namespace EnglishWordSet.util
                 openForms.Add(f);
 
 
-                openForms.Reverse();
+            openForms.Reverse();
 
             foreach (Form f in openForms)
             {
-                if (f.Name != "LoginPage")           
-                    f.Dispose();             
+                if (f.Name != "LoginPage")
+                    f.Dispose();
             }
         }
 

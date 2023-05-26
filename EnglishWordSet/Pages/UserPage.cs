@@ -85,10 +85,6 @@ namespace EnglishWordSet
             Hide();
         }
 
-        private void AdminPage_FormClosed(object sender, FormClosedEventArgs e)
-        {
-          
-        }
 
 
         private void btnAddNewAdmin_KeyDown(object sender, KeyEventArgs e)
@@ -131,13 +127,7 @@ namespace EnglishWordSet
 
         private void AdminPage_FormClosing(object sender, FormClosingEventArgs e)
         {
-              if(!PageTransactions.MainIsNull())
-                {
-                    e.Cancel = true;
-                    this.Hide();
-                    PageTransactions.GetForm1().Show();
-
-                }
+            Application.Exit();
         }
 
         private void pbAdminPageOpen_Click(object sender, EventArgs e)

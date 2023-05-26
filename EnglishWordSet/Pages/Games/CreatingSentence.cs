@@ -23,9 +23,7 @@ namespace EnglishWordSet.Pages.Games
 
         private void CreatingSentence_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            Hide();
-            PageTransactions.GetUserPage().Show();
+            Application.Exit();
         }
 
         LearnedWordImpl _learnedWordImpl = new();
@@ -61,6 +59,12 @@ namespace EnglishWordSet.Pages.Games
             LearnedWordsPanel page = PageTransactions.GetLearnedWordsPanelPage();
             page.LearnedWordRefresh();
             page.Show();
+        }
+
+        private void pbBackUserPage_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            PageTransactions.GetUserPage().Show();
         }
     }
 }

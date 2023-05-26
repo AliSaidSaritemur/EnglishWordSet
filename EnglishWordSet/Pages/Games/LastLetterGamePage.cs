@@ -20,9 +20,7 @@ namespace EnglishWordSet.Pages.Games
 
         private void LastLetterGamePage_FormClosing(object sender, FormClosingEventArgs e)
         {
-            e.Cancel = true;
-            Hide();
-            PageTransactions.GetUserPage().Show();
+            Application.Exit();
         }
 
         ButtonTransactions buttonTransactions;
@@ -69,7 +67,7 @@ namespace EnglishWordSet.Pages.Games
                 epTextNewWord.Clear();
                 btnAlertColor = Color.LightGreen;                  
                 lblScoreBoard.Text = (int.Parse(lblScoreBoard.Text.ToString())+1).ToString();
-                lblGameTimer.Text = (int.Parse(lblGameTimer.Text.ToString()) +8).ToString();
+                lblGameTimer.Text = (int.Parse(lblGameTimer.Text.ToString()) +4).ToString();
             }
             buttonTransactions.ChangeButtonColor(btnAlertColor, 1);
         }
@@ -149,6 +147,12 @@ namespace EnglishWordSet.Pages.Games
             txtNewWord.Enabled = true;
             btnApplyWord.Enabled = true;
             tmrGameTimer.Start();
+        }
+
+        private void pbBackUserPage_Click(object sender, EventArgs e)
+        {
+                this.Hide();
+                PageTransactions.GetUserPage().Show();
         }
     }
 }

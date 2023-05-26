@@ -137,8 +137,7 @@ namespace EnglishWordSet
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "User Page";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminPage_FormClosing);
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AdminPage_FormClosed);
-            this.Load += new System.EventHandler(this.Form2_Load);
+            this.Load += new System.EventHandler(this.btnAddNewWord_Enter);
             ((System.ComponentModel.ISupportInitialize)(this.pbBack)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbAdminPageOpen)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbOpenGamePanel)).EndInit();

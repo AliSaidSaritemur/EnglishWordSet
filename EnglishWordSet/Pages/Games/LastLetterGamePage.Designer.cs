@@ -40,8 +40,10 @@
             this.lblGameTimer = new System.Windows.Forms.Label();
             this.tmrGameTimer = new System.Windows.Forms.Timer(this.components);
             this.btnStartGame = new System.Windows.Forms.Button();
+            this.pbBackUserPage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.epTextNewWord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbResetGame)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackUserPage)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNewWord
@@ -153,12 +155,25 @@
             this.btnStartGame.UseVisualStyleBackColor = true;
             this.btnStartGame.Click += new System.EventHandler(this.btnStartGame_Click);
             // 
+            // pbBackUserPage
+            // 
+            this.pbBackUserPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBackUserPage.Image = global::EnglishWordSet.Properties.Resources.back;
+            this.pbBackUserPage.Location = new System.Drawing.Point(0, 203);
+            this.pbBackUserPage.Name = "pbBackUserPage";
+            this.pbBackUserPage.Size = new System.Drawing.Size(76, 62);
+            this.pbBackUserPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBackUserPage.TabIndex = 10;
+            this.pbBackUserPage.TabStop = false;
+            this.pbBackUserPage.Click += new System.EventHandler(this.pbBackUserPage_Click);
+            // 
             // LastLetterGamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.pbBackUserPage);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.lblGameTimer);
             this.Controls.Add(this.lblScoreBoard);
@@ -177,6 +192,7 @@
             this.Load += new System.EventHandler(this.LastLetterGamePage_Load);
             ((System.ComponentModel.ISupportInitialize)(this.epTextNewWord)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbResetGame)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackUserPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -195,5 +211,6 @@
         private System.Windows.Forms.Label lblGameTimer;
         private System.Windows.Forms.Timer tmrGameTimer;
         private System.Windows.Forms.Button btnStartGame;
+        private System.Windows.Forms.PictureBox pbBackUserPage;
     }
 }

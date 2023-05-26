@@ -39,6 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.getLaarnedWordPage = new System.Windows.Forms.Button();
+            this.pbBackUserPage = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackUserPage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnStartSentenceGame
@@ -149,11 +151,24 @@
             this.getLaarnedWordPage.UseVisualStyleBackColor = true;
             this.getLaarnedWordPage.Click += new System.EventHandler(this.getLaarnedWordPage_Click);
             // 
+            // pbBackUserPage
+            // 
+            this.pbBackUserPage.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.pbBackUserPage.Image = global::EnglishWordSet.Properties.Resources.back;
+            this.pbBackUserPage.Location = new System.Drawing.Point(-1, 82);
+            this.pbBackUserPage.Name = "pbBackUserPage";
+            this.pbBackUserPage.Size = new System.Drawing.Size(40, 35);
+            this.pbBackUserPage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbBackUserPage.TabIndex = 14;
+            this.pbBackUserPage.TabStop = false;
+            this.pbBackUserPage.Click += new System.EventHandler(this.pbBackUserPage_Click);
+            // 
             // CreatingSentence
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(767, 309);
+            this.Controls.Add(this.pbBackUserPage);
             this.Controls.Add(this.getLaarnedWordPage);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -171,6 +186,7 @@
             this.Text = "CreatingSentence";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.CreatingSentence_FormClosing);
             this.Load += new System.EventHandler(this.CreatingSentence_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pbBackUserPage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -189,5 +205,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button getLaarnedWordPage;
+        private System.Windows.Forms.PictureBox pbBackUserPage;
     }
 }
