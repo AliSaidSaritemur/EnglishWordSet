@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace DataAccess.Concrete
 {
-    internal class UserGameScoresImpl : IUserGameScoresService
+    public  class UserGameScoresImpl : IUserGameScoresService
     {
         private WordContext context = MyDBTransactions.GetContext();
         public void AddNewLastLetterGameScore(string username, int score)

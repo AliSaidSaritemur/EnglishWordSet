@@ -41,6 +41,8 @@
             this.tmrGameTimer = new System.Windows.Forms.Timer(this.components);
             this.btnStartGame = new System.Windows.Forms.Button();
             this.pbBackUserPage = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblBestScore = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.epTextNewWord)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbResetGame)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbBackUserPage)).BeginInit();
@@ -167,12 +169,34 @@
             this.pbBackUserPage.TabStop = false;
             this.pbBackUserPage.Click += new System.EventHandler(this.pbBackUserPage_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Sylfaen", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(0, 51);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(137, 29);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Best Score :";
+            // 
+            // lblBestScore
+            // 
+            this.lblBestScore.AutoSize = true;
+            this.lblBestScore.Font = new System.Drawing.Font("Sylfaen", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.lblBestScore.Location = new System.Drawing.Point(134, 51);
+            this.lblBestScore.Name = "lblBestScore";
+            this.lblBestScore.Size = new System.Drawing.Size(26, 29);
+            this.lblBestScore.TabIndex = 12;
+            this.lblBestScore.Text = "0";
+            // 
             // LastLetterGamePage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkSeaGreen;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.lblBestScore);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.pbBackUserPage);
             this.Controls.Add(this.btnStartGame);
             this.Controls.Add(this.lblGameTimer);
@@ -212,5 +236,7 @@
         private System.Windows.Forms.Timer tmrGameTimer;
         private System.Windows.Forms.Button btnStartGame;
         private System.Windows.Forms.PictureBox pbBackUserPage;
+        private System.Windows.Forms.Label lblBestScore;
+        private System.Windows.Forms.Label label2;
     }
 }

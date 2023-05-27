@@ -1,4 +1,5 @@
-﻿using DataAccess.util;
+﻿using DataAccess.Concrete;
+using DataAccess.util;
 using EnglishWordSet.util;
 using Entities.Concrete;
 using System;
@@ -24,8 +25,11 @@ namespace EnglishWordSet.Pages.Games
         }
 
         ButtonTransactions buttonTransactions;
+        UserGameScoresImpl _userGameScoresImpl;
         private void LastLetterGamePage_Load(object sender, EventArgs e)
         {
+            _userGameScoresImpl = new();
+            lblBestScore.Text = _userGameScoresImpl.GetLastLetterGameBestScore(Sessions.UserSession.username_Admin).ToString();
             buttonTransactions = new(btnApplyWord);
         }
         GettingRandomWordWithFrequencyLevel frequencyLevel=new ();
@@ -121,12 +125,16 @@ namespace EnglishWordSet.Pages.Games
             }
                 
         }
+        const string newReckorMessage = "Wow we have a new record :)";
         private void FinishGame()
         {
             txtNewWord.Enabled=false;
             btnApplyWord.Enabled=false;
+            string messageBoxPlusMessa = _userGameScoresImpl.GetLastLetterGameBestScore(Sessions.UserSession.username_Admin) < int.Parse(lblScoreBoard.Text) ? "\n" + newReckorMessage :"";
+            _userGameScoresImpl.AddNewScoreLastLetterGameIfBiggerThanBestScoreUpdateBestScore(Sessions.UserSession.username_Admin, int.Parse(lblScoreBoard.Text));
+            lblBestScore.Text = _userGameScoresImpl.GetLastLetterGameBestScore(Sessions.UserSession.username_Admin).ToString();
             DialogResult dialogResult;
-            dialogResult = MessageBox.Show($"Your Game is Over\n Your Score :{lblScoreBoard.Text}", "Do you want to start a new Game ?", MessageBoxButtons.YesNoCancel);
+            dialogResult = MessageBox.Show($"Your Game is Over\nYour Score :{lblScoreBoard.Text}{messageBoxPlusMessa}", "Do you want to start a new Game ?", MessageBoxButtons.YesNoCancel);
             if (dialogResult == DialogResult.Yes)
             {
                 StartANewGame();
