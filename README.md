@@ -41,3 +41,19 @@ In addition, if he presses the new button,the sentences come through the API ran
 However, if he does not remember the meaning of the word, he is provided to remember it through the pictures taken over the API.</h5>
 <p align="center">
 <img src="UIPics\SearchedPAge.jpg" width="400"  ></p>
+
+<h2 align="center">Games</h2>
+
+
+<h3 align="center">Last Letter Game </h3>
+
+<h5>In this game, we generate a new word from the last letter of the word we wrote. For example, after "pencil," the requested letter will be "L," and a word starting with the letter "L" should be written. Additionally, there is a time limit of 60 seconds in the game, and an additional 3 seconds are added with each word entered. The words are checked, and words with a frequency close to 0 are not approved. Apart from these, each user's best scores are saved.</h5>
+<p align="center">
+<img src="UIPics\LastLetterGame.png" width="400"  ></p>
+
+<h3 align="center">Create Sentence Game </h3>
+
+<h5>In this game, four words randomly appear from the user's previously learned words, and the user is asked to create meaningful sentences using these words. If the user doesn't remember a word, they can open the "Learned Word" panel. Additionally, they can click the "Test" button to check the meaning of the sentence they wrote.</h5>
+<p align="center">
+<img src="UIPics\CreateSentenceGame.png" width="400"  ></p>
+
