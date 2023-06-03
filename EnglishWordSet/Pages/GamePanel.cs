@@ -41,5 +41,10 @@ namespace EnglishWordSet.Pages
             PageTransactions.GetLastLetterGamePage().Show();
             Hide();
         }
+
+        private void GamePanel_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -134,10 +134,14 @@ namespace EnglishWordSet.Pages
 
 
         LearnedWordImpl _learnedWordImpl = new();
+        List <Keys >lastKeyCode=new();
         private void cBSearchedWords_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Control||e.KeyCode == Keys.Shift)
-                return;
+            if (lastKeyCode.Contains(Keys.ControlKey) || lastKeyCode.Contains(Keys.ShiftKey)||e.KeyCode == Keys.ControlKey || e.KeyCode == Keys.ShiftKey || e.KeyCode == Keys.Right || e.KeyCode == Keys.Left)
+            {
+                lastKeyCode.Clear();
+                 return;
+            }
             if (e.KeyCode == Keys.Enter)
             {
                 this.pbSearch_Click(sender, e);
@@ -164,6 +168,7 @@ namespace EnglishWordSet.Pages
             learnedWords.Add(searchKeyWord);
             learnedWords.ForEach(I => cBSearchedWords.Items.Add(I));
             SetLblLeanedWordCount(learnedWords.Count-1);
+            lastKeyCode.Clear();
         }
         public void SetLblLeanedWordCount(int size)
         {
@@ -175,7 +180,7 @@ namespace EnglishWordSet.Pages
             {
                 e.SuppressKeyPress = true;
             }
-          
+            lastKeyCode.Add(e.KeyCode);
         }
     }
 }

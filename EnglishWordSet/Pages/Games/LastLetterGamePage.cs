@@ -71,7 +71,7 @@ namespace EnglishWordSet.Pages.Games
                 epTextNewWord.Clear();
                 btnAlertColor = Color.LightGreen;                  
                 lblScoreBoard.Text = (int.Parse(lblScoreBoard.Text.ToString())+1).ToString();
-                lblGameTimer.Text = (int.Parse(lblGameTimer.Text.ToString()) +4).ToString();
+                lblGameTimer.Text = (int.Parse(lblGameTimer.Text.ToString()) +3).ToString();
             }
             buttonTransactions.ChangeButtonColor(btnAlertColor, 1);
         }

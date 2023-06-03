@@ -34,22 +34,26 @@
             // 
             // btnOpenCreatingSentencePage
             // 
-            this.btnOpenCreatingSentencePage.Location = new System.Drawing.Point(26, 29);
+            this.btnOpenCreatingSentencePage.BackColor = System.Drawing.Color.Yellow;
+            this.btnOpenCreatingSentencePage.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnOpenCreatingSentencePage.Location = new System.Drawing.Point(2, 0);
             this.btnOpenCreatingSentencePage.Name = "btnOpenCreatingSentencePage";
-            this.btnOpenCreatingSentencePage.Size = new System.Drawing.Size(176, 74);
+            this.btnOpenCreatingSentencePage.Size = new System.Drawing.Size(316, 297);
             this.btnOpenCreatingSentencePage.TabIndex = 0;
             this.btnOpenCreatingSentencePage.Text = "Create Sentence";
-            this.btnOpenCreatingSentencePage.UseVisualStyleBackColor = true;
+            this.btnOpenCreatingSentencePage.UseVisualStyleBackColor = false;
             this.btnOpenCreatingSentencePage.Click += new System.EventHandler(this.btnOpenCreatingSentencePage_Click);
             // 
             // btnOpenLastLetterGame
             // 
-            this.btnOpenLastLetterGame.Location = new System.Drawing.Point(372, 29);
+            this.btnOpenLastLetterGame.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.btnOpenLastLetterGame.Font = new System.Drawing.Font("Showcard Gothic", 16.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point);
+            this.btnOpenLastLetterGame.Location = new System.Drawing.Point(324, 0);
             this.btnOpenLastLetterGame.Name = "btnOpenLastLetterGame";
-            this.btnOpenLastLetterGame.Size = new System.Drawing.Size(176, 74);
-            this.btnOpenLastLetterGame.TabIndex = 1;
+            this.btnOpenLastLetterGame.Size = new System.Drawing.Size(338, 297);
+            this.btnOpenLastLetterGame.TabIndex = 0;
             this.btnOpenLastLetterGame.Text = "Last Letter";
-            this.btnOpenLastLetterGame.UseVisualStyleBackColor = true;
+            this.btnOpenLastLetterGame.UseVisualStyleBackColor = false;
             this.btnOpenLastLetterGame.Click += new System.EventHandler(this.btnOpenLastLetterGame_Click);
             // 
             // GamePanel
@@ -65,6 +69,7 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "GamePanel";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.GamePanel_FormClosing);
+            this.Load += new System.EventHandler(this.GamePanel_Load);
             this.ResumeLayout(false);
 
         }
