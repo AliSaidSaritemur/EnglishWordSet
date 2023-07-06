@@ -14,5 +14,10 @@ namespace EnglishWordSet.Sessions
             username_Admin=username;
             role_Admin = userImpl.GetRole(username);
         }
+        public static void RemoveUserSession()
+        {
+            username_Admin = null;
+            role_Admin = null;
+        }
     }
 }

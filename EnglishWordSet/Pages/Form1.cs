@@ -63,6 +63,8 @@ namespace EnglishWordSet
             {
                AddLog.ConvertedWordsLogs.Trace($"{UserSession.username_Admin} Converted words : \n {tempText}");
             }
+            richTextBoxBuilderForInputTxt ??= new RichTextBoxBuilder(txtInput);
+            richTextBoxBuilderForInputTxt.ChangeTxtInputWordsColor("!!!", Color.Red);
             richTextBoxBuilderForOutputTxt ??= new RichTextBoxBuilder(txtOutput);
             richTextBoxBuilderForOutputTxt.ChangeTxtInputWordsColor("!!!", Color.Red);
 
@@ -197,6 +199,8 @@ namespace EnglishWordSet
         {
 
             string words = _UserTextsImpl.GetLastConvertedWords(Sessions.UserSession.username_Admin);
+            if (String.IsNullOrEmpty(words))
+                return;
             words = Regex.Replace(words, @"^\s*$(\n|\r|\r\n)", "", RegexOptions.Multiline);
             txtInput.Text = words;
             SetWordInform(txtInput, lblWordCountInput, lblWordDayAvarageInput);
@@ -237,7 +241,7 @@ namespace EnglishWordSet
         private void pbLogOutMainPage_Click(object sender, EventArgs e)
         {        
             PageTransactions.CloseAllPage();
-            Sessions.UserSession.role_Admin = null;
+            Sessions.UserSession.RemoveUserSession();
             GC.Collect();
             PageTransactions.GetLoginPage().Show();
         }
